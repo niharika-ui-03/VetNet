@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VetNest – Veterinary Science, Made Easier</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+<a class="skip" href="#main">Skip to content</a>
+<div id="progress" aria-hidden="true"><span></span></div>
+
+<header class="topbar">
+  <a class="brand" href="#home" aria-label="VetNest home">
+    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><ellipse cx="12" cy="16" rx="5" ry="4"/><circle cx="5.5" cy="10.5" r="2"/><circle cx="9.5" cy="6" r="2"/><circle cx="14.5" cy="6" r="2"/><circle cx="18.5" cy="10.5" r="2"/></svg>
+    <span>VetNest</span>
+  </a>
+  <button id="menuBtn" class="iconbtn" aria-label="Open menu" aria-expanded="false">☰</button>
+  <nav id="nav" aria-label="Main">
+    <a href="#home">Home</a>
+    <a href="#subjects">Subjects</a>
+    <a href="#quiz">MCQ Quiz</a>
+    <a href="#exam">Exam Prep</a>
+    <a href="#flash">Flashcards</a>
+    <a href="#glossary">Glossary</a>
+    <a href="#planner">Planner</a>
+    <a href="#space">My Space</a>
+    <a href="#intern">Internship</a>
+    <a href="#refs">References</a>
+  </nav>
+  <button id="themeBtn" class="iconbtn" aria-label="Switch light/dark theme">◐</button>
+</header>
+
+<div id="storageWarn" class="warn" hidden>
+  Your browser is blocking local storage, so notes, bookmarks and tasks won't be saved after you close this page.
+</div>
+
+<main id="main">
+
+<!-- HOME -->
+<section class="page active" id="page-home">
+  <div class="hero">
+    <h1>Veterinary Science, Made Easier.</h1>
+    <p class="sub">Understand difficult concepts, study smarter, and revise with confidence.</p>
+    <div class="cta">
+      <a class="btn" href="#subjects">Start Learning</a>
+      <a class="btn ghost" href="#subjects">Explore Subjects</a>
+      <a class="btn ghost" id="readBtn" href="#reader/a1">Read Study Notes</a>
+      <a class="btn ghost" href="#quiz">Practise MCQs</a>
+      <a class="btn ghost" href="#glossary">Open Glossary</a>
+      <a class="btn ghost" href="#planner">Plan My Studies</a>
+    </div>
+  </div>
+  <p class="notice">Please verify the curriculum and examination requirements against your current college syllabus. VetNest is an independent student-made educational project. It is not an official website of SVVU or any veterinary college.</p>
+  <div class="grid dash">
+    <article class="card"><h2>Continue Learning</h2><div id="hContinue"></div></article>
+    <article class="card"><h2>Today's Study Tasks</h2><div id="hTasks"></div></article>
+    <article class="card"><h2>Recently Opened</h2><div id="hRecent"></div></article>
+    <article class="card"><h2>Bookmarked Topics</h2><div id="hBook"></div></article>
+    <article class="card"><h2>Completed Topics</h2><div id="hDone"></div></article>
+  </div>
+</section>
+
+<!-- SUBJECTS -->
+<section class="page" id="page-subjects">
+  <h1>Subject Library</h1>
+  <p class="notice">Please verify the curriculum and examination requirements against your current college syllabus. Subjects are shown in one general library because the year-wise placement differs between curriculum versions. Use "Pin to year" on a card to arrange them the way your college does.</p>
+  <div class="row">
+    <input id="subSearch" type="search" placeholder="Search subjects…" aria-label="Search subjects">
+    <input id="topicSearch" type="search" placeholder="Search topics across all subjects…" aria-label="Search topics">
+  </div>
+  <div id="yearTabs" class="tabs" role="tablist"></div>
+  <div id="topicRes" class="card" hidden></div>
+  <div id="subGrid" class="grid"></div>
+</section>
+
+<section class="page" id="page-subject"><div id="subjectView"></div></section>
+
+<!-- READER -->
+<section class="page" id="page-reader">
+  <article id="reader"></article>
+</section>
+
+<!-- QUIZ -->
+<section class="page" id="page-quiz">
+  <h1>MCQ Quiz</h1>
+  <p class="meta">Sample practice questions written for VetNest. They are not previous-year university questions.</p>
+  <div id="qzSetup" class="card">
+    <label for="qzSubj">Choose a subject</label>
+    <select id="qzSubj"></select>
+    <button class="btn" id="qzStart">Start quiz</button>
+    <p id="qzMsg" class="meta"></p>
+  </div>
+  <div id="qzPlay" class="card" hidden></div>
+  <div id="qzEnd" class="card" hidden></div>
+</section>
+
+<!-- EXAM -->
+<section class="page" id="page-exam">
+  <h1>Exam Preparation</h1>
+  <p class="meta">All questions are sample practice questions written for VetNest. They did not appear in any official university paper.</p>
+  <div class="row">
+    <select id="exSubj" aria-label="Subject"></select>
+    <select id="exTopic" aria-label="Topic"></select>
+  </div>
+  <div id="exTabs" class="tabs">
+    <button data-type="def" class="on">Definitions</button>
+    <button data-type="sa">Short answer</button>
+    <button data-type="la">Long answer</button>
+    <button data-type="fb">Fill in the blanks</button>
+    <button data-type="mcq">MCQs</button>
+    <button data-type="fc">Flashcards</button>
+  </div>
+  <div id="exOut"></div>
+</section>
+
+<!-- FLASHCARDS -->
+<section class="page" id="page-flash">
+  <h1>Flashcards</h1>
+  <div class="row">
+    <select id="flSubj" aria-label="Subject"></select>
+    <button class="btn ghost" id="flShuffle">Shuffle</button>
+  </div>
+  <button id="flCard" class="flashcard" aria-live="polite"></button>
+  <div class="row center">
+    <button class="btn ghost" id="flPrev">← Previous</button>
+    <span id="flCount" class="meta"></span>
+    <button class="btn ghost" id="flNext">Next →</button>
+  </div>
+  <p class="meta center">Tap the card to flip it.</p>
+</section>
+
+<!-- GLOSSARY -->
+<section class="page" id="page-glossary">
+  <h1>Veterinary Glossary</h1>
+  <div class="row">
+    <input id="gSearch" type="search" placeholder="Search a term or meaning…" aria-label="Search glossary">
+    <select id="gSubj" aria-label="Subject filter"></select>
+  </div>
+  <div id="gLetters" class="letters"></div>
+  <p id="gCount" class="meta"></p>
+  <div id="gList"></div>
+</section>
+
+<!-- PLANNER -->
+<section class="page" id="page-planner">
+  <h1>Study Planner</h1>
+  <form id="pForm" class="card row">
+    <input id="pText" type="text" placeholder="What do you want to study?" required aria-label="Task">
+    <select id="pSubj" aria-label="Subject"></select>
+    <input id="pDate" type="date" aria-label="Due date">
+    <button class="btn" type="submit">Add task</button>
+  </form>
+  <div id="pFilters" class="tabs">
+    <button data-f="all" class="on">All</button>
+    <button data-f="pending">Pending</button>
+    <button data-f="done">Completed</button>
+  </div>
+  <div id="pList"></div>
+</section>
+
+<!-- MY SPACE -->
+<section class="page" id="page-space"><div id="spaceView"></div></section>
+
+<!-- INTERNSHIP -->
+<section class="page" id="page-intern">
+  <h1>Internship Learning Centre</h1>
+  <p class="notice">Everything here is a general educational template made for VetNest. These are not official college forms, and no official internship requirement is claimed. Follow your college and your supervising clinicians. This page cannot replace supervised clinical training.</p>
+
+  <details class="sec" open><summary>Clinical terminology and abbreviations</summary><div class="secbody">
+    <div class="tablewrap"><table><thead><tr><th>Abbreviation</th><th>Meaning</th></tr></thead><tbody>
+      <tr><td>Hx / Dx / DDx</td><td>History / diagnosis / differential diagnosis</td></tr>
+      <tr><td>Tx / Rx / Px</td><td>Treatment / prescription / prognosis</td></tr>
+      <tr><td>TPR</td><td>Temperature, pulse, respiration</td></tr>
+      <tr><td>CRT</td><td>Capillary refill time</td></tr>
+      <tr><td>BCS</td><td>Body condition score</td></tr>
+      <tr><td>WNL</td><td>Within normal limits</td></tr>
+      <tr><td>SID / BID / TID</td><td>Once / twice / three times daily</td></tr>
+      <tr><td>PO / IV / IM / SC</td><td>By mouth / intravenous / intramuscular / subcutaneous</td></tr>
+      <tr><td>PRN</td><td>As needed</td></tr>
+    </tbody></table></div>
+  </div></details>
+
+  <details class="sec"><summary>Case history template</summary><div class="secbody">
+    <ol>
+      <li><b>Signalment:</b> species, breed, age, sex, body weight, colour, identification.</li>
+      <li><b>Owner's complaint</b> (in the owner's own words) and how long it has been present.</li>
+      <li><b>History:</b> onset, progression, appetite, water intake, urine, faeces, milk yield or production changes, other animals affected.</li>
+      <li><b>Management:</b> housing, feed, vaccination and deworming records, recent purchase or travel.</li>
+      <li><b>Clinical examination:</b> general demeanour, TPR, mucous membranes, CRT, hydration, lymph nodes, then system by system.</li>
+      <li><b>Provisional diagnosis and differentials</b> (discuss with your supervisor).</li>
+      <li><b>Tests advised</b> and their results.</li>
+      <li><b>Treatment as directed by the supervising veterinarian</b>, outcome and follow-up.</li>
+    </ol>
+  </div></details>
+
+  <details class="sec"><summary>Animal observation record</summary><div class="secbody">
+    <ul>
+      <li>Date, time, animal ID, species and location.</li>
+      <li>Behaviour and posture: alert, dull, standing, recumbent, head position.</li>
+      <li>Eating, drinking, rumination (ruminants), urination and defaecation.</li>
+      <li>Gait and any lameness, skin and coat, discharges, swellings.</li>
+      <li>Observations made by the intern: <i>write what you see, not what you assume.</i></li>
+    </ul>
+  </div></details>
+
+  <details class="sec"><summary>Case presentation structure</summary><div class="secbody">
+    <ol>
+      <li>One-line summary: signalment and main complaint.</li>
+      <li>Relevant history.</li>
+      <li>Examination findings: positive findings first, then important negatives.</li>
+      <li>Problem list and differential diagnoses, with reasons.</li>
+      <li>Tests, diagnosis, and the plan decided by the supervisor.</li>
+      <li>What you learned, and one question you still have.</li>
+    </ol>
+  </div></details>
+
+  <details class="sec"><summary>Reflective learning log</summary><div class="secbody">
+    <p class="meta">Saved only on this device. Don't write owner names or other private details here.</p>
+    <form id="logForm">
+      <label for="logText">What happened, what went well, what was difficult, what will I read up, and what will I do differently?</label>
+      <textarea id="logText" rows="5" required></textarea>
+      <button class="btn" type="submit">Save entry</button>
+    </form>
+    <div id="logList"></div>
+  </div></details>
+
+  <details class="sec"><summary>Clinical rotation planning</summary><div class="secbody">
+    <ul>
+      <li>List your rotations (for example medicine, surgery, gynaecology, ambulatory) as given by your college.</li>
+      <li>For each one, write 3 things you want to learn, and ask your supervisor what is expected.</li>
+      <li>Revise the related theory beforehand. Use the <a href="#planner">Study Planner</a> to schedule it.</li>
+      <li>At the end of each rotation, write one log entry above.</li>
+    </ul>
+  </div></details>
+
+  <details class="sec"><summary>Practical learning objectives</summary><div class="secbody">
+    <ul>
+      <li>Take a clear, complete history and record it neatly.</li>
+      <li>Handle and restrain animals safely, under supervision.</li>
+      <li>Perform and record a general clinical examination.</li>
+      <li>Explain your reasoning for a problem list.</li>
+      <li>Explain a plan to an owner in plain language.</li>
+    </ul>
+  </div></details>
+
+  <details class="sec"><summary>Supervisor discussion questions</summary><div class="secbody">
+    <ul>
+      <li>What would make you more worried or less worried about this case?</li>
+      <li>What other conditions should I rule out, and how?</li>
+      <li>What can I safely do myself under your supervision, and what must wait?</li>
+      <li>What would you want me to read before the next similar case?</li>
+    </ul>
+  </div></details>
+
+  <details class="sec"><summary>Professional communication tips</summary><div class="secbody">
+    <ul>
+      <li>Introduce yourself and your role clearly to owners.</li>
+      <li>Avoid jargon with owners. Say "inflammation of the udder", not only "mastitis".</li>
+      <li>Never promise outcomes. Refer treatment questions to the supervising veterinarian.</li>
+      <li>Be honest when you don't know. Say "let me check with my supervisor".</li>
+      <li>Keep records neat, dated and honest.</li>
+    </ul>
+  </div></details>
+
+  <details class="sec" open><summary>Revision checklist (ticks are saved)</summary><div class="secbody">
+    <label class="chk"><input type="checkbox" data-chk="r1"> Normal TPR ranges for the species I work with (from my textbook)</label>
+    <label class="chk"><input type="checkbox" data-chk="r2"> Directional terms and body regions</label>
+    <label class="chk"><input type="checkbox" data-chk="r3"> Drug classes and routes of administration (theory)</label>
+    <label class="chk"><input type="checkbox" data-chk="r4"> Withdrawal periods and why they matter</label>
+    <label class="chk"><input type="checkbox" data-chk="r5"> Common zoonoses and handling precautions</label>
+    <label class="chk"><input type="checkbox" data-chk="r6"> Sterilisation, disinfection and biosafety basics</label>
+  </div></details>
+</section>
+
+<!-- REFERENCES -->
+<section class="page" id="page-refs">
+  <h1>References and Syllabus Information</h1>
+  <p class="notice">VetNest is an independent educational project. It is not an official website of SVVU, the College of Veterinary Science, Garividi, or the Veterinary Council of India.</p>
+
+  <h2>Official curriculum references (check these yourself)</h2>
+  <ul>
+    <li><a href="https://www.svvu.edu.in/Academics.aspx" target="_blank" rel="noopener">SVVU – Academics</a></li>
+    <li><a href="https://svvu.edu.in/" target="_blank" rel="noopener">SVVU – main website</a></li>
+    <li><a href="https://vci.dahd.gov.in/node/262" target="_blank" rel="noopener">Veterinary Council of India</a></li>
+  </ul>
+  <p class="meta">These links are provided as starting points. The detailed syllabus for each batch has not been verified here. Please verify the curriculum and examination requirements against your current college syllabus.</p>
+
+  <h2>Original educational explanations</h2>
+  <p>The study material in the Anatomy, Physiology, Biochemistry and Pharmacology modules is written fresh for this project as short introductory notes. It is not copied from any textbook and it is not the full university syllabus.</p>
+
+  <h2>External educational references (suggested further reading)</h2>
+  <ul>
+    <li>Dyce, Sack and Wensing – <i>Textbook of Veterinary Anatomy</i></li>
+    <li>Klein (ed.) – <i>Cunningham's Textbook of Veterinary Physiology</i></li>
+    <li>Rodwell et al. – <i>Harper's Illustrated Biochemistry</i></li>
+    <li>Nelson and Cox – <i>Lehninger Principles of Biochemistry</i></li>
+    <li>Riviere and Papich (eds.) – <i>Veterinary Pharmacology and Therapeutics</i></li>
+  </ul>
+  <p class="meta">Check the edition your college recommends. Use these books to confirm and deepen what you read here.</p>
+
+  <h2>Sample practice questions</h2>
+  <p>All questions on this site are original practice questions. They are not previous-year papers.</p>
+
+  <h2>Student-contributed resources</h2>
+  <p>None added yet.</p>
+
+  <h2>Safety note</h2>
+  <p>Pharmacology and clinical content here is theoretical. No drug doses or treatment instructions are given. Always follow a registered veterinarian for any real animal.</p>
+
+  <h2>About saved data</h2>
+  <p>Your notes, bookmarks, tasks and progress are saved only in this browser, on this device. They do not sync to other phones or computers. Clearing your browser data will erase them. Use the backup button in My Space.</p>
+</section>
+
+</main>
+
+<footer>
+  <p>VetNest is an independent student educational project, not an official university website. Verify everything against your college syllabus and textbooks.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
