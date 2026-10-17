@@ -1,4 +1,4 @@
-/* VetNet - script.js
+﻿/* VetNet - script.js
    HOW TO ADD CONTENT
    1. unit("anat", "Unit name");   starts a new unit in a subject
    2. topic("anat", "Topic title", { i, s, n, tb, k, m, sa, la, q, f, d });
@@ -15,24 +15,24 @@ const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
 const SUBJECTS = [
-  { id: "anat", name: "Veterinary Anatomy", icon: "🦴", blurb: "How the animal body is built, from bones to organs." },
-  { id: "phys", name: "Veterinary Physiology", icon: "🫀", blurb: "How the body works: blood, heart, kidney, digestion, hormones." },
-  { id: "bioc", name: "Veterinary Biochemistry", icon: "🧪", blurb: "Biomolecules, enzymes, metabolism and clinical chemistry." },
-  { id: "pharm", name: "Veterinary Pharmacology and Toxicology", icon: "💊", blurb: "How drugs and poisons act on animals (theory only)." },
-  { id: "micro", name: "Veterinary Microbiology", icon: "🦠", blurb: "Bacteria, viruses, fungi, immunity and control." },
-  { id: "para", name: "Veterinary Parasitology", icon: "🪱", blurb: "Helminths, protozoa, arthropods and their control." },
-  { id: "path", name: "Veterinary Pathology", icon: "🔬", blurb: "What disease does to cells, tissues and organs." },
-  { id: "nutr", name: "Animal Nutrition", icon: "🌾", blurb: "Nutrients, feeds, rations and feeding of livestock." },
-  { id: "pubh", name: "Veterinary Public Health and Epidemiology", icon: "🌍", blurb: "Zoonoses, food safety, disease investigation." },
-  { id: "gen", name: "Animal Genetics and Breeding", icon: "🧬", blurb: "Inheritance, selection and breeding systems." },
-  { id: "lpm", name: "Livestock Production Management", icon: "🐄", blurb: "Housing, herd, flock and poultry management." },
-  { id: "lpt", name: "Livestock Products Technology", icon: "🥛", blurb: "Milk, meat, eggs and their processing." },
-  { id: "gyn", name: "Veterinary Gynaecology and Obstetrics", icon: "🐣", blurb: "Reproduction, pregnancy, parturition and its problems." },
-  { id: "surg", name: "Veterinary Surgery and Radiology", icon: "🩹", blurb: "Surgical principles, wounds, anaesthesia, imaging." },
-  { id: "med", name: "Veterinary Medicine", icon: "🩺", blurb: "Diseases of animals, system by system." },
-  { id: "ext", name: "Veterinary and Animal Husbandry Extension Education", icon: "📢", blurb: "Taking knowledge to farmers, communication, programmes." },
-  { id: "clin", name: "Veterinary Clinical Practice", icon: "🏥", blurb: "Clinical examination, diagnosis, records, ethics." },
-  { id: "farm", name: "Livestock Farm Practices", icon: "🚜", blurb: "Hands-on farm routines, records and biosecurity." }
+  { id: "anat", name: "Veterinary Anatomy", icon: "ðŸ¦´", blurb: "How the animal body is built, from bones to organs." },
+  { id: "phys", name: "Veterinary Physiology", icon: "ðŸ«€", blurb: "How the body works: blood, heart, kidney, digestion, hormones." },
+  { id: "bioc", name: "Veterinary Biochemistry", icon: "ðŸ§ª", blurb: "Biomolecules, enzymes, metabolism and clinical chemistry." },
+  { id: "pharm", name: "Veterinary Pharmacology and Toxicology", icon: "ðŸ’Š", blurb: "How drugs and poisons act on animals (theory only)." },
+  { id: "micro", name: "Veterinary Microbiology", icon: "ðŸ¦ ", blurb: "Bacteria, viruses, fungi, immunity and control." },
+  { id: "para", name: "Veterinary Parasitology", icon: "ðŸª±", blurb: "Helminths, protozoa, arthropods and their control." },
+  { id: "path", name: "Veterinary Pathology", icon: "ðŸ”¬", blurb: "What disease does to cells, tissues and organs." },
+  { id: "nutr", name: "Animal Nutrition", icon: "ðŸŒ¾", blurb: "Nutrients, feeds, rations and feeding of livestock." },
+  { id: "pubh", name: "Veterinary Public Health and Epidemiology", icon: "ðŸŒ", blurb: "Zoonoses, food safety, disease investigation." },
+  { id: "gen", name: "Animal Genetics and Breeding", icon: "ðŸ§¬", blurb: "Inheritance, selection and breeding systems." },
+  { id: "lpm", name: "Livestock Production Management", icon: "ðŸ„", blurb: "Housing, herd, flock and poultry management." },
+  { id: "lpt", name: "Livestock Products Technology", icon: "ðŸ¥›", blurb: "Milk, meat, eggs and their processing." },
+  { id: "gyn", name: "Veterinary Gynaecology and Obstetrics", icon: "ðŸ£", blurb: "Reproduction, pregnancy, parturition and its problems." },
+  { id: "surg", name: "Veterinary Surgery and Radiology", icon: "ðŸ©¹", blurb: "Surgical principles, wounds, anaesthesia, imaging." },
+  { id: "med", name: "Veterinary Medicine", icon: "ðŸ©º", blurb: "Diseases of animals, system by system." },
+  { id: "ext", name: "Veterinary and Animal Husbandry Extension Education", icon: "ðŸ“¢", blurb: "Taking knowledge to farmers, communication, programmes." },
+  { id: "clin", name: "Veterinary Clinical Practice", icon: "ðŸ¥", blurb: "Clinical examination, diagnosis, records, ethics." },
+  { id: "farm", name: "Livestock Farm Practices", icon: "ðŸšœ", blurb: "Hands-on farm routines, records and biosecurity." }
 ];
 const SUBJ = {}; SUBJECTS.forEach(s => SUBJ[s.id] = s);
 
@@ -48,7 +48,7 @@ function topic(sid, title, o) {
 }
 function planned(sid, list) { PLANNED[sid] = list; }
 /* ================= ANATOMY ================= */
-unit("anat", "Unit 1 – Getting started");
+unit("anat", "Unit 1 â€“ Getting started");
 topic("anat", "Introduction to Veterinary Anatomy", {
   i: "Anatomy is the study of how the animal body is built. You need it before physiology, pathology or surgery make any sense.",
   s: "Anatomy is the map of the body. Physiology tells you how the city runs, anatomy tells you where the roads and buildings are. In vet college you learn many species, so you also learn how a cow differs from a dog or a horse.",
@@ -90,7 +90,7 @@ topic("anat", "Anatomical Terminology, Planes and Directions", {
   d: ["Practise describing a wound location using three terms.", "Learn the terms used for the head, neck and thorax regions."]
 });
 
-unit("anat", "Unit 2 – Skeleton, joints, muscles");
+unit("anat", "Unit 2 â€“ Skeleton, joints, muscles");
 topic("anat", "Bones: Classification, Structure and the Skeleton", {
   i: "The skeleton supports the animal, protects soft organs, gives muscles something to pull on, stores minerals and makes blood cells.",
   s: "Bones come in different shapes because they do different jobs. Long bones act like levers, flat bones protect, short bones absorb shock. Bone is alive. It keeps remodelling all your life.",
@@ -158,7 +158,7 @@ topic("anat", "Muscles, Tendons and Movement", {
   d: ["Learn the muscles of the dog's forelimb.", "Study how a muscle contracts at the sarcomere level."]
 });
 
-unit("anat", "Unit 3 – Organ systems");
+unit("anat", "Unit 3 â€“ Organ systems");
 topic("anat", "Digestive System and the Ruminant Stomach", {
   i: "The digestive system takes in, breaks down and absorbs feed. Species differ enormously, which is why this topic is so important in veterinary anatomy.",
   s: "A dog has a simple stomach, like us. A cow has four stomach compartments, and the biggest one, the rumen, is a fermentation vat full of microbes. A horse digests fibre in a huge caecum and colon.",
@@ -225,7 +225,7 @@ topic("anat", "Urogenital System and Nervous System Basics", {
 planned("anat", ["Skull and paranasal sinuses", "Forelimb and hindlimb bones of the horse, ox, dog", "Stay apparatus of the horse", "Hoof and claw anatomy", "Mammary gland of the cow", "Avian anatomy", "Eye and ear", "Endocrine glands", "Lymphatic system and spleen", "Surface anatomy for clinical examination", "Embryology and fetal membranes", "Histology of the major organs"]);
 
 /* ================= PHYSIOLOGY ================= */
-unit("phys", "Unit 1 – Basic concepts");
+unit("phys", "Unit 1 â€“ Basic concepts");
 topic("phys", "Introduction to Physiology and Body Fluids", {
   i: "Physiology is the science of how living bodies work. It asks how and why, where anatomy asks what and where.",
   s: "Anatomy shows the parts, physiology shows what they do and how they work together. Most of the body is water, about two thirds inside cells and one third outside.",
@@ -268,7 +268,7 @@ topic("phys", "Homeostasis and Feedback Control", {
   d: ["Learn heat stress effects on dairy cows.", "Study the baroreceptor reflex step by step."]
 });
 
-unit("phys", "Unit 2 – Blood and circulation");
+unit("phys", "Unit 2 â€“ Blood and circulation");
 topic("phys", "Blood: Composition, Cells and Functions", {
   i: "Blood is a fluid connective tissue that carries oxygen, nutrients, hormones, wastes and defence cells around the body.",
   s: "Blood has a liquid part, plasma, and cells floating in it. Red cells carry oxygen. White cells fight infection. Platelets help stop bleeding.",
@@ -316,7 +316,7 @@ topic("phys", "Cardiovascular Physiology", {
   d: ["Learn normal heart rates for each species.", "Study heart failure types."]
 });
 
-unit("phys", "Unit 3 – Other systems");
+unit("phys", "Unit 3 â€“ Other systems");
 topic("phys", "Respiration and Gas Transport", {
   i: "Respiration supplies oxygen to tissues and removes carbon dioxide. It includes ventilation, gas exchange and transport.",
   s: "We breathe in to bring oxygen to the lungs, the oxygen crosses into the blood, haemoglobin carries it, and the tissues use it. Carbon dioxide travels the other way.",
@@ -384,7 +384,7 @@ topic("phys", "Renal Physiology and Endocrine Basics", {
 planned("phys", ["Nerve and muscle physiology", "Special senses", "Reproductive physiology and the oestrous cycle", "Lactation physiology", "Avian physiology and egg formation", "Acid-base balance", "Growth and development", "Environmental physiology and heat stress", "Immunity in outline", "Physiology of exercise in the horse and greyhound"]);
 
 /* ================= BIOCHEMISTRY ================= */
-unit("bioc", "Unit 1 – Biomolecules");
+unit("bioc", "Unit 1 â€“ Biomolecules");
 topic("bioc", "Introduction to Biochemistry, Water and Buffers", {
   i: "Biochemistry is the chemistry of living things. It explains how molecules build, break down and control life.",
   s: "Your body is made of a few big groups of molecules: carbohydrates, proteins, lipids and nucleic acids. All of them work in water, so water and pH matter a great deal.",
@@ -475,7 +475,7 @@ topic("bioc", "Lipids and Lipoproteins", {
   d: ["Learn the details of ketosis in dairy cows.", "Study cholesterol synthesis."]
 });
 
-unit("bioc", "Unit 2 – Enzymes, vitamins and metabolism");
+unit("bioc", "Unit 2 â€“ Enzymes, vitamins and metabolism");
 topic("bioc", "Enzymes and Clinical Enzymology", {
   i: "Enzymes are biological catalysts, nearly all proteins, that speed up reactions without being used up.",
   s: "An enzyme has a pocket called the active site. The substrate fits in, the reaction occurs, and the product leaves. Heat, wrong pH or poisons change the shape and the enzyme stops working.",
@@ -546,7 +546,7 @@ topic("bioc", "Metabolism: Glycolysis, TCA Cycle and Energy", {
 });
 planned("bioc", ["Nucleic acids and protein synthesis", "Haem synthesis and bilirubin metabolism", "Urea cycle in detail", "Biochemistry of milk", "Biochemistry of muscle contraction", "Blood biochemical tests and their interpretation", "Hormone biochemistry", "Biochemical techniques: chromatography, electrophoresis, spectrophotometry"]);
 /* ================= PHARMACOLOGY ================= */
-unit("pharm", "Unit 1 – General pharmacology");
+unit("pharm", "Unit 1 â€“ General pharmacology");
 topic("pharm", "Introduction, Terminology and Sources of Drugs", {
   i: "Pharmacology is the study of drugs and how they affect living systems. It is the base for safe, rational treatment.",
   s: "A drug is any substance used to prevent, diagnose or treat disease or to change how the body works. This module is theory only. A veterinarian chooses the drug and the dose for a real animal.",
@@ -682,7 +682,7 @@ topic("pharm", "Toxicology: Principles and Common Poisonings", {
 planned("pharm", ["Chemotherapy of parasitic diseases", "Antifungal and antiviral drugs", "Hormones and related drugs", "Drugs acting on the digestive tract", "Drugs for the cardiovascular and respiratory systems", "General and local anaesthetics", "Fluid therapy concepts", "Prescription writing and drug laws", "Pesticide and heavy metal poisoning in detail", "Plant poisonings of India"]);
 
 /* ================= MICROBIOLOGY ================= */
-unit("micro", "Unit 1 – General microbiology");
+unit("micro", "Unit 1 â€“ General microbiology");
 topic("micro", "Introduction to Microorganisms and History", {
   i: "Microbiology is the study of organisms too small to see without a microscope: bacteria, viruses, fungi, protozoa and others.",
   s: "Most microbes are harmless or helpful. Rumen microbes help cattle digest. A few are pathogens that cause disease. Microbiology tells us how to find them and stop them.",
@@ -751,7 +751,7 @@ topic("micro", "Viruses and Fungi", {
   d: ["Learn the details of virus families.", "Study the life cycle of a retrovirus."]
 });
 
-unit("micro", "Unit 2 – Control and immunity");
+unit("micro", "Unit 2 â€“ Control and immunity");
 topic("micro", "Sterilisation, Disinfection and Laboratory Safety", {
   i: "Sterilisation removes all life including spores. Disinfection reduces the number of pathogens. Good practice protects patients, staff and the environment.",
   s: "Sterilise things that must be completely free of microbes, like surgical instruments. Disinfect surfaces and equipment. Always treat samples as potentially infectious.",
@@ -819,7 +819,7 @@ topic("micro", "Important Veterinary Bacterial and Viral Diseases: Microbiology 
 planned("micro", ["Detailed study of each pathogenic genus", "Bacterial genetics", "Mycology: details of mycoses", "Virology techniques: PCR, ELISA, cell culture", "Immunological tests", "Antimicrobial sensitivity testing", "Avian and poultry microbiology", "Milk and food microbiology"]);
 
 /* ================= PARASITOLOGY ================= */
-unit("para", "Unit 1 – Basics");
+unit("para", "Unit 1 â€“ Basics");
 topic("para", "Introduction: Parasites, Hosts and Host-Parasite Relationships", {
   i: "A parasite lives on or in another organism, the host, and gets its food from it. Parasites cost livestock production dearly.",
   s: "Parasites never give much back. Some live in the gut, some in blood, some on the skin. Knowing the life cycle shows where we can break it.",
@@ -886,7 +886,7 @@ topic("para", "Protozoa and Blood Parasites", {
   d: ["Learn the life cycles of Babesia and Theileria.", "Study endemic stability."]
 });
 
-unit("para", "Unit 2 – Arthropods and control");
+unit("para", "Unit 2 â€“ Arthropods and control");
 topic("para", "Entomology: Ticks, Mites, Lice, Fleas and Flies", {
   i: "Arthropods cause damage directly by feeding or irritation and indirectly by carrying disease agents.",
   s: "Insects have six legs and three body parts. Ticks and mites have eight legs and are arachnids. Ticks are blood feeders and major disease vectors.",
@@ -931,7 +931,7 @@ topic("para", "Diagnosis and Control of Parasites: Concepts", {
 });
 planned("para", ["Detailed life cycles of each important helminth", "Parasites of poultry", "Parasites of horses, pigs, dogs and cats", "Apicomplexan parasites in detail", "Insect vectors in detail", "Parasitic zoonoses of India", "Pasture parasite epidemiology", "Anthelmintics: classes and mechanisms"]);
 /* ================= PATHOLOGY ================= */
-unit("path", "Unit 1 – General pathology");
+unit("path", "Unit 1 â€“ General pathology");
 topic("path", "Introduction to Pathology and Causes of Disease", {
   i: "Pathology is the study of disease: its causes, mechanisms, changes in the body and outcomes.",
   s: "When an animal is sick, pathology asks what went wrong (etiology), how it developed (pathogenesis), what changed in the organs (lesions) and what the result is. It links basic science to clinical work.",
@@ -998,7 +998,7 @@ topic("path", "Circulatory Disturbances: Haemorrhage, Thrombosis, Oedema, Shock"
   d: ["Study disseminated intravascular coagulation.", "Learn the stages of shock."]
 });
 
-unit("path", "Unit 2 – Inflammation, repair and growth");
+unit("path", "Unit 2 â€“ Inflammation, repair and growth");
 topic("path", "Inflammation and Healing", {
   i: "Inflammation is the body's response to injury. Healing repairs the damage. Both are major topics in pathology.",
   s: "Inflammation brings blood, fluid and defence cells to the injured place. The five old signs are redness, heat, swelling, pain and loss of function. Healing follows by repair with new cells or scar.",
@@ -1048,7 +1048,7 @@ topic("path", "Neoplasia and Systemic Pathology Outline", {
 planned("path", ["Pathology of the respiratory system", "Pathology of the digestive system", "Pathology of the liver and pancreas", "Pathology of the urinary system", "Pathology of the nervous system", "Pathology of the reproductive system", "Pathology of the cardiovascular system", "Pathology of bone, joint and muscle", "Avian pathology", "Clinical pathology: haematology, urinalysis, cytology", "Veterinary toxicopathology", "Necropsy techniques step by step"]);
 
 /* ================= NUTRITION ================= */
-unit("nutr", "Unit 1 – Nutrient basics");
+unit("nutr", "Unit 1 â€“ Nutrient basics");
 topic("nutr", "Introduction: Nutrients, Feed Analysis and Terms", {
   i: "Animal nutrition is about feeding animals so that they grow, produce, reproduce and stay healthy at a cost the farmer can afford.",
   s: "Feed contains water, carbohydrates, proteins, fats, minerals and vitamins. Nutrition is learning what each animal needs, what each feed offers, and how to match the two.",
@@ -1114,7 +1114,7 @@ topic("nutr", "Minerals, Vitamins and Water", {
   d: ["Study mineral interactions.", "Learn water quality standards for livestock."]
 });
 
-unit("nutr", "Unit 2 – Feeding practice");
+unit("nutr", "Unit 2 â€“ Feeding practice");
 topic("nutr", "Feeding of Ruminants, Pigs and Poultry: Concepts", {
   i: "Different species digest feed differently, so they are fed differently. This topic gives the main ideas, not a ration for a real farm.",
   s: "Ruminants get most energy from fibre by microbes. Pigs and poultry are simple-stomached and need more concentrated, balanced diets. Always follow feeding standards or local advice for actual rations.",
@@ -1162,7 +1162,7 @@ topic("nutr", "Fodder Production, Conservation and Feed Technology", {
 planned("nutr", ["Ruminant nutrition: energy and protein systems in depth", "Feed formulation methods", "Nutrition of laboratory and companion animals", "Feed additives and antinutritional factors", "Mycotoxins in feeds", "Nutrition and reproduction", "Feeding standards (ICAR, NRC)", "Nutritional disorders of livestock"]);
 
 /* ================= PUBLIC HEALTH ================= */
-unit("pubh", "Unit 1 – Public health and epidemiology");
+unit("pubh", "Unit 1 â€“ Public health and epidemiology");
 topic("pubh", "Epidemiology: Concepts and Measures", {
   i: "Epidemiology studies the distribution and determinants of disease in populations. It asks who, where, when and why.",
   s: "A clinician treats one animal. An epidemiologist looks at the herd, the village or the district and asks why some get sick and others do not.",
@@ -1230,7 +1230,7 @@ topic("pubh", "Food Safety, Meat and Milk Hygiene", {
 });
 planned("pubh", ["Veterinary epidemiology study designs and statistics", "Disease surveillance and reporting systems", "National disease control programmes in India", "Environmental hygiene and waste disposal", "Animal welfare and legislation", "Biosecurity and quarantine", "Disaster and outbreak management", "Veterinary jurisprudence"]);
 /* ================= GENETICS ================= */
-unit("gen", "Unit 1 – Genetics basics");
+unit("gen", "Unit 1 â€“ Genetics basics");
 topic("gen", "Mendelian Genetics and Gene Interactions", {
   i: "Genetics is the study of heredity and variation. Breeding programmes depend on understanding how traits pass from parents to offspring.",
   s: "Each animal carries two copies of most genes, one from each parent. Some versions of a gene hide others. That simple idea explains many coat colours and inherited defects.",
@@ -1275,7 +1275,7 @@ topic("gen", "Population and Quantitative Genetics", {
   d: ["Practise heritability and response calculations.", "Study progeny testing."]
 });
 
-unit("gen", "Unit 2 – Breeding methods");
+unit("gen", "Unit 2 â€“ Breeding methods");
 topic("gen", "Selection, Breeding Systems and Livestock Breeds of India", {
   i: "Breeders improve livestock through selection of the best parents and by planned mating systems.",
   s: "Choose the best animals as parents, and mate them in the way that fits your goal: purebreeding, crossbreeding or upgrading. India has many indigenous breeds well adapted to local conditions.",
@@ -1301,7 +1301,7 @@ topic("gen", "Selection, Breeding Systems and Livestock Breeds of India", {
 planned("gen", ["Cytogenetics and chromosome abnormalities", "Molecular genetics and DNA technology", "Immunogenetics and blood groups", "Genetics of coat colour", "Poultry breeding", "Selection index and genomic selection in depth", "Conservation of indigenous breeds", "Statistics for genetics"]);
 
 /* ================= LIVESTOCK PRODUCTION MANAGEMENT ================= */
-unit("lpm", "Unit 1 – Cattle and buffalo");
+unit("lpm", "Unit 1 â€“ Cattle and buffalo");
 topic("lpm", "Dairy Cattle and Buffalo Management", {
   i: "Good dairy management turns genetic and feed potential into milk, with healthy animals and healthy calves.",
   s: "Housing, feeding, milking, breeding and health care all work together. A weak point in any one of these lowers the whole farm's profit.",
@@ -1325,7 +1325,7 @@ topic("lpm", "Dairy Cattle and Buffalo Management", {
   d: ["Study dairy farm design.", "Learn clean milk production."]
 });
 
-unit("lpm", "Unit 2 – Small ruminants, pigs, poultry");
+unit("lpm", "Unit 2 â€“ Small ruminants, pigs, poultry");
 topic("lpm", "Sheep, Goat and Pig Management", {
   i: "Small ruminants and pigs give fast returns and fit small farmers, if managed carefully.",
   s: "Goats and sheep reproduce quickly and use poor land. Pigs convert waste and feed to meat fast. All three need clean housing, good feed and disease prevention.",
@@ -1371,7 +1371,7 @@ topic("lpm", "Poultry Management", {
 planned("lpm", ["Management of horses, donkeys, camels", "Zoo, laboratory and companion animal management", "Housing design and equipment", "Fodder planning for the farm", "Hatchery technology", "Integrated farming systems", "Project preparation and farm economics", "Climate change and livestock"]);
 
 /* ================= LIVESTOCK PRODUCTS TECHNOLOGY ================= */
-unit("lpt", "Unit 1 – Milk and meat");
+unit("lpt", "Unit 1 â€“ Milk and meat");
 topic("lpt", "Milk: Composition, Properties and Processing", {
   i: "Milk is a nutritious fluid and an ideal medium for bacteria. Technology aims at keeping it safe and turning it into useful products.",
   s: "Milk is water, fat, protein, lactose and minerals. Heat treatment kills harmful germs. From milk we make curd, butter, ghee, cheese and many other products.",
@@ -1419,7 +1419,7 @@ topic("lpt", "Meat Science and Technology", {
   d: ["Study slaughterhouse design and by-product utilisation.", "Learn sausage manufacture."]
 });
 
-unit("lpt", "Unit 2 – Eggs and other products");
+unit("lpt", "Unit 2 â€“ Eggs and other products");
 topic("lpt", "Eggs, Poultry Products and By-products", {
   i: "Eggs are a complete, cheap protein food that spoil easily. Quality grading, storage and processing protect their value.",
   s: "An egg has a shell, shell membranes, white (albumen) and yolk. Fresh eggs have a thick white and a high yolk. Storage and handling decide how long they stay good.",
@@ -1443,7 +1443,7 @@ topic("lpt", "Eggs, Poultry Products and By-products", {
 });
 planned("lpt", ["Cheese and fermented milk technology", "Dairy plant design and operation", "Meat plant design and by-product utilisation", "Packaging of animal products", "Fish products technology", "Quality assurance in food industry", "Wool and hair technology", "Value addition and entrepreneurship"]);
 /* ================= GYNAECOLOGY AND OBSTETRICS ================= */
-unit("gyn", "Unit 1 – Reproduction basics");
+unit("gyn", "Unit 1 â€“ Reproduction basics");
 topic("gyn", "Reproductive Cycles and Oestrus", {
   i: "Understanding the oestrous cycle is the basis of breeding management, artificial insemination and fertility work.",
   s: "Females come into heat at regular intervals. Hormones from the brain, pituitary and ovary control it. Knowing the cycle tells you when to inseminate and when to suspect a problem.",
@@ -1489,7 +1489,7 @@ topic("gyn", "Pregnancy, Pregnancy Diagnosis and Placentation", {
   d: ["Study foetal membranes and fluids.", "Learn ultrasonographic findings."]
 });
 
-unit("gyn", "Unit 2 – Parturition and its problems");
+unit("gyn", "Unit 2 â€“ Parturition and its problems");
 topic("gyn", "Normal Parturition and Obstetrical Terms", {
   i: "Parturition is the process of giving birth. Knowing the normal process helps decide when help is needed.",
   s: "Birth has three stages: preparation and cervical opening, delivery of the young, and passing of the afterbirth. If any stage is delayed beyond normal, call a veterinarian.",
@@ -1538,7 +1538,7 @@ topic("gyn", "Reproductive Disorders and Infertility: An Overview", {
 planned("gyn", ["Anatomy of the male and female reproductive tracts in depth", "Semen collection, evaluation and preservation", "Artificial insemination technique", "Dystocia: causes and classification", "Caesarean section and obstetrical surgery concepts", "Reproduction in dogs and cats", "Reproduction in poultry", "Embryo transfer and assisted reproduction", "Neonatal care"]);
 
 /* ================= SURGERY AND RADIOLOGY ================= */
-unit("surg", "Unit 1 – Principles of surgery");
+unit("surg", "Unit 1 â€“ Principles of surgery");
 topic("surg", "Surgical Principles, Asepsis and Wound Management", {
   i: "Surgery is the treatment of disease or injury by operative procedures. Success depends on good principles before technique.",
   s: "Keep things clean, handle tissue gently, stop bleeding, close without tension and think about pain and aftercare. These apply to every surgery from castration to caesarean section.",
@@ -1584,7 +1584,7 @@ topic("surg", "Anaesthesia, Pain Relief and Restraint: Concepts", {
   d: ["Learn the equipment of an anaesthetic machine.", "Study pre-anaesthetic drugs and their effects."]
 });
 
-unit("surg", "Unit 2 – Common conditions and imaging");
+unit("surg", "Unit 2 â€“ Common conditions and imaging");
 topic("surg", "Common Surgical Conditions in Large and Small Animals: Overview", {
   i: "A map of common surgical problems, so you recognise them and understand why they need a veterinarian.",
   s: "Hernias, abscesses, fractures and obstructions are frequent. Learn the idea behind each, not a recipe. Surgery for real animals is done under supervision after proper training.",
@@ -1631,7 +1631,7 @@ topic("surg", "Veterinary Radiology and Diagnostic Imaging", {
 planned("surg", ["Surgery of the head, neck and thorax", "Abdominal surgery", "Orthopaedic surgery in detail", "Ophthalmic surgery", "Surgery of the hoof and claw", "Castration and other herd procedures", "Reconstructive surgery", "Critical care and fluid therapy", "Advanced imaging: CT, MRI", "Surgical instruments and their uses"]);
 
 /* ================= VETERINARY MEDICINE ================= */
-unit("med", "Unit 1 – Principles of medicine");
+unit("med", "Unit 1 â€“ Principles of medicine");
 topic("med", "Approach to Disease: History, Examination and Diagnosis", {
   i: "A systematic approach finds the cause of illness faster and more reliably than guessing.",
   s: "Listen, look, then examine. Think of what could be wrong, and then test your ideas. Vital signs are the quickest clues.",
@@ -1655,7 +1655,7 @@ topic("med", "Approach to Disease: History, Examination and Diagnosis", {
   d: ["Practise TPR on animals under supervision.", "Study clinical examination of each system."]
 });
 
-unit("med", "Unit 2 – Diseases by system");
+unit("med", "Unit 2 â€“ Diseases by system");
 topic("med", "Digestive Diseases of Ruminants and Others: Concepts", {
   i: "Digestive disorders are among the commonest problems in cattle, buffaloes, sheep and goats.",
   s: "Rumen problems follow wrong feeding. Think about what the animal ate, when, and how the rumen microbes respond. Treatment belongs to the veterinarian.",
@@ -1704,7 +1704,7 @@ topic("med", "Respiratory, Cardiovascular and Other System Diseases: Overview", 
 });
 planned("med", ["Diseases of poultry (full systematic treatment)", "Diseases of pigs", "Diseases of horses", "Diseases of dogs and cats", "Diseases of sheep and goats", "Metabolic and deficiency diseases in depth", "Toxicological emergencies", "Skin diseases", "Neurological disorders", "Clinical pathology interpretation", "Therapeutic concepts and fluid balance", "Preventive medicine and vaccination schedules"]);
 /* ================= EXTENSION ================= */
-unit("ext", "Unit 1 – Extension basics");
+unit("ext", "Unit 1 â€“ Extension basics");
 topic("ext", "Extension Education: Concepts, Principles and Methods", {
   i: "Extension education takes useful knowledge from research and veterinary science to farmers and helps them use it.",
   s: "A vet who knows a lot but can't get farmers to act on it has little impact. Extension is about communicating well, building trust and helping people decide for themselves.",
@@ -1753,7 +1753,7 @@ topic("ext", "Livestock Extension in India: Programmes, Institutions and Farmer 
 planned("ext", ["Adult education and learning principles", "Rural sociology", "Leadership in extension", "Social change and diffusion in depth", "Evaluation research in extension", "Entrepreneurship in animal husbandry", "Gender and livestock", "ICT tools for veterinary extension"]);
 
 /* ================= CLINICAL PRACTICE ================= */
-unit("clin", "Unit 1 – Clinical skills");
+unit("clin", "Unit 1 â€“ Clinical skills");
 topic("clin", "Clinical Examination Skills and Case Records", {
   i: "A vet's first skill is looking carefully and recording accurately. Good records protect the animal, the owner and you.",
   s: "Approach the animal calmly. Observe from a distance, then examine up close. Write what you find, in the same order each time.",
@@ -1802,7 +1802,7 @@ topic("clin", "Clinical Procedures, Biosafety and Professional Ethics: Concepts"
 planned("clin", ["Clinical examination of each species in detail", "Clinical laboratory interpretation", "Emergency and critical care concepts", "Dental and oral examination", "Ambulatory (field) practice", "Zoo and wildlife handling", "Practice management and economics", "Medical records and certification"]);
 
 /* ================= FARM PRACTICES ================= */
-unit("farm", "Unit 1 – On the farm");
+unit("farm", "Unit 1 â€“ On the farm");
 topic("farm", "Livestock Farm Routines, Records and Biosecurity", {
   i: "Hands-on farm practices turn theory into daily routine. A well-run farm has clear schedules, clean systems and good records.",
   s: "Every farm runs on routine: feeding, watering, cleaning, milking or egg collection, observation and records. Small habits, done daily, prevent most big problems.",
@@ -2192,7 +2192,7 @@ const GLOSS_RAW = [
 ];
 const GLOSS = GLOSS_RAW.map(l => { const p = l.split("|"); return [p[0], p[1], p.slice(2).join("|")]; }).sort((a, b) => a[0].localeCompare(b[0]));
 /* ================= ENGINE ================= */
-const KEY = "vetnest_state_v2";
+const KEY = "VetNet_state_v2";
 let storageOK = true;
 const S = { bm: [], gbm: [], done: [], recent: [], notes: {}, tasks: [], pins: {}, logs: [], chk: {}, last: null, theme: "light", fs: 18, mode: "simple", folders: ["General"], snips: [] };
 try { const raw = localStorage.getItem(KEY); if (raw) Object.assign(S, JSON.parse(raw)); } catch (e) { storageOK = false; }
@@ -2248,13 +2248,13 @@ function route() {
 /* ---------- home ---------- */
 function renderHome() {
   const nQ = TOPICS.reduce((a, t) => a + (t.q ? t.q.length : 0), 0), nF = TOPICS.reduce((a, t) => a + (t.f ? t.f.length : 0), 0);
-  $("#stats").textContent = TOPICS.length + " study topics · " + nQ + " practice MCQs · " + nF + " flashcards · " + GLOSS.length + " glossary terms · 18 subjects";
+  $("#stats").textContent = TOPICS.length + " study topics Â· " + nQ + " practice MCQs Â· " + nF + " flashcards Â· " + GLOSS.length + " glossary terms Â· 18 subjects";
   const last = S.last && T[S.last] ? S.last : null;
   $("#hContinue").innerHTML = last ? "<p>" + tLink(last) + '<br><span class="meta">' + esc(SUBJ[T[last].s].name) + '</span></p><a class="btn small" href="#reader/' + last + '">Continue</a>' : '<p class="empty">Nothing yet. Open a subject and start with any topic.</p><a class="btn small" href="#subjects">Browse subjects</a>';
   $("#readBtn").setAttribute("href", "#reader/" + (last || "anat1"));
   const list = (ids, empty) => { ids = ids.filter(id => T[id]); return ids.length ? '<ul class="list">' + ids.slice(0, 5).map(id => "<li>" + tLink(id) + "</li>").join("") + "</ul>" : '<p class="empty">' + empty + "</p>"; };
   $("#hRecent").innerHTML = list(S.recent, "Topics you open will show up here.");
-  $("#hBook").innerHTML = list(S.bm, "Tap ☆ Bookmark inside any topic.");
+  $("#hBook").innerHTML = list(S.bm, "Tap â˜† Bookmark inside any topic.");
   const dn = S.done.filter(id => T[id]);
   $("#hDone").innerHTML = dn.length ? "<p><b>" + dn.length + "</b> completed</p>" + list(dn, "") : '<p class="empty">Mark a topic as completed when you finish it.</p>';
   const td = S.tasks.filter(x => x.due === today() && !x.done);
@@ -2295,11 +2295,11 @@ function drawTopicSearch() {
 function renderSubject(sid) {
   const s = SUBJ[sid], box = $("#subjectView");
   if (!s) { box.innerHTML = '<p class="empty">Subject not found. <a href="#subjects">Back</a></p>'; return; }
-  let h = '<nav class="crumbs"><a href="#subjects">Subjects</a> › ' + esc(s.name) + "</nav><h1>" + s.icon + " " + esc(s.name) + "</h1><p>" + esc(s.blurb) + '</p><p class="notice">Study modules written as learning aids, not the complete official syllabus. Please verify the curriculum and examination requirements against your current college syllabus.</p>';
+  let h = '<nav class="crumbs"><a href="#subjects">Subjects</a> â€º ' + esc(s.name) + "</nav><h1>" + s.icon + " " + esc(s.name) + "</h1><p>" + esc(s.blurb) + '</p><p class="notice">Study modules written as learning aids, not the complete official syllabus. Please verify the curriculum and examination requirements against your current college syllabus.</p>';
   const doneN = ORDER[sid].filter(id => S.done.includes(id)).length;
-  h += '<p class="meta">' + ORDER[sid].length + " topics · " + doneN + " completed by you · " + mcqCount(sid) + ' practice MCQs</p><div class="row"><a class="btn" href="#reader/' + ORDER[sid][0] + '">Start from topic 1</a><a class="btn ghost" href="#quiz/' + sid + '">Practise MCQs</a><a class="btn ghost" href="#exam">Exam prep</a></div>';
+  h += '<p class="meta">' + ORDER[sid].length + " topics Â· " + doneN + " completed by you Â· " + mcqCount(sid) + ' practice MCQs</p><div class="row"><a class="btn" href="#reader/' + ORDER[sid][0] + '">Start from topic 1</a><a class="btn ghost" href="#quiz/' + sid + '">Practise MCQs</a><a class="btn ghost" href="#exam">Exam prep</a></div>';
   UNITS[sid].forEach(u => {
-    h += '<div class="card"><h3>' + esc(u[0]) + '</h3><ul class="list">' + u[1].map(id => { const t = T[id]; return "<li><span>" + (S.done.includes(id) ? '<span class="ok">✓</span> ' : "") + (S.bm.includes(id) ? "★ " : "") + tLink(id) + '</span><span class="meta">' + mins(t) + " min read · " + t.q.length + " MCQs</span></li>"; }).join("") + "</ul></div>";
+    h += '<div class="card"><h3>' + esc(u[0]) + '</h3><ul class="list">' + u[1].map(id => { const t = T[id]; return "<li><span>" + (S.done.includes(id) ? '<span class="ok">âœ“</span> ' : "") + (S.bm.includes(id) ? "â˜… " : "") + tLink(id) + '</span><span class="meta">' + mins(t) + " min read Â· " + t.q.length + " MCQs</span></li>"; }).join("") + "</ul></div>";
   });
   if (PLANNED[sid].length) h += '<div class="card"><h3>Still to explore (not written yet)</h3><p class="meta">These topics belong to this subject but have no study notes on VetNet yet. Use your textbooks for them, and save your own notes in the Notebook.</p><ul class="more">' + PLANNED[sid].map(x => "<li>" + esc(x) + "</li>").join("") + "</ul></div>";
   box.innerHTML = h;
@@ -2315,8 +2315,8 @@ function renderReader(id) {
   box.style.setProperty("--fs", S.fs + "px");
   const ord = ORDER[t.s], pos = ord.indexOf(id), prev = ord[pos - 1], next = ord[pos + 1];
   let h = '<button class="btn small focus-exit" data-act="focus">Exit focus mode</button>';
-  h += '<nav class="crumbs"><a href="#subjects">Subjects</a> › <a href="#subject/' + t.s + '">' + esc(SUBJ[t.s].name) + "</a> › " + esc(t.t) + "</nav><h1>" + esc(t.t) + '</h1><p class="meta">' + SUBJ[t.s].icon + " " + esc(SUBJ[t.s].name) + " · about " + mins(t) + " min read · study aid, not the official syllabus</p>";
-  h += '<div class="tools no-focus"><button data-act="simple" class="' + (S.mode === "simple" ? "on" : "") + '">Explain it simply</button><button data-act="detail" class="' + (S.mode === "detail" ? "on" : "") + '">Detailed notes</button><button data-act="fsdown" aria-label="Smaller text">A−</button><button data-act="fsup" aria-label="Larger text">A+</button><button data-act="focus">Focus mode</button><button data-act="bm">' + (S.bm.includes(id) ? "★ Bookmarked" : "☆ Bookmark") + '</button><button data-act="done">' + (S.done.includes(id) ? "✓ Completed" : "Mark completed") + '</button><input id="inTopic" type="search" placeholder="Search in this topic…" aria-label="Search in this topic"></div><p id="inMsg" class="meta"></p>';
+  h += '<nav class="crumbs"><a href="#subjects">Subjects</a> â€º <a href="#subject/' + t.s + '">' + esc(SUBJ[t.s].name) + "</a> â€º " + esc(t.t) + "</nav><h1>" + esc(t.t) + '</h1><p class="meta">' + SUBJ[t.s].icon + " " + esc(SUBJ[t.s].name) + " Â· about " + mins(t) + " min read Â· study aid, not the official syllabus</p>";
+  h += '<div class="tools no-focus"><button data-act="simple" class="' + (S.mode === "simple" ? "on" : "") + '">Explain it simply</button><button data-act="detail" class="' + (S.mode === "detail" ? "on" : "") + '">Detailed notes</button><button data-act="fsdown" aria-label="Smaller text">Aâˆ’</button><button data-act="fsup" aria-label="Larger text">A+</button><button data-act="focus">Focus mode</button><button data-act="bm">' + (S.bm.includes(id) ? "â˜… Bookmarked" : "â˜† Bookmark") + '</button><button data-act="done">' + (S.done.includes(id) ? "âœ“ Completed" : "Mark completed") + '</button><input id="inTopic" type="search" placeholder="Search in this topicâ€¦" aria-label="Search in this topic"></div><p id="inMsg" class="meta"></p>';
   h += '<p class="meta no-focus">Tip: select any sentence or paragraph below and tap "Save to notebook" to keep it in your own folder.</p>';
   h += '<div class="body">';
   h += sec("Introduction", "<p>" + esc(t.i) + "</p>");
@@ -2339,8 +2339,8 @@ function renderReader(id) {
   const rel = related(t);
   if (rel.length) h += sec("Related topics", "<ul>" + rel.map(r => "<li>" + tLink(r) + ' <span class="meta">(' + esc(SUBJ[T[r].s].name) + ")</span></li>").join("") + "</ul>");
   h += "</div>";
-  h += '<details class="sec" open><summary>My quick note for this topic (saved on this device)</summary><div class="secbody"><textarea id="noteBox" rows="4" placeholder="Write your own note…" aria-label="My note">' + esc(S.notes[id] || "") + '</textarea><div class="row"><button class="btn small" data-act="savenote">Save note</button><button class="btn small ghost" data-act="delnote">Delete note</button><span id="noteMsg" class="meta"></span></div><p class="meta">Notes stay in this browser only. They do not sync to other devices.</p></div></details>';
-  h += '<div class="nav2 no-focus">' + (prev ? '<a class="btn ghost" href="#reader/' + prev + '">← ' + esc(T[prev].t) + "</a>" : "<span></span>") + (next ? '<a class="btn ghost" href="#reader/' + next + '">' + esc(T[next].t) + " →</a>" : "<span></span>") + "</div>";
+  h += '<details class="sec" open><summary>My quick note for this topic (saved on this device)</summary><div class="secbody"><textarea id="noteBox" rows="4" placeholder="Write your own noteâ€¦" aria-label="My note">' + esc(S.notes[id] || "") + '</textarea><div class="row"><button class="btn small" data-act="savenote">Save note</button><button class="btn small ghost" data-act="delnote">Delete note</button><span id="noteMsg" class="meta"></span></div><p class="meta">Notes stay in this browser only. They do not sync to other devices.</p></div></details>';
+  h += '<div class="nav2 no-focus">' + (prev ? '<a class="btn ghost" href="#reader/' + prev + '">â† ' + esc(T[prev].t) + "</a>" : "<span></span>") + (next ? '<a class="btn ghost" href="#reader/' + next + '">' + esc(T[next].t) + " â†’</a>" : "<span></span>") + "</div>";
   box.innerHTML = h;
 }
 function readerClick(e) {
@@ -2359,8 +2359,8 @@ function readerClick(e) {
   if (a === "simple" || a === "detail") { const tmp = $("#noteBox").value; S.mode = a; save(); const y = window.scrollY; renderReader(curId); $("#noteBox").value = tmp; window.scrollTo(0, y); }
   else if (a === "fsup" || a === "fsdown") { S.fs = Math.max(15, Math.min(26, S.fs + (a === "fsup" ? 1 : -1))); save(); box.style.setProperty("--fs", S.fs + "px"); }
   else if (a === "focus") document.body.classList.toggle("focus");
-  else if (a === "bm") { S.bm = S.bm.includes(curId) ? S.bm.filter(x => x !== curId) : S.bm.concat(curId); save(); b.textContent = S.bm.includes(curId) ? "★ Bookmarked" : "☆ Bookmark"; }
-  else if (a === "done") { S.done = S.done.includes(curId) ? S.done.filter(x => x !== curId) : S.done.concat(curId); save(); b.textContent = S.done.includes(curId) ? "✓ Completed" : "Mark completed"; }
+  else if (a === "bm") { S.bm = S.bm.includes(curId) ? S.bm.filter(x => x !== curId) : S.bm.concat(curId); save(); b.textContent = S.bm.includes(curId) ? "â˜… Bookmarked" : "â˜† Bookmark"; }
+  else if (a === "done") { S.done = S.done.includes(curId) ? S.done.filter(x => x !== curId) : S.done.concat(curId); save(); b.textContent = S.done.includes(curId) ? "âœ“ Completed" : "Mark completed"; }
   else if (a === "savenote") { const v = $("#noteBox").value.trim(); if (v) S.notes[curId] = v; else delete S.notes[curId]; save(); $("#noteMsg").textContent = storageOK ? "Saved." : "Could not save: browser storage is blocked."; }
   else if (a === "delnote") { delete S.notes[curId]; save(); $("#noteBox").value = ""; $("#noteMsg").textContent = "Note deleted."; }
 }
@@ -2384,13 +2384,13 @@ function checkSel() {
   if (node.closest("textarea,input,#modal,#selBar")) { hideSel(); return; }
   selText = sel.toString().replace(/[ \t]+/g, " ").replace(/\n{3,}/g, "\n\n").trim();
   selSrc = curId && $("#page-reader").classList.contains("active") ? curId : null;
-  $("#selTxt").textContent = "“" + (txt.length > 70 ? txt.slice(0, 70) + "…" : txt) + "”";
+  $("#selTxt").textContent = "â€œ" + (txt.length > 70 ? txt.slice(0, 70) + "â€¦" : txt) + "â€";
   $("#selBar").hidden = false;
 }
 let selTimer = null;
 document.addEventListener("selectionchange", () => { clearTimeout(selTimer); selTimer = setTimeout(checkSel, 250); });
 function toBullets(text) {
-  let parts = text.split(/\n+/).map(x => x.replace(/^[-•*\d.)\s]+/, "").trim()).filter(Boolean);
+  let parts = text.split(/\n+/).map(x => x.replace(/^[-â€¢*\d.)\s]+/, "").trim()).filter(Boolean);
   if (parts.length < 2) parts = (text.match(/[^.;!?]+[.;!?]*/g) || [text]).map(x => x.trim()).filter(Boolean);
   return parts;
 }
@@ -2410,7 +2410,7 @@ function saveSnip() {
   S.snips.unshift({ id: Date.now() + Math.floor(Math.random() * 1000), folder: folder, kind: kind, lines: kind === "bullets" ? toBullets(text) : [text], src: selSrc, date: today() });
   save(); $("#modal").hidden = true; hideSel();
   try { window.getSelection().removeAllRanges(); } catch (e) { }
-  $("#selTxt").textContent = "Saved to “" + folder + "” ✓"; $("#selBar").hidden = false; $("#selSave").hidden = true;
+  $("#selTxt").textContent = "Saved to â€œ" + folder + "â€ âœ“"; $("#selBar").hidden = false; $("#selSave").hidden = true;
   setTimeout(() => { $("#selBar").hidden = true; $("#selSave").hidden = false; }, 1600);
 }
 
@@ -2423,41 +2423,41 @@ function drawNotebook() {
   let list = S.snips.filter(s => (nbFolder === "All" || s.folder === nbFolder) && (!nbQ || s.lines.join(" ").toLowerCase().includes(nbQ)));
   let h = "<h1>My Notebook</h1><p class='notice'>Select any text while reading (topics, glossary, exam prep) and tap <b>Save to notebook</b>. Keep it as a note or turn it into bullet points, and file it in your own folder. Everything is saved only in this browser on this device. Use My Space to download a backup.</p>";
   h += '<div class="nbwrap"><aside><div class="folders">';
-  ["All"].concat(S.folders).forEach(f => { h += '<button data-nbf="' + esc(f) + '" class="' + (f === nbFolder ? "on" : "") + '">' + (f === "All" ? "📚 All snippets" : "📁 " + esc(f)) + " (" + cnt(f) + ")</button>"; });
-  h += '</div><form id="nbAdd" class="row"><input id="nbNew" type="text" placeholder="New folder name…" aria-label="New folder name"><button class="btn small" type="submit">Add folder</button></form>';
+  ["All"].concat(S.folders).forEach(f => { h += '<button data-nbf="' + esc(f) + '" class="' + (f === nbFolder ? "on" : "") + '">' + (f === "All" ? "ðŸ“š All snippets" : "ðŸ“ " + esc(f)) + " (" + cnt(f) + ")</button>"; });
+  h += '</div><form id="nbAdd" class="row"><input id="nbNew" type="text" placeholder="New folder nameâ€¦" aria-label="New folder name"><button class="btn small" type="submit">Add folder</button></form>';
   if (nbFolder !== "All") h += '<div class="row"><button class="btn small ghost" data-nbren="1">Rename folder</button>' + (nbFolder !== "General" ? '<button class="btn small ghost" data-nbdel="1">Delete folder</button>' : "") + '<button class="btn small ghost" data-nbexp="1">Download folder (.txt)</button></div>';
   else h += '<div class="row"><button class="btn small ghost" data-nbexp="1">Download everything (.txt)</button></div>';
-  h += '</aside><section><div class="row"><input id="nbSearch" type="search" placeholder="Search my notebook…" value="' + esc(nbQ) + '" aria-label="Search notebook"></div>';
+  h += '</aside><section><div class="row"><input id="nbSearch" type="search" placeholder="Search my notebookâ€¦" value="' + esc(nbQ) + '" aria-label="Search notebook"></div>';
   if (!list.length) h += '<p class="empty">' + (S.snips.length ? "Nothing matches here." : "Your notebook is empty. Open any topic, select a sentence, and save it.") + "</p>";
   list.forEach(s => {
     const body = s.kind === "bullets" ? "<ul>" + s.lines.map(l => "<li>" + esc(l) + "</li>").join("") + "</ul>" : "<p>" + esc(s.lines.join("\n")).replace(/\n/g, "<br>") + "</p>";
-    h += '<div class="snip" data-id="' + s.id + '">' + body + '<p class="src">📁 ' + esc(s.folder) + " · " + s.date + (s.src && T[s.src] ? ' · from <a href="#reader/' + s.src + '">' + esc(T[s.src].t) + "</a>" : "") + '</p><div class="row"><button class="btn small ghost" data-edit="' + s.id + '">Edit</button><select data-move="' + s.id + '" aria-label="Move to folder">' + S.folders.map(f => "<option" + (f === s.folder ? " selected" : "") + ">" + esc(f) + "</option>").join("") + '</select><button class="btn small ghost" data-copy="' + s.id + '">Copy</button><button class="btn small ghost" data-delsnip="' + s.id + '">Delete</button></div></div>';
+    h += '<div class="snip" data-id="' + s.id + '">' + body + '<p class="src">ðŸ“ ' + esc(s.folder) + " Â· " + s.date + (s.src && T[s.src] ? ' Â· from <a href="#reader/' + s.src + '">' + esc(T[s.src].t) + "</a>" : "") + '</p><div class="row"><button class="btn small ghost" data-edit="' + s.id + '">Edit</button><select data-move="' + s.id + '" aria-label="Move to folder">' + S.folders.map(f => "<option" + (f === s.folder ? " selected" : "") + ">" + esc(f) + "</option>").join("") + '</select><button class="btn small ghost" data-copy="' + s.id + '">Copy</button><button class="btn small ghost" data-delsnip="' + s.id + '">Delete</button></div></div>';
   });
   h += "</section></div>";
   box.innerHTML = h;
 }
-function snipText(s) { return s.kind === "bullets" ? s.lines.map(l => "• " + l).join("\n") : s.lines.join("\n"); }
+function snipText(s) { return s.kind === "bullets" ? s.lines.map(l => "â€¢ " + l).join("\n") : s.lines.join("\n"); }
 function nbClick(e) {
   const t = e.target;
   const fb = t.closest("[data-nbf]");
   if (fb) { nbFolder = fb.dataset.nbf; drawNotebook(); return; }
   if (t.dataset.nbren) {
-    const nn = (prompt("New name for folder “" + nbFolder + "”:", nbFolder) || "").trim();
+    const nn = (prompt("New name for folder â€œ" + nbFolder + "â€:", nbFolder) || "").trim();
     if (nn && nn !== nbFolder && !S.folders.includes(nn)) { S.folders = S.folders.map(f => f === nbFolder ? nn : f); S.snips.forEach(s => { if (s.folder === nbFolder) s.folder = nn; }); nbFolder = nn; save(); drawNotebook(); }
   } else if (t.dataset.nbdel) {
-    if (confirm("Delete folder “" + nbFolder + "”? Its snippets will move to General.")) { S.snips.forEach(s => { if (s.folder === nbFolder) s.folder = "General"; }); S.folders = S.folders.filter(f => f !== nbFolder); nbFolder = "All"; save(); drawNotebook(); }
+    if (confirm("Delete folder â€œ" + nbFolder + "â€? Its snippets will move to General.")) { S.snips.forEach(s => { if (s.folder === nbFolder) s.folder = "General"; }); S.folders = S.folders.filter(f => f !== nbFolder); nbFolder = "All"; save(); drawNotebook(); }
   } else if (t.dataset.nbexp) {
     const items = S.snips.filter(s => nbFolder === "All" || s.folder === nbFolder);
     if (!items.length) return;
-    let out = "VetNet notebook – " + (nbFolder === "All" ? "all folders" : nbFolder) + " – " + today() + "\n\n";
+    let out = "VetNet notebook â€“ " + (nbFolder === "All" ? "all folders" : nbFolder) + " â€“ " + today() + "\n\n";
     S.folders.forEach(f => { const a = items.filter(s => s.folder === f); if (a.length) { out += "== " + f + " ==\n"; a.forEach(s => { out += snipText(s) + (s.src && T[s.src] ? "\n   (from: " + T[s.src].t + ")" : "") + "\n\n"; }); } });
     const blob = new Blob([out], { type: "text/plain" }), a = document.createElement("a");
-    a.href = URL.createObjectURL(blob); a.download = "vetnest-notebook.txt"; a.click(); URL.revokeObjectURL(a.href);
+    a.href = URL.createObjectURL(blob); a.download = "VetNet-notebook.txt"; a.click(); URL.revokeObjectURL(a.href);
   } else if (t.dataset.delsnip) {
     S.snips = S.snips.filter(s => String(s.id) !== t.dataset.delsnip); save(); drawNotebook();
   } else if (t.dataset.copy) {
     const s = S.snips.find(x => String(x.id) === t.dataset.copy);
-    if (s) { try { navigator.clipboard.writeText(snipText(s)); t.textContent = "Copied ✓"; } catch (er) { t.textContent = "Copy not allowed"; } }
+    if (s) { try { navigator.clipboard.writeText(snipText(s)); t.textContent = "Copied âœ“"; } catch (er) { t.textContent = "Copy not allowed"; } }
   } else if (t.dataset.edit) {
     const s = S.snips.find(x => String(x.id) === t.dataset.edit); if (!s) return;
     const card = t.closest(".snip");
@@ -2506,7 +2506,7 @@ function startQuiz(f, list, n) {
 function showQ() {
   const q = Q.pool[Q.i];
   Q.opts = shuffle(q.o.map((t, k) => ({ t: t, ok: k === q.a }))); Q.locked = false;
-  $("#qzPlay").innerHTML = '<p class="meta">Question ' + (Q.i + 1) + " of " + Q.pool.length + " · Score " + Q.score + " · " + esc(SUBJ[T[q.t].s].name) + "</p><h2>" + esc(q.q) + '</h2><div class="opts">' + Q.opts.map((o, k) => '<button class="opt" data-k="' + k + '">' + esc(o.t) + "</button>").join("") + '</div><div id="qzFb"></div>';
+  $("#qzPlay").innerHTML = '<p class="meta">Question ' + (Q.i + 1) + " of " + Q.pool.length + " Â· Score " + Q.score + " Â· " + esc(SUBJ[T[q.t].s].name) + "</p><h2>" + esc(q.q) + '</h2><div class="opts">' + Q.opts.map((o, k) => '<button class="opt" data-k="' + k + '">' + esc(o.t) + "</button>").join("") + '</div><div id="qzFb"></div>';
 }
 function quizPlayClick(e) {
   const o = e.target.closest(".opt");
@@ -2551,7 +2551,7 @@ function drawExam() {
     h += "<h3>" + esc(t.t) + "</h3>";
     if (exType === "sa") h += t.sa.map(q => "<p><b>Q.</b> " + esc(q[0]) + "</p><details><summary>Show answer</summary><p>" + esc(q[1]) + "</p></details>").join("");
     if (exType === "la") h += t.la.map(q => "<p><b>Q.</b> " + esc(q[0]) + "</p><details><summary>Show answer outline</summary><p>" + esc(q[1]) + "</p></details>").join("");
-    if (exType === "rc") h += t.sa.concat(t.la).map(q => '<div class="card"><p><b>Q.</b> ' + esc(q[0]) + '</p><textarea rows="3" placeholder="Write your answer from memory first…" aria-label="Your answer"></textarea><details><summary>Compare with model answer</summary><p>' + esc(q[1]) + "</p></details></div>").join("");
+    if (exType === "rc") h += t.sa.concat(t.la).map(q => '<div class="card"><p><b>Q.</b> ' + esc(q[0]) + '</p><textarea rows="3" placeholder="Write your answer from memory firstâ€¦" aria-label="Your answer"></textarea><details><summary>Compare with model answer</summary><p>' + esc(q[1]) + "</p></details></div>").join("");
   });
   $("#exOut").innerHTML = h || '<p class="empty">No questions yet.</p>';
 }
@@ -2573,7 +2573,7 @@ function drawCard() {
   if (!c) { el.textContent = "No flashcards for this choice."; $("#flCount").textContent = ""; return; }
   el.textContent = F.back ? c.b : c.f;
   el.classList.toggle("back", F.back);
-  $("#flCount").textContent = (F.i + 1) + " / " + F.deck.length + " · " + c.t;
+  $("#flCount").textContent = (F.i + 1) + " / " + F.deck.length + " Â· " + c.t;
 }
 
 /* ---------- glossary ---------- */
@@ -2591,7 +2591,7 @@ function drawGlossary() {
   const q = $("#gSearch").value.trim().toLowerCase(), sid = $("#gSubj").value;
   const list = GLOSS.filter(g => (!sid || g[1] === sid) && (!gLetter || g[0][0].toUpperCase() === gLetter) && (!q || (g[0] + " " + g[2]).toLowerCase().includes(q)));
   $("#gCount").textContent = list.length + " of " + GLOSS.length + " terms";
-  $("#gList").innerHTML = list.length ? list.map(g => '<div class="card term"><div><h3 style="margin:0">' + esc(g[0]) + ' <span class="tag">' + esc(SUBJ[g[1]] ? SUBJ[g[1]].name : g[1]) + "</span></h3><p>" + esc(g[2]) + '</p></div><button class="star" data-g="' + esc(g[0]) + '" aria-label="Bookmark ' + esc(g[0]) + '">' + (S.gbm.includes(g[0]) ? "★" : "☆") + "</button></div>").join("") : '<p class="empty">No term matches.</p>';
+  $("#gList").innerHTML = list.length ? list.map(g => '<div class="card term"><div><h3 style="margin:0">' + esc(g[0]) + ' <span class="tag">' + esc(SUBJ[g[1]] ? SUBJ[g[1]].name : g[1]) + "</span></h3><p>" + esc(g[2]) + '</p></div><button class="star" data-g="' + esc(g[0]) + '" aria-label="Bookmark ' + esc(g[0]) + '">' + (S.gbm.includes(g[0]) ? "â˜…" : "â˜†") + "</button></div>").join("") : '<p class="empty">No term matches.</p>';
 }
 
 /* ---------- planner ---------- */
@@ -2671,7 +2671,7 @@ function init() {
   $("#gSearch").addEventListener("input", drawGlossary);
   $("#gSubj").addEventListener("change", drawGlossary);
   $("#gLetters").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; gLetter = b.dataset.l; $$("#gLetters button").forEach(x => x.classList.toggle("on", x === b)); drawGlossary(); });
-  $("#gList").addEventListener("click", e => { const b = e.target.closest("[data-g]"); if (!b) return; const g = b.dataset.g; S.gbm = S.gbm.includes(g) ? S.gbm.filter(x => x !== g) : S.gbm.concat(g); save(); b.textContent = S.gbm.includes(g) ? "★" : "☆"; });
+  $("#gList").addEventListener("click", e => { const b = e.target.closest("[data-g]"); if (!b) return; const g = b.dataset.g; S.gbm = S.gbm.includes(g) ? S.gbm.filter(x => x !== g) : S.gbm.concat(g); save(); b.textContent = S.gbm.includes(g) ? "â˜…" : "â˜†"; });
 
   $("#pForm").addEventListener("submit", e => {
     e.preventDefault();
@@ -2690,7 +2690,7 @@ function init() {
     else if (t.dataset.ugb) { S.gbm = S.gbm.filter(x => x !== t.dataset.ugb); save(); renderSpace(); }
     else if (t.id === "exportBtn") {
       const blob = new Blob([JSON.stringify(S, null, 2)], { type: "application/json" });
-      const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "vetnest-backup.json"; a.click(); URL.revokeObjectURL(a.href);
+      const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "VetNet-backup.json"; a.click(); URL.revokeObjectURL(a.href);
     }
   });
   $("#spaceView").addEventListener("change", e => {
