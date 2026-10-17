@@ -15,24 +15,24 @@ const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
 const SUBJECTS = [
-  { id: "anat", name: "Veterinary Anatomy", icon: "ðŸ¦´", blurb: "How the animal body is built, from bones to organs." },
-  { id: "phys", name: "Veterinary Physiology", icon: "ðŸ«€", blurb: "How the body works: blood, heart, kidney, digestion, hormones." },
-  { id: "bioc", name: "Veterinary Biochemistry", icon: "ðŸ§ª", blurb: "Biomolecules, enzymes, metabolism and clinical chemistry." },
-  { id: "pharm", name: "Veterinary Pharmacology and Toxicology", icon: "ðŸ’Š", blurb: "How drugs and poisons act on animals (theory only)." },
-  { id: "micro", name: "Veterinary Microbiology", icon: "ðŸ¦ ", blurb: "Bacteria, viruses, fungi, immunity and control." },
-  { id: "para", name: "Veterinary Parasitology", icon: "ðŸª±", blurb: "Helminths, protozoa, arthropods and their control." },
-  { id: "path", name: "Veterinary Pathology", icon: "ðŸ”¬", blurb: "What disease does to cells, tissues and organs." },
-  { id: "nutr", name: "Animal Nutrition", icon: "ðŸŒ¾", blurb: "Nutrients, feeds, rations and feeding of livestock." },
-  { id: "pubh", name: "Veterinary Public Health and Epidemiology", icon: "ðŸŒ", blurb: "Zoonoses, food safety, disease investigation." },
-  { id: "gen", name: "Animal Genetics and Breeding", icon: "ðŸ§¬", blurb: "Inheritance, selection and breeding systems." },
-  { id: "lpm", name: "Livestock Production Management", icon: "ðŸ„", blurb: "Housing, herd, flock and poultry management." },
-  { id: "lpt", name: "Livestock Products Technology", icon: "ðŸ¥›", blurb: "Milk, meat, eggs and their processing." },
-  { id: "gyn", name: "Veterinary Gynaecology and Obstetrics", icon: "ðŸ£", blurb: "Reproduction, pregnancy, parturition and its problems." },
-  { id: "surg", name: "Veterinary Surgery and Radiology", icon: "ðŸ©¹", blurb: "Surgical principles, wounds, anaesthesia, imaging." },
-  { id: "med", name: "Veterinary Medicine", icon: "ðŸ©º", blurb: "Diseases of animals, system by system." },
-  { id: "ext", name: "Veterinary and Animal Husbandry Extension Education", icon: "ðŸ“¢", blurb: "Taking knowledge to farmers, communication, programmes." },
-  { id: "clin", name: "Veterinary Clinical Practice", icon: "ðŸ¥", blurb: "Clinical examination, diagnosis, records, ethics." },
-  { id: "farm", name: "Livestock Farm Practices", icon: "ðŸšœ", blurb: "Hands-on farm routines, records and biosecurity." }
+  { id: "anat", name: "Veterinary Anatomy", icon: "🦴", blurb: "How the animal body is built, from bones to organs." },
+  { id: "phys", name: "Veterinary Physiology", icon: "🫀", blurb: "How the body works: blood, heart, kidney, digestion, hormones." },
+  { id: "bioc", name: "Veterinary Biochemistry", icon: "🧪", blurb: "Biomolecules, enzymes, metabolism and clinical chemistry." },
+  { id: "pharm", name: "Veterinary Pharmacology and Toxicology", icon: "💊", blurb: "How drugs and poisons act on animals (theory only)." },
+  { id: "micro", name: "Veterinary Microbiology", icon: "🦠", blurb: "Bacteria, viruses, fungi, immunity and control." },
+  { id: "para", name: "Veterinary Parasitology", icon: "🪱", blurb: "Helminths, protozoa, arthropods and their control." },
+  { id: "path", name: "Veterinary Pathology", icon: "🔬", blurb: "What disease does to cells, tissues and organs." },
+  { id: "nutr", name: "Animal Nutrition", icon: "🌾", blurb: "Nutrients, feeds, rations and feeding of livestock." },
+  { id: "pubh", name: "Veterinary Public Health and Epidemiology", icon: "🌍", blurb: "Zoonoses, food safety, disease investigation." },
+  { id: "gen", name: "Animal Genetics and Breeding", icon: "🧬", blurb: "Inheritance, selection and breeding systems." },
+  { id: "lpm", name: "Livestock Production Management", icon: "🐄", blurb: "Housing, herd, flock and poultry management." },
+  { id: "lpt", name: "Livestock Products Technology", icon: "🥛", blurb: "Milk, meat, eggs and their processing." },
+  { id: "gyn", name: "Veterinary Gynaecology and Obstetrics", icon: "🐣", blurb: "Reproduction, pregnancy, parturition and its problems." },
+  { id: "surg", name: "Veterinary Surgery and Radiology", icon: "🩹", blurb: "Surgical principles, wounds, anaesthesia, imaging." },
+  { id: "med", name: "Veterinary Medicine", icon: "🩺", blurb: "Diseases of animals, system by system." },
+  { id: "ext", name: "Veterinary and Animal Husbandry Extension Education", icon: "📢", blurb: "Taking knowledge to farmers, communication, programmes." },
+  { id: "clin", name: "Veterinary Clinical Practice", icon: "🏥", blurb: "Clinical examination, diagnosis, records, ethics." },
+  { id: "farm", name: "Livestock Farm Practices", icon: "🚜", blurb: "Hands-on farm routines, records and biosecurity." }
 ];
 const SUBJ = {}; SUBJECTS.forEach(s => SUBJ[s.id] = s);
 
@@ -48,7 +48,7 @@ function topic(sid, title, o) {
 }
 function planned(sid, list) { PLANNED[sid] = list; }
 /* ================= ANATOMY ================= */
-unit("anat", "Unit 1 â€“ Getting started");
+unit("anat", "Unit 1 – Getting started");
 topic("anat", "Introduction to Veterinary Anatomy", {
   i: "Anatomy is the study of how the animal body is built. You need it before physiology, pathology or surgery make any sense.",
   s: "Anatomy is the map of the body. Physiology tells you how the city runs, anatomy tells you where the roads and buildings are. In vet college you learn many species, so you also learn how a cow differs from a dog or a horse.",
@@ -90,7 +90,7 @@ topic("anat", "Anatomical Terminology, Planes and Directions", {
   d: ["Practise describing a wound location using three terms.", "Learn the terms used for the head, neck and thorax regions."]
 });
 
-unit("anat", "Unit 2 â€“ Skeleton, joints, muscles");
+unit("anat", "Unit 2 – Skeleton, joints, muscles");
 topic("anat", "Bones: Classification, Structure and the Skeleton", {
   i: "The skeleton supports the animal, protects soft organs, gives muscles something to pull on, stores minerals and makes blood cells.",
   s: "Bones come in different shapes because they do different jobs. Long bones act like levers, flat bones protect, short bones absorb shock. Bone is alive. It keeps remodelling all your life.",
@@ -158,7 +158,7 @@ topic("anat", "Muscles, Tendons and Movement", {
   d: ["Learn the muscles of the dog's forelimb.", "Study how a muscle contracts at the sarcomere level."]
 });
 
-unit("anat", "Unit 3 â€“ Organ systems");
+unit("anat", "Unit 3 – Organ systems");
 topic("anat", "Digestive System and the Ruminant Stomach", {
   i: "The digestive system takes in, breaks down and absorbs feed. Species differ enormously, which is why this topic is so important in veterinary anatomy.",
   s: "A dog has a simple stomach, like us. A cow has four stomach compartments, and the biggest one, the rumen, is a fermentation vat full of microbes. A horse digests fibre in a huge caecum and colon.",
@@ -225,7 +225,7 @@ topic("anat", "Urogenital System and Nervous System Basics", {
 planned("anat", ["Skull and paranasal sinuses", "Forelimb and hindlimb bones of the horse, ox, dog", "Stay apparatus of the horse", "Hoof and claw anatomy", "Mammary gland of the cow", "Avian anatomy", "Eye and ear", "Endocrine glands", "Lymphatic system and spleen", "Surface anatomy for clinical examination", "Embryology and fetal membranes", "Histology of the major organs"]);
 
 /* ================= PHYSIOLOGY ================= */
-unit("phys", "Unit 1 â€“ Basic concepts");
+unit("phys", "Unit 1 – Basic concepts");
 topic("phys", "Introduction to Physiology and Body Fluids", {
   i: "Physiology is the science of how living bodies work. It asks how and why, where anatomy asks what and where.",
   s: "Anatomy shows the parts, physiology shows what they do and how they work together. Most of the body is water, about two thirds inside cells and one third outside.",
@@ -268,7 +268,7 @@ topic("phys", "Homeostasis and Feedback Control", {
   d: ["Learn heat stress effects on dairy cows.", "Study the baroreceptor reflex step by step."]
 });
 
-unit("phys", "Unit 2 â€“ Blood and circulation");
+unit("phys", "Unit 2 – Blood and circulation");
 topic("phys", "Blood: Composition, Cells and Functions", {
   i: "Blood is a fluid connective tissue that carries oxygen, nutrients, hormones, wastes and defence cells around the body.",
   s: "Blood has a liquid part, plasma, and cells floating in it. Red cells carry oxygen. White cells fight infection. Platelets help stop bleeding.",
@@ -316,7 +316,7 @@ topic("phys", "Cardiovascular Physiology", {
   d: ["Learn normal heart rates for each species.", "Study heart failure types."]
 });
 
-unit("phys", "Unit 3 â€“ Other systems");
+unit("phys", "Unit 3 – Other systems");
 topic("phys", "Respiration and Gas Transport", {
   i: "Respiration supplies oxygen to tissues and removes carbon dioxide. It includes ventilation, gas exchange and transport.",
   s: "We breathe in to bring oxygen to the lungs, the oxygen crosses into the blood, haemoglobin carries it, and the tissues use it. Carbon dioxide travels the other way.",
@@ -384,7 +384,7 @@ topic("phys", "Renal Physiology and Endocrine Basics", {
 planned("phys", ["Nerve and muscle physiology", "Special senses", "Reproductive physiology and the oestrous cycle", "Lactation physiology", "Avian physiology and egg formation", "Acid-base balance", "Growth and development", "Environmental physiology and heat stress", "Immunity in outline", "Physiology of exercise in the horse and greyhound"]);
 
 /* ================= BIOCHEMISTRY ================= */
-unit("bioc", "Unit 1 â€“ Biomolecules");
+unit("bioc", "Unit 1 – Biomolecules");
 topic("bioc", "Introduction to Biochemistry, Water and Buffers", {
   i: "Biochemistry is the chemistry of living things. It explains how molecules build, break down and control life.",
   s: "Your body is made of a few big groups of molecules: carbohydrates, proteins, lipids and nucleic acids. All of them work in water, so water and pH matter a great deal.",
@@ -475,7 +475,7 @@ topic("bioc", "Lipids and Lipoproteins", {
   d: ["Learn the details of ketosis in dairy cows.", "Study cholesterol synthesis."]
 });
 
-unit("bioc", "Unit 2 â€“ Enzymes, vitamins and metabolism");
+unit("bioc", "Unit 2 – Enzymes, vitamins and metabolism");
 topic("bioc", "Enzymes and Clinical Enzymology", {
   i: "Enzymes are biological catalysts, nearly all proteins, that speed up reactions without being used up.",
   s: "An enzyme has a pocket called the active site. The substrate fits in, the reaction occurs, and the product leaves. Heat, wrong pH or poisons change the shape and the enzyme stops working.",
@@ -546,7 +546,7 @@ topic("bioc", "Metabolism: Glycolysis, TCA Cycle and Energy", {
 });
 planned("bioc", ["Nucleic acids and protein synthesis", "Haem synthesis and bilirubin metabolism", "Urea cycle in detail", "Biochemistry of milk", "Biochemistry of muscle contraction", "Blood biochemical tests and their interpretation", "Hormone biochemistry", "Biochemical techniques: chromatography, electrophoresis, spectrophotometry"]);
 /* ================= PHARMACOLOGY ================= */
-unit("pharm", "Unit 1 â€“ General pharmacology");
+unit("pharm", "Unit 1 – General pharmacology");
 topic("pharm", "Introduction, Terminology and Sources of Drugs", {
   i: "Pharmacology is the study of drugs and how they affect living systems. It is the base for safe, rational treatment.",
   s: "A drug is any substance used to prevent, diagnose or treat disease or to change how the body works. This module is theory only. A veterinarian chooses the drug and the dose for a real animal.",
@@ -682,7 +682,7 @@ topic("pharm", "Toxicology: Principles and Common Poisonings", {
 planned("pharm", ["Chemotherapy of parasitic diseases", "Antifungal and antiviral drugs", "Hormones and related drugs", "Drugs acting on the digestive tract", "Drugs for the cardiovascular and respiratory systems", "General and local anaesthetics", "Fluid therapy concepts", "Prescription writing and drug laws", "Pesticide and heavy metal poisoning in detail", "Plant poisonings of India"]);
 
 /* ================= MICROBIOLOGY ================= */
-unit("micro", "Unit 1 â€“ General microbiology");
+unit("micro", "Unit 1 – General microbiology");
 topic("micro", "Introduction to Microorganisms and History", {
   i: "Microbiology is the study of organisms too small to see without a microscope: bacteria, viruses, fungi, protozoa and others.",
   s: "Most microbes are harmless or helpful. Rumen microbes help cattle digest. A few are pathogens that cause disease. Microbiology tells us how to find them and stop them.",
@@ -751,7 +751,7 @@ topic("micro", "Viruses and Fungi", {
   d: ["Learn the details of virus families.", "Study the life cycle of a retrovirus."]
 });
 
-unit("micro", "Unit 2 â€“ Control and immunity");
+unit("micro", "Unit 2 – Control and immunity");
 topic("micro", "Sterilisation, Disinfection and Laboratory Safety", {
   i: "Sterilisation removes all life including spores. Disinfection reduces the number of pathogens. Good practice protects patients, staff and the environment.",
   s: "Sterilise things that must be completely free of microbes, like surgical instruments. Disinfect surfaces and equipment. Always treat samples as potentially infectious.",
@@ -819,7 +819,7 @@ topic("micro", "Important Veterinary Bacterial and Viral Diseases: Microbiology 
 planned("micro", ["Detailed study of each pathogenic genus", "Bacterial genetics", "Mycology: details of mycoses", "Virology techniques: PCR, ELISA, cell culture", "Immunological tests", "Antimicrobial sensitivity testing", "Avian and poultry microbiology", "Milk and food microbiology"]);
 
 /* ================= PARASITOLOGY ================= */
-unit("para", "Unit 1 â€“ Basics");
+unit("para", "Unit 1 – Basics");
 topic("para", "Introduction: Parasites, Hosts and Host-Parasite Relationships", {
   i: "A parasite lives on or in another organism, the host, and gets its food from it. Parasites cost livestock production dearly.",
   s: "Parasites never give much back. Some live in the gut, some in blood, some on the skin. Knowing the life cycle shows where we can break it.",
@@ -886,7 +886,7 @@ topic("para", "Protozoa and Blood Parasites", {
   d: ["Learn the life cycles of Babesia and Theileria.", "Study endemic stability."]
 });
 
-unit("para", "Unit 2 â€“ Arthropods and control");
+unit("para", "Unit 2 – Arthropods and control");
 topic("para", "Entomology: Ticks, Mites, Lice, Fleas and Flies", {
   i: "Arthropods cause damage directly by feeding or irritation and indirectly by carrying disease agents.",
   s: "Insects have six legs and three body parts. Ticks and mites have eight legs and are arachnids. Ticks are blood feeders and major disease vectors.",
@@ -931,7 +931,7 @@ topic("para", "Diagnosis and Control of Parasites: Concepts", {
 });
 planned("para", ["Detailed life cycles of each important helminth", "Parasites of poultry", "Parasites of horses, pigs, dogs and cats", "Apicomplexan parasites in detail", "Insect vectors in detail", "Parasitic zoonoses of India", "Pasture parasite epidemiology", "Anthelmintics: classes and mechanisms"]);
 /* ================= PATHOLOGY ================= */
-unit("path", "Unit 1 â€“ General pathology");
+unit("path", "Unit 1 – General pathology");
 topic("path", "Introduction to Pathology and Causes of Disease", {
   i: "Pathology is the study of disease: its causes, mechanisms, changes in the body and outcomes.",
   s: "When an animal is sick, pathology asks what went wrong (etiology), how it developed (pathogenesis), what changed in the organs (lesions) and what the result is. It links basic science to clinical work.",
@@ -998,7 +998,7 @@ topic("path", "Circulatory Disturbances: Haemorrhage, Thrombosis, Oedema, Shock"
   d: ["Study disseminated intravascular coagulation.", "Learn the stages of shock."]
 });
 
-unit("path", "Unit 2 â€“ Inflammation, repair and growth");
+unit("path", "Unit 2 – Inflammation, repair and growth");
 topic("path", "Inflammation and Healing", {
   i: "Inflammation is the body's response to injury. Healing repairs the damage. Both are major topics in pathology.",
   s: "Inflammation brings blood, fluid and defence cells to the injured place. The five old signs are redness, heat, swelling, pain and loss of function. Healing follows by repair with new cells or scar.",
@@ -1048,7 +1048,7 @@ topic("path", "Neoplasia and Systemic Pathology Outline", {
 planned("path", ["Pathology of the respiratory system", "Pathology of the digestive system", "Pathology of the liver and pancreas", "Pathology of the urinary system", "Pathology of the nervous system", "Pathology of the reproductive system", "Pathology of the cardiovascular system", "Pathology of bone, joint and muscle", "Avian pathology", "Clinical pathology: haematology, urinalysis, cytology", "Veterinary toxicopathology", "Necropsy techniques step by step"]);
 
 /* ================= NUTRITION ================= */
-unit("nutr", "Unit 1 â€“ Nutrient basics");
+unit("nutr", "Unit 1 – Nutrient basics");
 topic("nutr", "Introduction: Nutrients, Feed Analysis and Terms", {
   i: "Animal nutrition is about feeding animals so that they grow, produce, reproduce and stay healthy at a cost the farmer can afford.",
   s: "Feed contains water, carbohydrates, proteins, fats, minerals and vitamins. Nutrition is learning what each animal needs, what each feed offers, and how to match the two.",
@@ -1114,7 +1114,7 @@ topic("nutr", "Minerals, Vitamins and Water", {
   d: ["Study mineral interactions.", "Learn water quality standards for livestock."]
 });
 
-unit("nutr", "Unit 2 â€“ Feeding practice");
+unit("nutr", "Unit 2 – Feeding practice");
 topic("nutr", "Feeding of Ruminants, Pigs and Poultry: Concepts", {
   i: "Different species digest feed differently, so they are fed differently. This topic gives the main ideas, not a ration for a real farm.",
   s: "Ruminants get most energy from fibre by microbes. Pigs and poultry are simple-stomached and need more concentrated, balanced diets. Always follow feeding standards or local advice for actual rations.",
@@ -1162,7 +1162,7 @@ topic("nutr", "Fodder Production, Conservation and Feed Technology", {
 planned("nutr", ["Ruminant nutrition: energy and protein systems in depth", "Feed formulation methods", "Nutrition of laboratory and companion animals", "Feed additives and antinutritional factors", "Mycotoxins in feeds", "Nutrition and reproduction", "Feeding standards (ICAR, NRC)", "Nutritional disorders of livestock"]);
 
 /* ================= PUBLIC HEALTH ================= */
-unit("pubh", "Unit 1 â€“ Public health and epidemiology");
+unit("pubh", "Unit 1 – Public health and epidemiology");
 topic("pubh", "Epidemiology: Concepts and Measures", {
   i: "Epidemiology studies the distribution and determinants of disease in populations. It asks who, where, when and why.",
   s: "A clinician treats one animal. An epidemiologist looks at the herd, the village or the district and asks why some get sick and others do not.",
@@ -1230,7 +1230,7 @@ topic("pubh", "Food Safety, Meat and Milk Hygiene", {
 });
 planned("pubh", ["Veterinary epidemiology study designs and statistics", "Disease surveillance and reporting systems", "National disease control programmes in India", "Environmental hygiene and waste disposal", "Animal welfare and legislation", "Biosecurity and quarantine", "Disaster and outbreak management", "Veterinary jurisprudence"]);
 /* ================= GENETICS ================= */
-unit("gen", "Unit 1 â€“ Genetics basics");
+unit("gen", "Unit 1 – Genetics basics");
 topic("gen", "Mendelian Genetics and Gene Interactions", {
   i: "Genetics is the study of heredity and variation. Breeding programmes depend on understanding how traits pass from parents to offspring.",
   s: "Each animal carries two copies of most genes, one from each parent. Some versions of a gene hide others. That simple idea explains many coat colours and inherited defects.",
@@ -1275,7 +1275,7 @@ topic("gen", "Population and Quantitative Genetics", {
   d: ["Practise heritability and response calculations.", "Study progeny testing."]
 });
 
-unit("gen", "Unit 2 â€“ Breeding methods");
+unit("gen", "Unit 2 – Breeding methods");
 topic("gen", "Selection, Breeding Systems and Livestock Breeds of India", {
   i: "Breeders improve livestock through selection of the best parents and by planned mating systems.",
   s: "Choose the best animals as parents, and mate them in the way that fits your goal: purebreeding, crossbreeding or upgrading. India has many indigenous breeds well adapted to local conditions.",
@@ -1301,7 +1301,7 @@ topic("gen", "Selection, Breeding Systems and Livestock Breeds of India", {
 planned("gen", ["Cytogenetics and chromosome abnormalities", "Molecular genetics and DNA technology", "Immunogenetics and blood groups", "Genetics of coat colour", "Poultry breeding", "Selection index and genomic selection in depth", "Conservation of indigenous breeds", "Statistics for genetics"]);
 
 /* ================= LIVESTOCK PRODUCTION MANAGEMENT ================= */
-unit("lpm", "Unit 1 â€“ Cattle and buffalo");
+unit("lpm", "Unit 1 – Cattle and buffalo");
 topic("lpm", "Dairy Cattle and Buffalo Management", {
   i: "Good dairy management turns genetic and feed potential into milk, with healthy animals and healthy calves.",
   s: "Housing, feeding, milking, breeding and health care all work together. A weak point in any one of these lowers the whole farm's profit.",
@@ -1325,7 +1325,7 @@ topic("lpm", "Dairy Cattle and Buffalo Management", {
   d: ["Study dairy farm design.", "Learn clean milk production."]
 });
 
-unit("lpm", "Unit 2 â€“ Small ruminants, pigs, poultry");
+unit("lpm", "Unit 2 – Small ruminants, pigs, poultry");
 topic("lpm", "Sheep, Goat and Pig Management", {
   i: "Small ruminants and pigs give fast returns and fit small farmers, if managed carefully.",
   s: "Goats and sheep reproduce quickly and use poor land. Pigs convert waste and feed to meat fast. All three need clean housing, good feed and disease prevention.",
@@ -1371,7 +1371,7 @@ topic("lpm", "Poultry Management", {
 planned("lpm", ["Management of horses, donkeys, camels", "Zoo, laboratory and companion animal management", "Housing design and equipment", "Fodder planning for the farm", "Hatchery technology", "Integrated farming systems", "Project preparation and farm economics", "Climate change and livestock"]);
 
 /* ================= LIVESTOCK PRODUCTS TECHNOLOGY ================= */
-unit("lpt", "Unit 1 â€“ Milk and meat");
+unit("lpt", "Unit 1 – Milk and meat");
 topic("lpt", "Milk: Composition, Properties and Processing", {
   i: "Milk is a nutritious fluid and an ideal medium for bacteria. Technology aims at keeping it safe and turning it into useful products.",
   s: "Milk is water, fat, protein, lactose and minerals. Heat treatment kills harmful germs. From milk we make curd, butter, ghee, cheese and many other products.",
@@ -1419,7 +1419,7 @@ topic("lpt", "Meat Science and Technology", {
   d: ["Study slaughterhouse design and by-product utilisation.", "Learn sausage manufacture."]
 });
 
-unit("lpt", "Unit 2 â€“ Eggs and other products");
+unit("lpt", "Unit 2 – Eggs and other products");
 topic("lpt", "Eggs, Poultry Products and By-products", {
   i: "Eggs are a complete, cheap protein food that spoil easily. Quality grading, storage and processing protect their value.",
   s: "An egg has a shell, shell membranes, white (albumen) and yolk. Fresh eggs have a thick white and a high yolk. Storage and handling decide how long they stay good.",
@@ -1443,7 +1443,7 @@ topic("lpt", "Eggs, Poultry Products and By-products", {
 });
 planned("lpt", ["Cheese and fermented milk technology", "Dairy plant design and operation", "Meat plant design and by-product utilisation", "Packaging of animal products", "Fish products technology", "Quality assurance in food industry", "Wool and hair technology", "Value addition and entrepreneurship"]);
 /* ================= GYNAECOLOGY AND OBSTETRICS ================= */
-unit("gyn", "Unit 1 â€“ Reproduction basics");
+unit("gyn", "Unit 1 – Reproduction basics");
 topic("gyn", "Reproductive Cycles and Oestrus", {
   i: "Understanding the oestrous cycle is the basis of breeding management, artificial insemination and fertility work.",
   s: "Females come into heat at regular intervals. Hormones from the brain, pituitary and ovary control it. Knowing the cycle tells you when to inseminate and when to suspect a problem.",
@@ -1489,7 +1489,7 @@ topic("gyn", "Pregnancy, Pregnancy Diagnosis and Placentation", {
   d: ["Study foetal membranes and fluids.", "Learn ultrasonographic findings."]
 });
 
-unit("gyn", "Unit 2 â€“ Parturition and its problems");
+unit("gyn", "Unit 2 – Parturition and its problems");
 topic("gyn", "Normal Parturition and Obstetrical Terms", {
   i: "Parturition is the process of giving birth. Knowing the normal process helps decide when help is needed.",
   s: "Birth has three stages: preparation and cervical opening, delivery of the young, and passing of the afterbirth. If any stage is delayed beyond normal, call a veterinarian.",
@@ -1538,7 +1538,7 @@ topic("gyn", "Reproductive Disorders and Infertility: An Overview", {
 planned("gyn", ["Anatomy of the male and female reproductive tracts in depth", "Semen collection, evaluation and preservation", "Artificial insemination technique", "Dystocia: causes and classification", "Caesarean section and obstetrical surgery concepts", "Reproduction in dogs and cats", "Reproduction in poultry", "Embryo transfer and assisted reproduction", "Neonatal care"]);
 
 /* ================= SURGERY AND RADIOLOGY ================= */
-unit("surg", "Unit 1 â€“ Principles of surgery");
+unit("surg", "Unit 1 – Principles of surgery");
 topic("surg", "Surgical Principles, Asepsis and Wound Management", {
   i: "Surgery is the treatment of disease or injury by operative procedures. Success depends on good principles before technique.",
   s: "Keep things clean, handle tissue gently, stop bleeding, close without tension and think about pain and aftercare. These apply to every surgery from castration to caesarean section.",
@@ -1584,7 +1584,7 @@ topic("surg", "Anaesthesia, Pain Relief and Restraint: Concepts", {
   d: ["Learn the equipment of an anaesthetic machine.", "Study pre-anaesthetic drugs and their effects."]
 });
 
-unit("surg", "Unit 2 â€“ Common conditions and imaging");
+unit("surg", "Unit 2 – Common conditions and imaging");
 topic("surg", "Common Surgical Conditions in Large and Small Animals: Overview", {
   i: "A map of common surgical problems, so you recognise them and understand why they need a veterinarian.",
   s: "Hernias, abscesses, fractures and obstructions are frequent. Learn the idea behind each, not a recipe. Surgery for real animals is done under supervision after proper training.",
@@ -1631,7 +1631,7 @@ topic("surg", "Veterinary Radiology and Diagnostic Imaging", {
 planned("surg", ["Surgery of the head, neck and thorax", "Abdominal surgery", "Orthopaedic surgery in detail", "Ophthalmic surgery", "Surgery of the hoof and claw", "Castration and other herd procedures", "Reconstructive surgery", "Critical care and fluid therapy", "Advanced imaging: CT, MRI", "Surgical instruments and their uses"]);
 
 /* ================= VETERINARY MEDICINE ================= */
-unit("med", "Unit 1 â€“ Principles of medicine");
+unit("med", "Unit 1 – Principles of medicine");
 topic("med", "Approach to Disease: History, Examination and Diagnosis", {
   i: "A systematic approach finds the cause of illness faster and more reliably than guessing.",
   s: "Listen, look, then examine. Think of what could be wrong, and then test your ideas. Vital signs are the quickest clues.",
@@ -1655,7 +1655,7 @@ topic("med", "Approach to Disease: History, Examination and Diagnosis", {
   d: ["Practise TPR on animals under supervision.", "Study clinical examination of each system."]
 });
 
-unit("med", "Unit 2 â€“ Diseases by system");
+unit("med", "Unit 2 – Diseases by system");
 topic("med", "Digestive Diseases of Ruminants and Others: Concepts", {
   i: "Digestive disorders are among the commonest problems in cattle, buffaloes, sheep and goats.",
   s: "Rumen problems follow wrong feeding. Think about what the animal ate, when, and how the rumen microbes respond. Treatment belongs to the veterinarian.",
@@ -1704,7 +1704,7 @@ topic("med", "Respiratory, Cardiovascular and Other System Diseases: Overview", 
 });
 planned("med", ["Diseases of poultry (full systematic treatment)", "Diseases of pigs", "Diseases of horses", "Diseases of dogs and cats", "Diseases of sheep and goats", "Metabolic and deficiency diseases in depth", "Toxicological emergencies", "Skin diseases", "Neurological disorders", "Clinical pathology interpretation", "Therapeutic concepts and fluid balance", "Preventive medicine and vaccination schedules"]);
 /* ================= EXTENSION ================= */
-unit("ext", "Unit 1 â€“ Extension basics");
+unit("ext", "Unit 1 – Extension basics");
 topic("ext", "Extension Education: Concepts, Principles and Methods", {
   i: "Extension education takes useful knowledge from research and veterinary science to farmers and helps them use it.",
   s: "A vet who knows a lot but can't get farmers to act on it has little impact. Extension is about communicating well, building trust and helping people decide for themselves.",
@@ -1753,7 +1753,7 @@ topic("ext", "Livestock Extension in India: Programmes, Institutions and Farmer 
 planned("ext", ["Adult education and learning principles", "Rural sociology", "Leadership in extension", "Social change and diffusion in depth", "Evaluation research in extension", "Entrepreneurship in animal husbandry", "Gender and livestock", "ICT tools for veterinary extension"]);
 
 /* ================= CLINICAL PRACTICE ================= */
-unit("clin", "Unit 1 â€“ Clinical skills");
+unit("clin", "Unit 1 – Clinical skills");
 topic("clin", "Clinical Examination Skills and Case Records", {
   i: "A vet's first skill is looking carefully and recording accurately. Good records protect the animal, the owner and you.",
   s: "Approach the animal calmly. Observe from a distance, then examine up close. Write what you find, in the same order each time.",
@@ -1802,7 +1802,7 @@ topic("clin", "Clinical Procedures, Biosafety and Professional Ethics: Concepts"
 planned("clin", ["Clinical examination of each species in detail", "Clinical laboratory interpretation", "Emergency and critical care concepts", "Dental and oral examination", "Ambulatory (field) practice", "Zoo and wildlife handling", "Practice management and economics", "Medical records and certification"]);
 
 /* ================= FARM PRACTICES ================= */
-unit("farm", "Unit 1 â€“ On the farm");
+unit("farm", "Unit 1 – On the farm");
 topic("farm", "Livestock Farm Routines, Records and Biosecurity", {
   i: "Hands-on farm practices turn theory into daily routine. A well-run farm has clear schedules, clean systems and good records.",
   s: "Every farm runs on routine: feeding, watering, cleaning, milking or egg collection, observation and records. Small habits, done daily, prevent most big problems.",
@@ -1850,6 +1850,773 @@ topic("farm", "Practical Skills: Farm Equipment, Fodder and Seasonal Planning", 
   d: ["Prepare a fodder calendar for your region.", "Visit a nearby farm and record its routine."]
 });
 planned("farm", ["Hatchery operations", "Dairy farm design and layout", "Milking machine operation", "Artificial insemination practice", "Sheep and goat farm practices", "Piggery practices", "Farm machinery and mechanisation", "Integrated farming systems practice", "Farm accounting"]);
+/* ================= SECOND WAVE: helpers ================= */
+/* extra(id, {...}) adds more fields (o, df, tm, st, ex, dia) to an existing topic */
+function extra(id, o) { if (T[id]) Object.assign(T[id], o); }
+
+/* ================= ANATOMY (wave 2) ================= */
+unit("anat", "Unit 4 – Head, limbs, glands and birds");
+topic("anat", "Skull, Teeth and Age Estimation", {
+  o: ["Name the main bones of the skull and the paranasal sinuses", "Write the dental formulae of the common species", "Describe the parts of a tooth and compare brachydont and hypsodont teeth", "Explain why the age of an animal can be judged from its teeth"],
+  i: "The head carries the brain, the sense organs and the first part of the digestive and respiratory tracts. Teeth are part of the head that every clinician uses every day, because they tell us about age, feeding and health.",
+  s: "The skull has two parts: the cranium, which holds the brain, and the face, which holds the nose, mouth and eyes. Teeth are fixed in the jaws. A cow has no upper front teeth, a horse has teeth that keep growing and wear down, and a dog has sharp teeth for tearing meat. Counting and checking the teeth is the traditional way to estimate age.",
+  n: [
+    ["Bones of the skull", "The cranial bones are the occipital, sphenoid, temporal, parietal, frontal and ethmoid. The facial bones are the nasal, incisive (premaxilla), maxilla, zygomatic, lacrimal, palatine, vomer and the mandible (lower jaw). The mandible is the only skull bone that moves, at the temporomandibular joint. The foramen magnum at the back lets the spinal cord leave the skull. In cattle, sheep and goats the horn core grows out of the frontal bone, so the horn is hollow inside and joined to the frontal sinus."],
+    ["Paranasal sinuses", "These are air-filled spaces in the skull bones lined by mucous membrane, which open into the nasal cavity. The main ones are the frontal, maxillary, sphenoid and palatine sinuses. They lighten the skull and warm the air. Because the cornual diverticulum of the frontal sinus runs inside the horn, dehorning an adult can open the sinus, and sinusitis can follow. In horses, infection of the maxillary sinus can come from a diseased upper cheek tooth root."],
+    ["Skull shapes in dogs", "Dolichocephalic dogs have long narrow heads (greyhound). Mesaticephalic dogs have medium heads (labrador). Brachycephalic dogs have short broad heads (pug, bulldog). Brachycephalic breeds often have breathing problems because the soft tissues of the airway are crowded into a short skull."],
+    ["Parts of a tooth", "A tooth has a crown (above the gum), a neck and a root (in the socket). Enamel, the hardest tissue of the body, covers the crown. Dentine forms the bulk of the tooth. Cement covers the root and attaches it to the periodontal ligament. The pulp cavity inside holds vessels and nerves. Brachydont teeth have a low crown and a closed root, and stop growing (dog, cat, pig, human). Hypsodont teeth have a very tall crown, and erupt continuously as the surface wears (horse, cattle, sheep). Hypsodont teeth have infoldings of enamel that make a rough grinding surface."],
+    ["Types of teeth and dental formulae", "Incisors (I) cut, canines (C) tear, premolars (P) and molars (M) grind. The formula shows one side of the upper jaw over one side of the lower jaw. Permanent teeth: Dog I 3/3, C 1/1, P 4/4, M 2/3 = 42. Cat I 3/3, C 1/1, P 3/2, M 1/1 = 30. Pig I 3/3, C 1/1, P 4/4, M 3/3 = 44. Horse I 3/3, C 1/1, P 3/3, M 3/3 = 40 (canines are small or absent in mares, and some horses have small wolf teeth before the first premolars). Ox, sheep and goat I 0/4, C 0/0, P 3/3, M 3/3 = 32, where the lower canine looks like a fourth incisor, and a dental pad replaces the upper incisors."],
+    ["Deciduous and permanent teeth", "Young animals have deciduous (milk) teeth that are replaced by permanent teeth. Deciduous teeth have no molars. Molars come only as permanent teeth. Eruption times are the basis of age estimation."],
+    ["Age estimation (teaching approximations)", "In cattle the permanent incisors replace the milk incisors in pairs, from about the middle of the second year to about the fourth year, so people speak of the two-tooth, four-tooth, six-tooth and eight-tooth stages. In horses, eruption, wear of the table surface, shape changes and Galvayne's groove on the upper corner incisor are used. These timings vary with breed, feeding and management. Take exact ages from your textbook, and remember that age estimation is approximate."]
+  ],
+  tb: { h: ["Species", "Dental formula (permanent)", "Total", "Crown type"], r: [["Dog", "I 3/3 C 1/1 P 4/4 M 2/3", "42", "Brachydont"], ["Cat", "I 3/3 C 1/1 P 3/2 M 1/1", "30", "Brachydont"], ["Pig", "I 3/3 C 1/1 P 4/4 M 3/3", "44", "Brachydont"], ["Horse", "I 3/3 C 1/1 P 3/3 M 3/3", "40", "Hypsodont"], ["Ox, sheep, goat", "I 0/4 C 0/0 P 3/3 M 3/3", "32", "Hypsodont cheek teeth"]] },
+  df: ["Brachydont tooth: a low-crowned tooth that stops growing once formed.", "Hypsodont tooth: a high-crowned tooth that continues to erupt as the crown wears.", "Dental formula: a short way of writing the number of each type of tooth in half of the upper and lower jaw."],
+  tm: [["Mandible", "Lower jaw bone, the only movable bone of the skull"], ["Foramen magnum", "Large opening at the back of the skull for the spinal cord"], ["Enamel", "Hardest tissue, covers the crown"], ["Cement", "Bone-like tissue covering the root"], ["Wolf tooth", "Small first premolar seen in some horses"], ["Dental pad", "Thick gum pad replacing upper incisors in ruminants"]],
+  st: ["Open the mouth gently and safely, with proper restraint.", "Identify the tooth types in the jaw.", "Count the incisors present and note which are permanent.", "Compare with the eruption chart in your textbook.", "Record the result as an approximate age range, not a single number."],
+  ex: ["Chronic nasal discharge in a horse can come from an infected upper cheek tooth that drains into the maxillary sinus.", "Sharp enamel points on the cheek teeth of horses cause pain while chewing and weight loss, so horses need regular dental checks.", "A brachycephalic dog that snores and tires easily shows the effect of skull shape on the airway."],
+  k: ["Bones of the cranium and face.", "Paranasal sinuses and clinical importance.", "Dental formulae of dog, cat, pig, horse, ox.", "Brachydont vs hypsodont.", "Parts of a tooth.", "Age estimation by teeth."],
+  m: ["Age by teeth is an estimate, not a certificate. Feeding and breed shift the timing.", "Horns of cattle are not solid. They contain the frontal sinus extension."],
+  sa: [["Define a hypsodont tooth with an example.", "A tall-crowned tooth that keeps erupting as the crown wears, for example the cheek teeth of the horse and ox."], ["Why is the frontal sinus important in dehorning?", "Because the sinus extends into the horn core, so removal of the horn in adults can open the sinus and invite infection."]],
+  la: [["Describe the structure of a tooth and the dental formulae of domestic animals.", "Draw a longitudinal section with enamel, dentine, cement, pulp and root. Define brachydont and hypsodont. Give formulae for dog, cat, pig, horse and ox with totals. Add deciduous and permanent teeth and age estimation."]],
+  q: [["Which skull bone is movable?", ["Frontal", "Mandible", "Maxilla", "Occipital"], 1, "The mandible moves at the temporomandibular joint."],
+    ["The ox has no", ["Upper incisors", "Lower incisors", "Molars", "Premolars"], 0, "A dental pad replaces them."],
+    ["The hardest tissue of the body is", ["Dentine", "Cement", "Enamel", "Bone"], 2, "Enamel."],
+    ["The total number of permanent teeth in the dog is", ["30", "32", "40", "42"], 3, "42."],
+    ["Brachycephalic dogs often have", ["Airway problems", "Long skulls", "Extra teeth", "No sinuses"], 0, "Short skull, crowded airway."]],
+  f: [["Dental formula of the dog", "I 3/3 C 1/1 P 4/4 M 2/3 = 42"], ["Brachydont", "Low-crowned tooth that stops growing"], ["Cornual diverticulum", "Extension of the frontal sinus into the horn core"], ["Foramen magnum", "Opening for the spinal cord at the skull base"]],
+  d: ["Learn the foramina of the skull and which nerves pass through them.", "Study dental disease in dogs and horses.", "Read about the temporomandibular joint."]
+});
+
+topic("anat", "Limb Bones and Comparative Limb Anatomy", {
+  o: ["Name the bones of the fore and hind limbs", "Compare the limbs of horse, ox, pig and dog", "Use the correct limb terms such as carpus, tarsus, stifle and fetlock", "Explain how limbs are attached to the trunk"],
+  i: "The limbs of domestic animals show how one basic plan is changed for speed, weight bearing or digging. Lameness is one of the commonest clinical problems, so limb anatomy is used every day in practice.",
+  s: "All four-legged mammals share the same bones in the legs, but the number of toes and the length of the bones changes. A horse stands on one toe, a cow on two, a dog on four or five. The forelimb is joined to the body by muscle only, while the hind limb joins the body by a true joint, which is why the hind limb gives the push and the forelimb takes the weight.",
+  n: [
+    ["Forelimb bones", "The forelimb has the scapula (shoulder blade), humerus, radius and ulna (forearm), the carpal bones, the metacarpal bones and the phalanges. In ungulates the clavicle is absent, and the limb is joined to the trunk only by muscles (a synsarcosis), which acts as a shock absorber. The carpus is the joint that is called the knee in the horse. The radius carries most of the weight in ungulates, and the ulna is reduced and partly fused with the radius in ox and horse."],
+    ["Hind limb bones", "The pelvic girdle is made of the ilium, ischium and pubis, which meet in the acetabulum. The pelvic girdle joins the vertebral column at the sacroiliac joint, so the hind limb gives propulsion. Next are the femur, patella (in the quadriceps tendon), tibia and fibula, the tarsal bones (the largest being the calcaneus, the point of the hock), the metatarsal bones and the phalanges. The knee joint of the hind limb is called the stifle."],
+    ["Digits", "The horse has one functional digit (III) with the others reduced to splint bones (II and IV), so splints are a clinical term. Ruminants have two functional digits (III and IV) and two small dewclaws. The pig has four digits, two large and two small. The dog has five digits on the forelimb, where the first is the dewclaw, and four on the hind limb. The cat has retractile claws."],
+    ["Parts of the distal limb", "Proximal to distal in the horse: cannon bone (third metacarpal or metatarsal), fetlock joint, long pastern (first phalanx), short pastern (second phalanx) and coffin bone (third phalanx, inside the hoof). Sesamoid bones sit at the back of the fetlock, and the distal sesamoid is the navicular bone. Navicular disease and pedal bone problems cause lameness."],
+    ["Locomotion and weight", "Forelimbs carry about 60 percent of the horse's weight. Long bones in distal limbs work like levers, and muscles are held close to the body so that the distal limb is light, with long tendons. Cursorial animals (horse, greyhound) have long, slim limbs for speed, while heavy draught breeds and cattle have a sturdier build."],
+    ["Clinical links", "Fractures, joint injuries, laminitis and hoof problems are common causes of lameness in dairy cattle and horses. A good understanding of the limb bones helps in reading radiographs and describing injuries."]
+  ],
+  tb: { h: ["Species", "Functional digits (forelimb)", "Notes"], r: [["Horse", "1 (III)", "Splint bones II and IV"], ["Ox, sheep, goat", "2 (III and IV)", "Dewclaws present"], ["Pig", "4 (2 large, 2 small)", "Small digits touch the ground in soft soil"], ["Dog", "5", "First digit is the dewclaw"], ["Cat", "5", "Retractile claws"]] },
+  df: ["Carpus: the joint complex between the forearm and the metacarpus, the horse's knee.", "Tarsus: the hock, the joint complex between the leg and the metatarsus.", "Synsarcosis: attachment of the forelimb to the trunk by muscle only."],
+  tm: [["Stifle", "Knee joint of the hind limb"], ["Hock", "The tarsal joint"], ["Fetlock", "Metacarpophalangeal or metatarsophalangeal joint"], ["Pastern", "Region of the first and second phalanges"], ["Coffin bone", "Third phalanx inside the hoof"], ["Acetabulum", "Socket of the hip joint"]],
+  st: ["Start at the trunk and name the girdle bone.", "Move distally: arm, forearm, carpus (or leg, tarsus).", "Name the metapodial bones and digits.", "Mark the joints between each segment.", "Compare the pattern with another species."],
+  ex: ["The hock of a cow is injured easily on hard floors, and swelling there is common in loose housing.", "A splint in a horse is a bony swelling on the second or fourth metacarpal bone.", "Hip dysplasia in dogs is poor fit of the femoral head in the acetabulum."],
+  k: ["Bones of the fore and hind limbs.", "Digit number in species.", "Joint names: carpus, tarsus, stifle, fetlock.", "Attachment of the limbs to the trunk."],
+  m: ["The horse's knee is the carpus, not the stifle.", "The hock is not a knee. It is the tarsus."],
+  sa: [["What is the stifle?", "The knee joint of the hind limb, between the femur and tibia, with the patella in front."], ["How many functional digits does the ox have?", "Two, digits III and IV."]],
+  la: [["Describe the bones of the forelimb of the horse and compare with the ox.", "List scapula, humerus, radius and ulna, carpus, metacarpus, phalanges and sesamoids. Compare digit numbers, ulna reduction and use of a sketch."]],
+  q: [["The point of the hock is formed by the", ["Calcaneus", "Patella", "Talus", "Fibula"], 0, "The calcaneus."],
+    ["Pigs have how many digits on each foot?", ["1", "2", "4", "5"], 2, "Four, two of them larger."],
+    ["The knee of a horse's forelimb is the", ["Stifle", "Carpus", "Hock", "Fetlock"], 1, "The carpus."],
+    ["The hind limb attaches to the vertebral column through the", ["Sacroiliac joint", "Shoulder joint", "Atlantoaxial joint", "Stifle"], 0, "Sacroiliac joint."]],
+  f: [["Synsarcosis", "Attachment of forelimb by muscles only"], ["Navicular bone", "Distal sesamoid bone in the horse"], ["Hock", "Tarsal joint of the hind limb"], ["Splint bone", "Reduced metacarpal II or IV in the horse"]],
+  d: ["Study the muscles of the limb in the dog.", "Learn the stay apparatus of the horse.", "Compare hooves and claws."]
+});
+
+topic("anat", "Mammary Gland of the Cow and Udder Anatomy", {
+  o: ["Describe the structure of the bovine udder and teat", "Explain the supporting ligaments, blood supply and lymph drainage", "Compare the mammary glands of other species", "Link udder anatomy to mastitis and milking"],
+  i: "The udder is the production unit of a dairy farm. Its structure explains how milk is made, held and removed, and why mastitis is so common.",
+  s: "The cow's udder is divided into four quarters, each with its own teat and milk system. They do not share milk, so one quarter can get sick while the others stay healthy. A thick blood supply feeds the udder, because the cow needs several hundred litres of blood to make one litre of milk.",
+  n: [
+    ["External features", "The udder has four quarters, front and rear, separated by a median groove, and a teat on each quarter. The hind quarters yield more milk, roughly 60 percent of the total. A well-attached, balanced, not pendulous udder is selected for in breeding because it is less prone to injury and mastitis."],
+    ["Internal structure", "Milk is made in alveoli, tiny sacs lined by secretory epithelium and surrounded by myoepithelial cells. Alveoli form lobules, and ducts join to form larger ducts that open into the gland cistern (sinus) above the teat. The teat cistern lies in the teat, and below it is the streak (teat) canal, closed by a sphincter muscle, with Fürstenberg's rosette at the top of the teat canal. The teat canal is the main defence against bacteria entering the udder."],
+    ["Support", "The udder is held by the median suspensory ligament, which is elastic and divides it into right and left halves, and by the lateral suspensory laminae, with the skin, fascia and tendon-like parts. When the suspensory apparatus weakens with age and heavy yields, the udder hangs low and the teats become more exposed."],
+    ["Blood and lymph", "The main blood supply is the external pudendal artery, which becomes the mammary artery, and venous drainage forms a circle at the base of the udder, with the milk veins on the abdominal wall. About 400 to 500 litres of blood pass through the udder to make one litre of milk. The supramammary lymph nodes at the back of the udder drain it and are felt during examination. Swelling of these nodes suggests infection."],
+    ["Nerve supply and let-down", "Sensory nerves in the teat send a signal to the hypothalamus when the teat is stimulated or the calf suckles. Oxytocin is released from the posterior pituitary, reaches the udder through blood and makes the myoepithelial cells squeeze the alveoli, pushing milk down (milk let-down). Fear and pain release adrenaline, which blocks let-down, so calm handling matters."],
+    ["Other species", "Mare: two glands with two teats. Ewe and doe: two glands. Sow: usually 12 to 14 glands in two rows. Bitch: usually 8 to 10. Buffalo: four quarters, but the teat canal is tight, and let-down depends on the calf's presence in many animals, so careful stimulation is needed. Each pair of glands in sows has an independent system."],
+    ["Mastitis link", "Mastitis is inflammation of the mammary gland, usually caused by bacteria entering through the teat canal. Wide or damaged teat canals, wet and dirty conditions, poor milking hygiene and low immunity add to the risk. Knowing that each quarter works separately helps in understanding why one quarter may be affected."]
+  ],
+  tb: { h: ["Species", "Number of glands", "Note"], r: [["Cow, buffalo", "4", "Four separate quarters"], ["Mare", "2", "Each with two openings per teat"], ["Ewe, doe", "2", "One teat canal each"], ["Sow", "12 to 14", "Two rows"], ["Bitch", "8 to 10", "Two rows"]] },
+  df: ["Alveolus: the milk-secreting sac of the mammary gland.", "Milk let-down: the oxytocin-driven release of milk from the alveoli into the ducts and cistern.", "Streak canal: the narrow canal at the tip of the teat through which milk leaves."],
+  tm: [["Gland cistern", "Space above the teat where milk collects"], ["Myoepithelial cell", "Contractile cell around alveoli"], ["Supramammary lymph node", "Node that drains the udder"], ["Rosette of Fürstenberg", "Fold at the junction of teat cistern and canal"]],
+  st: ["The calf suckles or the teat is washed and stimulated.", "Nerve signal reaches the hypothalamus.", "Oxytocin is released into the blood.", "Myoepithelial cells contract.", "Milk moves into the cistern and can be removed."],
+  ex: ["A cow that is frightened during milking may hold up her milk because adrenaline blocks oxytocin action.", "A hard, swollen quarter with a clear difference from the others suggests mastitis in that quarter alone.", "A pendulous udder is easily injured by a stone or a hock."],
+  k: ["Structure of the bovine udder and teat.", "Suspensory apparatus.", "Blood supply and milk to blood ratio.", "Let-down reflex.", "Species differences."],
+  m: ["The four quarters do not share milk. A quarter can be infected separately."],
+  sa: [["What is the main defence of the teat against infection?", "The streak canal with its sphincter muscle, and keratin lining."], ["Name the artery supplying the udder.", "The external pudendal artery, which continues as the mammary artery."]],
+  la: [["Describe the anatomy of the mammary gland of the cow with a labelled sketch.", "Four quarters, parenchyma and alveoli, ducts, gland and teat cisterns, teat canal, suspensory ligaments, blood and lymph supply, nerves, let-down reflex."]],
+  q: [["The hormone that causes milk let-down is", ["Prolactin", "Oxytocin", "Insulin", "Cortisol"], 1, "Oxytocin."],
+    ["The cow has how many mammary quarters?", ["2", "4", "6", "8"], 1, "Four."],
+    ["Which lymph nodes drain the udder?", ["Prescapular", "Supramammary", "Popliteal", "Mandibular"], 1, "Supramammary nodes."],
+    ["Fear can prevent let-down because it releases", ["Adrenaline", "Insulin", "Thyroxine", "Calcitonin"], 0, "Adrenaline blocks oxytocin action."]],
+  f: [["Alveolus", "Milk-secreting sac"], ["Streak canal", "Narrow outlet of the teat"], ["Median suspensory ligament", "Elastic ligament dividing the udder into halves"], ["Blood to milk ratio", "About 400 to 500 litres of blood per litre of milk"]],
+  d: ["Study the histology of the lactating udder.", "Learn the mammary gland of the sow and bitch.", "Read about teat and udder scoring."]
+});
+
+topic("anat", "Avian Anatomy: What Is Different in Birds", {
+  o: ["Describe the skeleton of the fowl and its adaptations", "Trace the digestive tract of the fowl", "Describe the respiratory system with air sacs", "Describe the reproductive tracts and the bursa of Fabricius"],
+  i: "Poultry is the biggest livestock sector in India, and birds are built very differently from mammals. A vet who treats poultry must know these differences.",
+  s: "Birds have light, air-filled bones, no teeth, a crop and gizzard instead of teeth for grinding, air sacs that pass air through the lungs, and one opening, the cloaca, for faeces, urine and eggs. Only the left ovary works in the hen.",
+  n: [
+    ["Skeleton", "Many bones are pneumatic, connected with air sacs. The sternum has a keel (carina) for the flight muscles. Many vertebrae are fused into the synsacrum with the pelvis, and the last few tail vertebrae form the pygostyle. Birds have a beak, no teeth and a lightweight skull. Medullary bone in the laying hen is a calcium store for shell formation."],
+    ["Digestive tract", "Beak, oral cavity, oesophagus, crop (a storage pouch), proventriculus (the glandular stomach), gizzard or ventriculus (muscular stomach with grit), small intestine (duodenal loop with the pancreas, jejunum, ileum), two caeca, short large intestine and cloaca. The gizzard grinds feed with the help of grit. Feed passes through quickly. The two caeca ferment some fibre."],
+    ["Respiratory system", "Birds have relatively small, rigid lungs that do not expand much. Air passes through the lungs one way, from the rear to the front, using nine air sacs that act as bellows. This one-way flow gives very efficient oxygen uptake. The syrinx at the base of the trachea produces sound. Birds have no diaphragm. Air sacs also reach into bones, so respiratory infection can spread widely."],
+    ["Urinary system", "The kidneys have three lobes on each side. The ureters open into the cloaca. There is no urinary bladder. The main nitrogenous waste is uric acid, which is the white part of droppings. The urine mixes with the faeces in the cloaca."],
+    ["Female reproductive tract", "Only the left ovary and left oviduct are functional in the hen. The oviduct has the infundibulum (receives the ovum and where fertilisation occurs), magnum (makes the albumen), isthmus (shell membranes), shell gland or uterus (shell and pigment) and vagina. An egg takes roughly 24 to 26 hours to form. The hen lays a clutch of eggs on successive days."],
+    ["Male reproductive tract", "Two testes lie inside the body, near the kidneys, and sperm travel through the ductus deferens to the cloaca. The cock has no true penis (a small copulatory organ exists), and mating transfers semen by cloacal contact. Ducks and geese have a true phallus."],
+    ["Immune organs", "The bursa of Fabricius is a lymphoid organ on the roof of the cloaca in young birds, essential for B-cell development, and it shrinks after sexual maturity. Infectious bursal disease virus attacks the bursa and weakens immunity. The thymus, spleen and caecal tonsils also contribute."]
+  ],
+  tb: { h: ["Feature", "Mammal", "Bird"], r: [["Teeth", "Present", "Absent, beak and gizzard"], ["Diaphragm", "Present", "Absent"], ["Lungs", "Expand, tidal flow", "Rigid, one-way flow with air sacs"], ["Urinary bladder", "Present", "Absent"], ["Main nitrogenous waste", "Urea", "Uric acid"], ["Ovary", "Two", "Left only functional"]] },
+  df: ["Cloaca: the common chamber for the digestive, urinary and reproductive tracts of birds.", "Gizzard: the muscular stomach of birds that grinds feed.", "Bursa of Fabricius: lymphoid organ above the cloaca where B cells mature."],
+  tm: [["Proventriculus", "Glandular stomach of birds"], ["Pygostyle", "Fused tail vertebrae"], ["Syrinx", "Voice organ at the base of the trachea"], ["Medullary bone", "Calcium reserve in laying hens"], ["Infundibulum", "Funnel that catches the ovum, site of fertilisation"]],
+  st: ["The ovum is released from the ovary into the infundibulum.", "It passes to the magnum, where albumen is added.", "It passes to the isthmus for shell membranes.", "The shell gland adds the shell and pigment.", "The egg is laid through the vagina and cloaca."],
+  ex: ["Gumboro disease damages the bursa, leaving chicks open to other infections.", "Birds fed without grit may digest poorly because the gizzard cannot grind well.", "Laying hens on calcium-poor feed can have thin shells and weak bones."],
+  k: ["Skeleton of the fowl.", "Digestive tract with crop and gizzard.", "Air sacs and one-way flow.", "Female tract and egg formation.", "Bursa of Fabricius."],
+  m: ["Birds have no urinary bladder, and the white part of the dropping is uric acid, not faeces."],
+  sa: [["Name the parts of the oviduct in the hen.", "Infundibulum, magnum, isthmus, shell gland (uterus) and vagina."], ["What is the function of the bursa of Fabricius?", "It is the site of B-cell maturation, so it is needed for antibody production."]],
+  la: [["Describe the digestive system of the fowl and compare with a mammal.", "Beak to cloaca with crop, proventriculus, gizzard, intestines, caeca, accessory organs, differences from mammals, with a sketch."]],
+  q: [["Fertilisation in the hen takes place in the", ["Infundibulum", "Shell gland", "Isthmus", "Cloaca"], 0, "At the infundibulum."],
+    ["Birds excrete nitrogen mainly as", ["Urea", "Uric acid", "Ammonia", "Creatinine"], 1, "Uric acid."],
+    ["The grinding stomach of the bird is the", ["Crop", "Proventriculus", "Gizzard", "Caecum"], 2, "The gizzard or ventriculus."],
+    ["How many ovaries function in the hen?", ["Two", "One", "None", "Three"], 1, "Only the left."]],
+  f: [["Cloaca", "Common exit for gut, urinary and genital tracts in birds"], ["Gizzard", "Muscular stomach with grit"], ["Bursa of Fabricius", "Lymphoid organ for B cell development"], ["Magnum", "Part of the oviduct that makes albumen"]],
+  d: ["Study the anatomy of ducks and pigeons.", "Learn the immune system of the bird.", "Compare egg formation timing with hatchery data."]
+});
+planned("anat", ["Eye and ear", "Endocrine glands", "Lymphatic system and spleen", "Surface anatomy for clinical examination", "Embryology and fetal membranes", "Histology of the major organs", "Hoof and claw anatomy in detail", "Anatomy of the nervous system in detail", "Comparative anatomy of the digestive system in the horse and pig", "Applied anatomy for nerve blocks"]);
+
+/* ================= PHYSIOLOGY (wave 2) ================= */
+unit("phys", "Unit 4 – Nerve, reproduction and balance");
+topic("phys", "Nerve and Muscle Physiology", {
+  o: ["Explain the resting membrane potential and the action potential", "Describe synaptic transmission and the neuromuscular junction", "Explain the sliding filament theory of muscle contraction", "Compare the sympathetic and parasympathetic systems"],
+  i: "Nerves carry signals and muscles produce movement. Many poisonings and diseases in animals, such as tetanus, botulism and organophosphate poisoning, act at one step of this chain.",
+  s: "A nerve cell keeps a small electrical charge across its membrane. When it is stimulated, the charge flips for a moment and a wave runs down the nerve. At the end of the nerve a chemical messenger crosses a tiny gap to the next cell. In a muscle, this makes calcium ions flood in and the muscle filaments slide over each other and shorten the muscle.",
+  n: [
+    ["Resting membrane potential", "At rest the inside of a neuron is negative compared with the outside, about minus 70 millivolts. This is due to the Na+/K+ ATPase pump (three sodium out, two potassium in) and the membrane being more permeable to potassium than sodium."],
+    ["Action potential", "A stimulus that reaches the threshold opens voltage-gated sodium channels. Sodium rushes in (depolarisation). Then the sodium channels close, potassium channels open and potassium leaves (repolarisation), sometimes with a brief overshoot (hyperpolarisation). An action potential follows the all-or-none law. During the refractory period the nerve cannot fire again at once, so signals go one way. Myelinated fibres conduct faster by saltatory conduction, jumping from node of Ranvier to node."],
+    ["Synapse and neurotransmitters", "At a chemical synapse, the arrival of an action potential opens calcium channels, and vesicles release neurotransmitter into the cleft. It binds receptors on the next cell. Acetylcholine is the transmitter at the neuromuscular junction and at parasympathetic endings. Noradrenaline is the main sympathetic transmitter. The signal ends when the transmitter is broken down (acetylcholinesterase) or taken back up."],
+    ["Muscle contraction", "A motor neuron's action potential causes acetylcholine release at the motor end plate. The muscle fibre action potential releases calcium from the sarcoplasmic reticulum. Calcium binds troponin, moving tropomyosin and exposing the binding sites on actin. Myosin heads attach, pull and release in cycles using ATP, and the thin filaments slide over the thick ones, shortening the sarcomere. When calcium is pumped back, the muscle relaxes. Without ATP, myosin cannot detach, as in rigor mortis."],
+    ["Reflex arc", "A reflex needs a receptor, a sensory (afferent) neuron, an integration centre in the spinal cord or brain, a motor (efferent) neuron and an effector. The patellar reflex is a simple stretch reflex. Reflexes are used in neurological examination of animals."],
+    ["Autonomic nervous system", "The sympathetic division prepares the body for fight or flight: it raises heart rate and blood pressure and dilates the pupils. The parasympathetic division is for rest and digestion: it slows the heart and increases gut movement. Most organs get both, and the balance decides their activity."],
+    ["Where diseases and poisons act", "Tetanus toxin blocks inhibitory signals in the spinal cord, giving spastic paralysis. Botulinum toxin blocks acetylcholine release, giving flaccid paralysis. Organophosphates inhibit acetylcholinesterase, so acetylcholine builds up. Low blood calcium (milk fever) weakens muscle and nerve function. Low magnesium raises nerve excitability (grass tetany)."]
+  ],
+  tb: { h: ["Feature", "Sympathetic", "Parasympathetic"], r: [["Overall effect", "Fight or flight", "Rest and digest"], ["Main transmitter at the organ", "Noradrenaline", "Acetylcholine"], ["Heart rate", "Increases", "Decreases"], ["Gut movement", "Decreases", "Increases"], ["Pupil", "Dilates", "Constricts"]] },
+  df: ["Action potential: a brief, all-or-none reversal of membrane potential that travels along a nerve or muscle fibre.", "Synapse: the junction where a neuron passes a signal to another cell.", "Motor unit: one motor neuron with all the muscle fibres it supplies."],
+  tm: [["Depolarisation", "Membrane potential becomes less negative"], ["Repolarisation", "Return of the membrane potential towards rest"], ["Node of Ranvier", "Gap in the myelin where the signal is regenerated"], ["Troponin", "Calcium-binding regulatory protein on actin"], ["Sarcoplasmic reticulum", "Calcium store of muscle"]],
+  st: ["The nerve impulse reaches the nerve ending.", "Acetylcholine is released and crosses the synapse.", "The muscle fibre membrane depolarises.", "Calcium is released from the sarcoplasmic reticulum.", "Actin and myosin slide and the muscle shortens.", "Calcium is pumped back and the muscle relaxes."],
+  ex: ["A calf with tetanus shows stiff limbs because inhibitory control of motor neurons is lost.", "A cow with milk fever lies down because low calcium weakens neuromuscular function.", "An animal poisoned with organophosphate shows salivation and tremors because acetylcholine acts without stopping."],
+  k: ["Resting potential and Na+/K+ pump.", "Action potential steps.", "Synaptic transmission.", "Sliding filament theory.", "Sympathetic vs parasympathetic."],
+  m: ["The action potential does not get weaker as it travels. It is regenerated all along the fibre."],
+  sa: [["State the all-or-none law.", "A stimulus above threshold produces a full-sized action potential, and a stimulus below threshold produces none."], ["Which ion triggers muscle contraction?", "Calcium ions, released from the sarcoplasmic reticulum."]],
+  la: [["Describe the mechanism of skeletal muscle contraction.", "Neuromuscular junction, end plate potential, calcium release, troponin and tropomyosin, cross-bridge cycle with ATP, relaxation, rigor mortis."]],
+  q: [["The resting membrane potential of a neuron is about", ["+70 mV", "0 mV", "-70 mV", "-7 mV"], 2, "Around minus 70 millivolts."],
+    ["Calcium binds to which protein to start contraction?", ["Myosin", "Troponin", "Collagen", "Actin"], 1, "Troponin."],
+    ["Botulinum toxin blocks", ["Acetylcholine release", "Acetylcholinesterase", "Sodium channels in the heart", "Noradrenaline"], 0, "It blocks release at the motor end plate."],
+    ["Saltatory conduction occurs in", ["Myelinated fibres", "Smooth muscle", "Capillaries", "Unmyelinated fibres only"], 0, "In myelinated nerves."]],
+  f: [["Neurotransmitter at the neuromuscular junction", "Acetylcholine"], ["Refractory period", "Time during which a nerve cannot fire again"], ["Sliding filament theory", "Actin slides over myosin to shorten the sarcomere"], ["Sympathetic division", "Fight or flight system"]],
+  d: ["Study smooth muscle contraction.", "Learn the neurological examination of the dog.", "Read about the synapse in more detail."]
+});
+
+topic("phys", "Reproductive Physiology and Lactation", {
+  o: ["Describe spermatogenesis and its hormonal control", "Explain how milk is synthesised and ejected", "Describe the lactation curve and factors affecting it", "Describe egg formation in the hen"],
+  i: "Production in livestock depends on reproduction and lactation. Knowing the physiology explains why management of heat, feed and milking changes yield.",
+  s: "In the male, the testes make sperm under the control of hormones from the pituitary. In the female, after calving the udder makes milk using nutrients from blood, and oxytocin from the brain squeezes it out. The hen makes an egg in about a day.",
+  n: [
+    ["Male reproduction", "The hypothalamus releases GnRH, the anterior pituitary releases FSH and LH. LH acts on Leydig cells, which make testosterone. FSH and testosterone act on the Sertoli cells in the seminiferous tubules, which support spermatogenesis. Spermatogenesis takes about two months in the bull. Sperm mature in the epididymis. The testes lie in the scrotum because sperm need a temperature a few degrees below body temperature, so heat stress lowers semen quality. Inhibin from the Sertoli cells controls FSH."],
+    ["Mammary development and lactogenesis", "Mammogenesis (growth of the udder) is stimulated by oestrogen and progesterone during pregnancy. At the end of pregnancy, progesterone falls and prolactin rises, which starts lactogenesis (milk synthesis). Colostrum is made first. Growth hormone supports maintenance of lactation (galactopoiesis), and so do thyroid hormones and cortisol."],
+    ["Milk synthesis", "The udder takes up precursors from blood. Lactose is made from glucose, and lactose draws water in, so it determines milk volume. In ruminants, milk fat uses acetate and beta-hydroxybutyrate for short-chain fatty acids and blood lipids for the rest. Milk protein, casein and whey proteins, is made from amino acids. Calcium moves into milk in large amounts, which is why cows are at risk of milk fever around calving."],
+    ["Milk let-down", "Stimulation of the teat sends a signal to the hypothalamus, which releases oxytocin from the posterior pituitary. Oxytocin makes the myoepithelial cells contract, pushing milk into the cistern. The effect lasts a few minutes, so milking should be done quickly after stimulation. Adrenaline blocks this effect in fear."],
+    ["Lactation curve", "Milk yield rises after calving to a peak at about 4 to 8 weeks in cows, then declines gradually. Persistency is the rate of decline. Good feeding, health, milking routine and comfort support the peak and persistency. A dry period of about 6 to 8 weeks lets the gland renew itself."],
+    ["Egg formation in the hen", "The ovary releases the ovum (yolk) into the infundibulum. The egg spends roughly 15 minutes in the infundibulum, about 3 hours in the magnum (albumen), about 1 to 1.5 hours in the isthmus (shell membranes) and about 20 hours in the shell gland (shell). The total is roughly a day. Daylight length controls laying through the hypothalamus and pituitary, and that is why layers get supplementary light."],
+    ["Effect of environment", "Heat stress lowers fertility in both sexes and milk yield. Nutrition affects the age at puberty. Photoperiod controls breeding season in sheep (short days), horses (long days) and poultry (long days)."]
+  ],
+  tb: { h: ["Hormone", "Source", "Role in reproduction or lactation"], r: [["GnRH", "Hypothalamus", "Releases FSH and LH"], ["FSH", "Anterior pituitary", "Spermatogenesis, follicle growth"], ["LH", "Anterior pituitary", "Testosterone, ovulation"], ["Prolactin", "Anterior pituitary", "Starts milk synthesis"], ["Oxytocin", "Posterior pituitary", "Milk let-down, uterine contraction"], ["Progesterone", "Corpus luteum, placenta", "Maintains pregnancy, blocks lactation until birth"]] },
+  df: ["Spermatogenesis: the process of sperm formation in the seminiferous tubules.", "Lactogenesis: the start of milk synthesis.", "Galactopoiesis: maintenance of established lactation."],
+  tm: [["Sertoli cell", "Supports developing sperm in the testis"], ["Leydig cell", "Makes testosterone"], ["Persistency", "How well milk yield is maintained after the peak"], ["Colostrum", "First milk after calving, rich in antibodies"]],
+  st: ["Pregnancy hormones grow the udder.", "Progesterone falls near birth and prolactin rises.", "Colostrum and then milk are secreted.", "Suckling or milking stimulates oxytocin release.", "Milk is ejected and removed, and synthesis continues."],
+  ex: ["Bulls in a hot, humid climate may have poor semen quality after heat stress.", "A cow that peaks late or declines quickly may have a feeding or health problem.", "Adding light in poultry houses helps maintain egg production in winter."],
+  k: ["Hormonal control of spermatogenesis.", "Lactogenesis and let-down.", "Lactation curve.", "Egg formation times.", "Photoperiod."],
+  m: ["Milk is not made at the moment of milking only. It builds up between milkings."],
+  sa: [["What causes milk let-down?", "Oxytocin from the posterior pituitary, making myoepithelial cells contract."], ["Why are testes outside the body?", "Sperm production requires a temperature lower than core body temperature."]],
+  la: [["Describe the physiology of lactation in the cow.", "Mammogenesis, lactogenesis, galactopoiesis, precursors of milk components, let-down reflex, lactation curve and factors affecting yield."]],
+  q: [["Which hormone starts milk synthesis?", ["Prolactin", "Oxytocin", "Insulin", "ADH"], 0, "Prolactin."],
+    ["Lactose in milk is made from", ["Glucose", "Acetate", "Cholesterol", "Casein"], 0, "Glucose, in the mammary gland."],
+    ["Which cell type makes testosterone?", ["Sertoli cell", "Leydig cell", "Spermatid", "Epididymal cell"], 1, "The Leydig cell."],
+    ["The egg spends the longest time in the", ["Infundibulum", "Magnum", "Shell gland", "Vagina"], 2, "About 20 hours in the shell gland."]],
+  f: [["Lactogenesis", "Beginning of milk synthesis"], ["Persistency", "Ability to maintain milk yield after the peak"], ["Inhibin", "Hormone from the Sertoli cell that suppresses FSH"], ["Photoperiod", "Length of daylight that influences breeding"]],
+  d: ["Study the oestrous cycle with hormone graphs.", "Learn the physiology of pregnancy and parturition.", "Read about milk composition changes in lactation."]
+});
+
+topic("phys", "Acid-Base Balance and Electrolytes", {
+  o: ["Define pH and explain how the body controls it", "Name the four primary acid-base disorders with common causes in animals", "Explain the roles of the main electrolytes", "Understand compensation by the lungs and kidneys"],
+  i: "Cells work only in a narrow pH range. Many common diseases of animals, such as diarrhoea, rumen acidosis and ketosis, upset pH and electrolytes.",
+  s: "Blood must stay slightly alkaline, around pH 7.4. Buffers soak up acids at once, the lungs blow off carbon dioxide within minutes, and the kidneys remove acid slowly but powerfully. When one of these fails, the animal becomes acidotic or alkalotic.",
+  n: [
+    ["Three lines of defence", "Chemical buffers, mainly the bicarbonate system, work immediately. The respiratory system changes the breathing rate, so changes in CO2 follow in minutes. The kidneys excrete hydrogen ions and regenerate bicarbonate over hours to days. The key equation is CO2 + H2O <-> H2CO3 <-> H+ + HCO3-."],
+    ["Four primary disorders", "- Metabolic acidosis: bicarbonate falls. Causes: diarrhoea (loss of bicarbonate, as in calf scours), lactic acidosis (rumen grain overload), ketosis, kidney failure.\n- Metabolic alkalosis: bicarbonate rises. Causes: loss of stomach acid, for example in abomasal displacement or obstruction, and vomiting.\n- Respiratory acidosis: CO2 rises from poor ventilation (airway obstruction, lung disease, deep anaesthesia).\n- Respiratory alkalosis: CO2 falls from overbreathing (heat panting, pain, fear)."],
+    ["Compensation", "The body tries to bring pH back. In metabolic acidosis the animal breathes faster and deeper to blow off CO2. In respiratory problems the kidneys adjust bicarbonate over days. Compensation reduces the pH change but does not cure the cause."],
+    ["Henderson-Hasselbalch idea", "pH depends on the ratio of bicarbonate (base) to dissolved CO2 (acid). If the ratio falls, pH falls. You do not need to calculate with the equation to know that adding acid or losing base lowers the pH."],
+    ["Electrolytes", "- Sodium: main ECF cation, controls water distribution.\n- Potassium: main ICF cation, needed for nerves and the heart. Both low and high levels are dangerous.\n- Chloride: main ECF anion, linked with sodium and acid secretion.\n- Calcium: bone, clotting, nerve and muscle function, milk.\n- Phosphorus and magnesium: energy and enzyme functions, nerve excitability.\nElectrolyte levels in blood are measured and read together with clinical signs and hydration."],
+    ["Dehydration", "Water loss with or without electrolyte loss reduces blood volume. Signs include sunken eyes, dry mucous membranes and a slow skin tent. The type of fluid lost, such as diarrhoea losing sodium, potassium and bicarbonate, decides what imbalance is expected. Fluid therapy is chosen and given by a veterinarian."]
+  ],
+  tb: { h: ["Disorder", "pH", "Primary change", "Typical veterinary cause"], r: [["Metabolic acidosis", "Low", "Low bicarbonate", "Calf diarrhoea, rumen acidosis"], ["Metabolic alkalosis", "High", "High bicarbonate", "Abomasal displacement or obstruction"], ["Respiratory acidosis", "Low", "High CO2", "Airway obstruction, poor ventilation"], ["Respiratory alkalosis", "High", "Low CO2", "Heat panting, pain"]] },
+  df: ["Acidosis: a condition in which blood pH is below the normal range.", "Alkalosis: a condition in which blood pH is above the normal range.", "Compensation: the response of the opposite system that moves pH back towards normal."],
+  tm: [["Bicarbonate", "The main blood buffer base"], ["Base excess", "A measure of the metabolic component of acid-base status"], ["Anion gap", "Difference between measured cations and anions, used to look for unmeasured acids"], ["Hydrogen ion", "H+, the acidity-carrying ion"]],
+  st: ["An acid load or loss of base occurs.", "Buffers absorb part of the change at once.", "Chemoreceptors raise or lower breathing.", "The kidneys adjust hydrogen and bicarbonate handling.", "pH moves back towards normal if the cause is removed."],
+  ex: ["A scouring calf with sunken eyes and weakness often has metabolic acidosis from bicarbonate loss.", "A cow with a displaced abomasum can develop metabolic alkalosis with low chloride and potassium.", "A panting dog in heat can blow off too much CO2 and become alkalotic."],
+  k: ["Buffer systems.", "Four disorders with causes.", "Compensation by lungs and kidneys.", "Roles of Na, K, Cl, Ca.", "Dehydration signs."],
+  m: ["Compensation does not mean the problem is solved."],
+  sa: [["What is metabolic acidosis? Give an example cause in cattle.", "A fall in blood pH due to loss of bicarbonate or gain of acid, for example rumen lactic acidosis or calf diarrhoea."], ["Which ion is the main intracellular cation?", "Potassium."]],
+  la: [["Describe the regulation of acid-base balance in the body.", "Buffers, respiratory control, renal control, four disorders with causes, compensation, link with electrolytes."]],
+  q: [["Calf diarrhoea commonly causes", ["Metabolic acidosis", "Metabolic alkalosis", "Respiratory acidosis", "Respiratory alkalosis"], 0, "Bicarbonate is lost in the faeces."],
+    ["The fastest acid-base defence is", ["Kidney", "Chemical buffers", "Liver", "Bone"], 1, "Buffers act instantly."],
+    ["Respiratory acidosis is caused by", ["Hyperventilation", "Hypoventilation", "Vomiting", "Diarrhoea"], 1, "Poor ventilation retains CO2."],
+    ["Abomasal displacement often leads to", ["Metabolic alkalosis", "Metabolic acidosis", "Normal pH", "Respiratory acidosis"], 0, "Loss of chloride and acid into the abomasum."]],
+  f: [["Normal blood pH", "About 7.35 to 7.45"], ["Compensation", "Opposite system tries to restore pH"], ["Main blood buffer", "Bicarbonate system"], ["Respiratory alkalosis", "High pH from too much CO2 loss"]],
+  d: ["Practise interpreting simple blood gas results.", "Study fluid therapy concepts.", "Learn the renal handling of hydrogen ions."]
+});
+planned("phys", ["Special senses", "Avian physiology in depth", "Growth and development", "Environmental physiology and heat stress", "Immunity in outline", "Physiology of exercise in the horse and greyhound", "Endocrine physiology in depth", "Physiology of digestion in the pig and horse", "Physiology of pregnancy and parturition"]);
+
+/* ================= BIOCHEMISTRY (wave 2) ================= */
+unit("bioc", "Unit 3 – Molecular and clinical biochemistry");
+topic("bioc", "Nucleic Acids and Protein Synthesis", {
+  o: ["Describe the structure of DNA and RNA", "Explain replication, transcription and translation", "Use the genetic code and name the types of mutations", "Explain how PCR works in outline"],
+  i: "DNA stores the genetic information. RNA copies it and proteins carry out the work. Veterinary diagnosis and breeding now use these molecules directly, for example in PCR tests for disease and in genomic selection.",
+  s: "DNA is a long coded message made of four letters, A, T, G and C. Cells copy it when they divide, read parts of it into RNA, and use that RNA to make proteins. A change in the code is a mutation.",
+  n: [
+    ["Nucleotides and DNA structure", "A nucleotide has a sugar, a phosphate and a nitrogen base. DNA contains deoxyribose and the bases adenine, thymine, guanine and cytosine. The two strands form a double helix, held together by hydrogen bonds between A and T (two bonds) and between G and C (three bonds), and the strands run in opposite directions (antiparallel). RNA contains ribose and uracil instead of thymine, and is usually single stranded."],
+    ["Types of RNA", "Messenger RNA (mRNA) carries the code from DNA to the ribosome. Transfer RNA (tRNA) brings amino acids and reads the codon with its anticodon. Ribosomal RNA (rRNA) forms part of the ribosome. Other small RNAs regulate genes."],
+    ["Replication", "DNA is copied before cell division. Replication is semi-conservative, so each new molecule has one old and one new strand. Helicase unwinds the helix, primase makes a primer, DNA polymerase adds nucleotides, and ligase joins fragments. Errors are corrected by proofreading and repair systems."],
+    ["Transcription", "RNA polymerase reads a gene on the DNA and builds mRNA in the nucleus. In eukaryotes the transcript is processed: introns are removed, a cap and a poly-A tail are added."],
+    ["Translation and the genetic code", "On the ribosome, the mRNA is read in groups of three bases called codons. There are 64 codons: 61 code for amino acids and three are stop codons. AUG is the start codon and codes for methionine. The code is degenerate, since several codons can code for the same amino acid. The tRNA brings each amino acid and the ribosome forms peptide bonds."],
+    ["Mutations", "A point mutation changes one base. It may be silent (same amino acid), missense (different amino acid) or nonsense (a stop codon). Insertion or deletion of bases that are not in multiples of three causes a frameshift, which usually changes the rest of the protein. Mutations may cause inherited diseases or be harmless, or create useful variation."],
+    ["Molecular tools in veterinary work", "PCR (polymerase chain reaction) copies a chosen piece of DNA by repeated cycles of heating (denaturing the strands), cooling (annealing primers) and extension by a heat-stable polymerase. RT-PCR starts with RNA, and so is used for RNA viruses such as the foot and mouth disease virus. DNA tests are used for inherited defects, parentage and breed identification."]
+  ],
+  tb: { h: ["Feature", "DNA", "RNA"], r: [["Sugar", "Deoxyribose", "Ribose"], ["Bases", "A, T, G, C", "A, U, G, C"], ["Strands", "Double", "Usually single"], ["Main role", "Stores genetic information", "Carries and decodes it"], ["Location", "Nucleus (and mitochondria)", "Nucleus and cytoplasm"]] },
+  df: ["Gene: a segment of DNA that carries the code for a protein or functional RNA.", "Codon: three consecutive bases in mRNA that code for one amino acid or a stop signal.", "PCR: a method that amplifies a specific DNA sequence by repeated cycles of heating and cooling."],
+  tm: [["Anticodon", "Three-base sequence of tRNA that pairs with the codon"], ["Intron", "Non-coding part removed from the transcript"], ["Exon", "Part of the gene that is expressed"], ["Frameshift", "Insertion or deletion that shifts the reading frame"], ["Primer", "Short DNA piece that starts DNA synthesis"]],
+  st: ["DNA is transcribed into pre-mRNA in the nucleus.", "The transcript is processed into mature mRNA.", "mRNA moves to the ribosome.", "tRNAs bring amino acids according to the codons.", "Peptide bonds are formed and the protein chain grows.", "The chain folds into the working protein."],
+  ex: ["An RT-PCR test can detect foot and mouth disease virus from a swab.", "A single base change causes some inherited defects in cattle.", "Paternity testing in dogs and horses uses DNA markers."],
+  k: ["Structure of DNA and RNA.", "Replication, transcription, translation.", "Genetic code properties.", "Types of mutation.", "Principle of PCR."],
+  m: ["The genetic code does not use thymine in mRNA. It uses uracil."],
+  sa: [["How many codons are there and how many are stop codons?", "64 codons, of which 3 are stop codons."], ["What is the base pairing in DNA?", "Adenine with thymine and guanine with cytosine."]],
+  la: [["Describe the process of protein synthesis.", "Transcription and processing, mRNA, tRNA and ribosome roles, codons and the genetic code, initiation, elongation, termination, with a flow diagram."]],
+  q: [["The start codon is", ["AUG", "UAA", "UGA", "GUA"], 0, "AUG codes for methionine."],
+    ["Which base is found in RNA but not DNA?", ["Thymine", "Uracil", "Adenine", "Guanine"], 1, "Uracil."],
+    ["A frameshift mutation is caused by", ["Substitution of one base for another", "Insertion of one base", "A silent change", "Replacement of codon by synonym"], 1, "Insertion or deletion not in multiples of three."],
+    ["PCR for an RNA virus must start with", ["DNA polymerase only", "Reverse transcription", "Culture", "Antibody"], 1, "RT-PCR converts RNA to DNA first."]],
+  f: [["Codon", "Three bases in mRNA coding for one amino acid"], ["Semi-conservative replication", "Each new DNA has one old and one new strand"], ["tRNA", "Brings amino acids to the ribosome"], ["Missense mutation", "Base change that alters an amino acid"]],
+  d: ["Study gene regulation and the lac operon.", "Learn how mutations cause inherited disease in animals.", "Read about next-generation sequencing."]
+});
+
+topic("bioc", "Clinical Biochemistry: Blood Tests, Bilirubin and Liver Function", {
+  o: ["Name the common biochemical tests for liver, kidney, muscle and pancreas", "Explain the breakdown of haem to bilirubin", "Distinguish pre-hepatic, hepatic and post-hepatic jaundice", "Explain why species and clinical picture matter when interpreting results"],
+  i: "A blood chemistry panel is a routine part of veterinary work. Understanding what each test measures lets you read the results in a sensible way, instead of memorising a list of high and low numbers.",
+  s: "When an organ is damaged, enzymes leak out of its cells into the blood, and waste products pile up if the kidney or liver fail. A blood test measures these. The numbers only make sense together with the animal's signs and species.",
+  n: [
+    ["Liver tests", "ALT and AST are enzymes inside liver cells. They rise when liver cells are damaged. In dogs and cats ALT is fairly liver-specific. In horses and ruminants ALT is low in the liver, so other tests are used, such as sorbitol dehydrogenase (SDH) and glutamate dehydrogenase (GLDH). AST also rises in muscle damage. ALP and GGT rise in bile duct problems. Bilirubin and bile acids show the liver's excretory function. Albumin and clotting tests show its synthetic function."],
+    ["Kidney tests", "Urea (blood urea nitrogen) and creatinine rise when kidney filtration falls. Creatinine is a better indicator of kidney function because it is less affected by diet and the state of hydration. Urea can rise with high-protein feeding, dehydration and gastrointestinal bleeding. Phosphorus rises in advanced kidney failure. Urine specific gravity shows the concentrating ability of the kidney."],
+    ["Muscle, pancreas and others", "Creatine kinase (CK) rises specifically in muscle damage. AST rises later and stays longer. Amylase and lipase are used for pancreatic problems, though they are not entirely specific. Glucose, total protein, albumin, globulin, calcium, phosphorus, sodium, potassium and chloride are routine."],
+    ["Haem breakdown and bilirubin", "Old red cells are broken down by macrophages of spleen, liver and marrow. Haem is converted to biliverdin and then to unconjugated bilirubin, which is fat-soluble and carried in blood bound to albumin. The liver conjugates bilirubin with glucuronic acid to make conjugated bilirubin, which is water-soluble and excreted in bile. In the gut, bacteria convert it into urobilinogen and stercobilin, which colours the faeces."],
+    ["Types of jaundice", "Pre-hepatic jaundice comes from excess red cell destruction, so unconjugated bilirubin rises (for example in babesiosis). Hepatic jaundice is due to liver cell damage, and both forms may be raised. Post-hepatic (obstructive) jaundice results from blockage of the bile flow, so conjugated bilirubin rises and the faeces become pale. Yellow mucous membranes and sclera are the clinical sign."],
+    ["Protein tests", "Albumin falls in liver disease, protein-losing kidney or gut disease and starvation, and with heavy parasite burdens such as Haemonchus. Globulins rise in chronic infection. A low albumin level reduces oncotic pressure and leads to oedema, such as bottle jaw."],
+    ["How to read results", "Compare with the reference range of the species and the laboratory. Look at patterns of several tests rather than one value. Consider the age, diet, hydration, stress and time of sampling. Repeat tests if needed. Samples must be collected and handled correctly, as haemolysis or delay can change results."]
+  ],
+  tb: { h: ["Organ", "Useful tests", "Note"], r: [["Liver", "ALT, AST, ALP, GGT, bilirubin, bile acids, albumin", "ALT is not liver-specific in horses and ruminants"], ["Kidney", "Urea, creatinine, phosphorus, urine specific gravity", "Creatinine is more reliable"], ["Muscle", "CK, AST", "CK is muscle-specific"], ["Pancreas", "Amylase, lipase", "Not fully specific"], ["Nutrition", "Albumin, total protein, glucose", "Interpret with feeding history"]] },
+  df: ["Jaundice (icterus): yellow discolouration of tissues due to raised bilirubin.", "Conjugated bilirubin: bilirubin joined with glucuronic acid in the liver, water soluble.", "Reference range: the range of values found in healthy animals of the species, used for comparison."],
+  tm: [["Haemolysis", "Rupture of red blood cells"], ["Azotaemia", "Raised urea and creatinine in blood"], ["Hypoalbuminaemia", "Low blood albumin"], ["Biliverdin", "Green pigment formed in the first step of haem breakdown"], ["Stercobilin", "Pigment that gives faeces their brown colour"]],
+  st: ["Red cells reach the end of their life span and are removed.", "Haem is converted to biliverdin and then to bilirubin.", "Bilirubin travels in blood bound to albumin to the liver.", "The liver conjugates it and excretes it into bile.", "Gut bacteria convert it into stercobilin."],
+  ex: ["Dogs with babesiosis may be jaundiced because of red cell destruction (pre-hepatic).", "A blocked bile duct from liver fluke can cause obstructive jaundice with pale faeces.", "CK and AST are raised in a horse after severe exertion, showing muscle damage."],
+  k: ["Common enzymes and the organ they indicate.", "Haem to bilirubin pathway.", "Three types of jaundice.", "Species differences in enzymes.", "Pre-analytical errors."],
+  m: ["One abnormal value does not make a diagnosis. Read the whole picture."],
+  sa: [["Which enzyme is specific for muscle damage?", "Creatine kinase (CK)."], ["What is obstructive jaundice?", "Jaundice due to blocked bile flow, with raised conjugated bilirubin and pale faeces."]],
+  la: [["Describe the metabolism of bilirubin and the types of jaundice.", "Haem breakdown, transport, conjugation, excretion, urobilinogen and stercobilin, pre-hepatic, hepatic and post-hepatic types with laboratory findings."]],
+  q: [["Creatine kinase mainly indicates damage to", ["Liver", "Muscle", "Kidney", "Pancreas"], 1, "It is a muscle enzyme."],
+    ["Conjugated bilirubin is", ["Water soluble", "Fat soluble only", "Insoluble", "Bound to haemoglobin"], 0, "Conjugation with glucuronic acid makes it water soluble."],
+    ["Which is a more reliable kidney indicator?", ["AST", "Creatinine", "Albumin", "Amylase"], 1, "Creatinine."],
+    ["Pale faeces with jaundice suggest", ["Obstruction of bile flow", "Haemolysis only", "Dehydration", "Normal liver"], 0, "Post-hepatic obstruction."]],
+  f: [["ALT", "Alanine aminotransferase, a liver enzyme especially in dogs and cats"], ["Azotaemia", "Raised urea and creatinine in blood"], ["Pre-hepatic jaundice", "Jaundice from excess red cell breakdown"], ["Stercobilin", "Bile pigment colouring faeces"]],
+  d: ["Study urinalysis in detail.", "Learn the biochemistry of the liver.", "Practise reading a blood chemistry panel with a teacher."]
+});
+planned("bioc", ["Urea cycle in detail", "Biochemistry of milk", "Biochemistry of muscle contraction", "Hormone biochemistry", "Biochemical techniques: chromatography, electrophoresis, spectrophotometry", "Nitrogen metabolism in ruminants", "Mineral metabolism: calcium and phosphorus"]);
+
+/* ================= PHARMACOLOGY (wave 2) ================= */
+unit("pharm", "Unit 2 – Drug groups in depth");
+topic("pharm", "Antimicrobial Pharmacology and Resistance (Concepts)", {
+  o: ["Classify antimicrobials by mechanism of action", "Explain bactericidal and bacteriostatic action and MIC", "Describe the mechanisms of antimicrobial resistance", "State the principles of responsible antimicrobial use"],
+  i: "Antimicrobials are the drugs vets use most. Resistance is one of the biggest threats to human and animal health, so understanding how these drugs work, and how bacteria escape them, is a core professional duty.",
+  s: "Antibiotics are chosen because they harm bacteria and not the animal. Some kill bacteria and some only stop them from growing. Bacteria can learn to survive a drug, and every unnecessary use pushes that along. This topic gives the ideas only. No doses are given, and the choice of drug belongs to a veterinarian.",
+  n: [
+    ["Selective toxicity", "A good antimicrobial acts on a target that bacteria have but animal cells do not, for example the bacterial cell wall. This is why many antibiotics are safe for the host, and why they do not work on viruses."],
+    ["Mechanisms of action", "- Cell wall synthesis: beta-lactams (penicillins, cephalosporins), bactericidal.\n- Protein synthesis at the ribosome: aminoglycosides (bactericidal), tetracyclines, macrolides and chloramphenicol (usually bacteriostatic).\n- Nucleic acid synthesis: fluoroquinolones inhibit DNA gyrase (bactericidal), rifampicin inhibits RNA polymerase.\n- Folate pathway: sulphonamides with trimethoprim.\n- Cell membrane: polymyxins such as colistin, which are highly important reserve drugs for human medicine."],
+    ["Bactericidal and bacteriostatic; spectrum", "Bactericidal drugs kill bacteria, and bacteriostatic drugs stop their growth and rely on the immune system. Narrow-spectrum drugs act on few species and broad-spectrum on many. Using the narrowest effective drug disturbs fewer normal flora and selects less resistance."],
+    ["MIC and sensitivity testing", "The minimum inhibitory concentration (MIC) is the lowest concentration of a drug that stops visible growth of a bacterium. Disk diffusion (Kirby-Bauer) testing places drug-soaked disks on an agar plate with the bacterium, and the size of the clear zone shows sensitivity. Culture and sensitivity testing helps pick a drug rationally."],
+    ["Mechanisms of resistance", "Bacteria may produce enzymes that destroy the drug (beta-lactamases), alter the target (as in MRSA), reduce drug entry, pump the drug out (efflux pumps) or bypass the blocked pathway. Resistance genes are often on plasmids and spread between bacteria by conjugation, even between species. Extended-spectrum beta-lactamase (ESBL) producers are an example in E. coli."],
+    ["Why resistance matters in animals", "Resistant bacteria can pass from animals to people through food, contact and the environment. Using antibiotics for growth promotion, for prevention without need and in poorly chosen doses select resistant strains. Veterinary use is regulated in many countries, and some drugs are restricted or banned in food animals. Check current Indian regulations."],
+    ["Principles of responsible use", "Use only when bacterial infection is likely. Choose based on culture where possible. Use the right drug by the right route for the right duration as prescribed. Do not use leftover drugs. Observe withdrawal periods. Improve hygiene, vaccination and housing to reduce the need for drugs. Keep treatment records. This is stewardship."]
+  ],
+  tb: { h: ["Group", "Target", "Action", "Example class"], r: [["Beta-lactams", "Cell wall", "Bactericidal", "Penicillins, cephalosporins"], ["Aminoglycosides", "30S ribosome", "Bactericidal", "Gentamicin type"], ["Tetracyclines", "30S ribosome", "Bacteriostatic", "Oxytetracycline type"], ["Macrolides", "50S ribosome", "Bacteriostatic", "Erythromycin type"], ["Fluoroquinolones", "DNA gyrase", "Bactericidal", "Enrofloxacin type"], ["Sulphonamides", "Folate pathway", "Bacteriostatic", "Sulphadimidine type"]] },
+  df: ["MIC: the lowest concentration of an antimicrobial that prevents visible growth of a microorganism.", "Antimicrobial resistance: the ability of a microorganism to survive exposure to a drug that would normally kill or inhibit it.", "Stewardship: coordinated actions to ensure antimicrobials are used only when needed and correctly."],
+  tm: [["Beta-lactamase", "Enzyme that breaks the beta-lactam ring"], ["Efflux pump", "Protein that pumps drugs out of the bacterial cell"], ["MRSA", "Methicillin-resistant Staphylococcus aureus"], ["Spectrum", "Range of bacteria affected by a drug"], ["Plasmid", "Circular DNA that can carry resistance genes"]],
+  st: ["Take a clean sample from the infected site.", "Culture and identify the bacterium.", "Test sensitivity to the drugs.", "A veterinarian chooses the drug by evidence.", "Treat as directed, observe withdrawal and keep records."],
+  ex: ["Mastitis bacteria in a herd may be sensitive to some drugs and not others, so culture guides treatment.", "Use of broad-spectrum drugs for mild diarrhoea that is viral selects resistant gut bacteria without helping.", "MRSA in dogs and people shows how resistant bacteria cross between species."],
+  k: ["Classification by mechanism.", "Bactericidal vs bacteriostatic.", "MIC and disk diffusion.", "Resistance mechanisms.", "Principles of stewardship."],
+  m: ["Antibiotics do not treat viral infections.", "Stopping a prescribed course early or using leftovers both promote resistance."],
+  sa: [["What is MIC?", "The lowest concentration of a drug that inhibits visible growth of a bacterium."], ["Name two mechanisms of antimicrobial resistance.", "Enzymatic inactivation, such as beta-lactamase, and efflux pumps that remove the drug."]],
+  la: [["Classify antimicrobial agents and describe how resistance develops.", "Table of classes with mechanism, spectrum and examples; mechanisms of resistance; spread by plasmids; consequences; stewardship measures."]],
+  q: [["Beta-lactams act by blocking", ["Protein synthesis", "Cell wall synthesis", "DNA gyrase", "Folate synthesis"], 1, "Cell wall synthesis."],
+    ["Resistance genes spread between bacteria mainly by", ["Plasmids", "Ribosomes", "Spores only", "Capsules"], 0, "Plasmids carried by conjugation."],
+    ["A bacteriostatic drug", ["Kills bacteria", "Stops bacterial growth", "Kills viruses", "Is always harmless"], 1, "It inhibits growth."],
+    ["The test that shows drug sensitivity on an agar plate is", ["Disk diffusion", "ELISA", "Gram stain", "Coagulase test"], 0, "Kirby-Bauer disk diffusion."]],
+  f: [["MIC", "Minimum inhibitory concentration"], ["ESBL", "Extended-spectrum beta-lactamase"], ["Narrow-spectrum", "Acts on a small range of bacteria"], ["Stewardship", "Responsible use of antimicrobials"]],
+  d: ["Learn the spectrum of each group in detail.", "Study the One Health approach to antimicrobial resistance.", "Read the rules on antibiotics in food animals."]
+});
+
+topic("pharm", "Anthelmintics and Ectoparasiticides: Classes and Mechanisms", {
+  o: ["Classify anthelmintics and ectoparasiticides", "Explain how each major class acts on the parasite", "Explain how anthelmintic resistance develops", "State why withdrawal periods and species cautions matter"],
+  i: "Parasite control is part of daily livestock work. Drugs for parasites are widely used, so resistance, residues and animal safety need as much attention as the killing effect.",
+  s: "Each parasite drug works by attacking something that the worm or arthropod needs, such as its nerves, muscles or energy supply. Different groups of drugs act in different ways. Overuse and wrong use make worms resistant. No doses are given here.",
+  n: [
+    ["Benzimidazoles", "These bind to tubulin in the parasite and block formation of microtubules, so the worm cannot absorb nutrients and starves. They act against many roundworms and some also on flukes and tapeworms. Resistance in Haemonchus and other sheep and goat worms is widespread."],
+    ["Imidazothiazoles and tetrahydropyrimidines", "Levamisole acts on the nicotinic receptors of the worm's muscle and causes spastic paralysis, so the worm is expelled. It acts on roundworms only."],
+    ["Macrocyclic lactones", "Ivermectin and related drugs bind glutamate-gated chloride channels in the nerve and muscle cells of nematodes and arthropods and cause paralysis. They act on roundworms and many ectoparasites, but not on flukes or tapeworms. Some dog breeds with a mutation in the MDR1 gene (for example many collie-type dogs) are very sensitive, which shows that species and breed matter."],
+    ["Drugs for tapeworms and flukes", "Praziquantel increases calcium permeability in tapeworms and flukes, which causes spastic paralysis and damage to the surface. Salicylanilides such as closantel and oxyclozanide and substituted phenols uncouple oxidative phosphorylation in flukes. Triclabendazole acts on both immature and adult liver flukes. The choice depends on the fluke stage."],
+    ["Ectoparasiticides", "Organophosphates and carbamates inhibit acetylcholinesterase. Synthetic pyrethroids keep sodium channels open in the nerves of arthropods. Amitraz acts on octopamine receptors in ticks and mites. Fipronil blocks GABA-gated chloride channels. Some insect growth regulators block development of immature stages. They are applied as dips, sprays, pour-ons, spot-ons or collars. Toxicity to animals, humans and the environment is a real risk, so follow label and veterinary instructions."],
+    ["Resistance", "Resistance means that worms survive a dose that used to kill them. It develops when the same class is used again and again, when under-dosing occurs (wrong weight estimate), or when all the worms on a farm are exposed to the drug leaving no unexposed worms (refugia). Resistant worms then pass on resistance genes. Slowing resistance needs targeted treatment, correct dosing by a vet, rotation by evidence, pasture management and testing with faecal egg count reduction tests."],
+    ["Residues and safety", "Drugs can pass into milk and meat, so withdrawal periods must be observed. Some drugs are not allowed in lactating animals. Avermectins are toxic to dung beetles and fish if the environment is contaminated. Dips must be disposed of safely."]
+  ],
+  tb: { h: ["Class", "Mechanism", "Acts on"], r: [["Benzimidazoles", "Bind tubulin", "Roundworms, some flukes and tapeworms"], ["Levamisole", "Nicotinic agonist, spastic paralysis", "Roundworms"], ["Macrocyclic lactones", "Glutamate-gated chloride channel", "Roundworms and arthropods"], ["Praziquantel", "Calcium permeability, spastic paralysis", "Tapeworms, flukes"], ["Salicylanilides", "Uncouple oxidative phosphorylation", "Flukes"], ["Pyrethroids", "Hold sodium channels open", "Ticks, flies, lice"]] },
+  df: ["Anthelmintic: a drug that kills or expels parasitic worms.", "Ectoparasiticide: a drug used against parasites on the surface of the host.", "Refugia: parasites not exposed to the drug."],
+  tm: [["Tubulin", "Structural protein of microtubules"], ["Nicotinic receptor", "Acetylcholine receptor in nerve and muscle"], ["Faecal egg count reduction test", "Test that compares egg counts before and after treatment to detect resistance"], ["Spot-on", "Liquid applied to the skin at one spot"]],
+  st: ["Confirm the parasite problem by examination.", "Select the drug class with a veterinarian.", "Weigh the animal and dose accurately as advised.", "Observe withdrawal periods and record treatment.", "Check the result and monitor for resistance."],
+  ex: ["Repeated use of one drug on a sheep flock without testing leads to resistant Haemonchus.", "A collie-type dog may show severe toxicity from a drug that is safe in other dogs.", "Dipping cattle against ticks without correct concentrations leaves resistant ticks."],
+  k: ["Mechanism of each class.", "Spectrum of the drugs.", "Causes of resistance.", "Refugia.", "Safety and residues."],
+  m: ["A drug that works for one parasite may not work on another. No single drug covers everything."],
+  sa: [["How do benzimidazoles act?", "They bind tubulin and block microtubule formation in the parasite."], ["What is refugia?", "Parasites not exposed to a drug, which keep resistant genes diluted."]],
+  la: [["Classify anthelmintics and describe their mechanisms of action.", "Table of classes, mechanisms, spectrum, examples, resistance, safety and residue issues."]],
+  q: [["Ivermectin acts on", ["Tubulin", "Glutamate-gated chloride channels", "DNA gyrase", "Cell wall"], 1, "Macrocyclic lactones act on glutamate-gated chloride channels."],
+    ["Praziquantel is mainly used against", ["Tapeworms and flukes", "Mites only", "Bacteria", "Viruses"], 0, "Cestodes and trematodes."],
+    ["Under-dosing leads to", ["Resistance", "Faster cure", "Longer residues", "Nothing"], 0, "It selects resistant parasites."],
+    ["Pyrethroids act on", ["Sodium channels", "Ribosomes", "Tubulin", "Proton pump"], 0, "They keep sodium channels open."]],
+  f: [["Levamisole", "Nicotinic agonist causing worm paralysis"], ["MDR1", "Gene whose mutation causes ivermectin sensitivity in some dogs"], ["Closantel", "Salicylanilide used against flukes"], ["Amitraz", "Acts on octopamine receptors in ticks and mites"]],
+  d: ["Study the life cycles to understand when drugs work.", "Learn about vaccines for parasites.", "Read about plant-based and integrated control."]
+});
+planned("pharm", ["Antifungal and antiviral drugs", "Hormones and related drugs", "Drugs acting on the digestive tract", "Drugs for the cardiovascular and respiratory systems", "General and local anaesthetics in depth", "Fluid therapy concepts", "Prescription writing and drug laws", "Pesticide and heavy metal poisoning in detail", "Plant poisonings of India", "NSAIDs and corticosteroids in depth"]);
+/* ================= WAVE 2, part 2: thinner subjects ================= */
+unit("pubh", "Unit 2 – Surveillance, One Health and disease control");
+topic("pubh", "One Health, Surveillance and Disease Control Programmes", {
+  o: ["Explain the One Health idea", "Describe surveillance and its types", "Outline control strategies: prevention, control, elimination, eradication", "Name the main Indian livestock disease control programmes in outline"],
+  i: "Human, animal and environmental health are linked. Rabies, brucellosis, avian influenza and antimicrobial resistance cannot be solved by one profession alone, so a vet is part of a public health team.",
+  s: "One Health means doctors, vets and environmental workers share information and act together. Surveillance is watching for disease so it is found early. Control programmes use vaccination, testing, movement rules and awareness to reduce or remove a disease.",
+  n: [
+    ["One Health", "Most new human infectious diseases come from animals. Controlling a disease in animals, such as vaccinating dogs against rabies, protects people far more cheaply than treating human cases. Shared areas are zoonoses, food safety, antimicrobial resistance and environmental contamination."],
+    ["Surveillance", "Surveillance is the continuous collection, analysis and sharing of disease data. Passive surveillance depends on reports from clinics and farmers. Active surveillance means going out to search, sample and test. Sentinel surveillance uses selected sites or animals as a warning system. Good surveillance needs correct diagnosis and quick reporting."],
+    ["Levels of control", "Prevention stops a disease from appearing. Control reduces it to an acceptable level. Elimination removes it from a region. Eradication removes the agent worldwide, as with rinderpest, declared eradicated in 2011. Tools are vaccination, test and cull, quarantine, movement control, vector control, hygiene and education."],
+    ["Outbreak investigation steps", "Confirm the diagnosis, define a case, count cases, describe by time, place and animal, form a hypothesis, test it, apply control measures and report. A simple epidemic curve shows whether it is a point source or a propagating outbreak."],
+    ["Indian programmes (verify current status)", "Programmes in India include the National Animal Disease Control Programme for foot and mouth disease and brucellosis, the rabies control efforts, and programmes for peste des petits ruminants and classical swine fever. Details and targets change, so check the Department of Animal Husbandry and Dairying for the present position."],
+    ["Biosecurity and notifiable diseases", "Some diseases must be reported to authorities by law. A vet who suspects one should report it and follow the official procedure, and should not treat it as a private case."]
+  ],
+  tb: { h: ["Term", "Meaning", "Example"], r: [["Control", "Reduce to acceptable level", "Mastitis control"], ["Elimination", "Zero cases in a region", "Disease free zone"], ["Eradication", "Agent removed worldwide", "Rinderpest"], ["Passive surveillance", "Reports sent in", "Clinic records"], ["Active surveillance", "Search and sampling", "Serosurvey"]] },
+  df: ["One Health: an approach that links the health of people, animals and the environment.", "Surveillance: continuous systematic collection and use of health data for action.", "Notifiable disease: a disease that must be reported to the authorities by law."],
+  tm: [["Index case", "First case identified in an outbreak"], ["Serosurvey", "Testing blood samples for antibodies in a population"], ["Sentinel", "Animal or site used as an early warning"], ["Quarantine", "Separation of animals that may be infected"]],
+  st: ["A suspected case is reported.", "Samples are taken and the diagnosis confirmed.", "The affected area and animals are identified.", "Movement control and treatment or vaccination begin.", "Contacts are traced and followed up.", "The outbreak is closed after a period without cases."],
+  ex: ["Mass dog vaccination reduces human rabies deaths.", "A sudden death of many poultry is reported, samples tested for avian influenza and the farm isolated.", "Bulk milk testing for brucellosis is a form of surveillance."],
+  k: ["One Health.", "Passive vs active surveillance.", "Control vs elimination vs eradication.", "Outbreak investigation steps."],
+  m: ["Eradication is not the same as elimination in a district."],
+  sa: [["Define surveillance.", "Continuous systematic collection, analysis and use of disease data to guide action."], ["Which disease was globally eradicated in animals?", "Rinderpest, declared in 2011."]],
+  la: [["Describe the steps of investigating a disease outbreak.", "Confirm diagnosis, case definition, case counting, time place animal analysis, hypothesis, control, reporting and follow up."]],
+  q: [["Rinderpest was declared eradicated in", ["1990", "2001", "2011", "2020"], 2, "2011."],
+    ["Searching for disease by sampling is", ["Passive surveillance", "Active surveillance", "Quarantine", "Elimination"], 1, "Active surveillance."],
+    ["A disease that must be reported by law is", ["Notifiable", "Endemic", "Enzootic", "Chronic"], 0, "Notifiable."],
+    ["One Health links", ["Only vets", "People, animals and environment", "Only farms", "Only labs"], 1, "All three."]],
+  f: [["Eradication", "Agent removed worldwide"], ["Sentinel surveillance", "Early warning using selected sites"], ["Notifiable disease", "Must be reported by law"], ["Epidemic curve", "Graph of cases over time"]],
+  d: ["Study the history of rinderpest eradication.", "Read about avian influenza surveillance.", "Learn epidemiological study designs."]
+});
+planned("pubh", ["Rabies control in depth", "Brucellosis and tuberculosis programmes", "Epidemiological study designs", "Biostatistics for veterinarians", "Veterinary public health law", "Environmental health and waste", "Occupational hazards", "Disaster management and livestock"]);
+
+unit("gen", "Unit 2 – Molecular and applied genetics");
+topic("gen", "Cytogenetics, Chromosomes and Inherited Disorders", {
+  o: ["Describe chromosome structure and number in domestic animals", "Explain mitosis and meiosis", "Describe chromosomal abnormalities", "Name examples of inherited disorders"],
+  i: "Chromosome knowledge explains inheritance, sex determination and some causes of infertility. It also forms the base of modern genetic testing in livestock.",
+  s: "Genes sit on chromosomes. Body cells have pairs of chromosomes, sperm and eggs have half. When the number or structure is wrong, animals can be infertile or sick.",
+  n: [
+    ["Chromosome numbers", "Diploid numbers (2n): cattle 60, buffalo 50 (river type), sheep 54, goat 60, pig 38, horse 64, dog 78, cat 38, fowl 78. The sex chromosomes are XX and XY in mammals. In birds the female is ZW and the male ZZ, so the female decides sex."],
+    ["Mitosis and meiosis", "Mitosis produces two identical diploid cells and is used for growth and repair. Meiosis halves the chromosome number to make gametes. It has two divisions, crossing over in prophase I gives genetic variation, and independent assortment adds more."],
+    ["Chromosome abnormalities", "Numerical errors include aneuploidy, for example monosomy and trisomy, and polyploidy. Structural errors include deletion, duplication, inversion and translocation. The Robertsonian translocation (1/29) in cattle is linked with reduced fertility. Freemartin heifers are sterile females born co-twin to a bull, caused by blood-vessel fusion in the placentas. XXY and XO conditions cause abnormal sexual development."],
+    ["Inherited disorders", "Examples include bovine leukocyte adhesion deficiency, citrullinaemia, hip dysplasia in dogs and polled-related traits. Many are autosomal recessive, so carriers look normal. DNA tests identify carriers, and planned matings avoid affected offspring."],
+    ["Karyotyping", "A karyotype arranges the chromosomes in pairs by size. It is used to detect chromosome abnormalities in infertile animals."]
+  ],
+  tb: { h: ["Species", "Diploid number"], r: [["Cattle", "60"], ["Buffalo (river)", "50"], ["Sheep", "54"], ["Goat", "60"], ["Pig", "38"], ["Horse", "64"], ["Dog", "78"], ["Fowl", "78"]] },
+  df: ["Karyotype: the complete set of chromosomes of an individual arranged in pairs.", "Aneuploidy: a chromosome number that is not an exact multiple of the haploid number.", "Carrier: an animal that carries a recessive allele but looks normal."],
+  tm: [["Autosome", "Non-sex chromosome"], ["Crossing over", "Exchange of segments between homologous chromosomes"], ["Freemartin", "Sterile female twin of a bull"], ["Translocation", "Movement of a chromosome segment to another chromosome"]],
+  st: ["Cells are collected and cultured.", "Division is stopped at metaphase.", "Chromosomes are spread and stained.", "Chromosomes are photographed and paired.", "Abnormalities are looked for."],
+  ex: ["A heifer born twin to a bull is usually a freemartin and cannot breed.", "A bull with a chromosome translocation may sire fewer calves.", "Two carriers mated together can produce an affected calf."],
+  k: ["Chromosome numbers.", "Mitosis vs meiosis.", "Chromosome abnormalities.", "Inherited disorders."],
+  m: ["Carriers of recessive disease are not sick, but they pass it on."],
+  sa: [["What is a freemartin?", "A sterile female born as a twin to a male, due to fusion of placental blood vessels."], ["Diploid number of cattle?", "60."]],
+  la: [["Compare mitosis and meiosis.", "Number of divisions, daughter cells, chromosome number, crossing over, function, with a table."]],
+  q: [["Diploid number of the dog is", ["38", "60", "64", "78"], 3, "78."],
+    ["In birds the heterogametic sex is", ["Male", "Female", "Both", "None"], 1, "Female ZW."],
+    ["Crossing over occurs in", ["Mitosis", "Meiosis", "Cleavage", "Fertilisation"], 1, "Prophase I of meiosis."],
+    ["A freemartin is usually", ["Fertile", "Sterile", "A male", "Polled"], 1, "Sterile."]],
+  f: [["Meiosis", "Division halving chromosome number"], ["Karyotype", "Chromosome set arranged in pairs"], ["Carrier", "Has a recessive allele but is normal"], ["ZW", "Female bird sex chromosomes"]],
+  d: ["Study DNA marker use in breeding.", "Learn about sex-linked traits.", "Read about genomic selection."]
+});
+planned("gen", ["Molecular genetics and genomic selection", "Immunogenetics and blood groups", "Biometry in animal breeding", "Breeds of horses, dogs and poultry of India", "Crossbreeding programmes in India", "Conservation of indigenous breeds"]);
+
+unit("lpm", "Unit 2 – Housing, calf rearing and herd health");
+topic("lpm", "Calf and Heifer Rearing, Housing and Herd Health", {
+  o: ["Describe colostrum feeding and calf care", "Explain the growth targets of a heifer", "State principles of dairy housing", "Describe the routine of herd health"],
+  i: "A good calf becomes a good cow. Most calf deaths and many later production problems start in the first weeks of life.",
+  s: "A newborn calf has almost no antibodies, so it must drink colostrum soon after birth. Clean housing, dry bedding, clean water and a plan for vaccination and deworming keep calves healthy until they join the herd.",
+  n: [
+    ["Colostrum", "Colostrum is the first milk and is rich in antibodies (immunoglobulins), vitamins and energy. Calves absorb whole antibodies only in the first hours of life, and this ability falls quickly, so colostrum should be fed early and in good quantity as advised by the farm vet. Poor transfer of immunity is called failure of passive transfer and leads to scours and pneumonia."],
+    ["Navel and early care", "Dry the calf, check breathing, dip the navel in antiseptic as advised and keep the calf in a clean, dry, draught-free pen. Use a separate clean pen for each calf where possible."],
+    ["Feeding the calf", "Milk or milk replacer is followed by calf starter and good water from the first weeks, which develop the rumen. Weaning is done when the calf eats enough starter. Feed hygiene is important: dirty buckets cause scours."],
+    ["Heifer growth", "Heifers should be reared to reach the target body weight and condition at first breeding, not just a target age. Under-feeding delays puberty, and over-feeding fattens the udder tissue and reduces milk yield later. Weigh or use a girth tape to follow growth."],
+    ["Housing principles", "Housing should give shade and ventilation in summer, dry and clean flooring, non-slip floors, enough space per animal, clean water and feeding space. Ventilation without draughts prevents respiratory problems. Good drainage prevents wet floors, which lead to foot disease and mastitis."],
+    ["Herd health routine", "Prepare a calendar of vaccination, deworming according to faecal tests, routine hoof checks, record keeping and isolation of sick animals. New animals are quarantined before joining the herd. Regular milk testing helps detect mastitis early."]
+  ],
+  tb: { h: ["Stage", "Main focus", "Common problem"], r: [["Newborn", "Colostrum, navel care", "Poor immunity, navel infection"], ["Pre-weaning", "Milk, starter, clean pen", "Scours, pneumonia"], ["Heifer", "Growth targets, vaccination", "Late puberty, over-conditioning"], ["Pregnant heifer", "Nutrition, comfort", "Difficult calving"]] },
+  df: ["Colostrum: the first milk after calving, rich in antibodies.", "Failure of passive transfer: inadequate absorption of antibodies from colostrum by the newborn.", "Weaning: stopping milk feeding when the calf can live on solid feed."],
+  tm: [["Calf starter", "Concentrate feed that supports early rumen development"], ["Quarantine", "Isolation of new animals before joining the herd"], ["Girth tape", "Tape to estimate body weight from chest girth"]],
+  st: ["Calf is born and breathing is checked.", "Navel care is done.", "Colostrum is fed early.", "Clean milk, starter and water are provided.", "Calf is weaned onto solid feed.", "Heifer is grown to target weight, then bred."],
+  ex: ["A calf that did not suck within hours has a high risk of scours.", "A heifer bred too small struggles at calving.", "Wet bedding and heat stress raise the risk of pneumonia."],
+  k: ["Colostrum importance.", "Starter and rumen development.", "Heifer growth targets.", "Housing principles.", "Herd health calendar."],
+  m: ["Calves are not born protected. They depend on colostrum."],
+  sa: [["Why is colostrum important?", "It provides antibodies that protect the calf in its first weeks."], ["What is weaning?", "Stopping milk feeding when the calf eats enough solid feed."]],
+  la: [["Describe the management of a calf from birth to weaning.", "Navel care, colostrum, hygiene, feeding programme, starter, water, housing, health care, weaning, records."]],
+  q: [["Calves get immunity at birth mainly from", ["Colostrum", "Placenta", "Hay", "Water"], 0, "Colostrum."],
+    ["Over-feeding heifers can", ["Increase later milk yield", "Reduce later milk yield", "Do nothing", "Cure scours"], 1, "Fat deposition in the udder reduces later yield."],
+    ["Calf starter helps", ["Rumen development", "Bone fusion", "Milk let-down", "Hoof growth"], 0, "It develops the rumen."],
+    ["New animals should be", ["Mixed at once", "Quarantined", "Sold", "Fasted"], 1, "Quarantine protects the herd."]],
+  f: [["Colostrum", "First milk with antibodies"], ["Calf starter", "Feed for rumen development"], ["Quarantine", "Isolation of new animals"], ["Target weight breeding", "Breed heifers by size, not age alone"]],
+  d: ["Study heat stress management in dairy cattle.", "Learn about transition cow management.", "Read about farm record systems."]
+});
+planned("lpm", ["Transition cow management", "Heat stress management", "Management of horses and companion animals", "Duck, quail and turkey management", "Rabbit and laboratory animal management", "Farm economics and project planning", "Layer and broiler house management in detail"]);
+
+unit("lpt", "Unit 2 – Value addition and quality");
+topic("lpt", "Milk Products, Quality Testing and Hygiene", {
+  o: ["List the main milk products and the principle of each", "Describe platform tests used for milk quality", "Explain pasteurisation and its purpose", "Name common adulterants and why they matter"],
+  i: "Milk is a perishable food. Processing turns it into longer-lasting products, and testing protects consumers from poor quality and adulteration.",
+  s: "Milk spoils quickly, so it is heated (pasteurised), cooled and often made into curd, butter, ghee, paneer or cheese. Simple tests at the milk collection centre show whether the milk is fresh, clean and unadulterated.",
+  n: [
+    ["Pasteurisation", "Pasteurisation heats milk to destroy disease-causing bacteria without changing it much. Common methods are the low temperature long time (LTLT) holding method and high temperature short time (HTST), followed by quick cooling. The alkaline phosphatase test checks that pasteurisation was done properly, as the enzyme is destroyed by correct heating."],
+    ["Common products", "Curd (dahi) is milk fermented by lactic acid bacteria. Butter comes from churning cream. Ghee is milk fat made by heating butter or cream to remove water. Paneer is made by acid coagulation of heated milk. Cheese uses rennet and bacterial cultures. Khoa is milk concentrated by heating. Ice cream is a frozen mix of milk, fat, sugar and stabiliser."],
+    ["Platform tests", "Organoleptic test (taste, smell, appearance), temperature, lactometer reading for density, fat estimation, clot on boiling (COB) and alcohol test to detect developed acidity, and acidity titration. These are quick tests at the collection point."],
+    ["Laboratory tests", "Fat by Gerber method, total solids and solids-not-fat, methylene blue reduction test and standard plate count for bacterial quality, somatic cell count for udder health, and detection tests for adulterants."],
+    ["Adulteration", "Water is the commonest adulterant. Others include added starch, urea, detergent or neutralisers. Adulteration reduces nutritional quality and some adulterants are harmful. Detection uses specific chemical tests as described in the Food Safety and Standards rules, which should be checked for current limits."],
+    ["Hygienic production", "Healthy animals, clean udder washing, clean milkers and utensils, quick cooling and prompt transport keep bacterial counts low. The cold chain is vital in India's warm climate."]
+  ],
+  tb: { h: ["Product", "Basic principle"], r: [["Curd", "Lactic fermentation"], ["Butter", "Churning cream"], ["Ghee", "Heat to remove water from butterfat"], ["Paneer", "Acid coagulation of heated milk"], ["Cheese", "Rennet and cultures"], ["Khoa", "Heat concentration"]] },
+  df: ["Pasteurisation: heat treatment that kills pathogenic bacteria in milk with minimal changes.", "Adulteration: addition of foreign or inferior substances to a food.", "Somatic cell count: number of body cells per ml of milk, an indicator of udder health."],
+  tm: [["Lactometer", "Instrument that measures milk density"], ["SNF", "Solids-not-fat"], ["COB test", "Clot on boiling test for acidity"], ["Rennet", "Enzyme preparation that clots milk in cheesemaking"]],
+  st: ["Receive milk and do platform tests.", "Filter and cool.", "Standardise fat and SNF.", "Pasteurise and cool.", "Pack and store cold.", "Distribute within the cold chain."],
+  ex: ["Milk that clots on boiling shows developed acidity and is rejected.", "A high somatic cell count tells the vet that mastitis may be present.", "A lactometer reading that is too low suggests added water."],
+  k: ["Pasteurisation methods.", "Platform tests.", "Milk products principles.", "Adulterants.", "Somatic cell count."],
+  m: ["Pasteurised milk is not sterile. It must still be kept cold."],
+  sa: [["What is the alkaline phosphatase test used for?", "To confirm that milk was pasteurised properly."], ["What does a high somatic cell count indicate?", "Possible mastitis or udder inflammation."]],
+  la: [["Describe the platform tests done on milk at a collection centre.", "Organoleptic, temperature, lactometer reading, fat, COB, alcohol, acidity, with purpose of each."]],
+  q: [["Paneer is made by", ["Acid coagulation", "Fermentation", "Churning", "Freezing"], 0, "Heated milk coagulated with acid."],
+    ["A low lactometer reading suggests", ["Added water", "Added fat", "Cold milk", "Good milk"], 0, "Added water lowers density."],
+    ["HTST is a type of", ["Pasteurisation", "Freezing", "Fermentation", "Homogenisation only"], 0, "High temperature short time pasteurisation."],
+    ["Gerber method estimates", ["Fat", "Lactose", "Protein", "Calcium"], 0, "Milk fat."]],
+  f: [["LTLT", "Low temperature long time pasteurisation"], ["Ghee", "Milk fat after removing water"], ["Somatic cell count", "Indicator of udder health"], ["COB", "Clot on boiling test"]],
+  d: ["Study the chemistry of milk proteins.", "Learn cheese technology.", "Read about food safety standards for milk."]
+});
+planned("lpt", ["Cheese and fermented products in depth", "Ice cream technology", "Slaughterhouse design and operations", "Meat products and preservation", "Egg grading and quality", "Hides, skins and wool", "Packaging and cold chain", "Quality systems: HACCP"]);
+
+unit("gyn", "Unit 2 – Fertility management");
+topic("gyn", "Artificial Insemination, Semen and Breeding Management", {
+  o: ["Describe how semen is collected and processed", "Explain heat detection and timing of AI", "List causes of AI failure", "Describe breeding soundness examination in outline"],
+  i: "Artificial insemination (AI) has spread good genetics across India, mainly through frozen semen of superior bulls. Success depends on good heat detection, correct handling of semen and sound technique.",
+  s: "In AI, semen from a good bull is collected, diluted, frozen and stored in liquid nitrogen. A trained person places it in the cow at the right time after she comes in heat. Mistakes in timing or semen handling are the main reasons AI fails.",
+  n: [
+    ["Semen collection", "Semen is collected from the bull with an artificial vagina, or by electroejaculation when needed. Collected semen is evaluated for volume, colour, concentration, motility and the proportion of normal sperm."],
+    ["Processing and storage", "Semen is diluted in an extender that protects sperm, such as one containing egg yolk or other protective agents, cooled, packed in straws and frozen. Frozen straws are stored in liquid nitrogen at about minus 196 degrees Celsius. Straws must stay submerged and the nitrogen level must be checked regularly."],
+    ["Heat detection", "Signs of oestrus include standing to be mounted, mounting other cows, restlessness, clear mucus discharge and a swollen vulva. Heat detection is the biggest weak point in many herds. Buffaloes often show silent heat, so careful observation is needed. Records of past heats help to predict the next."],
+    ["Timing", "Ovulation occurs some hours after the end of oestrus, so a commonly taught approach is the morning-evening rule: a cow seen in heat in the morning is inseminated in the evening, and one seen in the evening is inseminated the next morning. Check your textbook for the exact local guidance."],
+    ["Technique", "The recto-vaginal method is used in cattle: the operator holds the cervix through the rectum and passes the AI gun through it, depositing semen in the body of the uterus. Thawing is done correctly and the straw is used soon after thawing. Clean, gentle handling avoids injury and infection."],
+    ["Reasons for failure", "Poor heat detection, wrong timing, poorly handled semen, rough technique, uterine infection, poor body condition, heat stress and underlying reproductive disease. A systematic check of each is part of the problem-solving."],
+    ["Breeding soundness", "A breeding soundness examination of a bull includes general health, scrotal size, testes and accessory glands, semen quality and libido. It helps avoid using infertile bulls."],
+    ["Other technologies", "Estrus synchronisation, sexed semen, multiple ovulation and embryo transfer (MOET) and in vitro embryo production are used to speed up genetic progress. These need specialised training."]
+  ],
+  tb: { h: ["Step", "Key point"], r: [["Collection", "Artificial vagina"], ["Extender", "Protects sperm during freezing"], ["Storage", "Liquid nitrogen at about minus 196 C"], ["Heat detection", "Standing heat is the main sign"], ["Timing", "Morning-evening rule"], ["Deposition", "Body of the uterus"]] },
+  df: ["Artificial insemination: placing semen into the female tract by an instrument.", "Oestrus: the period of sexual receptivity of the female.", "Extender: a fluid added to semen to preserve sperm."],
+  tm: [["Straw", "Plastic tube holding frozen semen"], ["Thawing", "Warming frozen semen before use"], ["Silent heat", "Ovulation without clear behavioural signs"], ["Libido", "Sexual drive"]],
+  st: ["The cow is observed and heat is detected.", "A straw is chosen and thawed correctly.", "The AI gun is loaded cleanly.", "Semen is deposited in the uterine body.", "The date and bull are recorded.", "Pregnancy is checked later."],
+  ex: ["A farmer who misses silent heats in buffaloes has a long calving interval.", "A damaged liquid nitrogen container can ruin hundreds of straws.", "A repeat breeder cow needs systematic examination of causes."],
+  k: ["Semen processing and storage.", "Heat signs and timing.", "Causes of AI failure.", "Breeding soundness."],
+  m: ["Freezing does not make semen immortal. Handling errors kill sperm."],
+  sa: [["At what temperature is semen stored?", "In liquid nitrogen at about minus 196 degrees Celsius."], ["State the morning-evening rule.", "Cows in heat in the morning are inseminated in the evening and cows in heat in the evening the next morning."]],
+  la: [["Describe the procedure of artificial insemination in cattle and reasons for its failure.", "Heat detection, timing, thawing, technique, hygiene, deposition site, records, failure causes."]],
+  q: [["Frozen semen is stored in", ["Liquid nitrogen", "A refrigerator", "A freezer at minus 20", "Ice"], 0, "Liquid nitrogen."],
+    ["Semen is deposited in the", ["Vagina", "Body of the uterus", "Oviduct", "Bladder"], 1, "Body of the uterus."],
+    ["Biggest cause of AI failure on many farms is", ["Poor heat detection", "Good semen", "Too much feed", "Sunlight"], 0, "Heat detection."],
+    ["Silent heat is common in", ["Buffaloes", "Dogs", "Hens", "Pigs"], 0, "Buffaloes."]],
+  f: [["MOET", "Multiple ovulation and embryo transfer"], ["Extender", "Fluid that protects sperm"], ["Silent heat", "Oestrus with weak signs"], ["Straw", "Packaging for frozen semen"]],
+  d: ["Study oestrus synchronisation protocols in outline.", "Learn bull breeding soundness exam.", "Read about embryo transfer."]
+});
+planned("gyn", ["Embryo transfer and assisted reproduction", "Obstetrical operations", "Reproductive problems of the bitch and mare", "Male infertility", "Disorders of pregnancy and the puerperium", "Andrology", "Reproductive hormones in practice", "Neonatal care"]);
+
+unit("surg", "Unit 2 – Common procedures");
+topic("surg", "Wound Healing, Sutures and Common Operations (Concepts)", {
+  o: ["Classify wounds and describe the stages of healing", "Name common suture materials and patterns", "Describe the principles of tissue handling", "List common operations in outline"],
+  i: "Wounds and surgical cuts heal by the same biological steps. A surgeon helps healing by keeping tissue alive, clean and quiet. This topic gives concepts only. It is not a surgical guide, and procedures must be learned under a supervisor.",
+  s: "A wound first bleeds, then becomes inflamed, then new tissue fills it and finally scar tissue strengthens it. Infection, dead tissue and movement slow the process. Sutures hold the edges together while the body repairs itself.",
+  n: [
+    ["Wound classification", "Wounds may be incised, lacerated, punctured, contused or abraded. They may be clean, clean-contaminated, contaminated or dirty. Time since injury and degree of contamination decide whether a wound can be closed at once."],
+    ["Stages of healing", "Inflammatory phase: bleeding stops, white cells clean the area. Proliferative phase: granulation tissue fills the gap and epithelium covers it. Maturation (remodelling) phase: collagen reorganises and the scar gains strength over months. Healing by first intention is a clean closed wound. Second intention is open healing by granulation. Third intention is delayed closure."],
+    ["Factors affecting healing", "Infection, foreign bodies, dead tissue, poor blood supply, movement, tension, poor nutrition, disease such as anaemia, and drugs such as corticosteroids delay healing. Moist and clean wounds heal better."],
+    ["Suture materials", "Absorbable sutures, such as catgut or synthetic types, are used for tissue that heals quickly. Non-absorbable materials, such as nylon or silk, are used for skin and tissues that need long support. Needles are cutting or round-bodied. Select material according to tissue and species."],
+    ["Suture patterns", "Simple interrupted, simple continuous, horizontal mattress and inverting patterns are taught. Knots must be secure and not too tight, since tight sutures cut off blood supply."],
+    ["Principles of tissue handling", "Gentle handling, controlling bleeding, removing dead tissue (debridement), keeping tissues moist, avoiding dead space and tension, strict asepsis and good records. Halsted's principles summarise these ideas."],
+    ["Common operations in outline", "Castration, dehorning, hernia repair, caesarean section, rumenotomy, enterotomy, ovariohysterectomy and fracture fixation are typical examples. Details belong in practical classes under supervision with proper anaesthesia and pain relief."]
+  ],
+  tb: { h: ["Intention", "Description", "Example"], r: [["First", "Clean edges closed by suture", "Clean surgical incision"], ["Second", "Gap fills with granulation", "Open contaminated wound"], ["Third", "Delayed closure after cleaning", "Contaminated wound closed later"]] },
+  df: ["Debridement: removal of dead and contaminated tissue from a wound.", "Granulation tissue: new vascular connective tissue that fills a wound.", "Dehiscence: splitting open of a surgical wound."],
+  tm: [["Eschar", "Dry scab or crust"], ["Seroma", "Collection of serum under the skin"], ["Absorbable suture", "Suture the body breaks down over time"], ["Sepsis", "Infection spreading in the body"]],
+  st: ["Stop bleeding and clean the wound.", "Remove dead tissue.", "Decide on closure.", "Close without tension if suitable.", "Protect and review the wound.", "Remove skin sutures at the right time."],
+  ex: ["A dog bite wound is often left open at first because bacteria are deep.", "A wound on a limb that keeps moving heals slowly without support.", "A seroma forms when dead space is left."],
+  k: ["Wound classes.", "Healing phases.", "Factors delaying healing.", "Suture materials."],
+  m: ["Tighter sutures do not heal better. They can cut off blood supply."],
+  sa: [["Define first intention healing.", "Healing of a clean wound whose edges are brought together, with minimal scar."], ["What is debridement?", "Removal of dead and contaminated tissue from a wound."]],
+  la: [["Describe the phases of wound healing and factors that delay it.", "Inflammation, proliferation, maturation, types of intention, delaying factors, how a surgeon helps."]],
+  q: [["Granulation tissue is formed in the", ["Inflammatory phase only", "Proliferative phase", "Maturation phase", "None"], 1, "Proliferative phase."],
+    ["Splitting of a closed wound is", ["Dehiscence", "Seroma", "Eschar", "Debridement"], 0, "Dehiscence."],
+    ["Corticosteroids tend to", ["Delay healing", "Speed healing", "Cure infection", "Have no effect"], 0, "They delay healing."],
+    ["Clean edges closed by suture heal by", ["First intention", "Second intention", "Third intention", "None"], 0, "First intention."]],
+  f: [["Dehiscence", "Wound splits open"], ["Debridement", "Removing dead tissue"], ["Seroma", "Serum collection under skin"], ["Third intention", "Delayed closure"]],
+  d: ["Study fracture healing.", "Learn about bandaging.", "Read about surgical site infection prevention."]
+});
+planned("surg", ["Fracture healing and fixation", "Hernias and abdominal surgery", "Ophthalmic surgery", "Orthopaedic conditions in dogs", "Lameness examination in horses", "Surgery of the digestive tract in ruminants", "Teat and udder surgery", "Anaesthetic monitoring"]);
+
+unit("med", "Unit 2 – Systemic conditions and metabolic disease");
+topic("med", "Metabolic and Production Diseases of Dairy Cattle (Concepts)", {
+  o: ["Explain the idea of production diseases", "Describe milk fever, ketosis, grass tetany and downer cow in concept", "Explain why many occur around calving", "State prevention principles"],
+  i: "High-yielding cows push their metabolism hard around calving. When intake and supply fall short of demand, metabolic diseases appear. These are mostly preventable with good feeding and management. Treatment must be given by a veterinarian.",
+  s: "Right after calving the cow suddenly needs a lot of calcium and energy for milk, and she eats less. If the body cannot keep up, blood calcium or blood glucose falls and she becomes ill. Good dry-cow feeding and body condition prevent most cases.",
+  n: [
+    ["Why these diseases occur", "Production diseases result from an imbalance between nutrient intake and output in milk. Risk is highest in the transition period, from about three weeks before to three weeks after calving. They are linked: one problem makes others more likely."],
+    ["Milk fever (parturient hypocalcaemia)", "Calcium in blood falls as large amounts enter colostrum. The cow shows weakness, muscle tremor, cold ears, and then lies down, often with her head turned to the flank. It is mostly seen in older, high-yielding cows soon after calving. This is an emergency. Dry cow diets and management to prepare calcium mobilisation prevent it."],
+    ["Ketosis", "Negative energy balance leads to mobilisation of fat and accumulation of ketone bodies. Signs include reduced appetite, falling yield, weight loss and sometimes the smell of acetone. It is detected by ketone tests in milk or urine. Over-conditioned cows are at greater risk."],
+    ["Grass tetany (hypomagnesaemia)", "Low blood magnesium after lush spring grazing causes nervousness, tremors, staggering and convulsions. It is a fast and often fatal condition."],
+    ["Downer cow", "A cow that cannot rise has many possible causes, including milk fever, nerve or muscle damage during calving, mastitis and low phosphorus. Cause must be found, and good bedding and turning help prevent muscle damage."],
+    ["Rumen acidosis", "Sudden or heavy grain feeding lowers rumen pH, causing digestive upset, laminitis and reduced yield. Gradual diet changes and enough fibre prevent it."],
+    ["Prevention approaches", "Good dry period diet and body condition scoring, avoiding over-fat cows, balanced minerals, gradual change of feed, good feed access and comfort, monitoring feed intake and rumen fill, and early identification of cows at risk."]
+  ],
+  tb: { h: ["Disease", "Cause", "Typical timing", "Key sign"], r: [["Milk fever", "Low blood calcium", "Within days of calving", "Weakness, lying down"], ["Ketosis", "Negative energy balance", "First weeks of lactation", "Poor appetite, ketones"], ["Grass tetany", "Low magnesium", "Lush pasture", "Tremors, convulsions"], ["Rumen acidosis", "Too much grain", "Any time", "Dull, loose dung"]] },
+  df: ["Production disease: a disease caused by a mismatch between nutrient supply and the demands of production.", "Ketosis: a disease of high ketone body levels caused by negative energy balance.", "Transition period: the period around calving when the cow changes from pregnancy to lactation."],
+  tm: [["Hypocalcaemia", "Low blood calcium"], ["Hypomagnesaemia", "Low blood magnesium"], ["Ketone bodies", "Products of fat breakdown"], ["Body condition score", "Scale to judge fatness"]],
+  st: ["Body condition and diet are assessed in the dry period.", "A suitable dry cow diet is fed.", "Cow calves and is watched closely.", "Early signs such as poor appetite are reported to the vet.", "The vet diagnoses and treats.", "The herd diet is reviewed."],
+  ex: ["An older cow lying down a day after calving with cold ears suggests milk fever.", "A fat dry cow that eats poorly after calving is at risk of ketosis.", "Cattle moved to a lush pasture can develop tetany."],
+  k: ["Transition period.", "Milk fever.", "Ketosis.", "Grass tetany.", "Prevention."],
+  m: ["Metabolic diseases are not infections, but they open the door to infections."],
+  sa: [["Define milk fever.", "A metabolic disease of recently calved cows due to low blood calcium."], ["What is ketosis?", "A disease from negative energy balance with raised ketone bodies."]],
+  la: [["Describe the causes and prevention of metabolic diseases in dairy cows.", "Transition period, milk fever, ketosis, tetany, acidosis, diet, body condition and management."]],
+  q: [["Milk fever is caused by low blood", ["Calcium", "Sodium", "Glucose", "Iron"], 0, "Calcium."],
+    ["Grass tetany relates to", ["Magnesium", "Copper", "Cobalt", "Iodine"], 0, "Magnesium."],
+    ["Over-conditioned dry cows risk", ["Ketosis", "Pneumonia", "Rabies", "Anthrax"], 0, "Ketosis and fatty liver."],
+    ["The transition period is around", ["Calving", "Weaning", "Dipping", "Mating of heifers"], 0, "Around calving."]],
+  f: [["Transition period", "Three weeks before to three weeks after calving"], ["Ketone bodies", "Fat breakdown products"], ["Hypomagnesaemia", "Low magnesium"], ["Downer cow", "Cow unable to rise"]],
+  d: ["Study fatty liver in cows.", "Learn mastitis in depth.", "Read about foot disease and lameness."]
+});
+planned("med", ["Mastitis in detail", "Diseases of the dog and cat: an overview", "Skin diseases", "Nervous system diseases", "Diseases of poultry", "Deficiency diseases", "Diseases of the horse", "Fluid therapy and shock", "Neonatal diseases"]);
+
+unit("ext", "Unit 2 – Communication and training");
+topic("ext", "Communication, Adoption of Innovation and Participatory Methods", {
+  o: ["Describe the elements of communication", "Explain the stages of adoption and categories of adopters", "Describe participatory extension methods", "Plan a simple farmer awareness activity"],
+  i: "A technology that farmers do not adopt gives no benefit. Extension is the work of making sure knowledge reaches the right person in a form they understand and use.",
+  s: "Communication needs a sender, a message, a channel and a receiver, and feedback. Farmers do not all adopt new ideas at the same speed. Some try quickly, many wait to see results from neighbours. A good extension worker uses demonstrations and listens as much as talks.",
+  n: [
+    ["Elements of communication", "Source, message, channel, receiver and feedback. Noise is anything that blocks understanding, such as language barriers or distance. Use of the local language, simple messages and visuals helps."],
+    ["Adoption process", "A commonly taught model has stages: awareness, interest, evaluation, trial and adoption. A farmer may reject the idea at any stage. Rogers described adopter categories: innovators, early adopters, early majority, late majority and laggards."],
+    ["Factors affecting adoption", "Relative advantage, compatibility with existing practice, simplicity, trialability and observability. Cost, risk and access to inputs also matter. Women farmers have special roles in dairy and poultry, so they need to be reached."],
+    ["Extension methods", "Individual methods such as farm visits, group methods such as demonstrations, training and farmer meetings, and mass methods such as radio, television, posters and mobile messages. Method demonstration shows how to do something. Result demonstration shows the value of a practice."],
+    ["Participatory approaches", "Farmers take part in identifying problems and solutions. Examples are farmer field schools, farmer interest groups, self-help groups and village-level meetings. Local knowledge is respected and combined with scientific knowledge."],
+    ["Digital tools", "Mobile phones, WhatsApp groups, apps and farmer helplines can carry advice quickly, but messages must be correct and local. Verify the content with the relevant authority."],
+    ["Evaluation", "Extension work is checked by measuring changes in knowledge, attitude and practice, and by looking at the outcome such as milk yield or reduced disease."]
+  ],
+  tb: { h: ["Method", "Type", "Example"], r: [["Farm visit", "Individual", "Advice on a sick calf"], ["Demonstration", "Group", "Preparing silage"], ["Training camp", "Group", "AI technician training"], ["Radio talk", "Mass", "Seasonal care tips"]] },
+  df: ["Extension: an informal educational process that helps farmers adopt better practices.", "Adoption: the decision to use an innovation as the best course of action.", "Feedback: the receiver's response that tells the source how the message was understood."],
+  tm: [["Innovator", "First to try a new idea"], ["Laggard", "Last to adopt"], ["Method demonstration", "Shows how a skill is done"], ["Result demonstration", "Shows the outcome of a practice"]],
+  st: ["Find the farmers' real problem.", "Choose a simple message and method.", "Demonstrate in a local farm.", "Allow trial and answer doubts.", "Collect feedback.", "Review the results and improve."],
+  ex: ["A demonstration of urea-treated straw on a village farm convinces neighbours more than a lecture.", "A self-help group learns hygienic milking together and sells good quality milk.", "A WhatsApp reminder for vaccination dates reaches farmers fast."],
+  k: ["Communication elements.", "Adoption stages.", "Adopter categories.", "Extension methods.", "Participatory approaches."],
+  m: ["Extension is not only lecturing. Listening and feedback are part of it."],
+  sa: [["List the stages of adoption.", "Awareness, interest, evaluation, trial and adoption."], ["What is a result demonstration?", "A demonstration that shows farmers the outcome of a practice over time."]],
+  la: [["Discuss the adoption process and factors that influence adoption.", "Stages, categories, characteristics of innovation, socioeconomic factors, extension role."]],
+  q: [["The first adopters are called", ["Innovators", "Laggards", "Late majority", "Skeptics"], 0, "Innovators."],
+    ["Radio is a", ["Mass medium", "Individual method", "Group method", "Result demonstration"], 0, "Mass method."],
+    ["Anything that blocks understanding is", ["Noise", "Feedback", "Channel", "Source"], 0, "Noise."],
+    ["Farmer field schools are an example of", ["Participatory approach", "Mass media", "Law", "Marketing"], 0, "Participatory extension."]],
+  f: [["Noise", "Barrier to communication"], ["Trialability", "Ease of trying an innovation on a small scale"], ["Self-help group", "Small community group working together"], ["Feedback", "Response from receiver"]],
+  d: ["Study the history of Indian extension.", "Learn the role of Krishi Vigyan Kendras.", "Read about gender in livestock extension."]
+});
+planned("ext", ["Krishi Vigyan Kendras and ATMA", "Cooperatives and dairy development", "Programme planning and evaluation", "Rural sociology and leadership", "Entrepreneurship in livestock", "Gender in livestock extension", "Audio-visual aids"]);
+
+unit("clin", "Unit 2 – Practical procedures and ethics");
+topic("clin", "Clinical Pathology Samples and Laboratory Requests", {
+  o: ["List the common clinical samples and how to collect them in principle", "Explain labelling, preservation and transport", "Name common anticoagulants and their uses", "Describe how to read a laboratory report sensibly"],
+  i: "A diagnosis is only as good as the sample. Poorly collected or labelled samples produce misleading results. This topic describes principles. Practical procedures are learned under supervision.",
+  s: "Every sample should be fresh, enough, correctly labelled and in the right container. A good request form tells the laboratory what you suspect and what you want to know.",
+  n: [
+    ["Blood samples", "Whole blood is collected into tubes with an anticoagulant such as EDTA for blood counts. Heparin is used for some biochemical tests. A plain tube gives serum for biochemistry and serology. Sodium fluoride is used for glucose to stop glycolysis in the tube. Draw the correct tube first when more than one is needed, and mix gently without shaking."],
+    ["Smears", "A thin blood smear is made, air dried, fixed and stained, and can show blood parasites such as Babesia or Anaplasma. A good thin smear has a feathered edge. Smears are best prepared quickly after collection."],
+    ["Faeces", "Fresh faeces are collected for egg counts, flotation and culture. Samples should be kept cool and examined soon, as eggs can hatch or distort. Label with the animal and date."],
+    ["Urine, skin and other samples", "Midstream or catheter urine is used for urinalysis. Skin scrapings are used for mites. Swabs go in transport medium for bacteriology. Milk samples for mastitis testing are taken aseptically after cleaning the teat end."],
+    ["Tissue and post-mortem samples", "Tissues for histopathology go into 10 percent buffered formalin in a volume many times greater than the tissue. Tissues for microbiology go fresh, cool and separate. Samples must be taken as soon after death as possible."],
+    ["Labelling and submission", "Label every container with the animal identity, date, sample type and owner. Complete a request with species, age, history, clinical signs, tentative diagnosis, treatments given and tests wanted. Pack leak-proof and keep cool for transport. Notifiable disease samples need special rules."],
+    ["Reading the report", "Compare values with the reference range for the species. Match results with the clinical picture. Ask whether the sample quality may have influenced the result. Repeat tests when results do not fit."]
+  ],
+  tb: { h: ["Sample", "Container", "Used for"], r: [["Whole blood", "EDTA tube", "Haematology, blood smears"], ["Serum", "Plain tube", "Biochemistry, serology"], ["Glucose sample", "Fluoride tube", "Blood glucose"], ["Tissue", "10 percent formalin", "Histopathology"], ["Swab", "Transport medium", "Bacteriology"]] },
+  df: ["Anticoagulant: a substance that prevents blood from clotting in the tube.", "Serum: the fluid left after blood clots and the clot is removed.", "Histopathology: the microscopic study of diseased tissue."],
+  tm: [["EDTA", "Common anticoagulant for blood counts"], ["Transport medium", "Medium that keeps bacteria alive during transport"], ["Haemolysis", "Rupture of red cells in the sample"], ["Fixative", "Chemical that preserves tissue, for example formalin"]],
+  st: ["Choose the correct container.", "Collect the sample cleanly.", "Label immediately.", "Complete the request form.", "Pack securely and keep cool.", "Send to the laboratory promptly."],
+  ex: ["Blood left too long before smear preparation gives poor staining and misleading parasite results.", "A tissue sample dropped into too little formalin rots in the centre.", "A mislabelled tube can lead to a wrong result for the wrong animal."],
+  k: ["Anticoagulants and tubes.", "Smear preparation.", "Tissue fixation.", "Labelling.", "Reading a report."],
+  m: ["Shaking a blood tube hard causes haemolysis."],
+  sa: [["Name an anticoagulant used for blood counts.", "EDTA."], ["Which fixative is used for histopathology?", "10 percent buffered formalin."]],
+  la: [["Describe the collection and submission of samples for laboratory diagnosis.", "Blood, faeces, urine, skin, milk and tissues with containers, labelling, transport and request forms."]],
+  q: [["Samples for histopathology go in", ["Formalin", "Water", "Saline only", "Alcohol-free tube"], 0, "10 percent buffered formalin."],
+    ["Serum is collected in a", ["Plain tube", "EDTA tube", "Fluoride tube", "Formalin"], 0, "Plain tube."],
+    ["Mislabelled samples can", ["Cause wrong diagnosis", "Improve results", "Be ignored", "Cure disease"], 0, "Wrong animal, wrong result."],
+    ["Haemolysis means", ["Red cell rupture", "Clotting", "Infection", "Thick smear"], 0, "Rupture of red cells."]],
+  f: [["EDTA", "Anticoagulant for haematology"], ["Serum", "Fluid after clotting"], ["Transport medium", "Keeps bacteria alive in transit"], ["Formalin", "Tissue fixative"]],
+  d: ["Study urinalysis.", "Learn cytology of fine needle aspirates.", "Read about quality control in laboratories."]
+});
+planned("clin", ["Urinalysis", "Cytology and fine needle aspirates", "Clinical examination of the horse", "Clinical examination of poultry", "Emergency first aid for animals", "Medical records and certificates", "Professional ethics and law", "Case presentation skills"]);
+
+unit("farm", "Unit 2 – Animal health and economics on the farm");
+topic("farm", "Farm Economics, Costs and Record Keeping", {
+  o: ["Define fixed and variable costs", "Calculate simple gross margin and cost per litre", "Describe useful farm records", "Identify where profit is lost on a dairy farm"],
+  i: "A farm can be well managed biologically and still lose money. Veterinarians who understand costs give advice that farmers can afford and will follow.",
+  s: "Costs that continue whether or not you produce, such as the shed, are fixed. Costs that change with production, such as feed, are variable. Feed is usually the biggest cost. If the income from milk is more than the costs, there is a profit.",
+  n: [
+    ["Fixed and variable costs", "Fixed costs include buildings, equipment depreciation, interest on capital and permanent labour. Variable costs include feed, veterinary care, medicines, breeding, electricity and casual labour. Feed commonly makes up well over half of the cost of producing milk."],
+    ["Gross margin and profit", "Gross margin is the income minus the variable costs. Net profit is the income minus all costs. Cost of production per litre is total cost divided by litres. A farm may show a margin but still fail to cover fixed costs."],
+    ["A simple illustration", "Suppose a farm sells 10,000 litres in a month for 300,000 rupees, spends 180,000 on feed and other variable costs and 60,000 on fixed costs. The gross margin is 120,000, the net profit 60,000 and cost per litre is 24 rupees. These figures are only to show the method."],
+    ["Useful records", "Daily milk yield, feed use, breeding and calving dates, health treatments, vaccination and deworming, mortality, weights and growth, and financial accounts. Records show problems early, for example a fall in yield may signal mastitis."],
+    ["Key performance indicators", "Calving interval, age at first calving, conception rate, milk per cow per day, feed cost per litre, calf mortality and culling rate. Compare with targets to see where to improve."],
+    ["Where money is lost", "Long calving intervals, undetected mastitis, poor feeding, high calf mortality, unproductive animals kept too long and avoidable disease. The veterinary role is to reduce these losses with prevention."],
+    ["Insurance and credit", "Livestock insurance and credit schemes exist in India for farmers. Terms change, so check current details with the bank or the Department of Animal Husbandry."]
+  ],
+  tb: { h: ["Cost type", "Examples"], r: [["Fixed", "Shed, equipment depreciation, interest, permanent labour"], ["Variable", "Feed, medicines, AI, electricity, casual labour"]] },
+  df: ["Gross margin: income minus variable costs.", "Cost of production: total expenditure divided by the quantity produced.", "Depreciation: the fall in value of an asset over time through use."],
+  tm: [["Calving interval", "Days between successive calvings"], ["Culling", "Removing animals from the herd"], ["Break-even", "Point where income equals cost"], ["KPI", "Key performance indicator"]],
+  st: ["List all costs for the period.", "Separate fixed and variable costs.", "Total the income.", "Compute gross margin and net profit.", "Compute cost per litre.", "Find the largest cost and the weakest indicator."],
+  ex: ["A farm with long calving intervals loses income every extra day open.", "Good records showed that low-yielding cows were costing more than they earned.", "A cheaper but poorer feed can reduce yield and lose money."],
+  k: ["Fixed and variable costs.", "Gross margin.", "Cost per litre.", "Records and KPIs.", "Losses."],
+  m: ["Cheap feed is not always cheap production. Yield matters."],
+  sa: [["Define gross margin.", "Income minus variable costs."], ["Name two fixed costs on a dairy farm.", "Shed or building cost and equipment depreciation."]],
+  la: [["Explain the importance of record keeping on a dairy farm.", "Types of records, KPIs, use for decisions, early detection of problems, economics, health."]],
+  q: [["Feed is usually a", ["Variable cost", "Fixed cost", "Tax", "Subsidy"], 0, "Variable cost, and the largest."],
+    ["Gross margin equals income minus", ["Variable costs", "Fixed costs", "Tax", "Depreciation"], 0, "Variable costs."],
+    ["Calving interval is measured in", ["Days", "Litres", "Rupees", "Kilograms"], 0, "Days."],
+    ["Depreciation is", ["Fall in value of assets", "Income", "Profit", "Loan"], 0, "Gradual fall in asset value."]],
+  f: [["Cost per litre", "Total cost divided by litres"], ["Gross margin", "Income minus variable cost"], ["Calving interval", "Days between calvings"], ["Break-even", "Income equals costs"]],
+  d: ["Practise making a simple budget for a 10-cow dairy.", "Learn about project reports for bank loans.", "Study livestock insurance."]
+});
+planned("farm", ["Biosecurity audits", "Waste and manure management", "Project report writing", "Fodder cultivation calendar", "Poultry farm economics", "Feed formulation practice", "Marketing of livestock products"]);
+
+unit("nutr", "Unit 2 – Ration formulation and feed quality");
+topic("nutr", "Ration Formulation: Concepts and a Worked Example", {
+  o: ["State the aims of ration formulation", "Explain the Pearson square method", "Calculate a simple ration step by step", "List common nutrient requirement terms"],
+  i: "A ration is the amount of feed an animal receives in 24 hours. A balanced ration supplies all nutrients in correct proportion at lowest cost. Exact requirements come from feeding standards, so the worked example shows the method only.",
+  s: "To make a ration you need to know what the animal needs, what each feed contains and then mix feeds so the total meets the need. One quick way to mix two feeds to a target protein level is the Pearson square.",
+  n: [
+    ["Terms", "Maintenance ration keeps the animal alive without gain or production. Production ration adds the needs for milk, growth, pregnancy or work. A balanced ration meets all nutrient needs. Roughage includes fodder, hay and straw. Concentrates are energy or protein rich feeds. Dry matter intake is the key measure of how much an animal can eat."],
+    ["Steps of formulation", "1. Find the animal's requirements from feeding standards. 2. Calculate the roughage portion first, keeping roughage the base for ruminants. 3. Estimate what the roughage supplies. 4. Fill the gap using a concentrate mixture. 5. Check minerals and vitamins. 6. Check cost and palatability."],
+    ["Pearson square method", "To mix two feeds to a target crude protein: draw a square, write the target in the centre, the protein percentage of feed A at one top corner and feed B at the opposite bottom corner. Subtract diagonally, the smaller from the larger, ignoring signs. The differences are the parts of each feed."],
+    ["Worked example", "A target of 20 percent crude protein is wanted from maize (9 percent CP) and soybean meal (45 percent CP). Parts of maize = 45 minus 20 = 25. Parts of soybean meal = 20 minus 9 = 11. Total parts = 36. So the mixture is 25/36 = about 69 percent maize and 11/36 = about 31 percent soybean meal. Check: 0.69 x 9 + 0.31 x 45 = 6.2 + 14.0 = 20.2, close to 20. The mixture is based on crude protein only. Energy, minerals and fibre must be checked too."],
+    ["Dry matter basis", "Feeds contain different amounts of water, so compare them on a dry matter basis. Fresh green fodder may be 80 percent water, hay about 10 percent. To convert, divide the nutrient value by the dry matter fraction."],
+    ["Practical points", "Make changes in feed gradually. Provide clean water always. Use locally available feeds to keep cost low. Adding urea or by-pass protein requires care and professional advice. Sample feeds for analysis when quality varies."]
+  ],
+  tb: { h: ["Feed", "Crude protein (typical approx.)", "Type"], r: [["Maize grain", "9 percent", "Energy concentrate"], ["Soybean meal", "45 percent", "Protein concentrate"], ["Wheat straw", "3 to 4 percent", "Poor roughage"], ["Green berseem", "17 to 20 percent of dry matter", "Legume fodder"]] },
+  df: ["Ration: the total feed given to an animal in a day.", "Balanced ration: a ration that supplies all needed nutrients in the right proportions.", "Dry matter: what remains of a feed after the water is removed."],
+  tm: [["Maintenance", "Needs for body upkeep only"], ["Roughage", "Bulky fibrous feed"], ["Concentrate", "Energy or protein dense feed"], ["DMI", "Dry matter intake"]],
+  st: ["Choose the target nutrient level.", "Select two feeds, one above and one below the target.", "Draw the square with the target in the centre.", "Subtract diagonally.", "Add the parts and convert to percentages.", "Check the result by calculation."],
+  ex: ["A calf starter must be higher in protein than a maintenance ration.", "Wheat straw alone cannot meet protein needs, so it is supplemented.", "Using a local by-product can reduce ration cost."],
+  k: ["Ration terms.", "Steps of formulation.", "Pearson square.", "Dry matter basis."],
+  m: ["A ration on paper must still be palatable and available."],
+  sa: [["What is a balanced ration?", "A ration that supplies all required nutrients in the right proportions."], ["What is the Pearson square used for?", "To mix two feeds to reach a target nutrient percentage."]],
+  la: [["Describe the steps in formulating a ration for a dairy cow.", "Requirements, roughage first, estimate supply, fill gap with concentrate, minerals and vitamins, check cost and palatability."]],
+  q: [["In the Pearson square the target is placed", ["In the centre", "At a corner", "Outside", "Below"], 0, "Centre."],
+    ["Roughage is usually", ["Bulky and fibrous", "Pure protein", "Liquid", "Mineral"], 0, "Bulky, fibrous."],
+    ["For ruminants, formulation starts with", ["Roughage", "Mineral mix", "Urea", "Molasses"], 0, "Roughage forms the base."],
+    ["Dry matter basis helps to", ["Compare feeds fairly", "Remove protein", "Cook feed", "Find cost"], 0, "Compare feeds without water difference."]],
+  f: [["Pearson square", "Method for mixing two feeds to a target level"], ["Maintenance ration", "Keeps animal alive without production"], ["DMI", "Dry matter intake"], ["Roughage", "Fibrous bulky feed"]],
+  d: ["Try your own examples using two feeds.", "Learn about least cost formulation.", "Study feeding standards."]
+});
+planned("nutr", ["Feeding standards and requirements", "Least cost ration formulation", "Feed additives and probiotics", "Nutrition of horses and dogs", "Feed toxins: aflatoxin and others", "Pasture management", "Complete feed and TMR"]);
+/* ================= DIAGRAMS (schematics, not accurate drawings) ================= */
+const DIA = {};
+const _bx = (x, y, w, h, t, c) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="8" fill="' + (c || "#e3f1e8") + '" stroke="#1f4d3a" stroke-width="1.5"/><text x="' + (x + w / 2) + '" y="' + (y + h / 2 + 4) + '" text-anchor="middle" font-size="12" fill="#17352a">' + t + "</text>";
+const _ar = (x1, y1, x2, y2) => '<line x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '" stroke="#1f4d3a" stroke-width="1.6" marker-end="url(#ah)"/>';
+const _svg = (w, h, body, cap) => '<figure class="dia"><svg viewBox="0 0 ' + w + " " + h + '" role="img" aria-label="' + cap + '"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1f4d3a"/></marker></defs>' + body + "</svg><figcaption>" + cap + " (schematic, not an accurate anatomical drawing)</figcaption></figure>";
+const _tx = (x, y, t, a) => '<text x="' + x + '" y="' + y + '" font-size="12" fill="#17352a" text-anchor="' + (a || "middle") + '">' + t + "</text>";
+
+DIA.planes = _svg(420, 230,
+  '<ellipse cx="210" cy="120" rx="150" ry="50" fill="#e3f1e8" stroke="#1f4d3a" stroke-width="1.5"/>' +
+  '<line x1="210" y1="50" x2="210" y2="190" stroke="#b4572b" stroke-width="2" stroke-dasharray="5 4"/>' +
+  '<line x1="60" y1="120" x2="360" y2="120" stroke="#2a6f97" stroke-width="2" stroke-dasharray="5 4"/>' +
+  '<line x1="140" y1="60" x2="140" y2="185" stroke="#7a5ea8" stroke-width="2" stroke-dasharray="5 4"/>' +
+  _tx(210, 40, "Median (sagittal) plane", "middle") + _tx(375, 123, "Dorsal plane", "start") + _tx(140, 205, "Transverse plane", "middle") +
+  _tx(40, 100, "Cranial", "middle") + _tx(380, 100, "Caudal", "middle") + _tx(210, 112, "dorsal", "middle") + _tx(210, 140, "ventral", "middle"),
+  "Body planes and directions");
+
+DIA.homeo = _svg(440, 170,
+  _bx(10, 60, 90, 44, "Set point") + _bx(130, 60, 90, 44, "Sensor") + _bx(250, 60, 90, 44, "Control centre") + _bx(350, 10, 80, 44, "Effector", "#fff1d6") +
+  _ar(100, 82, 130, 82) + _ar(220, 82, 250, 82) + _ar(340, 70, 360, 54) +
+  '<path d="M390 54 L390 140 L175 140 L175 106" fill="none" stroke="#b4572b" stroke-width="1.6" marker-end="url(#ah)"/>' + _tx(285, 134, "Response changes the variable (negative feedback)"),
+  "Negative feedback loop");
+
+DIA.adme = _svg(440, 150,
+  _bx(10, 55, 85, 44, "Absorption") + _bx(120, 55, 85, 44, "Distribution") + _bx(230, 55, 90, 44, "Metabolism") + _bx(345, 55, 85, 44, "Excretion", "#fff1d6") +
+  _ar(95, 77, 120, 77) + _ar(205, 77, 230, 77) + _ar(320, 77, 345, 77) +
+  _tx(52, 125, "gut, muscle, skin") + _tx(162, 125, "blood to tissues") + _tx(275, 125, "mostly liver") + _tx(388, 125, "kidney, bile, milk"),
+  "Pharmacokinetics: ADME");
+
+DIA.gram = _svg(440, 190,
+  '<rect x="20" y="30" width="180" height="120" rx="14" fill="#efe5fa" stroke="#7a5ea8" stroke-width="2"/><rect x="40" y="50" width="140" height="80" rx="10" fill="#fff" stroke="#7a5ea8" stroke-dasharray="4 3"/>' +
+  '<rect x="240" y="30" width="180" height="120" rx="14" fill="#fbe3e3" stroke="#b44" stroke-width="1.5"/><rect x="255" y="45" width="150" height="90" rx="10" fill="#fff" stroke="#b44" stroke-dasharray="4 3"/><rect x="270" y="60" width="120" height="60" rx="8" fill="#fff" stroke="#b44"/>' +
+  _tx(110, 175, "Gram positive: thick peptidoglycan, stays purple") + _tx(330, 175, "Gram negative: thin wall + outer membrane, pink") +
+  _tx(110, 94, "Cell membrane") + _tx(110, 20, "Thick wall") + _tx(330, 20, "Outer membrane"),
+  "Gram-positive and Gram-negative cell walls");
+
+DIA.rumen = _svg(440, 190,
+  _bx(10, 20, 90, 40, "Oesophagus", "#fff") + _bx(130, 20, 100, 70, "Rumen + reticulum", "#e3f1e8") + _bx(260, 20, 80, 40, "Omasum") + _bx(260, 100, 80, 40, "Abomasum", "#fff1d6") + _bx(370, 100, 60, 40, "Intestine", "#fff") +
+  _ar(100, 40, 130, 40) + _ar(230, 50, 260, 40) + _ar(300, 60, 300, 100) + _ar(340, 120, 370, 120) +
+  '<path d="M150 20 C 140 5, 100 5, 90 20" fill="none" stroke="#b4572b" stroke-width="1.4" marker-end="url(#ah)"/>' + _tx(120, 12, "cud"),
+  "Path of feed through the ruminant stomach");
+
+DIA.lifecycle = _svg(440, 190,
+  _bx(10, 70, 80, 44, "Adult worm in host") + _bx(120, 10, 80, 44, "Eggs in faeces") + _bx(250, 10, 80, 44, "Larvae on pasture", "#fff1d6") + _bx(340, 70, 90, 44, "Infective larva eaten") + _bx(190, 130, 100, 44, "Migrates, matures", "#fff") +
+  _ar(60, 70, 130, 54) + _ar(200, 32, 250, 32) + _ar(330, 45, 370, 70) + _ar(370, 114, 290, 145) + _ar(190, 150, 70, 114),
+  "Generalised direct nematode life cycle");
+
+DIA.inflam = _svg(440, 160,
+  _bx(10, 50, 80, 44, "Injury") + _bx(110, 50, 90, 44, "Vasodilation") + _bx(220, 50, 90, 44, "Leak of fluid", "#fff1d6") + _bx(330, 50, 100, 44, "Neutrophils arrive") +
+  _ar(90, 72, 110, 72) + _ar(200, 72, 220, 72) + _ar(310, 72, 330, 72) +
+  _tx(220, 130, "Signs: redness, heat, swelling, pain, loss of function"),
+  "Sequence of acute inflammation");
+
+DIA.bone = _svg(420, 200,
+  '<rect x="165" y="20" width="90" height="160" rx="30" fill="#f4ead4" stroke="#1f4d3a" stroke-width="1.5"/><rect x="190" y="60" width="40" height="80" fill="#fffaf0" stroke="#1f4d3a" stroke-dasharray="4 3"/>' +
+  _tx(85, 40, "Epiphysis") + _tx(85, 100, "Diaphysis (shaft)") + _tx(85, 165, "Epiphysis") + _tx(340, 105, "Marrow cavity", "start") + _tx(340, 50, "Compact bone", "start"),
+  "Long bone parts");
+
+DIA.tooth = _svg(380, 200,
+  '<path d="M140 20 H240 L250 90 H130 Z" fill="#fffaf0" stroke="#1f4d3a" stroke-width="2"/><path d="M130 90 L160 180 L190 180 L190 90 M190 90 L190 180 L220 180 L250 90" fill="#f4ead4" stroke="#1f4d3a" stroke-width="2"/><rect x="175" y="60" width="30" height="100" rx="12" fill="#f6c7c7" stroke="#b44"/>' +
+  _tx(70, 45, "Enamel") + _tx(70, 120, "Dentine") + _tx(310, 70, "Crown", "start") + _tx(310, 150, "Root", "start") + _tx(310, 110, "Cement", "start") + _tx(190, 195, "Pulp cavity"),
+  "Parts of a tooth");
+
+DIA.synapse = _svg(440, 170,
+  '<path d="M10 50 H170 Q200 50 200 80 Q200 110 170 110 H10 Z" fill="#e3f1e8" stroke="#1f4d3a" stroke-width="1.5"/><rect x="250" y="40" width="180" height="80" rx="10" fill="#fff1d6" stroke="#1f4d3a" stroke-width="1.5"/>' +
+  '<circle cx="175" cy="80" r="6" fill="#b4572b"/><circle cx="200" cy="64" r="4" fill="#b4572b"/><circle cx="225" cy="78" r="4" fill="#b4572b"/><circle cx="238" cy="92" r="4" fill="#b4572b"/>' +
+  _tx(90, 135, "Nerve ending (vesicles)") + _tx(340, 135, "Muscle / next cell (receptors)") + _tx(225, 30, "Cleft: transmitter crosses"),
+  "Chemical synapse");
+
+DIA.oviduct = _svg(440, 190,
+  _bx(10, 20, 100, 36, "Ovary: ovum") + _bx(10, 70, 100, 36, "Infundibulum") + _bx(130, 70, 80, 36, "Magnum") + _bx(230, 70, 70, 36, "Isthmus") + _bx(320, 70, 100, 36, "Shell gland", "#fff1d6") + _bx(320, 130, 100, 36, "Vagina, cloaca", "#fff") +
+  _ar(60, 56, 60, 70) + _ar(110, 88, 130, 88) + _ar(210, 88, 230, 88) + _ar(300, 88, 320, 88) + _ar(370, 106, 370, 130) +
+  _tx(170, 130, "albumen") + _tx(265, 130, "membranes") + _tx(370, 60, "shell"),
+  "Egg formation in the hen");
+
+/* attach diagrams to topics */
+[["anat2", "planes"], ["phys2", "homeo"], ["pharm3", "adme"], ["micro2", "gram"], ["anat6", "rumen"], ["para2", "lifecycle"], ["path4", "inflam"], ["anat3", "bone"], ["anat9", "tooth"], ["phys8", "synapse"], ["anat12", "oviduct"]].forEach(p => extra(p[0], { dia: p[1] }));
 /* ================= GLOSSARY =================
    Format: "Term|subjectId|meaning"  (add as many as you like) */
 const GLOSS_RAW = [
@@ -2192,7 +2959,7 @@ const GLOSS_RAW = [
 ];
 const GLOSS = GLOSS_RAW.map(l => { const p = l.split("|"); return [p[0], p[1], p.slice(2).join("|")]; }).sort((a, b) => a[0].localeCompare(b[0]));
 /* ================= ENGINE ================= */
-const KEY = "VetNet_state_v2";
+const KEY = "vetnest_state_v2";
 let storageOK = true;
 const S = { bm: [], gbm: [], done: [], recent: [], notes: {}, tasks: [], pins: {}, logs: [], chk: {}, last: null, theme: "light", fs: 18, mode: "simple", folders: ["General"], snips: [] };
 try { const raw = localStorage.getItem(KEY); if (raw) Object.assign(S, JSON.parse(raw)); } catch (e) { storageOK = false; }
@@ -2248,13 +3015,13 @@ function route() {
 /* ---------- home ---------- */
 function renderHome() {
   const nQ = TOPICS.reduce((a, t) => a + (t.q ? t.q.length : 0), 0), nF = TOPICS.reduce((a, t) => a + (t.f ? t.f.length : 0), 0);
-  $("#stats").textContent = TOPICS.length + " study topics Â· " + nQ + " practice MCQs Â· " + nF + " flashcards Â· " + GLOSS.length + " glossary terms Â· 18 subjects";
+  $("#stats").textContent = TOPICS.length + " study topics · " + nQ + " practice MCQs · " + nF + " flashcards · " + GLOSS.length + " glossary terms · 18 subjects";
   const last = S.last && T[S.last] ? S.last : null;
   $("#hContinue").innerHTML = last ? "<p>" + tLink(last) + '<br><span class="meta">' + esc(SUBJ[T[last].s].name) + '</span></p><a class="btn small" href="#reader/' + last + '">Continue</a>' : '<p class="empty">Nothing yet. Open a subject and start with any topic.</p><a class="btn small" href="#subjects">Browse subjects</a>';
   $("#readBtn").setAttribute("href", "#reader/" + (last || "anat1"));
   const list = (ids, empty) => { ids = ids.filter(id => T[id]); return ids.length ? '<ul class="list">' + ids.slice(0, 5).map(id => "<li>" + tLink(id) + "</li>").join("") + "</ul>" : '<p class="empty">' + empty + "</p>"; };
   $("#hRecent").innerHTML = list(S.recent, "Topics you open will show up here.");
-  $("#hBook").innerHTML = list(S.bm, "Tap â˜† Bookmark inside any topic.");
+  $("#hBook").innerHTML = list(S.bm, "Tap ☆ Bookmark inside any topic.");
   const dn = S.done.filter(id => T[id]);
   $("#hDone").innerHTML = dn.length ? "<p><b>" + dn.length + "</b> completed</p>" + list(dn, "") : '<p class="empty">Mark a topic as completed when you finish it.</p>';
   const td = S.tasks.filter(x => x.due === today() && !x.done);
@@ -2295,11 +3062,11 @@ function drawTopicSearch() {
 function renderSubject(sid) {
   const s = SUBJ[sid], box = $("#subjectView");
   if (!s) { box.innerHTML = '<p class="empty">Subject not found. <a href="#subjects">Back</a></p>'; return; }
-  let h = '<nav class="crumbs"><a href="#subjects">Subjects</a> â€º ' + esc(s.name) + "</nav><h1>" + s.icon + " " + esc(s.name) + "</h1><p>" + esc(s.blurb) + '</p><p class="notice">Study modules written as learning aids, not the complete official syllabus. Please verify the curriculum and examination requirements against your current college syllabus.</p>';
+  let h = '<nav class="crumbs"><a href="#subjects">Subjects</a> › ' + esc(s.name) + "</nav><h1>" + s.icon + " " + esc(s.name) + "</h1><p>" + esc(s.blurb) + '</p><p class="notice">Study modules written as learning aids, not the complete official syllabus. Please verify the curriculum and examination requirements against your current college syllabus.</p>';
   const doneN = ORDER[sid].filter(id => S.done.includes(id)).length;
-  h += '<p class="meta">' + ORDER[sid].length + " topics Â· " + doneN + " completed by you Â· " + mcqCount(sid) + ' practice MCQs</p><div class="row"><a class="btn" href="#reader/' + ORDER[sid][0] + '">Start from topic 1</a><a class="btn ghost" href="#quiz/' + sid + '">Practise MCQs</a><a class="btn ghost" href="#exam">Exam prep</a></div>';
+  h += '<p class="meta">' + ORDER[sid].length + " topics · " + doneN + " completed by you · " + mcqCount(sid) + ' practice MCQs</p><div class="row"><a class="btn" href="#reader/' + ORDER[sid][0] + '">Start from topic 1</a><a class="btn ghost" href="#quiz/' + sid + '">Practise MCQs</a><a class="btn ghost" href="#exam">Exam prep</a></div>';
   UNITS[sid].forEach(u => {
-    h += '<div class="card"><h3>' + esc(u[0]) + '</h3><ul class="list">' + u[1].map(id => { const t = T[id]; return "<li><span>" + (S.done.includes(id) ? '<span class="ok">âœ“</span> ' : "") + (S.bm.includes(id) ? "â˜… " : "") + tLink(id) + '</span><span class="meta">' + mins(t) + " min read Â· " + t.q.length + " MCQs</span></li>"; }).join("") + "</ul></div>";
+    h += '<div class="card"><h3>' + esc(u[0]) + '</h3><ul class="list">' + u[1].map(id => { const t = T[id]; return "<li><span>" + (S.done.includes(id) ? '<span class="ok">✓</span> ' : "") + (S.bm.includes(id) ? "★ " : "") + tLink(id) + '</span><span class="meta">' + mins(t) + " min read · " + t.q.length + " MCQs</span></li>"; }).join("") + "</ul></div>";
   });
   if (PLANNED[sid].length) h += '<div class="card"><h3>Still to explore (not written yet)</h3><p class="meta">These topics belong to this subject but have no study notes on VetNet yet. Use your textbooks for them, and save your own notes in the Notebook.</p><ul class="more">' + PLANNED[sid].map(x => "<li>" + esc(x) + "</li>").join("") + "</ul></div>";
   box.innerHTML = h;
@@ -2315,11 +3082,15 @@ function renderReader(id) {
   box.style.setProperty("--fs", S.fs + "px");
   const ord = ORDER[t.s], pos = ord.indexOf(id), prev = ord[pos - 1], next = ord[pos + 1];
   let h = '<button class="btn small focus-exit" data-act="focus">Exit focus mode</button>';
-  h += '<nav class="crumbs"><a href="#subjects">Subjects</a> â€º <a href="#subject/' + t.s + '">' + esc(SUBJ[t.s].name) + "</a> â€º " + esc(t.t) + "</nav><h1>" + esc(t.t) + '</h1><p class="meta">' + SUBJ[t.s].icon + " " + esc(SUBJ[t.s].name) + " Â· about " + mins(t) + " min read Â· study aid, not the official syllabus</p>";
-  h += '<div class="tools no-focus"><button data-act="simple" class="' + (S.mode === "simple" ? "on" : "") + '">Explain it simply</button><button data-act="detail" class="' + (S.mode === "detail" ? "on" : "") + '">Detailed notes</button><button data-act="fsdown" aria-label="Smaller text">Aâˆ’</button><button data-act="fsup" aria-label="Larger text">A+</button><button data-act="focus">Focus mode</button><button data-act="bm">' + (S.bm.includes(id) ? "â˜… Bookmarked" : "â˜† Bookmark") + '</button><button data-act="done">' + (S.done.includes(id) ? "âœ“ Completed" : "Mark completed") + '</button><input id="inTopic" type="search" placeholder="Search in this topicâ€¦" aria-label="Search in this topic"></div><p id="inMsg" class="meta"></p>';
+  h += '<nav class="crumbs"><a href="#subjects">Subjects</a> › <a href="#subject/' + t.s + '">' + esc(SUBJ[t.s].name) + "</a> › " + esc(t.t) + "</nav><h1>" + esc(t.t) + '</h1><p class="meta">' + SUBJ[t.s].icon + " " + esc(SUBJ[t.s].name) + " · about " + mins(t) + " min read · study aid, not the official syllabus</p>";
+  h += '<div class="tools no-focus"><button data-act="simple" class="' + (S.mode === "simple" ? "on" : "") + '">Explain it simply</button><button data-act="detail" class="' + (S.mode === "detail" ? "on" : "") + '">Detailed notes</button><button data-act="fsdown" aria-label="Smaller text">A−</button><button data-act="fsup" aria-label="Larger text">A+</button><button data-act="focus">Focus mode</button><button data-act="bm">' + (S.bm.includes(id) ? "★ Bookmarked" : "☆ Bookmark") + '</button><button data-act="done">' + (S.done.includes(id) ? "✓ Completed" : "Mark completed") + '</button><input id="inTopic" type="search" placeholder="Search in this topic…" aria-label="Search in this topic"></div><p id="inMsg" class="meta"></p>';
   h += '<p class="meta no-focus">Tip: select any sentence or paragraph below and tap "Save to notebook" to keep it in your own folder.</p>';
   h += '<div class="body">';
   h += sec("Introduction", "<p>" + esc(t.i) + "</p>");
+  if (t.o) h += sec("Learning objectives", "<p class='meta'>After this topic you should be able to:</p>" + ul(t.o));
+  if (t.dia && DIA[t.dia]) h += sec("Diagram", DIA[t.dia]);
+  if (t.df) h += sec("Scientific definitions", ul(t.df));
+  if (t.tm) h += sec("Important terminology", tbl({ h: ["Term", "Meaning"], r: t.tm }));
   if (S.mode === "simple") {
     h += sec("Explained simply", "<p>" + esc(t.s) + "</p>");
     h += sec("Go a little deeper (full notes)", t.n.map(x => "<h3>" + esc(x[0]) + "</h3>" + rich(x[1])).join(""));
@@ -2327,6 +3098,8 @@ function renderReader(id) {
     h += sec("In simple words first", "<p>" + esc(t.s) + "</p>", false);
     t.n.forEach(x => { h += sec(x[0], rich(x[1])); });
   }
+  if (t.st) h += sec("Step by step", "<ol>" + t.st.map(x => "<li>" + esc(x) + "</li>").join("") + "</ol>");
+  if (t.ex) h += sec("Veterinary examples", ul(t.ex));
   if (t.tb) h += sec("Comparison table", tbl(t.tb));
   h += sec("Important examination points", ul(t.k));
   h += sec("Common misconceptions", ul(t.m));
@@ -2339,8 +3112,8 @@ function renderReader(id) {
   const rel = related(t);
   if (rel.length) h += sec("Related topics", "<ul>" + rel.map(r => "<li>" + tLink(r) + ' <span class="meta">(' + esc(SUBJ[T[r].s].name) + ")</span></li>").join("") + "</ul>");
   h += "</div>";
-  h += '<details class="sec" open><summary>My quick note for this topic (saved on this device)</summary><div class="secbody"><textarea id="noteBox" rows="4" placeholder="Write your own noteâ€¦" aria-label="My note">' + esc(S.notes[id] || "") + '</textarea><div class="row"><button class="btn small" data-act="savenote">Save note</button><button class="btn small ghost" data-act="delnote">Delete note</button><span id="noteMsg" class="meta"></span></div><p class="meta">Notes stay in this browser only. They do not sync to other devices.</p></div></details>';
-  h += '<div class="nav2 no-focus">' + (prev ? '<a class="btn ghost" href="#reader/' + prev + '">â† ' + esc(T[prev].t) + "</a>" : "<span></span>") + (next ? '<a class="btn ghost" href="#reader/' + next + '">' + esc(T[next].t) + " â†’</a>" : "<span></span>") + "</div>";
+  h += '<details class="sec" open><summary>My quick note for this topic (saved on this device)</summary><div class="secbody"><textarea id="noteBox" rows="4" placeholder="Write your own note…" aria-label="My note">' + esc(S.notes[id] || "") + '</textarea><div class="row"><button class="btn small" data-act="savenote">Save note</button><button class="btn small ghost" data-act="delnote">Delete note</button><span id="noteMsg" class="meta"></span></div><p class="meta">Notes stay in this browser only. They do not sync to other devices.</p></div></details>';
+  h += '<div class="nav2 no-focus">' + (prev ? '<a class="btn ghost" href="#reader/' + prev + '">← ' + esc(T[prev].t) + "</a>" : "<span></span>") + (next ? '<a class="btn ghost" href="#reader/' + next + '">' + esc(T[next].t) + " →</a>" : "<span></span>") + "</div>";
   box.innerHTML = h;
 }
 function readerClick(e) {
@@ -2359,8 +3132,8 @@ function readerClick(e) {
   if (a === "simple" || a === "detail") { const tmp = $("#noteBox").value; S.mode = a; save(); const y = window.scrollY; renderReader(curId); $("#noteBox").value = tmp; window.scrollTo(0, y); }
   else if (a === "fsup" || a === "fsdown") { S.fs = Math.max(15, Math.min(26, S.fs + (a === "fsup" ? 1 : -1))); save(); box.style.setProperty("--fs", S.fs + "px"); }
   else if (a === "focus") document.body.classList.toggle("focus");
-  else if (a === "bm") { S.bm = S.bm.includes(curId) ? S.bm.filter(x => x !== curId) : S.bm.concat(curId); save(); b.textContent = S.bm.includes(curId) ? "â˜… Bookmarked" : "â˜† Bookmark"; }
-  else if (a === "done") { S.done = S.done.includes(curId) ? S.done.filter(x => x !== curId) : S.done.concat(curId); save(); b.textContent = S.done.includes(curId) ? "âœ“ Completed" : "Mark completed"; }
+  else if (a === "bm") { S.bm = S.bm.includes(curId) ? S.bm.filter(x => x !== curId) : S.bm.concat(curId); save(); b.textContent = S.bm.includes(curId) ? "★ Bookmarked" : "☆ Bookmark"; }
+  else if (a === "done") { S.done = S.done.includes(curId) ? S.done.filter(x => x !== curId) : S.done.concat(curId); save(); b.textContent = S.done.includes(curId) ? "✓ Completed" : "Mark completed"; }
   else if (a === "savenote") { const v = $("#noteBox").value.trim(); if (v) S.notes[curId] = v; else delete S.notes[curId]; save(); $("#noteMsg").textContent = storageOK ? "Saved." : "Could not save: browser storage is blocked."; }
   else if (a === "delnote") { delete S.notes[curId]; save(); $("#noteBox").value = ""; $("#noteMsg").textContent = "Note deleted."; }
 }
@@ -2384,13 +3157,13 @@ function checkSel() {
   if (node.closest("textarea,input,#modal,#selBar")) { hideSel(); return; }
   selText = sel.toString().replace(/[ \t]+/g, " ").replace(/\n{3,}/g, "\n\n").trim();
   selSrc = curId && $("#page-reader").classList.contains("active") ? curId : null;
-  $("#selTxt").textContent = "â€œ" + (txt.length > 70 ? txt.slice(0, 70) + "â€¦" : txt) + "â€";
+  $("#selTxt").textContent = "“" + (txt.length > 70 ? txt.slice(0, 70) + "…" : txt) + "”";
   $("#selBar").hidden = false;
 }
 let selTimer = null;
 document.addEventListener("selectionchange", () => { clearTimeout(selTimer); selTimer = setTimeout(checkSel, 250); });
 function toBullets(text) {
-  let parts = text.split(/\n+/).map(x => x.replace(/^[-â€¢*\d.)\s]+/, "").trim()).filter(Boolean);
+  let parts = text.split(/\n+/).map(x => x.replace(/^[-•*\d.)\s]+/, "").trim()).filter(Boolean);
   if (parts.length < 2) parts = (text.match(/[^.;!?]+[.;!?]*/g) || [text]).map(x => x.trim()).filter(Boolean);
   return parts;
 }
@@ -2410,7 +3183,7 @@ function saveSnip() {
   S.snips.unshift({ id: Date.now() + Math.floor(Math.random() * 1000), folder: folder, kind: kind, lines: kind === "bullets" ? toBullets(text) : [text], src: selSrc, date: today() });
   save(); $("#modal").hidden = true; hideSel();
   try { window.getSelection().removeAllRanges(); } catch (e) { }
-  $("#selTxt").textContent = "Saved to â€œ" + folder + "â€ âœ“"; $("#selBar").hidden = false; $("#selSave").hidden = true;
+  $("#selTxt").textContent = "Saved to “" + folder + "” ✓"; $("#selBar").hidden = false; $("#selSave").hidden = true;
   setTimeout(() => { $("#selBar").hidden = true; $("#selSave").hidden = false; }, 1600);
 }
 
@@ -2423,41 +3196,41 @@ function drawNotebook() {
   let list = S.snips.filter(s => (nbFolder === "All" || s.folder === nbFolder) && (!nbQ || s.lines.join(" ").toLowerCase().includes(nbQ)));
   let h = "<h1>My Notebook</h1><p class='notice'>Select any text while reading (topics, glossary, exam prep) and tap <b>Save to notebook</b>. Keep it as a note or turn it into bullet points, and file it in your own folder. Everything is saved only in this browser on this device. Use My Space to download a backup.</p>";
   h += '<div class="nbwrap"><aside><div class="folders">';
-  ["All"].concat(S.folders).forEach(f => { h += '<button data-nbf="' + esc(f) + '" class="' + (f === nbFolder ? "on" : "") + '">' + (f === "All" ? "ðŸ“š All snippets" : "ðŸ“ " + esc(f)) + " (" + cnt(f) + ")</button>"; });
-  h += '</div><form id="nbAdd" class="row"><input id="nbNew" type="text" placeholder="New folder nameâ€¦" aria-label="New folder name"><button class="btn small" type="submit">Add folder</button></form>';
+  ["All"].concat(S.folders).forEach(f => { h += '<button data-nbf="' + esc(f) + '" class="' + (f === nbFolder ? "on" : "") + '">' + (f === "All" ? "📚 All snippets" : "📁 " + esc(f)) + " (" + cnt(f) + ")</button>"; });
+  h += '</div><form id="nbAdd" class="row"><input id="nbNew" type="text" placeholder="New folder name…" aria-label="New folder name"><button class="btn small" type="submit">Add folder</button></form>';
   if (nbFolder !== "All") h += '<div class="row"><button class="btn small ghost" data-nbren="1">Rename folder</button>' + (nbFolder !== "General" ? '<button class="btn small ghost" data-nbdel="1">Delete folder</button>' : "") + '<button class="btn small ghost" data-nbexp="1">Download folder (.txt)</button></div>';
   else h += '<div class="row"><button class="btn small ghost" data-nbexp="1">Download everything (.txt)</button></div>';
-  h += '</aside><section><div class="row"><input id="nbSearch" type="search" placeholder="Search my notebookâ€¦" value="' + esc(nbQ) + '" aria-label="Search notebook"></div>';
+  h += '</aside><section><div class="row"><input id="nbSearch" type="search" placeholder="Search my notebook…" value="' + esc(nbQ) + '" aria-label="Search notebook"></div>';
   if (!list.length) h += '<p class="empty">' + (S.snips.length ? "Nothing matches here." : "Your notebook is empty. Open any topic, select a sentence, and save it.") + "</p>";
   list.forEach(s => {
     const body = s.kind === "bullets" ? "<ul>" + s.lines.map(l => "<li>" + esc(l) + "</li>").join("") + "</ul>" : "<p>" + esc(s.lines.join("\n")).replace(/\n/g, "<br>") + "</p>";
-    h += '<div class="snip" data-id="' + s.id + '">' + body + '<p class="src">ðŸ“ ' + esc(s.folder) + " Â· " + s.date + (s.src && T[s.src] ? ' Â· from <a href="#reader/' + s.src + '">' + esc(T[s.src].t) + "</a>" : "") + '</p><div class="row"><button class="btn small ghost" data-edit="' + s.id + '">Edit</button><select data-move="' + s.id + '" aria-label="Move to folder">' + S.folders.map(f => "<option" + (f === s.folder ? " selected" : "") + ">" + esc(f) + "</option>").join("") + '</select><button class="btn small ghost" data-copy="' + s.id + '">Copy</button><button class="btn small ghost" data-delsnip="' + s.id + '">Delete</button></div></div>';
+    h += '<div class="snip" data-id="' + s.id + '">' + body + '<p class="src">📁 ' + esc(s.folder) + " · " + s.date + (s.src && T[s.src] ? ' · from <a href="#reader/' + s.src + '">' + esc(T[s.src].t) + "</a>" : "") + '</p><div class="row"><button class="btn small ghost" data-edit="' + s.id + '">Edit</button><select data-move="' + s.id + '" aria-label="Move to folder">' + S.folders.map(f => "<option" + (f === s.folder ? " selected" : "") + ">" + esc(f) + "</option>").join("") + '</select><button class="btn small ghost" data-copy="' + s.id + '">Copy</button><button class="btn small ghost" data-delsnip="' + s.id + '">Delete</button></div></div>';
   });
   h += "</section></div>";
   box.innerHTML = h;
 }
-function snipText(s) { return s.kind === "bullets" ? s.lines.map(l => "â€¢ " + l).join("\n") : s.lines.join("\n"); }
+function snipText(s) { return s.kind === "bullets" ? s.lines.map(l => "• " + l).join("\n") : s.lines.join("\n"); }
 function nbClick(e) {
   const t = e.target;
   const fb = t.closest("[data-nbf]");
   if (fb) { nbFolder = fb.dataset.nbf; drawNotebook(); return; }
   if (t.dataset.nbren) {
-    const nn = (prompt("New name for folder â€œ" + nbFolder + "â€:", nbFolder) || "").trim();
+    const nn = (prompt("New name for folder “" + nbFolder + "”:", nbFolder) || "").trim();
     if (nn && nn !== nbFolder && !S.folders.includes(nn)) { S.folders = S.folders.map(f => f === nbFolder ? nn : f); S.snips.forEach(s => { if (s.folder === nbFolder) s.folder = nn; }); nbFolder = nn; save(); drawNotebook(); }
   } else if (t.dataset.nbdel) {
-    if (confirm("Delete folder â€œ" + nbFolder + "â€? Its snippets will move to General.")) { S.snips.forEach(s => { if (s.folder === nbFolder) s.folder = "General"; }); S.folders = S.folders.filter(f => f !== nbFolder); nbFolder = "All"; save(); drawNotebook(); }
+    if (confirm("Delete folder “" + nbFolder + "”? Its snippets will move to General.")) { S.snips.forEach(s => { if (s.folder === nbFolder) s.folder = "General"; }); S.folders = S.folders.filter(f => f !== nbFolder); nbFolder = "All"; save(); drawNotebook(); }
   } else if (t.dataset.nbexp) {
     const items = S.snips.filter(s => nbFolder === "All" || s.folder === nbFolder);
     if (!items.length) return;
-    let out = "VetNet notebook â€“ " + (nbFolder === "All" ? "all folders" : nbFolder) + " â€“ " + today() + "\n\n";
+    let out = "VetNet notebook – " + (nbFolder === "All" ? "all folders" : nbFolder) + " – " + today() + "\n\n";
     S.folders.forEach(f => { const a = items.filter(s => s.folder === f); if (a.length) { out += "== " + f + " ==\n"; a.forEach(s => { out += snipText(s) + (s.src && T[s.src] ? "\n   (from: " + T[s.src].t + ")" : "") + "\n\n"; }); } });
     const blob = new Blob([out], { type: "text/plain" }), a = document.createElement("a");
-    a.href = URL.createObjectURL(blob); a.download = "VetNet-notebook.txt"; a.click(); URL.revokeObjectURL(a.href);
+    a.href = URL.createObjectURL(blob); a.download = "vetnet-notebook.txt"; a.click(); URL.revokeObjectURL(a.href);
   } else if (t.dataset.delsnip) {
     S.snips = S.snips.filter(s => String(s.id) !== t.dataset.delsnip); save(); drawNotebook();
   } else if (t.dataset.copy) {
     const s = S.snips.find(x => String(x.id) === t.dataset.copy);
-    if (s) { try { navigator.clipboard.writeText(snipText(s)); t.textContent = "Copied âœ“"; } catch (er) { t.textContent = "Copy not allowed"; } }
+    if (s) { try { navigator.clipboard.writeText(snipText(s)); t.textContent = "Copied ✓"; } catch (er) { t.textContent = "Copy not allowed"; } }
   } else if (t.dataset.edit) {
     const s = S.snips.find(x => String(x.id) === t.dataset.edit); if (!s) return;
     const card = t.closest(".snip");
@@ -2506,7 +3279,7 @@ function startQuiz(f, list, n) {
 function showQ() {
   const q = Q.pool[Q.i];
   Q.opts = shuffle(q.o.map((t, k) => ({ t: t, ok: k === q.a }))); Q.locked = false;
-  $("#qzPlay").innerHTML = '<p class="meta">Question ' + (Q.i + 1) + " of " + Q.pool.length + " Â· Score " + Q.score + " Â· " + esc(SUBJ[T[q.t].s].name) + "</p><h2>" + esc(q.q) + '</h2><div class="opts">' + Q.opts.map((o, k) => '<button class="opt" data-k="' + k + '">' + esc(o.t) + "</button>").join("") + '</div><div id="qzFb"></div>';
+  $("#qzPlay").innerHTML = '<p class="meta">Question ' + (Q.i + 1) + " of " + Q.pool.length + " · Score " + Q.score + " · " + esc(SUBJ[T[q.t].s].name) + "</p><h2>" + esc(q.q) + '</h2><div class="opts">' + Q.opts.map((o, k) => '<button class="opt" data-k="' + k + '">' + esc(o.t) + "</button>").join("") + '</div><div id="qzFb"></div>';
 }
 function quizPlayClick(e) {
   const o = e.target.closest(".opt");
@@ -2547,11 +3320,18 @@ function drawExam() {
   let h = "";
   if (exType === "mcq") h = "<p>" + mcqCount(tid || sid) + ' practice questions are ready for this choice.</p><a class="btn" href="#quiz/' + (tid || sid) + '">Start MCQs</a>';
   else if (exType === "fc") h = "<p>" + topics.reduce((a, t) => a + t.f.length, 0) + ' flashcards for this choice, plus every other subject.</p><a class="btn" href="#flash">Open flashcards</a>';
-  else topics.forEach(t => {
+  else if (exType === "def" || exType === "fill") {
+    topics.forEach(t => {
+      const items = (t.df || []).map(d => { const i = d.indexOf(":"); return [d.slice(0, i), d.slice(i + 1).trim()]; }).concat(t.f);
+      h += "<h3>" + esc(t.t) + "</h3>";
+      if (exType === "def") h += "<ul>" + items.map(x => "<li><b>" + esc(x[0]) + ":</b> " + esc(x[1]) + "</li>").join("") + "</ul>";
+      else h += items.map((x, i) => '<div class="card fill" data-ans="' + esc(x[0].toLowerCase()) + '"><p>' + (i + 1) + ". ____ : " + esc(x[1]) + '</p><input type="text" placeholder="Type the term" aria-label="Your answer"><button class="btn small" data-chk="1">Check</button> <span class="meta fres"></span></div>').join("");
+    });
+  } else topics.forEach(t => {
     h += "<h3>" + esc(t.t) + "</h3>";
     if (exType === "sa") h += t.sa.map(q => "<p><b>Q.</b> " + esc(q[0]) + "</p><details><summary>Show answer</summary><p>" + esc(q[1]) + "</p></details>").join("");
     if (exType === "la") h += t.la.map(q => "<p><b>Q.</b> " + esc(q[0]) + "</p><details><summary>Show answer outline</summary><p>" + esc(q[1]) + "</p></details>").join("");
-    if (exType === "rc") h += t.sa.concat(t.la).map(q => '<div class="card"><p><b>Q.</b> ' + esc(q[0]) + '</p><textarea rows="3" placeholder="Write your answer from memory firstâ€¦" aria-label="Your answer"></textarea><details><summary>Compare with model answer</summary><p>' + esc(q[1]) + "</p></details></div>").join("");
+    if (exType === "rc") h += t.sa.concat(t.la).map(q => '<div class="card"><p><b>Q.</b> ' + esc(q[0]) + '</p><textarea rows="3" placeholder="Write your answer from memory first…" aria-label="Your answer"></textarea><details><summary>Compare with model answer</summary><p>' + esc(q[1]) + "</p></details></div>").join("");
   });
   $("#exOut").innerHTML = h || '<p class="empty">No questions yet.</p>';
 }
@@ -2573,7 +3353,7 @@ function drawCard() {
   if (!c) { el.textContent = "No flashcards for this choice."; $("#flCount").textContent = ""; return; }
   el.textContent = F.back ? c.b : c.f;
   el.classList.toggle("back", F.back);
-  $("#flCount").textContent = (F.i + 1) + " / " + F.deck.length + " Â· " + c.t;
+  $("#flCount").textContent = (F.i + 1) + " / " + F.deck.length + " · " + c.t;
 }
 
 /* ---------- glossary ---------- */
@@ -2591,7 +3371,7 @@ function drawGlossary() {
   const q = $("#gSearch").value.trim().toLowerCase(), sid = $("#gSubj").value;
   const list = GLOSS.filter(g => (!sid || g[1] === sid) && (!gLetter || g[0][0].toUpperCase() === gLetter) && (!q || (g[0] + " " + g[2]).toLowerCase().includes(q)));
   $("#gCount").textContent = list.length + " of " + GLOSS.length + " terms";
-  $("#gList").innerHTML = list.length ? list.map(g => '<div class="card term"><div><h3 style="margin:0">' + esc(g[0]) + ' <span class="tag">' + esc(SUBJ[g[1]] ? SUBJ[g[1]].name : g[1]) + "</span></h3><p>" + esc(g[2]) + '</p></div><button class="star" data-g="' + esc(g[0]) + '" aria-label="Bookmark ' + esc(g[0]) + '">' + (S.gbm.includes(g[0]) ? "â˜…" : "â˜†") + "</button></div>").join("") : '<p class="empty">No term matches.</p>';
+  $("#gList").innerHTML = list.length ? list.map(g => '<div class="card term"><div><h3 style="margin:0">' + esc(g[0]) + ' <span class="tag">' + esc(SUBJ[g[1]] ? SUBJ[g[1]].name : g[1]) + "</span></h3><p>" + esc(g[2]) + '</p></div><button class="star" data-g="' + esc(g[0]) + '" aria-label="Bookmark ' + esc(g[0]) + '">' + (S.gbm.includes(g[0]) ? "★" : "☆") + "</button></div>").join("") : '<p class="empty">No term matches.</p>';
 }
 
 /* ---------- planner ---------- */
@@ -2660,6 +3440,7 @@ function init() {
 
   $("#exSubj").addEventListener("change", () => { fillExTopics(); drawExam(); });
   $("#exTopic").addEventListener("change", drawExam);
+  $("#exOut").addEventListener("click", e => { const b = e.target.closest("[data-chk]"); if (!b) return; const c = b.closest(".fill"), v = $("input", c).value.trim().toLowerCase(), a = c.dataset.ans, r = $(".fres", c); const ok = v && (a === v || a.includes(v) && v.length > 3 || v.includes(a)); r.textContent = ok ? "Correct: " + a : "Not quite. Answer: " + a; r.style.color = ok ? "#1f7a4d" : "#b4572b"; });
   $("#exTabs").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; exType = b.dataset.type; $$("#exTabs button").forEach(x => x.classList.toggle("on", x === b)); drawExam(); });
 
   $("#flSubj").addEventListener("change", () => buildDeck(false));
@@ -2671,7 +3452,7 @@ function init() {
   $("#gSearch").addEventListener("input", drawGlossary);
   $("#gSubj").addEventListener("change", drawGlossary);
   $("#gLetters").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; gLetter = b.dataset.l; $$("#gLetters button").forEach(x => x.classList.toggle("on", x === b)); drawGlossary(); });
-  $("#gList").addEventListener("click", e => { const b = e.target.closest("[data-g]"); if (!b) return; const g = b.dataset.g; S.gbm = S.gbm.includes(g) ? S.gbm.filter(x => x !== g) : S.gbm.concat(g); save(); b.textContent = S.gbm.includes(g) ? "â˜…" : "â˜†"; });
+  $("#gList").addEventListener("click", e => { const b = e.target.closest("[data-g]"); if (!b) return; const g = b.dataset.g; S.gbm = S.gbm.includes(g) ? S.gbm.filter(x => x !== g) : S.gbm.concat(g); save(); b.textContent = S.gbm.includes(g) ? "★" : "☆"; });
 
   $("#pForm").addEventListener("submit", e => {
     e.preventDefault();
@@ -2690,7 +3471,7 @@ function init() {
     else if (t.dataset.ugb) { S.gbm = S.gbm.filter(x => x !== t.dataset.ugb); save(); renderSpace(); }
     else if (t.id === "exportBtn") {
       const blob = new Blob([JSON.stringify(S, null, 2)], { type: "application/json" });
-      const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "VetNet-backup.json"; a.click(); URL.revokeObjectURL(a.href);
+      const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "vetnet-backup.json"; a.click(); URL.revokeObjectURL(a.href);
     }
   });
   $("#spaceView").addEventListener("change", e => {
