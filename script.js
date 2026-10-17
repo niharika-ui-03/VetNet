@@ -2541,6 +2541,581 @@ topic("nutr", "Ration Formulation: Concepts and a Worked Example", {
   d: ["Try your own examples using two feeds.", "Learn about least cost formulation.", "Study feeding standards."]
 });
 planned("nutr", ["Feeding standards and requirements", "Least cost ration formulation", "Feed additives and probiotics", "Nutrition of horses and dogs", "Feed toxins: aflatoxin and others", "Pasture management", "Complete feed and TMR"]);
+/* ================= ANATOMY (wave 3) ================= */
+unit("anat", "Unit 5 – Sense organs, glands and lymphoid organs");
+topic("anat", "The Eye and the Ear", {
+  o: ["Name the layers and parts of the eyeball", "Describe the eyelids, third eyelid and lacrimal apparatus", "Explain the structure of the ear in three parts", "Compare eye and ear features of domestic species"],
+  i: "Eye and ear problems are among the commonest in small and large animal practice. A clinician can examine only what he or she can name, so a clear map of both organs comes first.",
+  s: "The eyeball is a ball with three layers: a tough outer coat, a middle coat full of blood vessels and an inner coat, the retina, which senses light. The ear has an outer part that collects sound, a middle part with three tiny bones and an inner part that senses sound and balance.",
+  n: [
+    ["Three tunics of the eyeball", "The outer fibrous tunic is the white sclera and the clear cornea at the front. The middle vascular tunic (uvea) has the choroid, the ciliary body and the iris. The inner nervous tunic is the retina. The retina has rods for dim light and cones for colour and detail. The optic nerve leaves at the optic disc, which has no receptors."],
+    ["Contents and chambers", "The lens sits behind the iris and is held by the ciliary body through zonular fibres. The anterior chamber (between cornea and iris) and posterior chamber (between iris and lens) contain aqueous humour, which is produced by the ciliary body and drains at the angle between cornea and iris. The large vitreous chamber behind the lens holds the jelly-like vitreous body. Blocked aqueous drainage raises eye pressure, which is glaucoma."],
+    ["Tapetum lucidum and pupil shape", "Most domestic animals have a tapetum lucidum, a reflective layer in the choroid that gives eyeshine in the dark. The pig lacks it. Ruminants and horses have a fibrous tapetum, and carnivores a cellular one. The pupil is a horizontal oval in ruminants and the horse, round in dog and pig, and a vertical slit in the cat. Small dark nodules on the upper pupil edge in the horse and ruminants are the corpora nigra."],
+    ["Eyelids, third eyelid and lacrimal apparatus", "There are an upper and a lower eyelid, lined by conjunctiva. The third eyelid (nictitating membrane) lies in the medial corner. In the dog it carries a gland, whose prolapse is called cherry eye. Tears from the lacrimal gland spread over the eye and drain through the puncta, canaliculi, lacrimal sac and the nasolacrimal duct into the nose. A blocked duct causes a wet face."],
+    ["Extraocular muscles", "Four rectus muscles and two oblique muscles turn the eye. Most domestic animals also have a retractor bulbi muscle that pulls the eye into the socket. The levator palpebrae raises the upper lid. Cranial nerves III, IV and VI supply the muscles, so loss of eye movement points to nerve damage."],
+    ["External ear", "The pinna collects sound. The ear canal in dogs has a vertical part and a horizontal part, an L-shape that traps wax and water, which is why drop-eared dogs get otitis externa more often. The tympanic membrane (eardrum) closes the canal."],
+    ["Middle and inner ear", "The middle ear lies in the tympanic bulla and contains three ossicles, the malleus, incus and stapes, which pass vibrations to the inner ear. The auditory (Eustachian) tube joins the middle ear to the pharynx. In the horse a large diverticulum of this tube forms the guttural pouch, a site of fungal and bacterial infection. The inner ear has the cochlea for hearing and the vestibule and semicircular canals for balance. Cranial nerve VIII carries both signals."]
+  ],
+  tb: { h: ["Feature", "Cattle and horse", "Dog", "Cat", "Pig"], r: [["Pupil", "Horizontal oval", "Round", "Vertical slit", "Round"], ["Tapetum lucidum", "Fibrous", "Cellular", "Cellular", "Absent"], ["Special ear feature", "Horse: guttural pouch", "L-shaped canal", "Short canal", "Large pinna in many breeds"]] },
+  df: ["Uvea: the vascular middle tunic of the eye made of choroid, ciliary body and iris.", "Tapetum lucidum: a reflective layer in the choroid that improves night vision.", "Nasolacrimal duct: the duct that carries tears from the eye to the nasal cavity."],
+  tm: [["Cornea", "Clear front window of the eye"], ["Sclera", "White fibrous outer coat"], ["Aqueous humour", "Fluid in the anterior and posterior chambers"], ["Ossicles", "Malleus, incus and stapes"], ["Cochlea", "Coiled organ of hearing"], ["Guttural pouch", "Horse diverticulum of the auditory tube"]],
+  st: ["Light passes through the cornea and aqueous humour.", "The iris sets the size of the pupil.", "The lens focuses the light.", "Light crosses the vitreous to the retina.", "Rods and cones send signals through the optic nerve to the brain."],
+  ex: ["A blue-white cloudy cornea can follow injury or infection and is checked at once.", "A dog with a red mass at the medial corner of the eye is likely to have a prolapsed third eyelid gland.", "A horse with nasal discharge and swelling behind the jaw may have guttural pouch disease."],
+  k: ["Three tunics and their parts.", "Chambers and humours.", "Tapetum and pupil shape in species.", "Lacrimal apparatus.", "Parts of the ear.", "Guttural pouch."],
+  m: ["Eyeshine comes from the tapetum reflecting light. It is not the eye producing light.", "The pig has no tapetum."],
+  sa: [["Name the layers of the eyeball.", "Fibrous tunic (sclera and cornea), vascular tunic (choroid, ciliary body, iris) and nervous tunic (retina)."], ["What is the guttural pouch?", "A diverticulum of the auditory tube in the horse."]],
+  la: [["Describe the structure of the eyeball with a labelled diagram.", "Three tunics, lens, chambers, aqueous and vitreous humours, optic nerve and disc, tapetum, with a labelled sketch."]],
+  q: [["The reflective layer behind the retina is the", ["Tapetum lucidum", "Sclera", "Cornea", "Iris"], 0, "Tapetum lucidum."],
+    ["The guttural pouch is found in the", ["Dog", "Horse", "Pig", "Hen"], 1, "Horse."],
+    ["The pupil of the cat is", ["Vertical slit", "Horizontal oval", "Round", "Absent"], 0, "Vertical slit."],
+    ["Aqueous humour is produced by the", ["Ciliary body", "Lens", "Retina", "Cornea"], 0, "Ciliary body."],
+    ["Which ossicle contacts the oval window?", ["Malleus", "Incus", "Stapes", "Cochlea"], 2, "The stapes."]],
+  f: [["Rods", "Retinal cells for dim light"], ["Corpora nigra", "Dark nodules on the upper pupil edge in horse and ruminants"], ["Cherry eye", "Prolapse of the third eyelid gland"], ["Otitis externa", "Inflammation of the external ear canal"]],
+  d: ["Learn the cranial nerves of the eye.", "Study the ophthalmic examination.", "Compare the eye in birds."]
+});
+
+topic("anat", "Endocrine Glands: Position and Structure", {
+  o: ["Locate the major endocrine glands in domestic animals", "State what each gland secretes", "Link gland structure to function", "Explain the pituitary-hypothalamus connection"],
+  i: "Endocrine glands release hormones directly into the blood. Their position and structure explain examination findings and the effect of disease or surgery.",
+  s: "Endocrine glands have no ducts. The pituitary sits under the brain and controls many other glands. The thyroid lies by the windpipe, the adrenals lie near the kidneys, and the pancreas has small islands of hormone cells among its digestive tissue.",
+  n: [
+    ["Pituitary gland (hypophysis)", "It lies in a bony hollow at the base of the skull (hypophyseal fossa) and hangs from the hypothalamus. The anterior lobe (adenohypophysis) makes growth hormone, prolactin, ACTH, TSH, FSH and LH. The posterior lobe (neurohypophysis) stores and releases oxytocin and ADH made in the hypothalamus. The hypothalamus controls the anterior lobe through a portal blood system."],
+    ["Thyroid and parathyroid", "The thyroid has two lobes on either side of the trachea near the larynx in most species. It stores thyroid hormones in follicles filled with colloid. Parafollicular (C) cells make calcitonin. The parathyroid glands, small and often several, lie near or inside the thyroid and secrete parathyroid hormone, which raises blood calcium."],
+    ["Adrenal glands", "They lie near the cranial pole of each kidney. The cortex has three zones: glomerulosa (aldosterone), fasciculata (cortisol) and reticularis (sex steroids). The medulla is derived from nerve tissue and releases adrenaline and noradrenaline."],
+    ["Endocrine pancreas", "The islets of Langerhans are scattered among exocrine acini. Alpha cells secrete glucagon, beta cells insulin and delta cells somatostatin. Destruction of beta cells or poor insulin action gives diabetes mellitus."],
+    ["Pineal, gonads, placenta", "The pineal gland, on the roof of the diencephalon, secretes melatonin, which carries day-length information and is important in seasonal breeders. The testes (Leydig cells) make testosterone and the ovaries make oestrogen and progesterone. The placenta also secretes hormones in pregnancy."],
+    ["Hypothalamic control", "The hypothalamus links the nervous and endocrine systems. Releasing hormones such as GnRH travel through the portal vessels to the anterior pituitary, which then releases trophic hormones that act on target glands. Hormone levels are controlled by negative feedback."],
+    ["Clinical relevance", "An enlarged thyroid is a goitre, which can come from iodine deficiency. Excess cortisol causes Cushing's disease, seen in dogs and horses. Low blood calcium after calving can relate to parathyroid response. Diseases of these glands often show as changes in coat, weight, drinking and behaviour."]
+  ],
+  tb: { h: ["Gland", "Position", "Main hormones"], r: [["Pituitary", "Base of the skull under the hypothalamus", "GH, prolactin, ACTH, TSH, FSH, LH, oxytocin, ADH"], ["Thyroid", "Either side of the trachea near the larynx", "T3, T4, calcitonin"], ["Parathyroid", "Near or in the thyroid", "PTH"], ["Adrenal", "Cranial to the kidney", "Cortisol, aldosterone, adrenaline"], ["Pancreatic islets", "Inside the pancreas", "Insulin, glucagon"], ["Pineal", "Roof of the diencephalon", "Melatonin"]] },
+  df: ["Endocrine gland: a ductless gland that releases hormones into the blood.", "Hormone: a chemical messenger produced by a gland that acts on target cells.", "Portal system: a set of vessels that carry blood between two capillary beds, as between hypothalamus and anterior pituitary."],
+  tm: [["Adenohypophysis", "Anterior pituitary"], ["Neurohypophysis", "Posterior pituitary"], ["Colloid", "Protein material stored in thyroid follicles"], ["Islets of Langerhans", "Endocrine clusters in the pancreas"], ["Goitre", "Enlargement of the thyroid"]],
+  st: ["The hypothalamus senses a need.", "It releases a hormone to the portal vessels.", "The anterior pituitary is stimulated.", "A trophic hormone reaches the target gland.", "The target gland releases its hormone, which feeds back on the hypothalamus."],
+  ex: ["Calves born to iodine-deficient dams may have enlarged thyroids.", "A dog with a pot belly, hair loss and heavy drinking may have excess cortisol.", "Removing the testes lowers testosterone and changes behaviour."],
+  k: ["Position of each gland.", "Anterior vs posterior pituitary.", "Zones of the adrenal cortex.", "Hormones of the islets.", "Hypothalamic control."],
+  m: ["The posterior pituitary does not make oxytocin. It stores and releases it."],
+  sa: [["Name the hormones stored in the neurohypophysis.", "Oxytocin and antidiuretic hormone (ADH)."], ["Which cells make insulin?", "Beta cells of the islets of Langerhans."]],
+  la: [["Describe the position, structure and secretions of the adrenal gland.", "Position near the kidney, cortex zones with hormones, medulla and its hormones, control and clinical links."]],
+  q: [["Calcitonin is made by", ["Parafollicular cells", "Chief cells", "Alpha cells", "Leydig cells"], 0, "Parafollicular (C) cells of the thyroid."],
+    ["The adrenal zone that makes cortisol is the", ["Glomerulosa", "Fasciculata", "Reticularis", "Medulla"], 1, "Zona fasciculata."],
+    ["Glucagon is secreted by", ["Alpha cells", "Beta cells", "Delta cells", "Acinar cells"], 0, "Alpha cells."],
+    ["The pituitary lies in the", ["Hypophyseal fossa", "Orbit", "Tympanic bulla", "Nasal cavity"], 0, "Hypophyseal fossa."],
+    ["The pineal gland secretes", ["Melatonin", "Insulin", "Cortisol", "Thyroxine"], 0, "Melatonin."]],
+  f: [["Adenohypophysis", "Anterior pituitary"], ["Zona glomerulosa", "Adrenal zone making aldosterone"], ["Goitre", "Enlarged thyroid"], ["Portal system", "Two capillary beds joined by veins"]],
+  d: ["Study the histology of endocrine glands.", "Learn the feedback loops of the thyroid and adrenal axes.", "Read about diabetes in dogs and cats."]
+});
+
+topic("anat", "Lymphatic System, Lymph Nodes and Spleen", {
+  o: ["Describe the lymphatic vessels and the thoracic duct", "Describe the structure and function of a lymph node", "Name the lymph nodes that can be palpated", "Explain the structure and role of the spleen"],
+  i: "The lymphatic system returns tissue fluid to the blood and fights infection. Lymph nodes are routinely felt in clinical examination, and swollen nodes point to disease in the area they drain.",
+  s: "Fluid that leaks from blood vessels into tissues is collected by thin lymph vessels and passes through lymph nodes, which filter it, before it returns to the blood. The spleen filters the blood in a similar way and stores red cells.",
+  n: [
+    ["Lymph vessels", "Lymph capillaries begin blindly in tissues and join to form larger vessels with valves. Lymph flows one way, helped by muscle movement. Lacteals in the intestinal villi carry absorbed fat. All lymph finally reaches the venous system through the thoracic duct and right lymphatic duct. The thoracic duct begins at the cisterna chyli in the abdomen near the aorta."],
+    ["Lymph node structure", "A lymph node is bean shaped with a capsule. Afferent vessels bring lymph into the subcapsular sinus, and an efferent vessel leaves at the hilus. The outer cortex has follicles rich in B cells. The paracortex holds T cells. The medulla has cords and sinuses with plasma cells and macrophages. In the pig the arrangement is reversed, with the cortex deep and the medulla outside."],
+    ["Palpable lymph nodes", "Nodes examined in the clinic include the mandibular, parotid, retropharyngeal (usually not palpable when normal), superficial cervical (prescapular), prefemoral (subiliac), popliteal, superficial inguinal (or supramammary in females). Always compare both sides and note size, firmness, pain and mobility."],
+    ["Spleen", "The spleen lies on the left side of the abdomen. In ruminants it is flat and attached to the rumen. In the horse it is a large sickle-shaped organ held by the nephrosplenic ligament. In dogs it is long, tongue-like and mobile. Its red pulp filters blood, removes old red cells and stores blood. The white pulp, made of lymphoid tissue around arteries, mounts immune responses."],
+    ["Thymus, tonsils and others", "The thymus is large in the young, in the neck and cranial chest, and shrinks with age. T cells mature there. Tonsils guard the throat. Mucosa-associated lymphoid tissue (MALT) such as Peyer's patches in the gut is part of mucosal defence."],
+    ["Clinical links", "Enlarged nodes can mean infection, such as in tuberculosis or strangles in the horse, or cancer such as lymphoma. Splenic torsion in dogs and nephrosplenic entrapment of the large colon in horses are examples of spleen-related emergencies. Removal of the spleen is possible but needs a vet."]
+  ],
+  tb: { h: ["Node", "Area drained", "Where found"], r: [["Mandibular", "Head, mouth", "Under the jaw"], ["Superficial cervical (prescapular)", "Neck, shoulder, forelimb", "In front of the shoulder"], ["Prefemoral (subiliac)", "Flank, stifle, hind limb", "In front of the stifle fold"], ["Popliteal", "Lower hind limb", "Behind the stifle"], ["Supramammary", "Udder", "Behind the udder"]] },
+  df: ["Lymph: the clear fluid that circulates in lymphatic vessels, formed from tissue fluid.", "Lymph node: an organ that filters lymph and houses immune cells.", "Cisterna chyli: the dilated beginning of the thoracic duct in the abdomen."],
+  tm: [["Afferent vessel", "Vessel bringing lymph to a node"], ["Efferent vessel", "Vessel taking lymph away"], ["Red pulp", "Blood-filtering tissue of the spleen"], ["White pulp", "Lymphoid tissue of the spleen"], ["Lacteal", "Lymph capillary in an intestinal villus"]],
+  st: ["Tissue fluid enters lymph capillaries.", "Lymph moves through vessels with valves.", "It is filtered in one or more lymph nodes.", "It collects in the thoracic duct.", "It empties into a large vein near the heart."],
+  ex: ["Swollen mandibular nodes in a calf can follow a mouth or throat infection.", "Enlarged prescapular nodes in cattle may point to disease in the neck or forelimb area.", "A fast growing mass and enlarged nodes in an older dog should be investigated."],
+  k: ["Lymph vessels and drainage.", "Structure of a node.", "Palpable nodes.", "Spleen structure and functions."],
+  m: ["Lymph nodes are not glands that make lymph. They filter it."],
+  sa: [["What is the function of the spleen?", "Filters blood, removes old red cells, stores blood and helps in immune responses."], ["Where does the thoracic duct begin?", "At the cisterna chyli in the abdomen."]],
+  la: [["Describe the structure and functions of a lymph node.", "Capsule, cortex, paracortex, medulla, afferent and efferent vessels, filtering and immune functions, species difference in the pig."]],
+  q: [["In the pig the lymph node cortex is", ["Outside", "Deep", "Absent", "Fused with the medulla"], 1, "The arrangement is inverted."],
+    ["T cells mature in the", ["Thymus", "Spleen", "Liver", "Kidney"], 0, "Thymus."],
+    ["The nephrosplenic ligament is described in the", ["Horse", "Dog", "Hen", "Cat"], 0, "Horse."],
+    ["Lymph reaches the blood through the", ["Thoracic duct", "Portal vein", "Aorta", "Ureter"], 0, "Thoracic duct and right lymphatic duct."]],
+  f: [["Lacteal", "Lymph capillary in the villus"], ["Red pulp", "Filters blood in the spleen"], ["MALT", "Mucosa-associated lymphoid tissue"], ["Efferent vessel", "Leaves the node at the hilus"]],
+  d: ["Study the immune cells of the lymph node.", "Learn the palpation of nodes in each species.", "Read about the bursa and lymphoid organs of birds."]
+});
+
+topic("anat", "Hoof, Claw and Horn: Structure and Clinical Importance", {
+  o: ["Describe the parts of the equine hoof", "Describe the structure of the bovine claw", "Compare the claws of dog and cat", "Link hoof and claw anatomy to lameness"],
+  i: "The foot carries the entire weight of the animal. Lameness from foot disease is a leading cause of production loss in dairy cattle and a common problem in horses.",
+  s: "A hoof is a thick horn shell around the last bone of the toe. The shell grows continuously from the top and wears away at the bottom. If it is too long, uneven or damaged, the animal goes lame.",
+  n: [
+    ["Equine hoof: horn parts", "The hoof wall grows from the coronary band. Its three layers are the outer stratum externum, the thick middle layer and the inner laminar layer. The sole covers the bottom, the frog is the V-shaped elastic pad that helps shock absorption and blood circulation, and the bars are folds of the wall. The white line is the junction of wall and sole and is a landmark for shoeing and a weak point where infection can enter."],
+    ["Equine hoof: sensitive parts", "Beneath the horn lie the sensitive laminae, which interlock with the horn laminae and join the hoof wall to the coffin bone. The corium supplies blood and makes the horn. The digital cushion at the heel acts as a shock absorber. The coffin bone, navicular bone and the deep digital flexor tendon lie inside the hoof."],
+    ["Laminitis", "Laminitis is inflammation of the sensitive laminae. It can follow grain overload, retained afterbirth or heavy weight bearing. The laminae weaken, the coffin bone can rotate or sink, and the horse stands with a typical rocking posture. It is an emergency. Rotation can be seen on a radiograph."],
+    ["Hoof growth and trimming", "The wall grows continuously, roughly in the order of a centimetre a month, which varies with age, nutrition and season. Regular trimming keeps the correct balance of the foot, and a farrier works with the veterinarian in managing foot problems."],
+    ["Bovine claw", "Cattle have two weight-bearing claws on each foot, with two dewclaws behind. Each claw has a wall, a sole, a heel bulb and a white line. The hind lateral claw bears more weight and is the most common site of sole ulcers and white line disease. Hard wet floors, long standing, poor claw trimming and acidosis all raise the risk of lameness."],
+    ["Dog and cat claws", "A claw grows from the ungual crest of the last phalanx. The nail contains the quick, which has blood vessels and nerves. In cats the claws retract because elastic ligaments on the dorsal side pull the last phalanx back. Dewclaws are the first digit."],
+    ["Horn", "The horn of cattle is a sheath of keratin over a bony core that grows from the frontal bone and contains an extension of the frontal sinus. The horn grows continuously, and rings on the horn are used in rough age estimation, but they are affected by nutrition and pregnancy."]
+  ],
+  tb: { h: ["Species", "Foot structure", "Common problems"], r: [["Horse", "One hoof, frog, laminae", "Laminitis, navicular disease, abscess"], ["Cattle", "Two claws", "Sole ulcer, white line disease, digital dermatitis"], ["Dog", "Four weight-bearing digits, claws", "Overgrown or torn claws"], ["Cat", "Retractile claws", "Ingrown claws in old cats"]] },
+  df: ["Laminitis: inflammation of the sensitive laminae of the hoof.", "White line: the junction between the sole and the wall of the hoof or claw.", "Quick: the live, sensitive tissue inside a claw."],
+  tm: [["Coronary band", "Region at the top of the hoof where the wall grows"], ["Frog", "Elastic V-shaped pad of the sole"], ["Corium", "Vascular tissue that makes horn"], ["Dewclaw", "Small accessory digit"], ["Ungual crest", "Bony ridge of the last phalanx that makes the claw"]],
+  st: ["Wash and look at the foot.", "Compare it with the opposite foot.", "Check the wall, sole and white line for cracks or heat.", "Check the digital pulse and any swelling.", "Refer to a vet or farrier for trimming or treatment."],
+  ex: ["A dairy cow on hard wet floors with a sole ulcer on the lateral hind claw is a typical case.", "A horse standing with the front feet stretched forward may have laminitis.", "A cat that cannot retract a claw may have an injured elastic ligament."],
+  k: ["Parts of the hoof wall and sole.", "Sensitive structures.", "Laminitis.", "Bovine claw lesions.", "Claws of dog and cat."],
+  m: ["The frog is not decorative. It helps with shock absorption and blood flow."],
+  sa: [["What is the white line?", "The junction between the hoof wall and the sole."], ["Which claw is most commonly affected by sole ulcers?", "The lateral claw of the hind foot."]],
+  la: [["Describe the structure of the equine hoof and add a note on laminitis.", "Wall layers, sole, frog, bars, laminae, corium, digital cushion, bones inside, causes and signs of laminitis."]],
+  q: [["The wall of the hoof grows from the", ["Coronary band", "Frog", "Sole", "Bars"], 0, "Coronary band."],
+    ["Cattle usually have how many weight-bearing claws on a foot?", ["One", "Two", "Three", "Four"], 1, "Two."],
+    ["Retractile claws are a feature of the", ["Cat", "Dog", "Pig", "Horse"], 0, "Cat."],
+    ["Laminitis affects the", ["Sensitive laminae", "Frog only", "Bars only", "Horn core"], 0, "Sensitive laminae."]],
+  f: [["Quick", "Living core of a claw"], ["Digital cushion", "Shock absorber at the heel"], ["White line", "Wall to sole junction"], ["Laminitis", "Inflamed hoof laminae"]],
+  d: ["Study the lameness examination.", "Learn about digital dermatitis in cattle.", "Read about hoof balance and farriery."]
+});
+
+topic("anat", "General Embryology and Fetal Membranes", {
+  o: ["Describe fertilisation, cleavage and the formation of germ layers", "State the derivatives of the three germ layers", "Describe the four fetal membranes", "Classify placentae and link the type with immunity at birth"],
+  i: "Embryology explains how a single cell becomes an animal, and why some abnormalities arise. Placental type determines whether antibodies reach the fetus before birth, which is the reason colostrum matters.",
+  s: "After fertilisation the cell divides again and again to make a ball of cells, which folds into three layers. Each layer forms certain organs. The fetus is surrounded by membranes that protect it and feed it through the placenta. In cows, horses and pigs the placenta does not pass antibodies, so the newborn must drink colostrum.",
+  n: [
+    ["Early development", "Fertilisation produces a zygote, usually in the oviduct. The zygote divides by cleavage into a morula, a solid ball of cells, and then a blastocyst with an outer trophoblast and an inner cell mass. The blastocyst reaches the uterus and attaches (implantation). In ruminants and the horse attachment is delayed."],
+    ["Germ layers", "Gastrulation produces three layers. Ectoderm forms skin, hair, nervous system and sense organs. Mesoderm forms muscle, bone, blood, heart, kidneys and gonads. Endoderm forms the lining of the gut and respiratory tract, and the liver and pancreas."],
+    ["Fetal membranes", "The amnion surrounds the fetus and forms the amniotic sac filled with fluid that cushions the fetus. The chorion is the outermost membrane and contacts the uterus. The allantois collects urinary wastes and fuses with the chorion to form the chorioallantois, the main placental membrane. The yolk sac is important early on and shrinks later."],
+    ["Placenta by shape", "Diffuse (horse, pig): villi cover the whole chorion. Cotyledonary (ruminants): the villous cotyledons of the fetus join the maternal caruncles to form placentomes. Zonary (dog, cat): a band around the fetus. Discoid (primates, rodents): a disc."],
+    ["Placenta by tissue layers", "Epithelio-chorial placentae (horse, pig) keep all layers of the barrier. Ruminants have a modified form (synepitheliochorial). Carnivores have an endothelio-chorial placenta. Primates and rodents have a haemochorial type. Large antibody molecules do not cross in the epitheliochorial types, so these species rely on colostrum, while in primates some antibodies cross the placenta."],
+    ["Fetal fluids and birth", "Amniotic and allantoic fluids are released at birth. The hippomane, a small floating mass in the horse's allantoic fluid, is a normal finding. Abnormal accumulation of fluid, such as hydrallantois in cattle, is a clinical problem."],
+    ["Developmental anomalies", "Examples include cleft palate, hernias, absent or fused organs, and conjoined twins. Freemartinism results from vascular fusion between co-twins of different sex in cattle."]
+  ],
+  tb: { h: ["Species", "Placenta shape", "Placenta layers", "Antibodies across placenta?"], r: [["Horse", "Diffuse", "Epitheliochorial", "No"], ["Pig", "Diffuse", "Epitheliochorial", "No"], ["Cattle, sheep, goat", "Cotyledonary", "Synepitheliochorial", "No"], ["Dog, cat", "Zonary", "Endotheliochorial", "Little"], ["Human, rodents", "Discoid", "Haemochorial", "Yes"]] },
+  df: ["Zygote: the cell formed by the union of sperm and ovum.", "Placenta: the organ in which fetal and maternal tissues are in contact for exchange.", "Placentome: the functional unit of the ruminant placenta, a cotyledon joined to a caruncle."],
+  tm: [["Morula", "Solid ball of early embryonic cells"], ["Blastocyst", "Hollow stage with a trophoblast and inner cell mass"], ["Trophoblast", "Outer layer that forms the chorion"], ["Caruncle", "Maternal part of the placentome"], ["Hippomane", "Floating mass in the equine allantoic fluid"]],
+  st: ["Sperm fertilises the ovum.", "The zygote cleaves into a morula.", "A blastocyst forms.", "The embryo implants in the uterus.", "Three germ layers form.", "Fetal membranes and placenta develop."],
+  ex: ["A calf that did not drink colostrum has very low antibody levels because the placenta passed none.", "A retained placenta in the cow can be due to failure of placentomes to separate.", "A heifer born twin to a bull is often a freemartin."],
+  k: ["Germ layers and derivatives.", "Fetal membranes.", "Placental classification.", "Colostrum link."],
+  m: ["A calf is not born protected by its mother's antibodies. Its placenta did not allow them across."],
+  sa: [["List the fetal membranes.", "Amnion, chorion, allantois and yolk sac."], ["What is a placentome?", "The functional unit of the ruminant placenta, a fetal cotyledon with a maternal caruncle."]],
+  la: [["Classify the placenta of domestic animals and explain its importance.", "By shape and layers with a table, and why colostrum is essential in epitheliochorial species."]],
+  q: [["The placenta of the cow is", ["Cotyledonary", "Zonary", "Diffuse", "Discoid"], 0, "Cotyledonary."],
+    ["The nervous system comes from", ["Ectoderm", "Mesoderm", "Endoderm", "Yolk sac"], 0, "Ectoderm."],
+    ["The dog placenta is", ["Zonary", "Diffuse", "Cotyledonary", "Discoid"], 0, "Zonary."],
+    ["The muscles are derived from", ["Mesoderm", "Ectoderm", "Endoderm", "Trophoblast"], 0, "Mesoderm."]],
+  f: [["Gastrulation", "Formation of the three germ layers"], ["Chorion", "Outermost fetal membrane"], ["Caruncle", "Maternal part of placentome"], ["Allantois", "Collects fetal urine"]],
+  d: ["Study organogenesis of the heart.", "Learn about congenital defects in calves.", "Compare the egg of the hen with a mammalian embryo."]
+});
+
+topic("anat", "Histology: Basic Tissues and Slide Preparation", {
+  o: ["Name the four basic tissues and their types", "Describe how a tissue is prepared for the microscope", "Identify cells of connective tissue and nervous tissue", "Know what H&E staining shows"],
+  i: "Histology is the study of tissues under the microscope. It forms the base of pathology, since a tissue must be known when normal before a disease can be recognised.",
+  s: "All organs are made from four basic tissues: epithelium, connective tissue, muscle and nervous tissue. To study them, a thin slice of tissue is fixed, cut and stained, usually with a pink and blue stain.",
+  n: [
+    ["Epithelium", "Epithelium covers surfaces and lines cavities and forms glands. It sits on a basement membrane and has little intercellular material. It is named by cell shape (squamous, cuboidal, columnar) and layers (simple, stratified). Skin has keratinised stratified squamous epithelium. The bladder has transitional epithelium. The small intestine has simple columnar epithelium with goblet cells."],
+    ["Connective tissue proper", "Cells include fibroblasts, macrophages, mast cells and plasma cells. Fibres are collagen (strength), elastic and reticular. Loose tissue supports organs, dense tissue forms tendons and ligaments, and adipose tissue stores fat."],
+    ["Cartilage and bone", "Hyaline cartilage covers joint surfaces. Elastic cartilage is found in the ear and epiglottis. Fibrocartilage is in intervertebral discs. Bone has osteocytes in lacunae, arranged in osteons (Haversian systems) in compact bone, and is made by osteoblasts and removed by osteoclasts."],
+    ["Muscle tissue", "Skeletal muscle is striated, multinucleated and voluntary. Cardiac muscle is striated, with branched cells joined by intercalated discs. Smooth muscle has spindle-shaped cells with a single central nucleus and is involuntary."],
+    ["Nervous tissue", "Neurons have a cell body, dendrites and an axon. Glial cells support them: astrocytes, oligodendrocytes (myelin in the CNS), microglia (immune cells) and Schwann cells (myelin in peripheral nerves)."],
+    ["Slide preparation", "Fixation in formalin preserves the tissue. Dehydration in graded alcohol removes water, clearing in xylene removes alcohol, then the tissue is embedded in paraffin wax. A microtome cuts sections a few micrometres thick, which are mounted on slides and stained. Poor fixation or delay leaves poor slides."],
+    ["H&E staining", "Haematoxylin is basic and stains acidic structures such as the nucleus blue to purple. Eosin is acidic and stains cytoplasm and collagen pink. Special stains highlight other things: Masson's trichrome for collagen, PAS for carbohydrate, Ziehl-Neelsen for acid-fast bacteria."]
+  ],
+  tb: { h: ["Tissue", "Main feature", "Example"], r: [["Epithelium", "Cells on a basement membrane", "Skin, gut lining"], ["Connective", "Cells in matrix with fibres", "Tendon, bone, blood"], ["Muscle", "Contractile cells", "Skeletal, cardiac, smooth"], ["Nervous", "Neurons and glia", "Brain, nerves"]] },
+  df: ["Tissue: a group of similar cells and their products performing a common function.", "Histology: the microscopic study of tissues.", "Basement membrane: a thin layer on which epithelial cells rest."],
+  tm: [["Goblet cell", "Mucus-secreting epithelial cell"], ["Osteon", "Structural unit of compact bone"], ["Intercalated disc", "Junction between cardiac muscle cells"], ["Microtome", "Instrument for cutting thin tissue sections"], ["Paraffin", "Wax used to embed tissue"]],
+  st: ["Fix the tissue in formalin.", "Dehydrate in graded alcohols.", "Clear in xylene.", "Embed in paraffin wax.", "Cut sections with a microtome.", "Stain with H&E and mount."],
+  ex: ["A biopsy from a skin lump is processed as above and read by a pathologist.", "Acid-fast stain of a smear helps in finding tuberculosis bacteria.", "Collagen deposition in a chronic liver can be shown with a trichrome stain."],
+  k: ["Types of epithelium.", "Connective tissue cells and fibres.", "Muscle types.", "Neuroglia.", "H&E and processing steps."],
+  m: ["The pink colour in H&E is not the same as blood. It is cytoplasm and collagen taking up eosin."],
+  sa: [["What does haematoxylin stain?", "Nuclei and other acidic structures blue to purple."], ["Name the lining epithelium of the urinary bladder.", "Transitional epithelium."]],
+  la: [["Describe the steps of tissue processing for histology.", "Fixation, dehydration, clearing, embedding, sectioning, staining and mounting."]],
+  q: [["Cardiac muscle cells are joined by", ["Intercalated discs", "Tight junctions only", "Desmin", "Sarcomeres"], 0, "Intercalated discs."],
+    ["Myelin in the CNS is made by", ["Oligodendrocytes", "Schwann cells", "Astrocytes", "Microglia"], 0, "Oligodendrocytes."],
+    ["Eosin stains cytoplasm", ["Pink", "Blue", "Black", "Green"], 0, "Pink."],
+    ["Tissue is embedded in", ["Paraffin wax", "Formalin", "Xylene", "Eosin"], 0, "Paraffin wax."]],
+  f: [["Transitional epithelium", "Lines the urinary tract"], ["Osteoblast", "Bone forming cell"], ["Microglia", "Immune cells of the CNS"], ["PAS", "Stain for carbohydrates"]],
+  d: ["Practise identifying tissues on slides.", "Learn special stains.", "Study the histology of each organ system."]
+});
+
+topic("anat", "Brain, Spinal Cord and Cranial Nerves", {
+  o: ["Name the main parts of the brain and their functions", "Describe the meninges, ventricles and cerebrospinal fluid", "List the twelve cranial nerves with their main functions", "Explain the clinical meaning of upper and lower motor neuron signs in outline"],
+  i: "A neurological examination checks cranial nerves, posture and reflexes to place a lesion. That is only possible with a clear picture of the nervous system.",
+  s: "The brain has the cerebrum for thought and voluntary movement, the cerebellum for coordination and the brainstem for vital functions. Twelve pairs of nerves leave the brain for the head and neck. The spinal cord runs inside the vertebral canal and sends nerves to the body.",
+  n: [
+    ["Parts of the brain", "The cerebrum has two hemispheres with a cortex for sensation, voluntary movement and learning. The diencephalon contains the thalamus (relay) and hypothalamus (autonomic and endocrine control). The midbrain, pons and medulla oblongata form the brainstem, which controls breathing, heart rate and reflexes. The cerebellum coordinates movement and balance."],
+    ["Meninges and CSF", "Three layers cover the brain and cord: the dura mater, the arachnoid mater and the pia mater. Cerebrospinal fluid (CSF) forms in the choroid plexus of the ventricles, flows through the ventricles and around the brain and cord and is absorbed into the venous system. It cushions the brain. CSF is collected by veterinarians at the cerebellomedullary cistern or the lumbosacral site under anaesthesia."],
+    ["Spinal cord and spinal nerves", "The cord has grey matter inside, in an H shape, and white matter outside. Dorsal roots carry sensory fibres and ventral roots carry motor fibres. The cord ends before the end of the vertebral canal, and the nerve roots trailing behind form the cauda equina. In the dog the cord ends around the sixth lumbar vertebra, and in the horse around the sacrum."],
+    ["Cranial nerves", "I olfactory (smell), II optic (vision), III oculomotor (eye movement, pupil constriction), IV trochlear (superior oblique), V trigeminal (face sensation, chewing), VI abducens (lateral rectus), VII facial (facial expression, taste), VIII vestibulocochlear (hearing and balance), IX glossopharyngeal (pharynx, taste), X vagus (heart, lungs, gut), XI accessory (neck muscles), XII hypoglossal (tongue)."],
+    ["Peripheral and autonomic nerves", "Spinal nerves form plexuses, such as the brachial plexus for the forelimb. The radial nerve supplies the extensor muscles of the forelimb, so radial paralysis leaves the limb dragging. The sympathetic outflow is thoracolumbar and the parasympathetic is craniosacral, through the vagus and sacral nerves."],
+    ["Neurological localisation", "Upper motor neuron lesions give stiff, spastic limbs with normal or increased reflexes. Lower motor neuron lesions give weak, floppy limbs with reduced reflexes and muscle wasting. Facial paralysis points to the facial nerve, while a head tilt suggests vestibular disease."],
+    ["Protection and blood supply", "The brain is protected by the skull and meninges, and the blood-brain barrier restricts what enters from the blood. This is why some drugs do not reach the brain."]
+  ],
+  tb: { h: ["Nerve", "Number", "Main function"], r: [["Olfactory", "I", "Smell"], ["Optic", "II", "Vision"], ["Oculomotor", "III", "Eye movement, pupil constriction"], ["Trigeminal", "V", "Face sensation, chewing"], ["Facial", "VII", "Facial movement"], ["Vestibulocochlear", "VIII", "Hearing and balance"], ["Vagus", "X", "Parasympathetic to thorax and abdomen"], ["Hypoglossal", "XII", "Tongue movement"]] },
+  df: ["Cerebrospinal fluid: the fluid that circulates in the ventricles and subarachnoid space.", "Cauda equina: the bundle of lumbosacral nerve roots trailing behind the end of the spinal cord.", "Blood-brain barrier: a selective barrier between blood and brain tissue."],
+  tm: [["Choroid plexus", "Tissue in the ventricles that makes CSF"], ["Cerebellum", "Brain part for coordination"], ["Plexus", "Network of nerves"], ["Dura mater", "Tough outer meningeal layer"], ["Medulla oblongata", "Lowest part of the brainstem"]],
+  st: ["Observe posture, gait and behaviour.", "Test the cranial nerves one by one.", "Test postural reactions and spinal reflexes.", "Decide the likely site of the lesion.", "Plan tests such as imaging or CSF analysis."],
+  ex: ["A horse with a drooping ear, lip and eyelid on one side shows facial nerve paralysis.", "A dog that drags its hind paws and has weak reflexes may have a lower motor neuron problem.", "A calf with a head tilt and circling can have inner ear or brainstem disease."],
+  k: ["Brain parts.", "Meninges and CSF.", "Twelve cranial nerves.", "Spinal cord position.", "UMN vs LMN."],
+  m: ["The spinal cord does not reach the end of the vertebral column."],
+  sa: [["Name the meninges.", "Dura mater, arachnoid mater and pia mater."], ["Which nerve is the vagus?", "Cranial nerve X, carrying parasympathetic fibres to the chest and abdomen."]],
+  la: [["List the cranial nerves with their functions.", "Table of I to XII with type and main function, with an example of a clinical sign for each important nerve."]],
+  q: [["The cranial nerve for vision is", ["II", "I", "V", "VII"], 0, "Optic nerve II."],
+    ["CSF is produced in the", ["Choroid plexus", "Cerebellum", "Pia mater", "Dura mater"], 0, "Choroid plexus."],
+    ["The facial nerve is cranial nerve", ["VII", "V", "IX", "XII"], 0, "VII."],
+    ["Lower motor neuron lesions cause", ["Weak, floppy limbs", "Spastic limbs", "Increased reflexes", "Normal tone"], 0, "Flaccid with reduced reflexes."]],
+  f: [["Cauda equina", "Horse-tail of nerve roots"], ["Cranial nerve X", "Vagus"], ["Blood-brain barrier", "Limits entry of substances into the brain"], ["Brainstem", "Midbrain, pons and medulla"]],
+  d: ["Learn the neurological exam step by step.", "Study the autonomic ganglia.", "Read about the avian brain."]
+});
+
+topic("anat", "Applied and Surface Anatomy for Clinical Work", {
+  o: ["Locate sites for pulse, venepuncture and auscultation", "Describe landmarks used in clinical examination", "Explain the idea of nerve blocks", "Use anatomical landmarks to describe the position of organs"],
+  i: "A great deal of clinical practice is anatomy under the skin, found with the fingers and a stethoscope. These landmarks are the ones every veterinary student is expected to know.",
+  s: "The skin and body wall have landmarks that tell you where the organs lie below. The jugular vein runs in the neck groove, the heart is heard on the left side of the chest and the rumen fills the left flank.",
+  n: [
+    ["Venepuncture sites", "In cattle, horses and sheep the jugular vein lies in the jugular groove of the neck and is made to rise by pressure at the base of the neck. In cattle, the tail (coccygeal) vein on the underside of the tail is another site. In dogs and cats the cephalic vein on the front of the forelimb and the saphenous vein on the hind limb are commonly used. Restraint and hygiene are required."],
+    ["Pulse points", "The facial artery, where it crosses the lower jaw, is used in the horse. The median caudal artery under the tail is used in cattle. The femoral artery in the groin is used in dogs and cats. Rate, rhythm and strength of the pulse are noted."],
+    ["Auscultation", "The heart lies in the lower chest, mainly on the left, roughly between the third and fifth ribs, with the point of the elbow as a guide. Lung sounds are heard over the lung field behind the shoulder. Rumen movements are heard in the left paralumbar fossa, and in cattle the 'ping' area on the left or right flank is relevant to displaced abomasum."],
+    ["Abdominal landmarks", "The left paralumbar fossa is the hollow behind the last rib and in front of the hip. The rumen occupies most of the left side of the abdomen. On the right side, the liver and abomasum lie in the cranial abdomen, and the caecum lies in the right flank in cattle. In the horse, the large colon and caecum fill much of the abdomen."],
+    ["Thoracic landmarks", "The ribs are counted from the front. The lungs reach back towards the last ribs, but the exact limit varies with species and breathing, so check your textbook for the percussion limits. The diaphragm sits further forward than many students expect, so the liver lies partly under the rib cage."],
+    ["Nerve blocks (concept)", "A nerve block uses local anaesthetic placed near a nerve to numb its area. Knowing the course of the nerve is essential. In cattle the cornual nerve supplies the horn and is blocked for dehorning, and paravertebral nerve blocks are used for flank surgery. The procedure is done only by a veterinarian."],
+    ["Injection sites in outline", "Intramuscular injections are given in large muscle masses with few vessels and nerves, such as the neck muscles in cattle and the thigh muscles in dogs. Injection sites are chosen to avoid the sciatic nerve and to reduce damage to valuable meat cuts."]
+  ],
+  tb: { h: ["Purpose", "Species", "Site"], r: [["Venepuncture", "Cattle, horse", "Jugular groove"], ["Venepuncture", "Dog", "Cephalic or saphenous vein"], ["Pulse", "Horse", "Facial artery"], ["Pulse", "Cattle", "Median caudal artery"], ["Pulse", "Dog", "Femoral artery"], ["Rumen sounds", "Cattle", "Left paralumbar fossa"]] },
+  df: ["Surface anatomy: the study of the position of internal structures in relation to the body surface.", "Auscultation: listening to body sounds, usually with a stethoscope.", "Nerve block: injection of a local anaesthetic near a nerve to block sensation."],
+  tm: [["Paralumbar fossa", "Hollow of the flank"], ["Intercostal space", "Space between two ribs"], ["Jugular groove", "Groove on the side of the neck holding the jugular vein"], ["Palpation", "Examining by touch"], ["Percussion", "Tapping to assess underlying structures"]],
+  st: ["Restrain the animal safely.", "Identify the landmark.", "Look, feel and listen.", "Compare with the opposite side.", "Record findings."],
+  ex: ["Listening on the left flank of a cow for rumen contractions.", "Taking the pulse from the tail of a cow.", "Raising the jugular vein for blood collection from a horse."],
+  k: ["Sites for venepuncture.", "Pulse points.", "Auscultation areas.", "Abdominal landmarks."],
+  m: ["The heart is not in the middle of the chest. In animals it lies mainly on the left."],
+  sa: [["Where is the pulse taken in the horse?", "From the facial artery as it crosses the lower jaw."], ["What is the paralumbar fossa?", "The hollow behind the last rib and before the hip in the flank."]],
+  la: [["Describe the clinical anatomy of the flank of the cow.", "Landmarks, organs on each side, auscultation, relevance to surgery and disease."]],
+  q: [["The jugular vein lies in the", ["Jugular groove", "Axilla", "Flank", "Groin"], 0, "Jugular groove."],
+    ["In cattle, rumen sounds are heard in the", ["Left paralumbar fossa", "Right paralumbar fossa", "Brisket", "Groin"], 0, "Left paralumbar fossa."],
+    ["The pulse in cattle is usually taken from the", ["Median caudal artery", "Facial artery", "Femoral vein", "Carotid"], 0, "Median caudal artery."],
+    ["A nerve block", ["Numbs the area supplied by a nerve", "Raises blood pressure", "Kills a nerve", "Cures infection"], 0, "It temporarily blocks sensation."]],
+  f: [["Cephalic vein", "Forelimb vein in the dog"], ["Auscultation", "Listening with a stethoscope"], ["Paralumbar fossa", "Flank hollow"], ["Median caudal artery", "Tail pulse site in cattle"]],
+  d: ["Practise landmarks on a live animal with a teacher.", "Study the clinical anatomy of the horse's limb.", "Learn about radiographic anatomy."]
+});
+planned("anat", ["Comparative anatomy of the digestive system in the horse and pig", "Anatomy of the respiratory system in detail: larynx, lungs and pleura", "Anatomy of the male and female reproductive organs in detail", "Anatomy of the urinary system in detail", "Avian skeleton and muscles in detail", "Muscles of the head, neck and trunk", "Blood vessels of the limbs and abdomen", "Practical dissection guide: a systematic approach", "Anatomy of the dog and cat in detail", "Radiographic anatomy"]);
+/* ================= ANATOMY (wave 4, part 1) ================= */
+unit("anat", "Unit 6 – Systems in comparative detail");
+topic("anat", "Digestive Tract of the Horse, Pig and Dog: Comparative View", {
+  o: ["Describe the parts of the equine large intestine and the common sites of colic", "Explain why the horse cannot vomit", "Describe the special features of the pig stomach and colon", "Compare the digestive tract of dog, horse and pig"],
+  i: "Ruminant digestion was covered earlier. Horses, pigs and dogs each have a different plan, and these differences explain feeding, colic and surgical problems.",
+  s: "The horse is a hindgut fermenter. It has a small simple stomach and a very large caecum and colon, where microbes ferment fibre. The pig has a simple stomach and a coiled colon. The dog has a short gut suited to meat.",
+  n: [
+    ["Horse: mouth to stomach", "The horse has a long, mobile upper lip, strong incisors for grazing and cheek teeth for grinding. The oesophagus joins the stomach through a very strong cardiac sphincter, and the horse cannot vomit, so gas or fluid builds up and can rupture the stomach. The simple stomach is small compared with body size, so horses are fed small amounts often."],
+    ["Horse: small intestine", "The small intestine is long (many metres), with duodenum, jejunum and ileum. The horse has no gallbladder, so bile flows directly and continuously into the duodenum. The jejunum hangs from a long mesentery, so it can twist or get trapped."],
+    ["Horse: caecum and colon", "The caecum is a large comma-shaped blind sac on the right side. The large colon forms a double loop: right ventral colon, left ventral colon, pelvic flexure, left dorsal colon and right dorsal colon. The pelvic flexure narrows, and so impactions often occur there. The small colon follows and forms firm faecal balls. The terminal part is narrow, so a blockage can occur."],
+    ["Horse colic: anatomical sites", "Colic is abdominal pain, not a single disease. Anatomy explains common problems: impaction at the pelvic flexure, twisting (volvulus) of the large colon, entrapment of the left colon over the nephrosplenic ligament, sand accumulation, and strangulation by a pedunculated lipoma in older horses. Colic is an emergency that needs veterinary help."],
+    ["Pig", "The stomach is simple with a diverticulum near the oesophageal entry and a muscular thickening (torus pyloricus) at the outlet. The small intestine is long. The caecum is short. The colon forms a spiral cone (ansa spiralis) in the left abdomen, and the pig has a large, well-developed liver. Pigs are omnivores and can digest a wide range of feeds."],
+    ["Dog and cat", "The stomach is large and simple and can expand after a big meal. The gut is relatively short, with a small caecum in the dog and a tiny one in the cat. Carnassial teeth (upper fourth premolar and lower first molar) shear meat. Gastric dilatation and volvulus affects deep-chested large breeds."],
+    ["Common clinical links", "Horses: colic, gastric ulcers, choke. Pigs: gastric ulcers, rectal prolapse. Dogs: foreign bodies in the stomach and small intestine, gastric dilatation-volvulus. Knowing the position and attachment of each part helps in understanding where the problem is."]
+  ],
+  tb: { h: ["Feature", "Horse", "Pig", "Dog"], r: [["Stomach", "Small, simple, cannot vomit", "Simple, torus pyloricus", "Large, simple"], ["Caecum", "Very large", "Short", "Small"], ["Colon", "Large colon with pelvic flexure", "Spiral cone", "Short, simple"], ["Gallbladder", "Absent", "Present", "Present"], ["Fermentation site", "Caecum and colon", "Colon", "Little"]] },
+  df: ["Hindgut fermenter: an animal that digests fibre by microbial fermentation in the caecum and colon.", "Colic: abdominal pain, usually from the intestine.", "Impaction: blockage of the gut lumen by dry feed or foreign material."],
+  tm: [["Cardiac sphincter", "Muscular ring at the oesophagus to stomach junction"], ["Pelvic flexure", "Hairpin bend of the horse's large colon"], ["Ansa spiralis", "Spiral colon of the pig"], ["Volvulus", "Twisting of the gut on its axis"], ["Nephrosplenic ligament", "Ligament between the left kidney and the spleen in the horse"]],
+  st: ["Feed is grazed and chewed.", "It passes to the small stomach and small intestine.", "Fibre reaches the caecum and large colon.", "Microbes ferment it to volatile fatty acids.", "The small colon forms faecal balls.", "Faeces leave through the rectum."],
+  ex: ["A horse with colic that rolls and looks at its flank needs urgent veterinary examination.", "A boar fed only coarse fibre cannot digest it as well as a ruminant.", "A deep-chested dog with a swollen abdomen after a meal can have gastric dilatation and volvulus."],
+  k: ["Equine large intestine parts.", "No vomiting in the horse.", "No gallbladder in the horse.", "Sites of colic.", "Pig stomach and colon."],
+  m: ["A horse has no gallbladder, but it still makes and uses bile."],
+  sa: [["Why can the horse not vomit?", "The cardiac sphincter is very strong and the oesophagus enters the stomach at an angle."], ["Name the parts of the large colon of the horse.", "Right ventral, left ventral, pelvic flexure, left dorsal and right dorsal colon."]],
+  la: [["Describe the digestive system of the horse.", "Mouth, stomach, small intestine, caecum, large and small colon, glands, no gallbladder, clinical relevance."]],
+  q: [["The horse has no", ["Gallbladder", "Liver", "Pancreas", "Caecum"], 0, "No gallbladder."],
+    ["Impaction in the horse often occurs at the", ["Pelvic flexure", "Oesophagus", "Caecal base only", "Duodenum"], 0, "Pelvic flexure."],
+    ["The spiral colon is a feature of the", ["Pig", "Horse", "Dog", "Hen"], 0, "Pig."],
+    ["The horse is a", ["Hindgut fermenter", "Foregut fermenter", "Carnivore", "Ruminant"], 0, "Hindgut fermenter."]],
+  f: [["Ansa spiralis", "Spiral colon of the pig"], ["Volvulus", "Twist of the gut"], ["Torus pyloricus", "Muscular pad at the pig's pylorus"], ["Hindgut fermenter", "Fibre digested in caecum and colon"]],
+  d: ["Study the equine gastric ulcer syndrome.", "Learn the mesenteric attachments.", "Read about the digestive anatomy of rabbits."]
+});
+
+topic("anat", "Respiratory System in Detail", {
+  o: ["Trace the air passage from nostril to alveolus", "Name the laryngeal cartilages and the nerve of the larynx", "Describe the lobes of the lungs and the pleura", "Compare species differences"],
+  i: "Respiratory disease is among the commonest causes of loss in livestock and companion animals. Auscultation, endoscopy and radiology all depend on this anatomy.",
+  s: "Air enters the nostrils, passes through the nasal cavity, pharynx, larynx and trachea, and then enters the lungs, where it splits into smaller and smaller tubes until it reaches the tiny air sacs where oxygen enters the blood.",
+  n: [
+    ["Nasal cavity and sinuses", "The nasal cavity is divided by the nasal septum. Scroll-like turbinates (conchae) warm, filter and humidify the air and increase surface area. The horse is an obligate nasal breather because of its long soft palate. The paranasal sinuses open into the nasal cavity."],
+    ["Pharynx and larynx", "The pharynx is shared by food and air. The larynx guards the airway and makes sound. Its cartilages are the epiglottic, thyroid, cricoid and the paired arytenoid cartilages. The vocal folds attach to the arytenoids. The left recurrent laryngeal nerve is long, and its damage causes laryngeal hemiplegia ('roaring') in horses."],
+    ["Trachea and bronchi", "The trachea is held open by C-shaped cartilage rings, completed by the trachealis muscle. It divides into two principal bronchi, which divide repeatedly into bronchioles. Ruminants and the pig have a separate tracheal bronchus supplying the right cranial lobe, which makes it prone to inhaled material or drugs."],
+    ["Lungs and lobes", "The right lung has more lobes than the left. In the dog the right lung has cranial, middle, caudal and accessory lobes and the left lung has cranial and caudal lobes. Cattle and pigs have clear interlobular septa, which limit the spread of pneumonia. The horse has incomplete septa."],
+    ["Alveoli and gas exchange", "Alveoli are thin-walled sacs surrounded by capillaries. Type I cells form the thin wall for gas exchange and type II cells make surfactant, which prevents collapse. Oxygen and carbon dioxide diffuse across the blood-air barrier."],
+    ["Pleura, diaphragm and mediastinum", "Each lung is covered by visceral pleura, and the chest wall is lined by parietal pleura, with a thin pleural space between them. The diaphragm is the main muscle of inspiration. The mediastinum is thin and may be incomplete in the horse and dog, so air in one side of the chest can affect both lungs."],
+    ["Clinical links", "Endoscopy shows the nasal passages and larynx of the horse. Thoracic radiographs show the lung fields. Pleural effusion fills the pleural space and dulls lung sounds. Pneumothorax is air in the pleural space."]
+  ],
+  tb: { h: ["Feature", "Cattle and pig", "Horse", "Dog"], r: [["Interlobular septa", "Complete", "Incomplete", "Incomplete"], ["Tracheal bronchus", "Present", "Absent", "Absent"], ["Breathing", "Mouth and nose", "Obligate nasal", "Mouth and nose"], ["Lobes (right)", "Cranial (two parts), middle, caudal, accessory", "Cranial, caudal, accessory", "Cranial, middle, caudal, accessory"]] },
+  df: ["Turbinate: a thin scroll of bone covered by mucosa in the nasal cavity.", "Surfactant: a fluid made by type II alveolar cells that lowers surface tension in the alveoli.", "Pleura: the serous membrane covering the lungs and lining the chest."],
+  tm: [["Arytenoid cartilage", "Paired laryngeal cartilage that moves the vocal folds"], ["Trachealis", "Muscle bridging the open ends of the tracheal rings"], ["Bronchiole", "Small airway without cartilage"], ["Pneumothorax", "Air in the pleural space"], ["Pleural effusion", "Fluid in the pleural space"]],
+  st: ["Air enters through the nostrils.", "It passes the nasal cavity and pharynx.", "It passes the larynx and trachea.", "It enters the bronchi and bronchioles.", "It reaches the alveoli for gas exchange."],
+  ex: ["A horse that makes a roaring noise during exercise may have damage to the left recurrent laryngeal nerve.", "A calf with pneumonia may have disease concentrated in the cranial lobes of the lungs.", "A dog with fluid in the chest has muffled lung sounds."],
+  k: ["Laryngeal cartilages.", "Nerve supply of the larynx.", "Lobes of the lung.", "Pleura.", "Species differences."],
+  m: ["The trachea is not a smooth tube. It has cartilage rings to stay open."],
+  sa: [["Name the cartilages of the larynx.", "Epiglottic, thyroid, cricoid and arytenoid cartilages."], ["What is surfactant?", "A fluid from type II alveolar cells that prevents alveolar collapse."]],
+  la: [["Describe the anatomy of the lungs of the domestic animals.", "Position, lobes, bronchial tree, alveoli, pleura, species differences, clinical relevance."]],
+  q: [["Roaring in horses involves the", ["Left recurrent laryngeal nerve", "Vagus on the right", "Facial nerve", "Phrenic nerve"], 0, "Left recurrent laryngeal nerve."],
+    ["The tracheal bronchus is found in", ["Pig and ruminants", "Horse", "Dog", "Cat"], 0, "Pig and ruminants."],
+    ["Surfactant is made by", ["Type II cells", "Type I cells", "Macrophages", "Goblet cells"], 0, "Type II alveolar cells."],
+    ["The horse is an obligate", ["Nasal breather", "Mouth breather", "Diaphragm breather", "Gill breather"], 0, "Nasal breather."]],
+  f: [["Pneumothorax", "Air in pleural space"], ["Turbinate", "Scroll of bone in the nose"], ["Bronchiole", "Small airway without cartilage"], ["Type II cell", "Makes surfactant"]],
+  d: ["Study the control of breathing.", "Learn endoscopic anatomy of the upper airway.", "Read about air sacs in birds."]
+});
+
+topic("anat", "Male Reproductive Organs", {
+  o: ["Describe the testis, epididymis and spermatic cord", "Name the accessory glands and compare species", "Compare the penis of ruminants, boar, stallion and dog", "Explain thermoregulation of the testis"],
+  i: "Breeding soundness, castration, and semen production all depend on the anatomy of the male tract.",
+  s: "Sperm are made in the testes, stored in the epididymis and carried by the vas deferens to the urethra, where fluid from the accessory glands is added. The testes hang outside the body to stay cooler than body temperature.",
+  n: [
+    ["Testis and scrotum", "The testis has seminiferous tubules where sperm are made and interstitial Leydig cells that make testosterone. The testes hang vertically in the bull, ram and boar (the boar's lie in the perineal region, below the anus) and nearly horizontally in the stallion. The scrotum and the cremaster and dartos muscles move the testes closer or farther from the body to control temperature."],
+    ["Temperature control", "The pampiniform plexus of veins wraps around the testicular artery and cools the arterial blood by counter-current heat exchange. Sperm production needs a temperature a few degrees below body temperature. Fever, heat stress or scrotal injury can reduce semen quality for weeks."],
+    ["Epididymis and ducts", "The epididymis has a head, body and tail. Sperm mature and are stored in the tail. The vas deferens carries sperm through the inguinal canal to the pelvic urethra."],
+    ["Accessory glands", "Vesicular glands, the prostate and bulbourethral glands add secretions. The bull, ram, boar and stallion have all three. The dog has only a prostate, which is well developed. The boar has very large vesicular and bulbourethral glands and produces a large volume of semen."],
+    ["Penis", "Ruminants and the boar have a fibroelastic penis with a sigmoid flexure, which straightens at erection. The stallion and dog have a musculocavernous penis that enlarges with blood. The dog has a bone, the os penis, and a bulbus glandis that causes the 'tie' during mating. The ram and goat have a urethral process at the tip."],
+    ["Prepuce and urethra", "The prepuce covers the free end of the penis. The urethra carries both urine and semen. In male ruminants stones often lodge at the sigmoid flexure or the urethral process, causing blocked urine flow."],
+    ["Clinical links", "Cryptorchidism is failure of one or both testes to descend. Orchitis is inflammation of the testis. Castration removes the testes. Examination of a bull includes palpation of the testes, epididymis and accessory glands, and measurement of scrotal circumference."]
+  ],
+  tb: { h: ["Feature", "Bull, ram", "Boar", "Stallion", "Dog"], r: [["Penis type", "Fibroelastic, sigmoid flexure", "Fibroelastic, corkscrew tip", "Musculocavernous", "Musculocavernous with os penis"], ["Vesicular glands", "Present", "Large", "Present", "Absent"], ["Prostate", "Present", "Present", "Present", "Present, large"], ["Bulbourethral glands", "Present", "Large", "Present", "Absent"]] },
+  df: ["Cryptorchidism: failure of one or both testes to descend into the scrotum.", "Pampiniform plexus: the network of testicular veins that cools arterial blood.", "Spermatogenesis: the formation of sperm in the seminiferous tubules."],
+  tm: [["Cremaster", "Muscle that raises the testis"], ["Dartos", "Smooth muscle in the scrotal wall"], ["Os penis", "Penile bone of the dog"], ["Bulbus glandis", "Swelling at the base of the glans in the dog"], ["Sigmoid flexure", "S-shaped bend in the ruminant and boar penis"]],
+  st: ["Sperm are made in the seminiferous tubules.", "They move to the epididymis and mature.", "At ejaculation they pass through the vas deferens.", "Accessory glands add fluid.", "Semen is delivered through the urethra."],
+  ex: ["A bull with a hard, enlarged testis may have orchitis.", "A male goat that strains and passes only drops of urine may have urethral stones.", "A bull's scrotal circumference is used to judge fertility."],
+  k: ["Testis structure.", "Temperature control.", "Accessory glands in species.", "Penis types.", "Cryptorchidism."],
+  m: ["The testes are outside the body to keep sperm cool, not to protect them."],
+  sa: [["Which gland is the only accessory gland of the dog?", "The prostate."], ["What is cryptorchidism?", "Failure of one or both testes to descend into the scrotum."]],
+  la: [["Describe the male reproductive system of the bull.", "Testes, scrotum, epididymis, spermatic cord, vas deferens, accessory glands, penis, prepuce, thermoregulation, clinical points."]],
+  q: [["Sperm are stored mainly in the", ["Tail of the epididymis", "Prostate", "Vas deferens", "Scrotum"], 0, "Tail of the epididymis."],
+    ["The dog has a", ["Penile bone", "Sigmoid flexure", "No prostate", "Fibroelastic penis"], 0, "Os penis."],
+    ["The pampiniform plexus", ["Cools testicular blood", "Makes sperm", "Stores sperm", "Makes testosterone"], 0, "Counter-current cooling."],
+    ["Sigmoid flexure is found in the", ["Bull", "Stallion", "Dog", "Cat"], 0, "Bull, ram, boar."]],
+  f: [["Cremaster", "Raises the testis"], ["Leydig cell", "Makes testosterone"], ["Orchitis", "Inflammation of the testis"], ["Os penis", "Bone in the dog's penis"]],
+  d: ["Study the breeding soundness exam.", "Learn the histology of the testis.", "Read about ejaculation physiology."]
+});
+
+topic("anat", "Female Reproductive Organs", {
+  o: ["Describe the ovary, oviduct, uterus, cervix and vagina", "Compare the uterus and cervix of the species", "Name the ligaments of the female tract", "Relate the anatomy to rectal palpation and artificial insemination"],
+  i: "Fertility work, artificial insemination, pregnancy diagnosis and calving all rely on a good three-dimensional picture of the female tract.",
+  s: "The ovaries make eggs and hormones. The egg travels along the oviduct, where it is fertilised, and the embryo grows in the uterus, which has two horns in domestic animals. The cervix is a strong gate between the uterus and the vagina.",
+  n: [
+    ["Ovary", "The ovary has follicles at different stages and corpora lutea. In the horse the ovary is bean shaped with an ovulation fossa, the only place where ovulation occurs. In the cow the ovary is almond shaped and follicles and corpora lutea can be felt per rectum. The sow's ovary looks like a bunch of grapes."],
+    ["Oviduct", "The oviduct has the infundibulum with finger-like fimbriae, the ampulla (site of fertilisation) and the isthmus, which joins the uterus. The oviduct moves the egg and sperm and supports early embryo development."],
+    ["Uterus", "Domestic animals have a bicornuate uterus with a body and two horns. Cows and ewes have a small body and long, coiled horns with caruncles for placentation. The mare has a large body and shorter horns. The sow has very long, coiled horns. The bitch and queen have long, narrow horns and a short body."],
+    ["Cervix", "The cervix is a thick-walled muscular canal, normally closed. In the cow it has several annular rings, which a technician feels and passes through during artificial insemination. In the sow the cervix has interdigitating pads which lock with the boar's corkscrew penis. The mare's cervix is soft and relaxes in oestrus."],
+    ["Vagina, vestibule and vulva", "The vagina lies between cervix and vestibule. The urethra opens at the junction of vagina and vestibule, and in the cow a blind pocket, the suburethral diverticulum, lies below the urethral opening, so a catheter may enter it by mistake. The vulva has two lips and the clitoris lies in the ventral commissure."],
+    ["Ligaments", "The broad ligament suspends the tract from the roof of the abdomen. Its parts are the mesovarium (for the ovary), mesosalpinx (for the oviduct) and mesometrium (for the uterus). In pregnancy the ligaments stretch."],
+    ["Blood supply and clinical links", "Ovarian and uterine arteries supply the tract. Pregnancy diagnosis in cattle by rectal palpation uses the position and size of the uterus and the presence of fetal membranes. Uterine prolapse, torsion and retained fetal membranes are calving problems that need immediate veterinary attention."]
+  ],
+  tb: { h: ["Feature", "Cow", "Mare", "Sow", "Bitch"], r: [["Uterine body", "Small", "Large", "Short", "Short"], ["Uterine horns", "Long, coiled", "Short", "Very long, coiled", "Long, narrow"], ["Cervix", "Annular rings", "Soft, relaxed in heat", "Interdigitating pads", "Single canal"], ["Placenta", "Cotyledonary", "Diffuse", "Diffuse", "Zonary"]] },
+  df: ["Bicornuate uterus: a uterus with a short body and two horns.", "Corpus luteum: a gland formed from the ruptured follicle that makes progesterone.", "Mesometrium: the part of the broad ligament that supports the uterus."],
+  tm: [["Fimbriae", "Finger-like projections of the infundibulum"], ["Ovulation fossa", "Depression on the equine ovary where ovulation occurs"], ["Caruncle", "Maternal placental button on the uterine wall"], ["Suburethral diverticulum", "Blind pocket under the urethral opening of the cow"], ["Cervical rings", "Folds in the cervix of ruminants"]],
+  st: ["An ovum is released from the ovary.", "It is caught by the infundibulum.", "Fertilisation occurs in the ampulla.", "The embryo moves to the uterus.", "It attaches and the placenta forms.", "At term the cervix relaxes and birth occurs."],
+  ex: ["An inseminator who knows the cervical rings can pass the gun through with minimal force.", "A catheter passed into a cow's urethra can wrongly go into the suburethral diverticulum.", "Palpation of the ovary tells the vet if a corpus luteum is present."],
+  k: ["Parts of the tract.", "Uterine types.", "Cervix of species.", "Broad ligament.", "Palpation landmarks."],
+  m: ["Fertilisation takes place in the oviduct, not in the uterus."],
+  sa: [["Where does fertilisation occur?", "In the ampulla of the oviduct."], ["Name the three parts of the broad ligament.", "Mesovarium, mesosalpinx and mesometrium."]],
+  la: [["Describe the female genital organs of the cow with a labelled diagram.", "Ovaries, oviducts, uterus, cervix, vagina, vulva, ligaments, blood supply, clinical points."]],
+  q: [["The site of ovulation in the mare is the", ["Ovulation fossa", "Cortex all over", "Corpus luteum", "Oviduct"], 0, "Ovulation fossa."],
+    ["The cow's cervix has", ["Annular rings", "Interdigitating pads", "No lumen", "A soft wall only"], 0, "Annular rings."],
+    ["Fertilisation occurs in the", ["Ampulla", "Uterus", "Cervix", "Vagina"], 0, "Ampulla."],
+    ["The mesovarium supports the", ["Ovary", "Uterus", "Bladder", "Vagina"], 0, "The ovary."]],
+  f: [["Fimbriae", "Catch the ovum"], ["Bicornuate", "Uterus with two horns and a body"], ["Mesosalpinx", "Supports the oviduct"], ["Suburethral diverticulum", "Blind pocket in the cow"]],
+  d: ["Study the ovarian cycle with histology.", "Learn the tract of the bitch.", "Read about rectal palpation techniques."]
+});
+
+topic("anat", "Urinary System in Detail", {
+  o: ["Describe the structure of the kidney and the nephron", "Compare the kidneys of the domestic species", "Describe the ureters, bladder and urethra", "Link anatomy to urolithiasis"],
+  i: "Kidneys filter blood, control water and salt, and remove wastes. Disease here is common in older dogs and cats, and blocked urinary tracts are a major problem in male ruminants and cats.",
+  s: "Each kidney contains many tiny filters called nephrons. Urine flows from the kidney through the ureter to the bladder and out through the urethra. In males the urethra is long and narrow, so stones can block it.",
+  n: [
+    ["Position and shape of kidneys", "The kidneys lie against the roof of the abdomen, under the lumbar vertebrae. The right kidney is more forward than the left. In cattle the kidney is lobulated with grooves on the surface. The pig and horse kidneys are smooth. The horse's right kidney is heart shaped and the left is bean shaped. In cattle the left kidney is displaced to the right behind the rumen, so it is found on the right side."],
+    ["Internal structure", "The cortex is the outer part and the medulla is the inner part, made of pyramids. Urine from the papilla collects in the renal pelvis or in calyces. Cattle and the pig have multipyramidal kidneys with calyces. The horse, dog, cat, sheep and goat have a single fused renal crest and a renal pelvis."],
+    ["The nephron", "The nephron consists of the renal corpuscle (glomerulus and Bowman's capsule), the proximal convoluted tubule, the loop of Henle, the distal convoluted tubule and the collecting duct. The juxtaglomerular apparatus near the glomerulus senses blood pressure and releases renin. Cortical nephrons have short loops, and juxtamedullary nephrons have long loops that help concentrate urine."],
+    ["Ureters and bladder", "A ureter leaves each kidney and runs to the bladder, entering it obliquely so urine cannot flow backward. The bladder is lined by transitional epithelium and has a smooth muscle wall. It lies on the pelvic floor and moves into the abdomen as it fills."],
+    ["Urethra", "In the female the urethra is short and opens into the vagina. In the male it is long and joins the genital tract. In male ruminants and pigs the urethra has narrow points at the sigmoid flexure and the urethral process. In the dog the urethra passes through the os penis, where stones may lodge."],
+    ["Blood supply", "The renal artery branches from the aorta, and the kidney receives a large share of the cardiac output. A portal system around the nephron, the peritubular capillaries, works with the glomerulus."],
+    ["Clinical links", "Urolithiasis (urinary stones) often blocks the urethra in male ruminants and cats and can cause a ruptured bladder. Chronic kidney disease is common in older cats and dogs. A normal kidney is smooth, and enlargement or irregularity is a clinical finding on palpation or imaging."]
+  ],
+  tb: { h: ["Species", "Kidney shape", "Type"], r: [["Cattle", "Lobulated", "Multipyramidal"], ["Pig", "Smooth, flattened", "Multipyramidal"], ["Horse", "Right heart-shaped, left bean-shaped", "Unipyramidal with crest"], ["Sheep, goat", "Bean-shaped", "Unipyramidal with crest"], ["Dog, cat", "Bean-shaped", "Unipyramidal with crest"]] },
+  df: ["Nephron: the structural and functional unit of the kidney.", "Juxtaglomerular apparatus: the structure that monitors blood pressure and releases renin.", "Urolithiasis: the formation of stones in the urinary tract."],
+  tm: [["Glomerulus", "Tuft of capillaries that filters blood"], ["Renal pelvis", "Funnel where urine collects"], ["Renal crest", "Fused papilla of the unipyramidal kidney"], ["Loop of Henle", "U-shaped part of the nephron"], ["Renin", "Enzyme released by the kidney that affects blood pressure"]],
+  st: ["Blood enters the glomerulus.", "Filtrate enters Bowman's capsule.", "The tubules reabsorb water and solutes.", "Urine collects in the collecting ducts.", "It passes to the pelvis, ureter, bladder and urethra."],
+  ex: ["A male goat with urethral stones strains and dribbles urine and can rupture the bladder.", "An old cat with small, irregular kidneys may have chronic kidney disease.", "A cow's left kidney is felt on the right side by rectal palpation because of its position."],
+  k: ["Gross structure of the kidney.", "Nephron parts.", "Species differences.", "Urethra and urolithiasis."],
+  m: ["The left kidney of a cow is not found on the left side."],
+  sa: [["What is the nephron?", "The functional unit of the kidney, made of the renal corpuscle and the renal tubule."], ["Where do stones commonly lodge in male ruminants?", "At the sigmoid flexure and the urethral process."]],
+  la: [["Describe the structure of the kidney and nephron.", "Position, cortex and medulla, nephron parts, juxtaglomerular apparatus, blood supply, species differences."]],
+  q: [["The multipyramidal kidney is found in", ["Cattle", "Dog", "Horse", "Cat"], 0, "Cattle and pig."],
+    ["The functional unit of the kidney is the", ["Nephron", "Calyx", "Ureter", "Papilla"], 0, "Nephron."],
+    ["In the dog, stones often lodge at the", ["Os penis", "Sigmoid flexure", "Urethral process", "Ureter only"], 0, "Os penis."],
+    ["The juxtaglomerular apparatus releases", ["Renin", "Insulin", "Bile", "Amylase"], 0, "Renin."]],
+  f: [["Glomerulus", "Capillary tuft of the nephron"], ["Urolithiasis", "Stones in the urinary tract"], ["Calyx", "Cup collecting urine from a papilla"], ["Transitional epithelium", "Lines the urinary passages"]],
+  d: ["Study renal physiology further.", "Learn urinary tract imaging.", "Read about urinary diseases of cats."]
+});
+/* ================= ANATOMY (wave 4, part 2) ================= */
+topic("anat", "Muscles of the Head, Neck and Trunk", {
+  o: ["Name the main muscles of mastication and the neck", "Describe the abdominal wall muscles and the inguinal canal", "Explain the nuchal ligament in ungulates", "Relate muscle anatomy to surgical approaches and hernias"],
+  i: "Muscles move the body, hold the organs in place and shape the carcass. Surgeons enter the abdomen through its muscular wall, so its layers must be known.",
+  s: "The head has strong muscles for chewing. The neck of grazing animals is held up by a strong elastic ligament. The belly wall has layers of muscle crossing in different directions, and a weak spot there lets organs push through as a hernia.",
+  n: [
+    ["Muscles of mastication", "The masseter and temporalis close the jaw and are large in herbivores. The pterygoid muscles move the jaw sideways, giving the grinding movement of ruminants and horses. The digastricus opens the jaw. Facial nerve damage affects the muscles of the lips, cheeks and ears, causing a drooping face."],
+    ["Neck muscles and nuchal ligament", "In ungulates the ligamentum nuchae is a strong elastic ligament running from the withers to the skull, holding the heavy head with little effort, helping the animal to graze. Muscles such as the splenius, brachiocephalicus and sternocephalicus raise, lower and turn the neck. The sternocephalicus and brachiocephalicus form the borders of the jugular groove."],
+    ["Muscles linking the forelimb to the trunk", "The trapezius, rhomboideus, latissimus dorsi and serratus ventralis attach the scapula and limb to the trunk and take the weight of the body, since the animal has no collarbone joint with the trunk. The serratus ventralis forms a sling."],
+    ["Abdominal wall", "From outside inwards: the skin and fascia, the external oblique, internal oblique, transversus abdominis and the peritoneum, plus the rectus abdominis along the underside. The aponeuroses of these muscles meet at the midline as the linea alba, a common site for abdominal incisions. Flank incisions go through all muscle layers."],
+    ["Inguinal canal", "The inguinal canal is the passage through the abdominal wall for the spermatic cord in males. Its entrance is the deep inguinal ring and its exit the superficial inguinal ring. A weak or enlarged ring lets bowel pass through as an inguinal hernia, more common in boars and stallions."],
+    ["Diaphragm and respiratory muscles", "The diaphragm separates thorax from abdomen and is the main muscle of breathing. It has openings for the aorta, oesophagus and vena cava. External intercostal muscles raise the ribs for inspiration, and internal ones assist expiration. Abdominal muscles assist forced expiration."],
+    ["Hernias and clinical links", "A hernia is the protrusion of an organ through a weak or opened part of its containing wall. Umbilical hernia is common in calves and piglets. Ventral hernia can follow a rupture of the abdominal muscles in late pregnancy. A diaphragmatic hernia follows trauma and moves abdominal organs into the chest."]
+  ],
+  tb: { h: ["Muscle group", "Examples", "Function"], r: [["Mastication", "Masseter, temporalis, pterygoids", "Close the jaw and grind"], ["Neck", "Splenius, brachiocephalicus", "Raise and move the head and neck"], ["Forelimb attachment", "Trapezius, serratus ventralis", "Hold the trunk between the forelimbs"], ["Abdominal wall", "External oblique, rectus abdominis", "Support organs, breathing, straining"]] },
+  df: ["Hernia: protrusion of an organ or tissue through an opening in the wall that normally contains it.", "Linea alba: the fibrous line along the ventral midline where the abdominal muscle sheaths meet.", "Ligamentum nuchae: the elastic ligament that supports the head and neck in ungulates."],
+  tm: [["Aponeurosis", "Broad flat tendon"], ["Origin", "Fixed attachment of a muscle"], ["Insertion", "Attachment of a muscle at the part that moves"], ["Rectus abdominis", "Muscle along the ventral midline of the abdomen"], ["Superficial inguinal ring", "External opening of the inguinal canal"]],
+  st: ["Cut through the skin and fascia.", "Identify the external oblique.", "Separate the layers of internal oblique and transversus.", "Reach the peritoneum.", "On closure, suture each layer in turn."],
+  ex: ["A calf with a swelling at the navel probably has an umbilical hernia.", "A boar with swelling in the groin may have an inguinal hernia.", "A cow with a drooping ear and lip after an injury may have a facial nerve problem."],
+  k: ["Muscles of mastication.", "Ligamentum nuchae.", "Layers of the abdominal wall.", "Inguinal canal.", "Types of hernia."],
+  m: ["A hernia is not a tumour. It is a defect in the wall."],
+  sa: [["Name the layers of the abdominal wall.", "Skin, fascia, external oblique, internal oblique, transversus abdominis and peritoneum, with the rectus abdominis ventrally."], ["What is the linea alba?", "The fibrous midline of the abdomen where the abdominal muscle sheaths meet."]],
+  la: [["Describe the muscles of the abdominal wall and their clinical importance.", "Layers, fibre direction, aponeuroses, linea alba, inguinal canal, hernias, surgical approaches."]],
+  q: [["The ligamentum nuchae is important in", ["Ungulates", "Birds", "Fish", "Humans only"], 0, "It supports the head in ungulates."],
+    ["The main muscle of inspiration is the", ["Diaphragm", "Rectus abdominis", "Masseter", "Trapezius"], 0, "The diaphragm."],
+    ["An umbilical hernia is common in", ["Calves and piglets", "Hens", "Fish", "Old dogs only"], 0, "Calves and piglets."],
+    ["The linea alba lies along the", ["Ventral midline", "Spine", "Flank", "Jaw"], 0, "Ventral midline."]],
+  f: [["Linea alba", "Midline fibrous line of the abdomen"], ["Masseter", "Main jaw-closing muscle"], ["Hernia", "Protrusion through a wall defect"], ["Deep inguinal ring", "Internal opening of the inguinal canal"]],
+  d: ["Study the muscles of the limb in the dog.", "Learn the surgical approaches to the abdomen.", "Read about muscle fibre types."]
+});
+
+topic("anat", "Heart, Great Vessels and Circulation (Detailed)", {
+  o: ["Describe the chambers, valves and conduction system of the heart", "Name the main arteries and veins of the body", "Trace the circulation, including the portal system", "Describe fetal circulation and its postnatal changes"],
+  i: "The heart and vessels are examined at every clinical check. Pulse, heart sounds and venepuncture all depend on this anatomy.",
+  s: "The heart has four chambers. The right side sends blood to the lungs and the left side sends it to the body. Arteries carry blood from the heart and veins return it. Before birth, the fetus uses special shortcuts that close after birth.",
+  n: [
+    ["Chambers and valves", "The right atrium receives blood from the body and passes it through the tricuspid valve to the right ventricle, which pumps to the lungs through the pulmonary valve. The left atrium receives oxygenated blood from the lungs and passes it through the mitral (bicuspid) valve to the left ventricle, which pumps through the aortic valve to the body. The left ventricle wall is thicker."],
+    ["Conduction system", "The sinoatrial node in the right atrium is the pacemaker. The impulse passes to the atrioventricular node, then to the bundle of His, the bundle branches and Purkinje fibres, which spread it through the ventricles. In the ox and sheep a cardiac bone, the os cordis, supports the aortic root."],
+    ["Heart sounds", "The first sound is closure of the atrioventricular valves at the start of ventricular contraction. The second sound is closure of the aortic and pulmonary valves. Murmurs are caused by turbulent flow, as in valve disease."],
+    ["Major arteries", "The aorta leaves the left ventricle and gives the brachiocephalic trunk (to the head, neck and forelimbs), then continues as the descending aorta. The abdominal aorta gives the coeliac, cranial mesenteric, renal, gonadal and caudal mesenteric arteries and ends in the external and internal iliac arteries. The external iliac continues as the femoral artery in the hind limb."],
+    ["Major veins", "The cranial vena cava collects blood from the head, neck and forelimbs. The jugular veins drain the head. The caudal vena cava returns blood from the abdomen and hind limbs. The portal vein carries blood from the stomach, intestine, spleen and pancreas to the liver before it returns to the heart."],
+    ["Fetal circulation", "The fetus gets oxygen from the placenta through the umbilical vein. Three shunts reduce flow to the lungs and liver: the ductus venosus, the foramen ovale between the atria and the ductus arteriosus between the pulmonary artery and the aorta. After birth, these close. Failure of the ductus arteriosus to close (patent ductus arteriosus) is a common congenital heart defect in dogs."],
+    ["Lymph and collateral supply", "Many organs have collateral blood supply that can compensate for the blockage of one vessel. The supply of the intestine is an example, but the portal system is vulnerable, as liver disease or portosystemic shunts show."]
+  ],
+  tb: { h: ["Structure", "Position", "Note"], r: [["Tricuspid valve", "Right atrioventricular", "Three cusps"], ["Mitral valve", "Left atrioventricular", "Two cusps"], ["SA node", "Right atrium", "Pacemaker"], ["Ductus arteriosus", "Pulmonary artery to aorta", "Closes after birth"], ["Foramen ovale", "Between the atria", "Closes after birth"]] },
+  df: ["Pacemaker: the group of cells in the sinoatrial node that sets the heart rate.", "Portal system: vessels carrying blood from the gut to the liver.", "Patent ductus arteriosus: failure of the fetal ductus arteriosus to close after birth."],
+  tm: [["Atrium", "Receiving chamber"], ["Ventricle", "Pumping chamber"], ["Purkinje fibres", "Conduction fibres in the ventricles"], ["Murmur", "Abnormal heart sound from turbulent flow"], ["Os cordis", "Cardiac bone of the ox"]],
+  st: ["Blood from the body enters the right atrium.", "It passes to the right ventricle.", "It is pumped to the lungs.", "Oxygenated blood returns to the left atrium.", "It passes to the left ventricle.", "It is pumped through the aorta."],
+  ex: ["A puppy with a continuous machinery murmur may have a patent ductus arteriosus.", "A cow with traumatic reticulopericarditis can show jugular distension and muffled heart sounds.", "A dog with a portosystemic shunt may show neurological signs because blood bypasses the liver."],
+  k: ["Chambers and valves.", "Conduction system.", "Great vessels.", "Portal circulation.", "Fetal shunts."],
+  m: ["The right side of the heart does not carry oxygenated blood in adults."],
+  sa: [["Name the valves of the heart.", "Tricuspid, pulmonary, mitral (bicuspid) and aortic valves."], ["What is the pacemaker of the heart?", "The sinoatrial node."]],
+  la: [["Describe the structure of the heart and its conduction system.", "Chambers, valves, wall layers, SA node to Purkinje fibres, blood supply, with a diagram."]],
+  q: [["The mitral valve lies between the", ["Left atrium and ventricle", "Right atrium and ventricle", "Aorta and ventricle", "Atria"], 0, "Left atrium and ventricle."],
+    ["Fetal blood reaches the lungs mainly through the", ["Ductus arteriosus bypass", "Portal vein", "Renal vein", "Coronary sinus"], 0, "The ductus arteriosus shunts blood away from the lungs."],
+    ["The pacemaker is the", ["SA node", "AV node", "Purkinje fibres", "Aortic valve"], 0, "SA node."],
+    ["The portal vein goes to the", ["Liver", "Lungs", "Kidney", "Brain"], 0, "The liver."]],
+  f: [["Os cordis", "Bone in the ox heart"], ["SA node", "Pacemaker"], ["Ductus venosus", "Fetal shunt through the liver"], ["Murmur", "Abnormal sound from turbulence"]],
+  d: ["Study the ECG.", "Learn congenital heart defects.", "Read about blood supply of the heart muscle."]
+});
+
+topic("anat", "Avian Skeleton, Muscles and Integument", {
+  o: ["Describe the main bones of the fowl and their adaptations for flight", "Describe the breast muscles and their importance", "Describe feathers and the skin appendages of poultry", "Relate the anatomy to meat quality and disease"],
+  i: "Poultry is a major livestock sector in India. The skeleton and muscle of the bird reflect adaptation to flight, and the breast muscle is the meat that is sold.",
+  s: "A bird's bones are light and some are hollow. The keel on the breastbone supports powerful flight muscles. The skin has feathers, a comb and wattles, and an oil gland near the tail.",
+  n: [
+    ["Skeleton", "The skull is light, with a beak and no teeth. The neck has many mobile vertebrae. Thoracic vertebrae are fused, and the synsacrum fuses the lumbar, sacral and some caudal vertebrae with the pelvis. The pygostyle is the tail bone. Ribs have uncinate processes, which brace the rib cage. The sternum has a keel for muscle attachment, and the furcula (wishbone) and coracoid brace the wings."],
+    ["Wing and leg bones", "The wing has the humerus, radius, ulna, and fused carpometacarpus. The leg has the femur, tibiotarsus, fibula (reduced) and tarsometatarsus. The thigh and drumstick are the muscle masses of the femur and tibiotarsus. Chickens have four toes, and the male has a spur on the tarsometatarsus."],
+    ["Pneumatic bones", "Bones such as the humerus and parts of the skull, sternum, vertebrae and pelvis contain air connected to the air sacs. A respiratory infection can therefore reach the bone. A broken pneumatic bone can communicate with the respiratory system."],
+    ["Muscles", "The pectoralis major is the largest muscle and lowers the wing in the downstroke. The supracoracoideus lies deeper and lifts the wing through a tendon that passes over the shoulder like a pulley. Together they form the breast meat. Breast meat is white because of its fast, glycolytic fibres, while leg meat is darker because of its slower, oxidative fibres."],
+    ["Skin and feathers", "The skin is thin and has no sweat glands. Feathers include contour feathers, down feathers and filoplumes. Feathers are made of keratin and regularly moulted. The comb, wattles and ear lobes are important for temperature control and for identifying breeds, and a bright comb indicates good health and laying condition."],
+    ["Uropygial gland and beak", "The uropygial (preen) gland above the tail secretes oil that the bird spreads on the feathers. The beak is covered with a horny sheath. Beak trimming of chicks is done as a management measure to reduce injury from feather pecking and cannibalism. Its welfare implications are debated."],
+    ["Clinical links", "Keel bone damage and fractures occur in laying hens because of weak bones from calcium loss. Cage layer fatigue is a bone-weakness condition. Breast blisters are skin lesions from pressure. Pododermatitis (bumblefoot) comes from poor litter conditions. Wing and leg abnormalities can come from genetic and nutritional causes."]
+  ],
+  tb: { h: ["Part", "Detail", "Importance"], r: [["Keel", "Ridge of the sternum", "Attachment of the flight muscles"], ["Furcula", "Wishbone", "Braces the shoulder girdle"], ["Pygostyle", "Fused tail vertebrae", "Supports tail feathers"], ["Synsacrum", "Fused vertebrae and pelvis", "Rigid frame for the hind limbs"], ["Uropygial gland", "Preen gland", "Oil for the feathers"]] },
+  df: ["Pneumatic bone: a bone containing air spaces connected with the respiratory system.", "Synsacrum: the fusion of lumbar and sacral vertebrae with the pelvis in birds.", "Keratin: the tough structural protein of feathers, beak and claws."],
+  tm: [["Furcula", "Wishbone formed by fused clavicles"], ["Uncinate process", "Bony projection of the rib in birds"], ["Tibiotarsus", "Drumstick bone"], ["Tarsometatarsus", "Fused lower leg bone of the bird"], ["Moulting", "Seasonal shedding and replacement of feathers"]],
+  st: ["Examine the bird for general condition.", "Check the comb and feathers.", "Palpate the keel for deformity.", "Check legs, feet and joints.", "Record any lesion and its location."],
+  ex: ["A hen with a fractured keel bone often has weak bones from calcium loss.", "A bird with bumblefoot has a swollen foot from poor litter conditions.", "Dark meat in the thigh comes from slow oxidative fibres."],
+  k: ["Bones and their fusion.", "Pneumatic bones.", "Breast muscles.", "Feather types.", "Uropygial gland."],
+  m: ["Birds do not have sweat glands. They cool by panting and by the comb and wattles."],
+  sa: [["What is the keel?", "The ridge on the sternum of birds for attaching the flight muscles."], ["What does the uropygial gland do?", "It secretes oil for preening the feathers."]],
+  la: [["Describe the skeleton of the fowl and its adaptations.", "Skull, vertebrae, synsacrum, pygostyle, ribs with uncinate processes, sternum with keel, wing and leg bones, pneumatic bones."]],
+  q: [["The wishbone is the", ["Furcula", "Keel", "Pygostyle", "Synsacrum"], 0, "Furcula."],
+    ["The largest breast muscle is the", ["Pectoralis major", "Supracoracoideus", "Masseter", "Biceps"], 0, "Pectoralis major."],
+    ["The preen gland is the", ["Uropygial gland", "Thyroid", "Bursa", "Parotid"], 0, "Uropygial gland."],
+    ["Pneumatic bones contain", ["Air", "Fat only", "Water", "Nothing"], 0, "Air spaces."]],
+  f: [["Keel", "Sternal ridge for flight muscles"], ["Furcula", "Wishbone"], ["Pygostyle", "Tail bone of fused vertebrae"], ["Bumblefoot", "Foot infection from poor litter"]],
+  d: ["Study the anatomy of the duck.", "Learn the skeletal disorders of broilers.", "Read about feather quality and moulting."]
+});
+
+topic("anat", "Anatomy of the Dog and Cat: Key Features", {
+  o: ["State the vertebral formulae of the common species", "Describe the key anatomical features of the dog and cat", "Relate anatomy to common small animal clinical work", "Compare the dog with the cat"],
+  i: "Small animal practice is growing rapidly in India. This topic collects the facts most often needed in the clinic and the dissection hall.",
+  s: "Dogs and cats are carnivores with strong sharp teeth, flexible spines, and muscular limbs. The cat is more flexible, has retractable claws and a rough tongue. Both have scent glands near the anus called anal sacs.",
+  n: [
+    ["Vertebral formulae", "The formula shows the number of vertebrae in each region. Approximate values: dog C7 T13 L7 S3 Cd 20 to 23; cat C7 T13 L7 S3 Cd 18 to 25; horse C7 T18 L6 S5 Cd 15 to 21; ox C7 T13 L6 S5 Cd 18 to 20; pig C7 T14 to 15 L6 to 7 S4 Cd 20 to 23. The numbers vary a little, so verify them against your textbook."],
+    ["Skeleton and body shape", "Dogs differ widely in size and skull shape between breeds. The cat has a flexible spine and a small clavicle that does not join other bones. The dog's forelimb is held to the trunk by muscle, and dogs run on their toes (digitigrade). The cat has retractable claws."],
+    ["Digestive features", "The carnassial teeth shear meat. The tongue of the cat has rough papillae for rasping and grooming. Dogs and cats have a simple stomach and relatively short intestine. The liver has several lobes."],
+    ["Anal sacs", "A pair of anal sacs open on each side of the anus. They hold a strong-smelling secretion used for scent marking. Blockage or infection of the sacs causes scooting and discomfort and is a common reason for a visit to the clinic."],
+    ["Reproductive features", "The bitch has about 8 to 10 mammary glands and the queen 8. Both have a bicornuate uterus with a zonary placenta. The tomcat's penis has small spines (barbs) and the cat is an induced ovulator. The dog's penis has the os penis and bulbus glandis."],
+    ["Sense organs", "The cat has a vertical slit pupil and a strong tapetum, giving excellent night vision. Both have sensitive hearing, a good sense of smell and vibrissae (whiskers) used as touch organs."],
+    ["Clinical sites", "Venepuncture uses the cephalic, saphenous and jugular veins. The femoral artery is used for pulse. Heart sounds are heard on the left chest wall. Abdominal palpation can detect the kidneys, bladder, intestines, and, in pregnancy, the uterus."]
+  ],
+  tb: { h: ["Species", "Vertebral formula (approx.)", "Ribs"], r: [["Dog", "C7 T13 L7 S3 Cd 20 to 23", "13 pairs"], ["Cat", "C7 T13 L7 S3 Cd 18 to 25", "13 pairs"], ["Horse", "C7 T18 L6 S5 Cd 15 to 21", "18 pairs"], ["Ox", "C7 T13 L6 S5 Cd 18 to 20", "13 pairs"], ["Pig", "C7 T14 to 15 L6 to 7 S4 Cd 20 to 23", "14 to 15 pairs"]] },
+  df: ["Digitigrade: walking on the toes, with the heel raised.", "Induced ovulator: a species in which ovulation follows mating, as in the cat.", "Carnassial teeth: the large shearing teeth of carnivores."],
+  tm: [["Anal sacs", "Scent-producing sacs beside the anus of carnivores"], ["Vibrissae", "Whiskers"], ["Barbs", "Small spines on the tomcat's penis"], ["Queen", "Female cat"], ["Cd", "Caudal (coccygeal) vertebrae"]],
+  st: ["Observe the posture and gait.", "Examine the head, eyes, ears and mouth.", "Palpate the abdomen.", "Auscultate the chest.", "Check the anal region and genitalia.", "Record findings."],
+  ex: ["A dog that scoots across the floor may have impacted anal sacs.", "A cat that does not ovulate unless mated is called an induced ovulator.", "Large breed dogs may have joint disease linked to rapid growth."],
+  k: ["Vertebral formulae.", "Carnassial teeth.", "Anal sacs.", "Reproduction in the cat.", "Clinical sites."],
+  m: ["Cats are not just small dogs. Their anatomy and physiology differ in important ways."],
+  sa: [["What is an induced ovulator?", "A species such as the cat in which ovulation is triggered by mating."], ["Where are the anal sacs located?", "On either side of the anus."]],
+  la: [["Compare the dog and the cat anatomically.", "Skeleton, teeth, digestive, reproductive and sensory differences, with clinical implications."]],
+  q: [["The cat is an", ["Induced ovulator", "Spontaneous ovulator", "Seasonal anoestrus animal only", "Egg laying species"], 0, "Induced ovulator."],
+    ["The dog's thoracic vertebrae number", ["13", "18", "7", "20"], 0, "13."],
+    ["Scooting in a dog may indicate", ["Anal sac problems", "Dental disease", "Ear infection", "Eye disease"], 0, "Anal sac impaction."],
+    ["Carnassial teeth are used to", ["Shear meat", "Crush grain", "Dig", "Drink"], 0, "Shear meat."]],
+  f: [["Digitigrade", "Walking on toes"], ["Queen", "Female cat"], ["Vibrissae", "Whiskers"], ["Carnassials", "Shearing teeth of carnivores"]],
+  d: ["Study canine breed variation.", "Learn feline radiographic anatomy.", "Read about feline reproduction."]
+});
+
+topic("anat", "Integument: Skin, Hair and Skin Glands", {
+  o: ["Describe the layers of the skin", "Describe the hair follicle and the types of hair", "Name the skin glands and their functions", "Link skin structure to common skin conditions"],
+  i: "Skin is the largest organ and the first barrier against the environment. Hides and wool are also valuable products, so a clinician and a livestock technologist both need this anatomy.",
+  s: "The skin has three layers: a thin outer epidermis, a thicker dermis with vessels and nerves, and a fatty layer underneath. It carries hair, glands, claws and horns. It protects, regulates temperature and senses touch.",
+  n: [
+    ["Epidermis", "The epidermis is stratified squamous keratinised epithelium without blood vessels. Its layers from deep to surface are the basal layer, spinous layer, granular layer and the dead horny layer (stratum corneum). Melanocytes in the basal layer give colour. The epidermis renews continuously."],
+    ["Dermis and hypodermis", "The dermis is dense connective tissue that contains vessels, nerves, hair follicles and glands. Its thickness decides the quality of leather. The hypodermis (subcutis) beneath the dermis is loose connective tissue with fat and lets the skin move over the body. Subcutaneous injections are given here."],
+    ["Hair and follicles", "A hair grows from a follicle with a bulb at its base. Each follicle has an arrector pili muscle and one or more sebaceous glands. Hair grows in cycles of growth, rest and shedding. Primary and secondary follicles give guard hairs and undercoat. Sheep have wool follicles with very long growth phases, giving wool as a product."],
+    ["Skin glands", "Sebaceous glands secrete oil (sebum) that keeps the hair and skin supple. Sweat (sudoriferous) glands are abundant in the horse and cattle, less so in the dog, which pants instead, and absent in the pig's body skin except for a few. Special glands include the interdigital glands of sheep, the horn glands of goats and the mammary glands, which are modified sweat glands."],
+    ["Specialised structures", "Claws, hooves and horns are keratinised derivatives of the epidermis. Footpads of dogs and cats have thick epidermis and fat. Tactile hairs (vibrissae) have rich nerve supply."],
+    ["Functions of skin", "Protection from injury and microbes, barrier to water loss, temperature regulation through hair, sweat and blood flow, sense of touch, pain and temperature, vitamin D synthesis with sunlight, and storage of fat. Colour of the coat is due to melanin."],
+    ["Clinical links", "Mange, ringworm, ticks, dermatitis, photosensitisation and tumours affect the skin. A skin scraping is taken for mites. Wound healing depends on the layers cut. Hide damage from warbles, ticks and brand marks reduces leather quality."]
+  ],
+  tb: { h: ["Layer", "Tissue", "Main features"], r: [["Epidermis", "Keratinised stratified squamous epithelium", "No vessels, renews continuously"], ["Dermis", "Dense connective tissue", "Vessels, nerves, follicles, glands"], ["Hypodermis", "Loose connective tissue and fat", "Insulation, mobility"]] },
+  df: ["Integument: the skin and its appendages.", "Sebum: the oily secretion of the sebaceous glands.", "Keratinisation: the process by which epidermal cells fill with keratin and die to form the horny layer."],
+  tm: [["Stratum corneum", "Outermost dead horny layer"], ["Melanocyte", "Pigment-producing cell"], ["Arrector pili", "Small muscle that raises the hair"], ["Follicle", "Pit in the skin from which a hair grows"], ["Hypodermis", "Subcutaneous layer"]],
+  st: ["Part the hair and examine the skin surface.", "Note colour, thickness, lesions and parasites.", "Palpate for lumps, heat or pain.", "Take a scraping or sample if needed.", "Record the site and appearance of lesions."],
+  ex: ["A mange mite lives in the epidermis and causes itching and hair loss.", "Warble holes in the hide lower the value of leather.", "A cow's skin thickness varies by body region and affects the injection site."],
+  k: ["Layers of the skin.", "Hair follicle.", "Skin glands.", "Functions of skin."],
+  m: ["The epidermis has no blood vessels. Bleeding means the dermis is cut."],
+  sa: [["Name the layers of the skin.", "Epidermis, dermis and hypodermis."], ["What is sebum?", "The oily secretion of the sebaceous glands."]],
+  la: [["Describe the structure of the skin.", "Epidermal layers, dermis, hypodermis, hair follicle, glands, functions, clinical relevance."]],
+  q: [["The outermost layer of the epidermis is the", ["Stratum corneum", "Stratum basale", "Dermis", "Hypodermis"], 0, "Stratum corneum."],
+    ["Melanocytes are found in the", ["Basal layer", "Horny layer", "Hypodermis", "Hair shaft"], 0, "Basal layer of the epidermis."],
+    ["The oily secretion of the skin is", ["Sebum", "Sweat", "Milk", "Mucus"], 0, "Sebum."],
+    ["Subcutaneous injections go into the", ["Hypodermis", "Epidermis", "Muscle", "Bone"], 0, "Hypodermis."]],
+  f: [["Sebum", "Skin oil"], ["Arrector pili", "Muscle that raises hair"], ["Melanocyte", "Pigment cell"], ["Hypodermis", "Subcutaneous layer"]],
+  d: ["Study skin diseases in the dog.", "Learn wool and hair structure.", "Read about the leather industry."]
+});
+
+topic("anat", "Dissection Skills and Radiographic Anatomy", {
+  o: ["Describe a systematic approach to dissecting an animal", "Explain basic radiographic terms and views", "Identify normal structures on a radiograph in principle", "Describe safety and ethical practice in the dissection hall and radiology room"],
+  i: "Anatomy is learned best by looking, touching and drawing. A disciplined approach to dissection and a basic understanding of the radiograph tie the textbook to clinical work.",
+  s: "In dissection you work from the surface inward, one layer at a time, and draw what you see. On an X-ray picture, bones look white, air looks black and soft tissue is grey, so you recognise organs by their shape and density.",
+  n: [
+    ["Preparing to dissect", "Wear a clean apron, gloves and closed shoes. Read the dissection guide before cutting, and have your atlas and textbook ready. Handle preserved specimens with care since they may contain formalin. Treat the animal with respect."],
+    ["Basic technique", "Make a clean skin incision and reflect the skin. Clean the fascia by blunt dissection with forceps and the handle of the scalpel. Identify muscles by their direction. Follow vessels and nerves along their course. Do not cut structures before they are identified. Pin or label important parts."],
+    ["A systematic order", "Study region by region, for example head and neck, then forelimb, thorax, abdomen, pelvis, hind limb. In each region move from superficial to deep, and from large structures to small. Keep notes and draw what you find."],
+    ["Radiographic principles", "X-rays pass through the body and darken the film or sensor depending on tissue density. Air (lungs) is radiolucent and appears black. Fat appears dark grey, soft tissue and fluid medium grey and bone white (radiopaque). Metal and contrast media appear brightest."],
+    ["Views and positioning", "Standard views are lateral (side) and ventrodorsal or dorsoventral. Two views at right angles are needed because one view flattens depth. The animal must be positioned correctly, usually under sedation, and the side marker shows which side is nearest the film."],
+    ["Reading a radiograph", "Use a systematic approach: check the quality and the markers, look at all the bones, then the soft tissue, then the organs. Look at size, shape, position, opacity and margins. Know the normal first. Young animals have growth plates (physes), which look like lines and can be mistaken for fractures."],
+    ["Safety and ethics", "Radiation exposure should be as low as reasonably possible. Use lead aprons, gloves and thyroid shields, keep your distance, never hold the animal by hand during the exposure and use a collimated beam. Follow local radiation safety rules. Use cadavers and specimens with respect and follow the college rules on disposal."]
+  ],
+  tb: { h: ["Material", "Appearance on X-ray", "Term"], r: [["Air", "Black", "Radiolucent"], ["Fat", "Dark grey", "Intermediate"], ["Soft tissue and fluid", "Grey", "Intermediate"], ["Bone", "White", "Radiopaque"], ["Metal", "Brightest white", "Radiopaque"]] },
+  df: ["Radiopaque: a material that absorbs X-rays and appears white on a radiograph.", "Radiolucent: a material that lets X-rays pass and appears dark on a radiograph.", "Physis: the growth plate of a long bone in a young animal."],
+  tm: [["Lateral view", "View taken from the side"], ["Ventrodorsal view", "Taken with the X-ray beam entering from the belly side to the back"], ["Collimation", "Narrowing the X-ray beam to the area of interest"], ["Contrast medium", "A substance that makes organs visible on a radiograph"], ["Artefact", "Something on an image that is not part of the animal"]],
+  st: ["Check the request and prepare the animal.", "Position carefully with the correct marker.", "Use protective equipment and leave the room.", "Take the exposure.", "Check the image quality.", "Read it systematically and record the findings."],
+  ex: ["A chest radiograph shows dark lung fields and a grey heart shadow.", "A growth plate in a puppy looks like a fracture line to a beginner.", "A foreign body in the stomach of a dog can show as a bright object."],
+  k: ["Steps of dissection.", "Radiographic densities.", "Two views.", "Radiation safety.", "Systematic reading."],
+  m: ["A radiograph is not a photograph. It is a shadow picture that adds up all tissues in the beam."],
+  sa: [["Why are two views taken?", "A single view flattens depth, so two views at right angles are needed to locate a lesion."], ["What does radiopaque mean?", "A material that absorbs X-rays and appears white."]],
+  la: [["Describe the principles of radiography and the radiographic appearance of different tissues.", "How X-rays work, tissue densities, views, positioning, systematic reading, safety."]],
+  q: [["Bone appears on a radiograph as", ["White", "Black", "Dark grey", "Colourless"], 0, "Radiopaque, so white."],
+    ["Air in the lungs looks", ["Black", "White", "Bright", "Grey"], 0, "Black."],
+    ["Growth plates are found in", ["Young animals", "Old animals only", "Birds only", "Cats only"], 0, "Young animals."],
+    ["To reduce radiation exposure, staff should", ["Use lead aprons and distance", "Hold the animal without protection", "Stand in the beam", "Remove the collimator"], 0, "Protection and distance."]],
+  f: [["Radiolucent", "Appears dark"], ["Radiopaque", "Appears white"], ["Physis", "Growth plate"], ["Collimation", "Narrowing the beam"]],
+  d: ["Practise reading normal thoracic radiographs.", "Learn about ultrasonography.", "Study contrast studies of the gut."]
+});
+planned("anat", ["Neuroanatomy: tracts, nuclei and the autonomic ganglia", "Comparative anatomy of the foot: joint capsules and bursae", "Salivary glands, pharynx and the oral cavity in detail", "Topographic anatomy of the thoracic and abdominal cavities", "Anatomy of the fish and exotic pets", "Applied anatomy of the horse's limb", "Mammary gland of the sow, mare and bitch", "Vascular anatomy of the head: arterial supply to the brain"]);
 /* ================= DIAGRAMS (schematics, not accurate drawings) ================= */
 const DIA = {};
 const _bx = (x, y, w, h, t, c) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="8" fill="' + (c || "#e3f1e8") + '" stroke="#1f4d3a" stroke-width="1.5"/><text x="' + (x + w / 2) + '" y="' + (y + h / 2 + 4) + '" text-anchor="middle" font-size="12" fill="#17352a">' + t + "</text>";
@@ -2615,8 +3190,12 @@ DIA.oviduct = _svg(440, 190,
   _tx(170, 130, "albumen") + _tx(265, 130, "membranes") + _tx(370, 60, "shell"),
   "Egg formation in the hen");
 
+DIA.eye = _svg(440, 190,
+  '<ellipse cx="200" cy="95" rx="120" ry="70" fill="#fff" stroke="#1f4d3a" stroke-width="2"/><path d="M80 95 Q70 95 70 95" stroke="#1f4d3a"/><ellipse cx="110" cy="95" rx="22" ry="50" fill="#e8f4fb" stroke="#2a6f97" stroke-width="1.5"/><line x1="125" y1="70" x2="150" y2="95" stroke="#7a5ea8" stroke-width="2"/><line x1="125" y1="120" x2="150" y2="95" stroke="#7a5ea8" stroke-width="2"/><path d="M318 55 Q335 95 318 135" fill="none" stroke="#b4572b" stroke-width="3"/><line x1="320" y1="95" x2="400" y2="95" stroke="#1f4d3a" stroke-width="5"/>' +
+  _tx(60, 40, "Cornea") + _tx(110, 165, "Lens") + _tx(150, 40, "Iris / pupil") + _tx(240, 100, "Vitreous") + _tx(330, 40, "Retina") + _tx(405, 120, "Optic nerve"),
+  "Parts of the eye");
 /* attach diagrams to topics */
-[["anat2", "planes"], ["phys2", "homeo"], ["pharm3", "adme"], ["micro2", "gram"], ["anat6", "rumen"], ["para2", "lifecycle"], ["path4", "inflam"], ["anat3", "bone"], ["anat9", "tooth"], ["phys8", "synapse"], ["anat12", "oviduct"]].forEach(p => extra(p[0], { dia: p[1] }));
+[["anat2", "planes"], ["phys2", "homeo"], ["pharm3", "adme"], ["micro2", "gram"], ["anat6", "rumen"], ["para2", "lifecycle"], ["path4", "inflam"], ["anat3", "bone"], ["anat9", "tooth"], ["phys8", "synapse"], ["anat12", "oviduct"], ["anat13", "eye"]].forEach(p => extra(p[0], { dia: p[1] }));
 /* ================= GLOSSARY =================
    Format: "Term|subjectId|meaning"  (add as many as you like) */
 const GLOSS_RAW = [
@@ -2955,6 +3534,56 @@ const GLOSS_RAW = [
 "Five freedoms|farm|Framework for animal welfare covering hunger, discomfort, pain, fear and normal behaviour.",
 "Footbath|farm|Disinfectant bath for footwear or hooves at entry points.",
 "Quarantine|farm|Separation of new or sick animals to prevent spread of disease.",
+"Tapetum lucidum|anat|Reflective layer behind the retina that gives eyeshine and helps night vision; absent in the pig.",
+"Uvea|anat|Vascular middle layer of the eye: choroid, ciliary body and iris.",
+"Aqueous humour|anat|Fluid in the front chambers of the eye, made by the ciliary body.",
+"Guttural pouch|anat|Large air-filled diverticulum of the auditory tube in the horse.",
+"Ossicles|anat|The three tiny middle-ear bones: malleus, incus and stapes.",
+"Adenohypophysis|anat|Anterior lobe of the pituitary gland, which makes most pituitary hormones.",
+"Neurohypophysis|anat|Posterior lobe of the pituitary that stores and releases oxytocin and ADH.",
+"Islets of Langerhans|anat|Clusters of endocrine cells in the pancreas that make insulin and glucagon.",
+"Cisterna chyli|anat|Dilated start of the thoracic duct in the abdomen.",
+"Red pulp|anat|Blood-filtering tissue of the spleen.",
+"White pulp|anat|Lymphoid tissue of the spleen around small arteries.",
+"White line|anat|Junction of the wall and sole of the hoof or claw.",
+"Quick|anat|Living sensitive core of a claw that contains blood vessels and nerves.",
+"Laminitis|anat|Inflammation of the sensitive laminae of the hoof, causing severe lameness.",
+"Gastrulation|anat|Stage of early development when the three germ layers form.",
+"Trophoblast|anat|Outer cell layer of the blastocyst that forms the chorion.",
+"Choroid plexus|anat|Tissue in the brain ventricles that produces cerebrospinal fluid.",
+"Cauda equina|anat|Bundle of nerve roots trailing behind the end of the spinal cord.",
+"Paralumbar fossa|anat|Hollow of the flank behind the last rib, used for clinical landmarks.",
+"Synsarcosis|anat|Attachment of the forelimb to the trunk by muscles only.",
+"Hypsodont|anat|Tall-crowned tooth that keeps erupting as it wears.",
+"Brachydont|anat|Low-crowned tooth that stops growing once formed.",
+"Karyotype|gen|Complete set of chromosomes of an individual arranged in pairs.",
+"Gross margin|farm|Income minus variable costs.",
+"Stewardship|pharm|Responsible, careful use of antimicrobial drugs.",
+"MIC|pharm|Minimum inhibitory concentration: lowest drug concentration that stops visible bacterial growth.",
+"Acidosis|phys|Condition in which blood pH falls below the normal range.",
+"Pearson square|nutr|Method of mixing two feeds to reach a target nutrient percentage.",
+"Hindgut fermenter|anat|Animal that digests fibre by microbial fermentation in the caecum and colon, such as the horse.",
+"Volvulus|anat|Twisting of a loop of gut on its own axis.",
+"Pelvic flexure|anat|Hairpin bend of the horse's large colon, a common site of impaction.",
+"Turbinate|anat|Thin scroll of bone covered by mucosa in the nasal cavity.",
+"Pampiniform plexus|anat|Network of testicular veins that cools the blood going to the testis.",
+"Os penis|anat|Bone in the penis of the dog.",
+"Bicornuate uterus|anat|Uterus with a short body and two horns, as in domestic animals.",
+"Corpus luteum|anat|Gland formed from the ruptured follicle, producing progesterone.",
+"Nephron|anat|Structural and functional unit of the kidney.",
+"Urolithiasis|anat|Formation of stones in the urinary tract.",
+"Linea alba|anat|Fibrous line along the ventral midline of the abdomen where the muscle sheaths meet.",
+"Ligamentum nuchae|anat|Elastic ligament that holds up the head and neck of ungulates.",
+"Patent ductus arteriosus|anat|Failure of the fetal ductus arteriosus to close after birth.",
+"Furcula|anat|Wishbone of birds, formed by the fused clavicles.",
+"Keel|anat|Ridge on the bird's sternum where the flight muscles attach.",
+"Uropygial gland|anat|Preen gland above the tail of birds that makes oil for the feathers.",
+"Digitigrade|anat|Walking on the toes with the heel raised, as in the dog and cat.",
+"Anal sac|anat|Scent-producing sac on each side of the anus in carnivores.",
+"Sebum|anat|Oily secretion of the sebaceous glands of the skin.",
+"Stratum corneum|anat|Outermost, dead, horny layer of the epidermis.",
+"Radiopaque|anat|Material that absorbs X-rays and looks white on a radiograph.",
+"Radiolucent|anat|Material that lets X-rays pass and looks dark on a radiograph.",
 "Cost of production|farm|Total cost divided by output, for example per litre of milk."
 ];
 const GLOSS = GLOSS_RAW.map(l => { const p = l.split("|"); return [p[0], p[1], p.slice(2).join("|")]; }).sort((a, b) => a[0].localeCompare(b[0]));
