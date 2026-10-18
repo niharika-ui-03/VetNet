@@ -3116,11 +3116,582 @@ topic("anat", "Dissection Skills and Radiographic Anatomy", {
   d: ["Practise reading normal thoracic radiographs.", "Learn about ultrasonography.", "Study contrast studies of the gut."]
 });
 planned("anat", ["Neuroanatomy: tracts, nuclei and the autonomic ganglia", "Comparative anatomy of the foot: joint capsules and bursae", "Salivary glands, pharynx and the oral cavity in detail", "Topographic anatomy of the thoracic and abdominal cavities", "Anatomy of the fish and exotic pets", "Applied anatomy of the horse's limb", "Mammary gland of the sow, mare and bitch", "Vascular anatomy of the head: arterial supply to the brain"]);
+/* ================= ANATOMY (syllabus-matched region topics, part 1) ================= */
+unit("anat", "Syllabus Unit 1 – General splanchnology");
+topic("anat", "General Splanchnology: Body Cavities and Topography of Organs", {
+  o: ["Define the thoracic, abdominal and pelvic cavities and state their boundaries", "Describe the position of the main organs of each system in the ox", "Name the regions of the abdomen", "Compare topography in the horse, dog, pig and fowl"],
+  i: "Splanchnology is the study of the viscera, the organs inside the body cavities. The syllabus asks for the boundaries of the three cavities and the topography of the digestive, respiratory, urinary, endocrine and reproductive organs. A vet who knows where each organ lies can palpate, listen and operate with confidence.",
+  s: "The trunk has a chest (thoracic) cavity, a belly (abdominal) cavity and a pelvic cavity. The diaphragm divides chest from belly. The belly continues into the pelvis with no wall between them. Each organ has a usual place, and in the ox the huge rumen fills the left side.",
+  n: [
+    ["Thoracic cavity", "The cavity is bounded dorsally by the thoracic vertebrae, laterally by the ribs and intercostal muscles, ventrally by the sternum and costal cartilages, cranially by the thoracic inlet (first rib, first thoracic vertebra and manubrium) and caudally by the diaphragm. It contains the lungs in two pleural sacs and the mediastinum with the heart, trachea, oesophagus, thymus (young animals), great vessels, nerves and lymph nodes. The diaphragm is dome-shaped and bulges forward into the chest, so the chest is smaller than its outside suggests."],
+    ["Abdominal cavity", "It is bounded dorsally by the lumbar vertebrae and sublumbar muscles, laterally and ventrally by the muscular abdominal wall, cranially by the diaphragm and caudally by the pelvic inlet. It is lined by peritoneum. Part of it lies under the rib cage (intrathoracic abdomen), which is why the liver, stomach and spleen lie partly behind the ribs."],
+    ["Pelvic cavity", "It is bounded dorsally by the sacrum and first caudal vertebrae, laterally by the ilium and sacrosciatic ligament, ventrally by the pubis and ischium, cranially by the pelvic inlet and caudally by the pelvic outlet. It contains the rectum, urinary bladder, urethra and the internal genital organs. The size of the pelvis matters in calving."],
+    ["Regions of the abdomen", "The abdomen is divided into cranial, middle and caudal regions, each with a median part and right and left sides. The cranial regions are the xiphoid and the right and left hypochondriac regions. The middle regions are the umbilical and the lateral (flank) regions. The caudal regions are the pubic region and the right and left inguinal regions. The paralumbar fossa, the hollow of the flank, belongs to the lateral region."],
+    ["Ox: digestive organs", "The reticulum lies against the diaphragm, in front of the rumen, at about the level of the 6th to 8th ribs, close to the heart. The rumen occupies most of the left abdomen from diaphragm to pelvis. The omasum lies on the right, and the abomasum on the floor of the abdomen, mostly to the right. The liver is on the right, partly under the ribs. The intestines lie on the right side in a coiled mass, with the caecum near the right flank. The spleen is on the left, attached to the rumen."],
+    ["Ox: other systems", "The lungs lie in the chest, the heart in the lower chest between the 3rd and 5th ribs, mainly on the left. The kidneys lie against the roof of the abdomen, the left one displaced to the right behind the rumen. The thyroid lies by the larynx and trachea, the adrenals near the kidneys and the pancreas along the duodenum. The female tract lies partly in the abdomen (ovaries, uterine horns) and partly in the pelvis (cervix, vagina). The testes hang outside in the scrotum."],
+    ["Differences in the horse, dog, pig and fowl", "The horse has a small stomach on the left under the ribs and a huge caecum and colon filling most of the belly. The dog has a stomach on the left under the ribs, a long mobile spleen, and short intestines. The pig has a spiral colon on the left. The fowl has no diaphragm, so the thoracic and abdominal cavities are not separated, and has air sacs, a crop, a proventriculus and gizzard, and a cloaca."]
+  ],
+  tb: { h: ["Cavity", "Roof", "Floor", "Main contents"], r: [["Thoracic", "Thoracic vertebrae", "Sternum", "Lungs, heart, trachea, oesophagus, thymus"], ["Abdominal", "Lumbar vertebrae", "Abdominal muscles, linea alba", "Stomach, intestines, liver, spleen, kidneys, internal genitalia"], ["Pelvic", "Sacrum", "Pubis and ischium", "Rectum, bladder, urethra, genital organs"]] },
+  df: ["Splanchnology: the study of the viscera.", "Viscera: the internal organs of the body cavities.", "Topography: the position of organs in relation to one another and to the body surface."],
+  tm: [["Thoracic inlet", "Opening at the front of the chest"], ["Pelvic outlet", "Opening at the back of the pelvis"], ["Mediastinum", "Space between the pleural sacs"], ["Paralumbar fossa", "Hollow of the flank"], ["Peritoneum", "Serous membrane lining the abdomen"]],
+  st: ["Place the animal in the correct position for study.", "Identify the boundaries of the cavity.", "Open it and see which organs lie where.", "Compare the left and right sides.", "Record the position in relation to ribs and vertebrae."],
+  ex: ["Hardware disease: the reticulum lies against the diaphragm and near the heart, so a sharp object can pierce the heart sac.", "The rumen on the left explains why rumen sounds are listened to in the left flank.", "A mare's huge colon explains why colic is so common."],
+  k: ["Boundaries of the three cavities.", "Topography of the ox organs.", "Regions of the abdomen.", "Differences in horse, dog, pig and fowl."],
+  m: ["The abdominal and pelvic cavities are continuous. There is no wall between them."],
+  sa: [["Name the boundaries of the thoracic cavity.", "Thoracic vertebrae dorsally, ribs laterally, sternum ventrally, thoracic inlet in front and diaphragm behind."], ["Where does the reticulum lie in the ox?", "Against the diaphragm, in front of the rumen, close to the heart."]],
+  la: [["Describe the topography of the abdominal viscera of the ox.", "Rumen left, reticulum cranial against the diaphragm, omasum and abomasum right, liver right, intestines right, spleen left, kidneys, with a sketch."]],
+  q: [["The reticulum lies close to the", ["Diaphragm and heart", "Pelvis", "Left kidney", "Bladder"], 0, "Against the diaphragm, near the heart."],
+    ["The ox rumen lies mainly on the", ["Left side", "Right side", "Midline only", "In the chest"], 0, "Left."],
+    ["A fowl has no", ["Diaphragm", "Liver", "Heart", "Kidney"], 0, "No diaphragm, so no separate thoracic and abdominal cavities."],
+    ["The paralumbar fossa belongs to the", ["Flank", "Brisket", "Loin only", "Groin"], 0, "The flank."]],
+  f: [["Viscera", "Internal organs of the cavities"], ["Thoracic inlet", "Opening at the front of the chest"], ["Peritoneum", "Serous lining of the abdomen"], ["Hypochondriac region", "Cranial abdomen beside the xiphoid region"]],
+  d: ["Draw the topography of the ox viscera on both sides.", "Compare with the horse.", "Learn the peritoneal reflections."]
+});
+
+unit("anat", "Syllabus Unit 2 – Fore limb");
+topic("anat", "Fore Limb of the Ox: Bones, Joints, Stay Apparatus, Nerves and Vessels", {
+  o: ["Name the bones and joints of the ox fore limb and compare with horse, dog, pig and fowl", "Describe the stay apparatus of the horse's fore limb", "Describe the brachial plexus and main nerves of the fore limb", "Explain the clinical importance of nerve paralysis and nerve block sites"],
+  i: "The fore limb carries most of the body weight and is the commonest site of lameness. The syllabus asks for the ox as the reference animal and for differences in the horse, dog, pig and fowl, including the hoof, the stay apparatus, nerves, vessels and lymph nodes.",
+  s: "The fore limb is joined to the trunk by muscles. Its bones run from the shoulder blade down to the toes. The horse locks its limb so that it can stand and sleep without tiring. Nerves from a plexus near the shoulder supply the limb. If a nerve is damaged, the limb shows a typical drop or weakness.",
+  n: [
+    ["Bones of the ox fore limb", "The scapula has a spine that divides it into supraspinous and infraspinous fossae. The humerus has the head, the deltoid tuberosity and the condyle. The radius is the main weight-bearing bone of the forearm, and the ulna is fused with it in the adult, the olecranon forming the point of the elbow. The carpus has six bones: radial, intermediate, ulnar and accessory in the proximal row, and a fused second and third carpal and a fourth carpal in the distal row. The large metacarpal bone (cannon bone) is formed by the fusion of metacarpals III and IV, with a small rudimentary metacarpal V. Each of the two digits (III and IV) has three phalanges and the sesamoid bones."],
+    ["Differences in other species", "Horse: one functional digit (III) with splint bones II and IV, carpus of seven or eight bones, a one-piece radius with fused ulna. Dog: radius and ulna separate and able to rotate, seven carpal bones (radial-intermediate fused), five metacarpals, five digits with claws. Pig: four digits, the two main ones (III and IV) bear weight. Fowl: the wing has a humerus, radius, ulna and a fused carpometacarpus with three digits reduced."],
+    ["Joints", "The shoulder joint is a ball-and-socket joint with no collateral ligaments, and so is stabilised by muscles and tendons. The elbow is a hinge joint. The carpus is a compound joint (antebrachiocarpal, middle carpal and carpometacarpal). The fetlock (metacarpophalangeal), pastern (proximal interphalangeal) and coffin (distal interphalangeal) joints complete the limb. Joints are named by the bones that meet."],
+    ["Stay apparatus (horse)", "The stay apparatus lets the horse stand with minimal muscular effort. In the fore limb it is made of the biceps tendon, with the lacertus fibrosus joining it to the extensor carpi radialis, which prevents flexion of the shoulder and elbow and extension of the carpus. The suspensory ligament, the proximal and distal sesamoid ligaments and the superficial and deep digital flexor tendons with their check ligaments support the fetlock and prevent over-extension. Rupture or overload of these structures, such as bowed tendons, causes lameness."],
+    ["Hoof of the ox and horse", "The ox has two claws on each foot with two dewclaws, and the horse a single hoof with wall, sole, frog, bars and white line. These are described in detail in the hoof topic, together with laminitis and common bovine claw lesions."],
+    ["Nerves of the fore limb", "The brachial plexus arises from the ventral branches of the last cervical and first thoracic nerves (C6 to T2 in the dog). It gives the suprascapular, subscapular, axillary, musculocutaneous, radial, median and ulnar nerves. The suprascapular nerve supplies the supraspinatus and infraspinatus, and its injury causes atrophy of these muscles and a prominent shoulder, called shoulder sweeny in the horse. The radial nerve supplies the extensor muscles of the elbow, carpus and digits, and its paralysis causes a dropped elbow and a knuckled carpus and fetlock. The median and ulnar nerves supply the flexor muscles and the skin of the lower limb. The digital (palmar) nerves are blocked to find the site of foot pain, but only a vet should do it."],
+    ["Vessels and lymph nodes", "The subclavian artery continues as the axillary and then the brachial artery, which gives the median artery to the lower limb. The main veins are the cephalic vein on the front of the forearm, which is used for intravenous injection in the dog, and the accessory cephalic, brachial and median veins. Lymph from the limb drains to the superficial cervical (prescapular) node and to the axillary nodes where present."]
+  ],
+  tb: { h: ["Species", "Functional digits", "Radius and ulna", "Special feature"], r: [["Ox", "2 (III and IV)", "Fused in the adult", "Cannon bone from metacarpals III and IV"], ["Horse", "1 (III)", "Ulna reduced and fused", "Stay apparatus"], ["Dog", "5", "Separate, can rotate", "Claws, dewclaw"], ["Pig", "4", "Separate", "Two main and two small digits"], ["Fowl", "Wing", "Radius and ulna present", "Fused carpometacarpus"]] },
+  df: ["Stay apparatus: the arrangement of tendons and ligaments that supports a limb with little muscular effort.", "Brachial plexus: the network of nerves that supplies the fore limb.", "Dropped elbow: the posture of radial nerve paralysis in which the elbow hangs low and the limb cannot be extended."],
+  tm: [["Cannon bone", "The large metacarpal bone"], ["Olecranon", "Point of the elbow"], ["Fetlock", "Metacarpophalangeal joint"], ["Check ligament", "Ligament joining a flexor tendon to a bone"], ["Sweeny", "Atrophy of the shoulder muscles from suprascapular nerve injury"]],
+  st: ["Identify the bones from scapula to phalanges.", "Name the joints between them.", "Trace the stay apparatus from muscle to tendon to ligament.", "Follow the brachial plexus to its branches.", "Match each nerve to the muscles it supplies and the sign of its injury."],
+  ex: ["A horse with a shrunken shoulder muscle after a kick may have suprascapular nerve damage (sweeny).", "A cow with a radial nerve injury after lying on a hard floor drags her knuckled foot.", "A dog's cephalic vein is a common site for an intravenous drip."],
+  k: ["Bones of the ox limb with number of carpal bones.", "Species differences.", "Stay apparatus.", "Brachial plexus and radial nerve paralysis.", "Cephalic vein."],
+  m: ["The ox cannon bone is not one original bone. It is two fused metacarpals."],
+  sa: [["What is the stay apparatus?", "A system of tendons and ligaments that supports the limb so that the horse can stand with little muscle effort."], ["Which nerve is injured in shoulder sweeny?", "The suprascapular nerve."]],
+  la: [["Describe the bones and joints of the fore limb of the ox and note the differences in the horse and dog.", "Bones from scapula to phalanges, joints, species differences in digits, carpus and radius-ulna, with a table."]],
+  q: [["The cannon bone of the ox is formed by", ["Metacarpals III and IV", "Metacarpal II only", "Metacarpals I and II", "The phalanges"], 0, "Fused metacarpals III and IV."],
+    ["Radial nerve paralysis causes", ["Dropped elbow", "Loss of vision", "Winged scapula only", "Lameness of the hind limb"], 0, "A dropped elbow and a knuckled limb."],
+    ["The dog's carpus has how many bones?", ["7", "6", "8", "4"], 0, "Seven."],
+    ["The cephalic vein is used for injection in the", ["Dog", "Fowl only", "Pig only", "Horse hind limb"], 0, "Dog."]],
+  f: [["Stay apparatus", "Passive support structure of the horse's limb"], ["Brachial plexus", "Nerve network of the fore limb"], ["Carpus of ox", "Six bones"], ["Suprascapular nerve", "Supplies the supraspinatus and infraspinatus"]],
+  d: ["Dissect and trace the radial nerve in a specimen.", "Study the stay apparatus of the hind limb.", "Read about digital nerve blocks with your teacher."]
+});
+/* ================= ANATOMY (syllabus-matched region topics, part 2) ================= */
+unit("anat", "Syllabus Unit 3 – Head and neck");
+topic("anat", "Head and Neck Regions: Cavities, Muscles, Glands, Nerves and Clinical Sites", {
+  o: ["State the boundaries of the oral, orbital, nasal and cranial cavities", "Describe the pharynx, larynx, tongue and salivary glands with species differences", "Describe the jugular furrow, carotid sheath and cranial nerve supply", "Name the head landmarks used for pulse, injections and nerve blocks"],
+  i: "The syllabus asks for the head and neck of the ox with differences in the horse, dog, pig and fowl. This is the area where a vet takes the pulse, collects blood, gives injections and examines the mouth, eyes and ears, so landmarks matter.",
+  s: "The head has four main spaces: the mouth, the eye sockets, the nose and the brain case. The neck has seven vertebrae, strong muscles and a groove on each side carrying the jugular vein. Nerves from the brain supply the face, tongue and throat.",
+  n: [
+    ["Cavities of the head", "The cranial cavity holds the brain and is formed by the cranial bones. The orbit holds the eyeball and is complete (closed by bone) in the ox, horse and pig, and incomplete in the dog and cat, where a ligament closes the gap. The nasal cavity is divided by the septum and contains turbinates. The oral cavity lies between the upper and lower jaws and contains the tongue and teeth."],
+    ["Paranasal sinuses", "In the ox the frontal sinus is very large and extends into the horn core (the cornual diverticulum). The ox also has maxillary, palatine, sphenoid and lacrimal sinuses, and conchal sinuses. The horse has frontal, rostral and caudal maxillary, sphenopalatine and conchal sinuses. The dog has a frontal sinus and a maxillary recess rather than a true maxillary sinus. The pig has a large frontal sinus extending far back over the brain. Sinus infection, for example after dehorning, can follow an open sinus."],
+    ["Neck vertebrae and ligaments", "Seven cervical vertebrae are present in all domestic mammals. The atlas has large wings and the axis has the dens, allowing nodding at the atlanto-occipital joint and rotation at the atlantoaxial joint. In ungulates the elastic nuchal ligament, with funicular and lamellar parts, supports the head."],
+    ["Muscles", "Muscles of the face move the lips, cheeks, nostrils and ears. The masseter, temporalis and pterygoids chew, the digastricus opens the mouth, the muscles of the tongue, pharynx, soft palate, hyoid and larynx help swallowing and voice. Superficial neck muscles include the brachiocephalicus, sternocephalicus and omohyoideus (in some species)."],
+    ["Tongue, pharynx and larynx", "The tongue has papillae and, in the ox, a prominent torus linguae, a raised hard area at the back that helps grinding. The pharynx has openings of the nasal passages, mouth, oesophagus, larynx and the auditory tubes. The soft palate separates oropharynx from nasopharynx and is long in the horse. The larynx has epiglottic, thyroid, cricoid and arytenoid cartilages."],
+    ["Salivary and thyroid glands", "The parotid, mandibular and sublingual glands are the major salivary glands. The parotid duct (Stenson's duct) opens into the cheek opposite the upper cheek teeth and in the horse crosses the cheek and the masseter, so it can be palpated and is surgically important. The thyroid and parathyroid glands lie close to the trachea."],
+    ["Jugular furrow and carotid sheath", "The jugular furrow is the groove on the side of the neck bounded dorsally by the brachiocephalicus and ventrally by the sternocephalicus. The external jugular vein lies in it, and is raised by pressure at the base of the neck for blood collection and intravenous injection in large animals. The carotid sheath, deep in the neck, contains the common carotid artery, the vagosympathetic trunk, the recurrent laryngeal nerve and, in some species, the internal jugular vein."],
+    ["Cranial nerves, vessels and lymph nodes", "The twelve cranial nerves supply the head. Arteries come from the carotid arteries and veins drain through the jugular veins. Lymph nodes include the mandibular, parotid and retropharyngeal nodes."],
+    ["Clinical landmarks (concept)", "The facial artery crosses the lower border of the mandible in the horse and is used to take the pulse. The cornual nerve, a branch of the zygomaticotemporal nerve, supplies the horn in the ox, and the cornual branch of the superficial temporal artery gives the main blood supply, which is why amputation of the horn bleeds. Nerve blocks of the head named in the syllabus include the cornual, infraorbital, mental, mandibular, supraorbital, auriculopalpebral and Peterson's orbital blocks. The approach to the guttural pouch of the horse is through Viborg's triangle, bounded by the tendon of the sternocephalicus, the caudal border of the mandible and the linguofacial vein. These are done only by a vet."]
+  ],
+  tb: { h: ["Feature", "Ox", "Horse", "Dog", "Pig"], r: [["Orbit", "Closed", "Closed", "Open (ligament)", "Closed"], ["Large frontal sinus", "Yes, into horn core", "Yes", "Smaller", "Very large"], ["Soft palate", "Short", "Long, obligate nasal breathing", "Medium", "Medium"], ["Guttural pouch", "Absent", "Present", "Absent", "Absent"]] },
+  df: ["Jugular furrow: the groove on the side of the neck that contains the jugular vein.", "Carotid sheath: the connective tissue sheath around the common carotid artery, vagosympathetic trunk and recurrent laryngeal nerve.", "Cornual diverticulum: the extension of the frontal sinus into the horn core of cattle."],
+  tm: [["Atlas", "First cervical vertebra"], ["Axis", "Second cervical vertebra with the dens"], ["Torus linguae", "Raised pad at the back of the ox tongue"], ["Stenson's duct", "Parotid duct"], ["Viborg's triangle", "Landmark triangle for the approach to the guttural pouch"]],
+  st: ["Locate the angle of the jaw and the wing of the atlas.", "Follow the jugular furrow between the two muscles.", "Raise the vein by pressure at its lower end.", "Identify the landmark for the structure you need.", "Compare with the opposite side."],
+  ex: ["A calf with a swollen jugular furrow may have a blood clot or a perivascular injection.", "A horse with nasal discharge may need the guttural pouch to be examined.", "A dehorned animal with nasal discharge may have sinusitis."],
+  k: ["Boundaries of cavities.", "Paranasal sinuses of species.", "Jugular furrow boundaries.", "Carotid sheath contents.", "Nerve block sites and cornual nerve."],
+  m: ["The facial nerve is not the nerve of the horn. The cornual nerve is a branch of the trigeminal system."],
+  sa: [["Name the boundaries of the jugular furrow.", "Brachiocephalicus dorsally and sternocephalicus ventrally."], ["What are the contents of the carotid sheath?", "Common carotid artery, vagosympathetic trunk and recurrent laryngeal nerve."]],
+  la: [["Describe the structures of the head and neck of the ox with differences in the horse and dog.", "Cavities, sinuses, muscles, tongue, pharynx, larynx, glands, jugular furrow, carotid sheath, nerves, clinical landmarks."]],
+  q: [["The jugular vein lies in the groove between", ["Brachiocephalicus and sternocephalicus", "Trapezius and rhomboideus", "Masseter and temporalis", "Splenius and serratus"], 0, "Brachiocephalicus and sternocephalicus."],
+    ["The orbit of the dog is", ["Incomplete", "Complete", "Absent", "Fused with the nose"], 0, "Closed by a ligament rather than bone."],
+    ["The cornual diverticulum is part of the", ["Frontal sinus", "Maxillary sinus", "Guttural pouch", "Ear"], 0, "Frontal sinus."],
+    ["The pulse in the horse is taken from the", ["Facial artery", "Carotid at the wing of the atlas", "Radial artery", "Jugular vein"], 0, "Facial artery."]],
+  f: [["Stenson's duct", "Duct of the parotid gland"], ["Atlas", "C1"], ["Viborg's triangle", "Approach landmark for the guttural pouch"], ["Jugular furrow", "Groove with the jugular vein"]],
+  d: ["Dissect and trace the facial nerve.", "Study the nerve supply of the tongue.", "Learn the lymph node drainage of the head."]
+});
+
+unit("anat", "Syllabus Unit 4 – Thorax");
+topic("anat", "Thorax: Skeleton, Pleura, Mediastinum and Thoracic Organs", {
+  o: ["Describe the thoracic vertebrae, ribs and sternum of the ox and compare species", "Describe the pleura, its reflections and the mediastinum", "Describe the heart, lungs, trachea, oesophagus and thymus in position", "State the areas of auscultation and percussion and the principle of safe thoracic puncture"],
+  i: "The chest holds the organs of breathing and circulation. The syllabus covers its bones, joints, vessels, nerves, lymph nodes and organs, and asks for the clinical areas of auscultation, percussion and thoracic puncture.",
+  s: "The chest is a bony cage of vertebrae, ribs and breastbone, lined inside with a smooth membrane, the pleura. The heart lies between the two lungs. Doctors listen over fixed areas to find heart and lung disease.",
+  n: [
+    ["Skeleton of the thorax", "The ox has 13 thoracic vertebrae and 13 pairs of ribs, of which 8 are sternal (join the sternum) and 5 are asternal (join the preceding costal cartilage). The horse has 18 pairs, the dog 13, and the pig 14 or 15. The sternum has a manubrium, body and xiphoid cartilage. In the fowl the sternum is large with a keel, and ribs have uncinate processes."],
+    ["Joints and muscles", "Each rib joins the vertebra at the costovertebral joint and the sternum by costal cartilage. Intercostal muscles move the ribs. The diaphragm is the main breathing muscle. The special ligaments include the supraspinous ligament, which continues as the nuchal ligament at the withers."],
+    ["Pleura and its reflections", "The pleura is a serous membrane. The parietal pleura lines the chest wall (costal), the diaphragm (diaphragmatic) and the mediastinum (mediastinal). The visceral (pulmonary) pleura covers the lung. The pleural reflection is the line where the costal pleura turns to the diaphragm. It lies further back than the lung's border, so lung and pleural limits differ, and a needle at the right place can enter the pleural cavity without hurting the lung."],
+    ["Mediastinum", "The mediastinum is the space between the two pleural sacs. It has cranial, middle and caudal parts and holds the heart in its pericardium, trachea, oesophagus, thymus, great vessels, vagus and phrenic nerves, and lymph nodes. In cattle it is complete and thick, so a pneumothorax is often confined to one side. It is thin and fenestrated in the dog and the horse."],
+    ["Organs of the thorax", "The trachea divides into two principal bronchi near the heart. In the ox, an extra tracheal bronchus supplies the right cranial lobe. The oesophagus lies dorsal to the trachea, then above the heart to the diaphragm. Choke is oesophageal obstruction. The thymus is large in young animals and shrinks with age. The lungs differ in the number of lobes and the degree of lobulation among species, as described in the respiratory topic."],
+    ["The heart in position", "The heart lies in the lower chest, in the pericardial sac, roughly between the 3rd and 5th ribs on the left in the ox. The apex points to the sternum. The reticulum lies just behind the diaphragm, close to the heart, so a foreign body from the reticulum can pierce the diaphragm and pericardium (traumatic reticulopericarditis)."],
+    ["Vessels, nerves and lymph", "The thoracic aorta, cranial and caudal vena cava, azygos vein, pulmonary vessels and the internal thoracic vessels lie in the thorax. The vagus, recurrent laryngeal, phrenic and sympathetic nerves pass through. Intercostal arteries, veins and nerves run along the caudal border of each rib. Lymph nodes include the mediastinal and bronchial nodes."],
+    ["Auscultation, percussion and thoracic puncture", "Auscultation of the heart is done on the left side over the lower chest, and of the lungs over the lung fields behind the shoulder. Percussion detects the boundary between resonant lung and dull heart or fluid. When fluid fills the pleural space, a vet may withdraw it by thoracocentesis (paracentesis thoracis). Because the intercostal vessels and nerve run behind each rib, the needle is placed just in front of a rib, a principle every student should learn before practising on a specimen."]
+  ],
+  tb: { h: ["Species", "Thoracic vertebrae", "Pairs of ribs", "Mediastinum"], r: [["Ox", "13", "13 (8 sternal, 5 asternal)", "Thick, complete"], ["Horse", "18", "18", "Thin, fenestrated"], ["Dog", "13", "13", "Thin, fenestrated"], ["Pig", "14 or 15", "14 or 15", "Thin"], ["Fowl", "Fused (notarium)", "Ribs with uncinate processes", "No diaphragm"]] },
+  df: ["Pleura: the serous membrane that lines the chest and covers the lungs.", "Mediastinum: the space between the two pleural sacs containing the thoracic organs other than the lungs.", "Thoracocentesis: puncture of the chest to remove fluid or air from the pleural cavity."],
+  tm: [["Sternal rib", "Rib that joins the sternum through costal cartilage"], ["Asternal rib", "Rib that does not reach the sternum"], ["Pericardium", "Sac around the heart"], ["Pleural reflection", "Line where pleura turns from chest wall to diaphragm"], ["Azygos vein", "Vein draining the chest wall on the right side"]],
+  st: ["Identify the ribs by counting from the first.", "Mark the elbow as a landmark for the heart.", "Place the stethoscope over the cardiac area.", "Listen to each lung field.", "Compare the left and right sides.", "Record the sounds heard."],
+  ex: ["A cow with traumatic reticulopericarditis has a swollen jugular and muffled heart sounds.", "A dog with fluid in the pleural cavity has dull lung sounds at the bottom of the chest.", "A calf with choke has saliva and bloat after an oesophageal obstruction."],
+  k: ["Ribs and vertebrae numbers.", "Pleura and reflections.", "Mediastinum.", "Position of the heart.", "Auscultation areas."],
+  m: ["The pleural cavity is a potential space with only a thin film of fluid, not an empty cavity."],
+  sa: [["How many pairs of ribs does the ox have?", "13 pairs, of which 8 are sternal and 5 asternal."], ["What is the mediastinum?", "The space between the pleural sacs containing the heart, trachea, oesophagus and other structures."]],
+  la: [["Describe the thorax of the ox with differences in the horse, dog and pig.", "Skeleton, pleura, mediastinum, organs, vessels, nerves, auscultation areas."]],
+  q: [["The ox has how many pairs of ribs?", ["13", "18", "14", "12"], 0, "Thirteen."],
+    ["The pleura that covers the lung is the", ["Visceral pleura", "Parietal pleura", "Pericardium", "Peritoneum"], 0, "Visceral (pulmonary) pleura."],
+    ["Intercostal vessels and nerve run along the", ["Caudal border of the rib", "Cranial border of the rib", "Sternum", "Vertebra"], 0, "Caudal border."],
+    ["Traumatic reticulopericarditis arises because the reticulum", ["Lies near the diaphragm and heart", "Lies in the pelvis", "Is attached to the kidney", "Is a lung part"], 0, "Close to the diaphragm and heart."]],
+  f: [["Sternal rib", "Reaches the sternum"], ["Pericardium", "Heart sac"], ["Thoracocentesis", "Chest puncture to remove fluid"], ["Notarium", "Fused thoracic vertebrae of the fowl"]],
+  d: ["Practise counting ribs on a specimen.", "Learn the thoracic radiograph.", "Study the heart sounds."]
+});
+
+unit("anat", "Syllabus Unit 5 – Abdomen");
+topic("anat", "Abdomen: Peritoneum, Topography of Viscera, Flank and Paralumbar Fossa", {
+  o: ["Describe the peritoneum, omenta and mesentery", "Describe the blood and nerve supply of the abdominal viscera", "State the boundaries and clinical importance of the flank and paralumbar fossa", "Explain the anatomical basis of the common abdominal approaches"],
+  i: "Most large-animal surgery and many diagnostic procedures involve the abdomen. The syllabus asks for the peritoneal reflections, the organs and their supply, the spleen and mammary glands, and the clinical importance of the flank and the paralumbar fossa.",
+  s: "The abdomen is a large cavity lined by a slippery membrane, the peritoneum. The organs hang inside from folds of this membrane. The soft hollow behind the last rib, the paralumbar fossa, is where the surgeon enters the belly in cattle.",
+  n: [
+    ["Peritoneum", "The parietal peritoneum lines the abdominal wall and the visceral peritoneum covers the organs, with a small peritoneal cavity between them. The mesentery suspends the intestines. The greater omentum hangs from the greater curvature of the stomach, and in the ox it covers the intestines like an apron on the right side, in two layers forming a bursa (omental bursa). The lesser omentum links the stomach and liver."],
+    ["Organs present in the abdomen", "The stomach, intestines, liver, pancreas, spleen, kidneys, adrenals, ureters, and in the female the ovaries and uterus. In males the abdomen contains the inguinal canal entrance and the vas deferens. The bladder lies on the pelvic floor and moves into the abdomen when full."],
+    ["Blood supply", "The abdominal aorta gives the coeliac artery (stomach, liver, spleen, pancreas), the cranial mesenteric artery (most of the intestines), the renal arteries, the gonadal arteries and the caudal mesenteric artery (the end of the colon and the rectum). The portal vein carries blood from the gut and spleen to the liver and the caudal vena cava drains the abdomen."],
+    ["Nerve supply", "The viscera receive sympathetic fibres through the splanchnic nerves and the coeliac and mesenteric ganglia, and parasympathetic fibres chiefly from the vagus. The flank wall is supplied by the last thoracic and first lumbar nerves."],
+    ["Spleen and endocrine structures", "The ox spleen is flat and long, lying on the left against the rumen, and is not removed readily. The horse spleen is large and sickle shaped, and the dog's long and mobile. Adrenal glands are near the kidneys, and the pancreas lies along the duodenum."],
+    ["Mammary glands", "The cow has four quarters on one udder with four teats. The mare has two glands and two teats in the inguinal region, each with two openings. The bitch has about eight to ten glands in two rows, and the sow twelve to fourteen. The details of the udder are in the mammary topic."],
+    ["Flank and paralumbar fossa", "The flank is the lateral abdominal wall between the last rib, the lumbar transverse processes and the hip. The paralumbar fossa, a depression at the top of the flank, is bounded by the last rib, the lumbar transverse processes and the tuber coxae. The left flank lies over the rumen, which is why rumen contractions are listened to there and why it is the approach to rumen surgery. Gas in a displaced abomasum can make a 'ping' on the left or right flank."],
+    ["Anatomical basis of surgical approaches (concept only)", "The syllabus lists sites for laparotomy, rumenocentesis, rumenotomy, abomasotomy, enterotomy, splenectomy, cystotomy, caesarean operation, biopsy sites and the paravertebral nerve block. The choice of site depends on where the organ lies and which layers of muscle are crossed. For example the left paralumbar fossa gives access to the rumen, the right flank to the abomasum and intestines, and the ventral midline or paramedian line to the uterus. The paravertebral block numbs the flank by blocking the last thoracic and first two lumbar nerves where they leave the vertebral column. All of these are performed only by trained veterinarians and are learned in the surgery course."]
+  ],
+  tb: { h: ["Artery", "Supplies"], r: [["Coeliac", "Stomach, liver, spleen, pancreas"], ["Cranial mesenteric", "Most of the small and large intestine"], ["Renal", "Kidney"], ["Gonadal", "Ovary or testis"], ["Caudal mesenteric", "Terminal colon and rectum"]] },
+  df: ["Peritoneum: the serous membrane lining the abdominal cavity and covering the viscera.", "Omentum: a fold of peritoneum attached to the stomach.", "Paralumbar fossa: the hollow of the flank bounded by the last rib, lumbar transverse processes and the hip."],
+  tm: [["Mesentery", "Peritoneal fold that suspends the intestine"], ["Omental bursa", "Space within the greater omentum"], ["Splanchnic nerve", "Sympathetic nerve to the abdominal organs"], ["Tuber coxae", "Point of the hip"], ["Laparotomy", "Surgical opening of the abdomen"]],
+  st: ["Identify the last rib, the lumbar transverse processes and the hip.", "Locate the fossa between them.", "Note the organs lying under it on each side.", "Identify the layers of the wall.", "Review the nerve and blood supply of the wall."],
+  ex: ["A 'ping' on the left flank with a high-pitched sound can come from a displaced abomasum.", "Bloat distends the left paralumbar fossa.", "A cow with right-sided abdominal pain may have a problem of the abomasum or intestine."],
+  k: ["Peritoneal folds.", "Abdominal arteries.", "Boundaries of the paralumbar fossa.", "Clinical importance of the flank."],
+  m: ["The organs are not inside the peritoneal cavity. They are covered by peritoneum but lie behind it."],
+  sa: [["Name the boundaries of the paralumbar fossa.", "Last rib in front, lumbar transverse processes above and tuber coxae behind."], ["What does the coeliac artery supply?", "Stomach, liver, spleen and pancreas."]],
+  la: [["Describe the peritoneum and abdominal viscera of the ox.", "Peritoneal layers, omenta, mesentery, topography of the organs, blood supply, nerve supply, flank."]],
+  q: [["The cranial mesenteric artery supplies the", ["Intestines", "Kidney", "Spleen only", "Bladder"], 0, "Most of the intestines."],
+    ["The ox spleen lies against the", ["Rumen", "Liver", "Bladder", "Heart"], 0, "Rumen, on the left."],
+    ["The paralumbar fossa is bounded by the", ["Last rib", "Sternum", "Jaw", "Femur"], 0, "Last rib, transverse processes and tuber coxae."],
+    ["The greater omentum attaches to the", ["Stomach", "Heart", "Kidney", "Bladder"], 0, "Greater curvature of the stomach."]],
+  f: [["Coeliac artery", "Supplies stomach, liver, spleen, pancreas"], ["Mesentery", "Fold that holds the intestines"], ["Tuber coxae", "Point of the hip"], ["Greater omentum", "Fold from the stomach covering the intestines"]],
+  d: ["Study the peritoneal reflections in the ox.", "Learn the rumen anatomy in detail.", "Practise palpation per rectum."]
+});
+
+unit("anat", "Syllabus Unit 6 – Hind limb and pelvis");
+topic("anat", "Hind Limb and Pelvis: Bones, Joints, Stifle, Inguinal Canal and Pelvic Viscera", {
+  o: ["Name the bones and joints of the pelvis and hind limb of the ox and compare species", "Describe the stifle joint, the patellar ligaments and the reciprocal apparatus", "Describe the inguinal canal, spermatic cord and prepubic tendon", "Describe the pelvic viscera and peritoneal reflections"],
+  i: "The hind limb gives propulsion. The pelvis protects the birth canal and the terminal parts of the gut and urinary tract. The syllabus asks for the structures from bones to nerve block sites, with the inguinal canal and prepubic tendon as special topics.",
+  s: "The hind limb joins the backbone through a strong joint between the pelvis and the sacrum. The pelvis is a bony ring through which the calf must pass at birth. The stifle is the knee of the hind leg, and in horses and cattle the kneecap can lock the leg for standing.",
+  n: [
+    ["Pelvis", "The pelvis is made of two hip bones (each of ilium, ischium and pubis, fused at the acetabulum), the sacrum and the first caudal vertebrae. The sacroiliac joint attaches it to the vertebral column. The broad sacrosciatic ligament forms part of the lateral wall in ruminants. The pelvic inlet is the opening at the front, the outlet at the back. A large and well-shaped pelvis eases calving."],
+    ["Bones of the hind limb", "The femur has the head, the greater trochanter and the condyles. The horse has a third trochanter, which the ox does not have. The patella is a sesamoid bone in the quadriceps tendon. The tibia carries the weight, and the fibula is reduced to a small bone in the ox and a splint in the horse. The ox hock (tarsus) has five bones: talus, calcaneus, fused central and fourth, fused second and third, and a small first fused with the second. The horse has six tarsal bones and the dog seven. The metatarsus and phalanges follow the pattern of the fore limb."],
+    ["Stifle joint and patellar ligaments", "The stifle has a femoropatellar joint and a femorotibial joint. Three patellar ligaments (medial, middle and lateral) attach the patella to the tibia. In the horse and ox the medial ligament can hook over the medial ridge of the femoral trochlea, locking the limb in extension (upward fixation of the patella), a part of the stay apparatus. If the lock fails to release, the limb is stuck in extension. Division of the medial patellar ligament (patellar desmotomy) is a surgical treatment, done only by a vet."],
+    ["Reciprocal apparatus and hock", "In the horse the stifle and hock are linked by the peroneus tertius and the superficial digital flexor tendon, so that they move together. The calcaneus forms the point of the hock, attached to the gastrocnemius through the common calcanean tendon."],
+    ["Nerves and vessels", "The sciatic nerve divides into the tibial and the common peroneal nerves. The femoral nerve supplies the quadriceps, and the obturator nerve the adductors. The pudic (pudendal) nerve supplies the perineum and external genitalia. Injury to the peroneal nerve gives a knuckled hind fetlock. The external iliac artery continues as the femoral artery and later the popliteal. The femoral artery is felt on the inside of the thigh in dogs, and the recurrent tarsal vein is used for intravenous injection in the dog. Popliteal and superficial inguinal lymph nodes drain the limb."],
+    ["Inguinal canal and spermatic cord", "The inguinal canal is the oblique passage in the lower abdominal wall between the deep ring (in the internal oblique and transversus layers) and the superficial ring (in the external oblique aponeurosis). In males it carries the spermatic cord: the ductus deferens, testicular artery, pampiniform plexus, lymph vessels, nerves, and cremaster muscle, wrapped in the vaginal tunic. In females it carries the vessels and nerves of the mammary gland. A wide canal permits inguinal hernia."],
+    ["Prepubic tendon", "The prepubic tendon is the common tendon formed from the abdominal muscles on the pubis. It anchors the abdominal wall and, in the mare and cow, can rupture late in pregnancy, causing ventral hernia. It is an important landmark in the pelvic floor."],
+    ["Pelvic viscera and peritoneal reflections", "The pelvic cavity contains the rectum, the urethra, the bladder (partly) and the genital organs. The peritoneum forms pouches: the rectogenital pouch between the rectum and the genital organs, the vesicogenital pouch between genital organs and the bladder in the female, and the pubovesical pouch in front of the bladder. Knowing them is vital for rectal palpation and for caesarean surgery. External genital organs include the vulva with clitoris in the female, and the penis and prepuce in the male."],
+    ["Sites relevant to clinical work (concept)", "Epidural anaesthesia is given at the first intercoccygeal or the sacrococcygeal space in cattle, and the lumbosacral space in dogs. Pudic nerve block is used to desensitise the penis and perineum. Castration and vasectomy use the scrotum and spermatic cord. These procedures are for vets and are learned in practicals."]
+  ],
+  tb: { h: ["Species", "Tarsal bones", "Third trochanter", "Fibula"], r: [["Ox", "5", "Absent", "Reduced"], ["Horse", "6", "Present", "Reduced to a splint"], ["Dog", "7", "Absent", "Complete"], ["Pig", "7", "Absent", "Complete"]] },
+  df: ["Inguinal canal: the oblique passage through the abdominal wall carrying the spermatic cord in the male.", "Prepubic tendon: the tendon at the front of the pubis formed by the attachments of the abdominal muscles.", "Reciprocal apparatus: the mechanism by which the stifle and hock of the horse move together."],
+  tm: [["Acetabulum", "Hip socket"], ["Calcaneus", "Point of the hock"], ["Pudic nerve", "Pudendal nerve"], ["Tuber ischii", "Pin bone"], ["Vaginal tunic", "Peritoneal covering of the spermatic cord and testis"]],
+  st: ["Identify the hip bones and their joint with the sacrum.", "Trace the femur to the stifle.", "Name the three patellar ligaments.", "Trace the sciatic nerve to its branches.", "Follow the spermatic cord through the inguinal canal."],
+  ex: ["A horse that cannot flex the stifle because of upward fixation of the patella may stand with a locked hind limb.", "Late pregnant mares can rupture the prepubic tendon and show ventral swelling.", "A cow with obturator nerve injury after a hard calving may slip and splay her hind legs."],
+  k: ["Parts of the pelvis.", "Bones of the hind limb.", "Patellar ligaments.", "Inguinal canal.", "Pelvic peritoneal pouches."],
+  m: ["The hock is not a knee. The knee of the hind limb is the stifle."],
+  sa: [["Name the patellar ligaments.", "Medial, middle and lateral patellar ligaments."], ["What is the content of the spermatic cord?", "Ductus deferens, testicular artery, pampiniform plexus, lymphatics, nerves and the cremaster muscle."]],
+  la: [["Describe the inguinal canal and spermatic cord.", "Position, rings, boundaries, contents in the male, clinical importance (hernia, castration)."]],
+  q: [["The point of the hock is the", ["Calcaneus", "Talus", "Patella", "Femoral head"], 0, "Calcaneus."],
+    ["The ox hock has how many tarsal bones?", ["5", "6", "7", "4"], 0, "Five."],
+    ["The sciatic nerve divides into", ["Tibial and common peroneal nerves", "Radial and ulnar nerves", "Femoral and obturator nerves", "Pudic and sacral nerves"], 0, "Tibial and common peroneal."],
+    ["The prepubic tendon anchors the", ["Abdominal muscles", "Hind limb joints", "Tongue", "Diaphragm"], 0, "The abdominal wall."]],
+  f: [["Reciprocal apparatus", "Links the stifle and hock in the horse"], ["Prepubic tendon", "Common tendon of the abdominal muscles at the pubis"], ["Pudic nerve", "Nerve to the perineum and external genitalia"], ["Sacrosciatic ligament", "Broad ligament forming part of the pelvic wall in ruminants"]],
+  d: ["Study the stay apparatus of the hind limb.", "Learn the pelvimetry.", "Read about hip dysplasia in dogs."]
+});
+
+unit("anat", "Syllabus Unit 7 – Cytology, histology and microscopy");
+topic("anat", "Cytology, Cell Junctions, Blood and Bone Marrow", {
+  o: ["Describe the cell and its organelles", "Name the types of cell junctions", "Describe the cells of the blood and compare species", "Describe bone marrow and the sites of its collection"],
+  i: "Histology starts with the cell. The syllabus lists cytology, cell junctions, basic tissues, blood and bone marrow, and microscopy including micrometry.",
+  s: "A cell is a tiny living unit with a boundary membrane, a nucleus and many small working parts. Cells stick to each other through special junctions. Blood is a fluid tissue with cells floating in it, and bone marrow is where these cells are made.",
+  n: [
+    ["The cell", "The cell has a plasma membrane, cytoplasm with organelles and a nucleus. The nucleus contains DNA and nucleoli. Rough endoplasmic reticulum with ribosomes makes proteins, smooth endoplasmic reticulum makes lipids and detoxifies, the Golgi apparatus packages secretions, mitochondria produce ATP, lysosomes digest, peroxisomes handle fatty acids and hydrogen peroxide. The cytoskeleton gives shape and movement."],
+    ["Cell junctions", "Tight junctions (zonula occludens) seal the space between neighbouring cells and prevent leakage. Adherens junctions (zonula adherens) and desmosomes (macula adherens) hold cells together mechanically, and hemidesmosomes anchor cells to the basement membrane. Gap junctions are channels that connect the cytoplasm of two cells and let small molecules pass, as between cardiac muscle cells."],
+    ["Light and electron microscopy", "The light microscope uses visible light and glass lenses and can resolve about 0.2 micrometre. The electron microscope uses a beam of electrons and shows organelles in great detail. Transmission electron microscopy shows internal structure and scanning electron microscopy shows surface structure. Micrometry measures the size of cells using an ocular micrometer calibrated against a stage micrometer."],
+    ["Blood: red cells", "Red blood cells (erythrocytes) carry haemoglobin. Mammalian red cells are biconcave and lack a nucleus. Camelid red cells are oval and non-nucleated. Birds, reptiles and fish have nucleated red cells. Red cell size varies in species, with the goat's being the smallest."],
+    ["Blood: white cells and platelets", "Granulocytes (neutrophils, eosinophils, basophils) and agranulocytes (lymphocytes and monocytes) are the white cells. Neutrophils fight bacteria, eosinophils respond to parasites and allergies, basophils release histamine, lymphocytes provide specific immunity and monocytes become macrophages. Platelets (thrombocytes) are small cell fragments in mammals and are nucleated cells in birds. Blood smears stained with Romanowsky stains such as Giemsa or Leishman show these cells."],
+    ["Bone marrow", "Red marrow makes blood cells and fills the flat bones and the ends of long bones. Yellow marrow is mostly fat and fills the shafts of long bones in the adult. In the young, most marrow is red. Haemopoiesis begins in the yolk sac, then liver and spleen, and the marrow takes over before birth."],
+    ["Sites for bone marrow collection", "The sites used include the sternum, the iliac crest, and the proximal humerus or femur in small animals, and the sternum or ribs in large animals. The site is chosen by the species and the size of the animal. It is done under local anaesthesia by a vet to examine marrow cells in cases of anaemia and some cancers."]
+  ],
+  tb: { h: ["Junction", "Function", "Example"], r: [["Tight", "Seals the space between cells", "Intestinal epithelium"], ["Adherens", "Mechanical attachment", "Epithelia, heart"], ["Desmosome", "Strong spot attachment", "Skin"], ["Gap", "Cytoplasmic channel", "Cardiac muscle"], ["Hemidesmosome", "Anchors to the basement membrane", "Epithelia"]] },
+  df: ["Organelle: a specialised structure within a cell with a particular function.", "Haemopoiesis: the formation of blood cells.", "Micrometry: measurement of microscopic objects using an ocular and stage micrometer."],
+  tm: [["Erythrocyte", "Red blood cell"], ["Leucocyte", "White blood cell"], ["Thrombocyte", "Platelet"], ["Desmosome", "Spot-like adhesion between cells"], ["Romanowsky stain", "Blood stain such as Giemsa or Leishman"]],
+  st: ["Make a thin blood smear.", "Air dry and fix.", "Stain with a Romanowsky stain.", "Examine under the oil immersion lens.", "Identify and count the cell types."],
+  ex: ["Birds have nucleated red cells, which helps recognise a bird blood smear.", "Eosinophil increase in a blood count can suggest parasitism.", "A bone marrow sample helps find the cause of a non-regenerative anaemia."],
+  k: ["Organelles and functions.", "Types of cell junctions.", "Blood cells in species.", "Bone marrow types and sites."],
+  m: ["Not all red cells are anucleate. Birds have nucleated red cells."],
+  sa: [["Name the types of cell junctions.", "Tight, adherens, desmosomes, hemidesmosomes and gap junctions."], ["What is red marrow?", "Marrow that makes blood cells, found in flat bones and the ends of long bones."]],
+  la: [["Describe the types of cells in the blood of domestic animals.", "Red cells, granulocytes, agranulocytes, platelets, species differences, functions, staining."]],
+  q: [["Camelid red cells are", ["Oval and non-nucleated", "Round with nuclei", "Biconcave", "Absent"], 0, "Oval and non-nucleated."],
+    ["Gap junctions", ["Connect cytoplasm of cells", "Seal cells", "Anchor to basement membrane", "Store ions"], 0, "They form channels between cells."],
+    ["Eosinophils increase in", ["Parasitism and allergy", "Viral infection only", "Blood loss only", "Starvation"], 0, "Parasites and allergies."],
+    ["The powerhouse of the cell is the", ["Mitochondrion", "Lysosome", "Golgi", "Ribosome"], 0, "Mitochondrion."]],
+  f: [["Tight junction", "Seals between cells"], ["Haemopoiesis", "Making blood cells"], ["Yellow marrow", "Fatty marrow"], ["Leishman stain", "Blood film stain"]],
+  d: ["Practise differential count on smears.", "Study the electron microscope.", "Learn the cell cycle."]
+});
+/* ================= ANATOMY (syllabus-matched region topics, part 3) ================= */
+topic("anat", "Microscopic Structure of the Organ Systems", {
+  o: ["Describe the layers of the digestive tube and the special features of each part", "Describe the microscopic structure of liver, pancreas, lung, kidney, heart and vessels", "Describe lymphoid, endocrine and reproductive organs microscopically", "Describe the microscopic structure of the eye, ear and skin"],
+  i: "This topic follows the syllabus statement on the microscopic structure of the digestive, circulatory, urinary, respiratory, nervous, lymphatic, endocrine and genital systems, the mammary gland and the sense organs. Pathology builds directly on it.",
+  s: "Every organ is a pattern of the four basic tissues. Once you know the typical pattern, each organ has a few special features that tell you what it is under the microscope.",
+  n: [
+    ["The general plan of the digestive tube", "From inside out there are four layers: the mucosa (epithelium, lamina propria and muscularis mucosae), the submucosa, the muscularis externa (usually an inner circular and outer longitudinal smooth muscle layer) and the serosa or adventitia. The oesophagus has stratified squamous epithelium. The rumen has keratinised stratified squamous epithelium with papillae. The glandular stomach has gastric glands with parietal and chief cells. The small intestine has villi, crypts of Lieberkühn, goblet cells and, in the duodenum, Brunner's glands in the submucosa. Peyer's patches are in the ileum. The large intestine has no villi and many goblet cells."],
+    ["Liver and pancreas", "The liver is organised in lobules with a central vein, plates of hepatocytes, sinusoids lined by Kupffer cells, and portal triads (a branch of the portal vein, hepatic artery and bile duct) at the corners. Pigs have clear connective tissue septa between lobules, giving a distinct lobulation. The exocrine pancreas has serous acini with zymogen granules, and the islets of Langerhans are the endocrine part."],
+    ["Respiratory system", "The trachea is lined by pseudostratified ciliated columnar epithelium with goblet cells and has C-shaped hyaline cartilage rings. Bronchi have cartilage plates. Bronchioles have no cartilage and no glands, with Clara cells in the terminal bronchioles. The alveolus has type I cells for gas exchange and type II cells that make surfactant, with a thin blood-air barrier."],
+    ["Circulatory system", "Arteries and veins have three layers: tunica intima (endothelium), tunica media (smooth muscle and elastic fibres) and tunica adventitia. Elastic arteries such as the aorta have many elastic laminae, muscular arteries have thick smooth muscle, and veins have thinner walls with valves. The heart wall has endocardium, myocardium and epicardium. Purkinje fibres are large pale cells under the endocardium."],
+    ["Urinary system", "The kidney has a cortex with renal corpuscles (glomerulus and Bowman's capsule), proximal tubules with brush borders, and distal tubules, and a medulla with loops of Henle and collecting ducts. The ureter, bladder and part of the urethra are lined by transitional epithelium (urothelium)."],
+    ["Nervous system", "The cerebral cortex is layered, with pyramidal neurons. The cerebellar cortex has molecular, Purkinje cell and granular layers. The spinal cord has an H-shaped central grey matter with motor neurons in the ventral horn and surrounding white matter. Peripheral nerves are bundles of myelinated and unmyelinated fibres surrounded by endoneurium, perineurium and epineurium."],
+    ["Lymphoid organs", "A lymph node has a capsule, cortex with lymphoid follicles, paracortex and medulla with cords and sinuses. The spleen has red pulp and white pulp with periarteriolar lymphoid sheaths. The thymus has a cortex of dense lymphocytes and a paler medulla with Hassall's corpuscles. The bursa of Fabricius of birds has plicae with follicles."],
+    ["Endocrine glands", "The thyroid has follicles lined by cuboidal cells containing colloid, with parafollicular C cells. The adrenal cortex has glomerulosa, fasciculata and reticularis zones, and the medulla has chromaffin cells. The pituitary has an anterior lobe with acidophils, basophils and chromophobes and a posterior lobe with pituicytes and nerve fibres."],
+    ["Male and female genital systems and mammary gland", "The testis has seminiferous tubules with spermatogenic cells and Sertoli cells, and interstitial Leydig cells. The epididymis has pseudostratified columnar epithelium with stereocilia. The ovary has a cortex with follicles at different stages and a medulla. The uterus has endometrium, myometrium and perimetrium. The resting mammary gland has mostly ducts and fat, and the lactating gland has alveoli filled with milk."],
+    ["Sense organs and integument", "The eye has the corneal layers (epithelium, stroma, Descemet's membrane, endothelium) and the retina with ten layers including photoreceptors. The ear's cochlea has the organ of Corti with hair cells. The skin has the epidermis, dermis, hair follicles, sebaceous glands and sweat glands."]
+  ],
+  tb: { h: ["Organ", "Key histological feature"], r: [["Oesophagus", "Stratified squamous epithelium"], ["Rumen", "Keratinised epithelium with papillae"], ["Small intestine", "Villi, crypts, goblet cells"], ["Liver", "Lobules, portal triads, sinusoids"], ["Lung", "Alveoli with type I and II cells"], ["Kidney", "Glomeruli and tubules"], ["Bladder", "Transitional epithelium"], ["Thyroid", "Follicles with colloid"], ["Testis", "Seminiferous tubules"]] },
+  df: ["Lobule: the structural unit of the liver centred on a central vein.", "Villus: a finger-like projection of the intestinal mucosa for absorption.", "Urothelium: the transitional epithelium lining the urinary passages."],
+  tm: [["Kupffer cell", "Macrophage lining liver sinusoids"], ["Brunner's gland", "Mucous gland in the duodenal submucosa"], ["Hassall's corpuscle", "Whorl of epithelial cells in the thymic medulla"], ["Purkinje fibre", "Conducting fibre of the heart"], ["Organ of Corti", "Hearing receptor in the cochlea"]],
+  st: ["Identify the tissue on the slide by its overall pattern.", "Find the lumen and the layers.", "Look for special cells or glands.", "Compare with a reference photo.", "Draw and label the section."],
+  ex: ["Brunner's glands help identify the duodenum on a slide.", "Hassall's corpuscles identify the thymus.", "Transitional epithelium identifies the bladder."],
+  k: ["Four layers of the gut wall.", "Special features of each organ.", "Pseudostratified ciliated epithelium of the trachea.", "Layers of vessels."],
+  m: ["Not every organ has the same four-layer plan. The plan applies to the tubular digestive tract."],
+  sa: [["What are the layers of the digestive tube?", "Mucosa, submucosa, muscularis externa and serosa or adventitia."], ["What does Hassall's corpuscle identify?", "The thymus."]],
+  la: [["Describe the histology of the small intestine with a labelled diagram.", "Layers, villi, crypts, goblet cells, glands, lymphoid tissue, with a sketch."]],
+  q: [["Brunner's glands are found in the", ["Duodenum", "Ileum", "Colon", "Stomach"], 0, "Submucosa of the duodenum."],
+    ["The trachea is lined by", ["Pseudostratified ciliated columnar epithelium", "Simple squamous epithelium", "Transitional epithelium", "Keratinised epithelium"], 0, "With goblet cells."],
+    ["Type II alveolar cells make", ["Surfactant", "Mucus", "Bile", "Insulin"], 0, "Surfactant."],
+    ["Kupffer cells are found in the", ["Liver", "Kidney", "Spleen cortex only", "Thyroid"], 0, "Liver sinusoids."]],
+  f: [["Crypt of Lieberkühn", "Gland at the base of intestinal villi"], ["Clara cell", "Secretory cell in terminal bronchioles"], ["Pituicyte", "Supporting cell of the posterior pituitary"], ["Colloid", "Thyroid storage material"]],
+  d: ["Practise identifying slides.", "Study special stains.", "Learn the histology of the avian organs."]
+});
+
+unit("anat", "Syllabus Unit 8 – Embryology");
+topic("anat", "Gametogenesis, Fertilisation, Cleavage, Implantation and Fetal Membranes in Mammals and Birds", {
+  o: ["Describe spermatogenesis and oogenesis", "Describe fertilisation, cleavage and the types of eggs", "Name the types of implantation and twinning", "Describe the formation of the fetal membranes in mammals and the avian egg"],
+  i: "This topic follows the syllabus sequence: introduction to embryology, gametogenesis, fertilisation, cleavage, types of eggs, morula, blastulation, gastrulation, implantation, twinning and fetal membranes, with the placenta covered in the general embryology topic.",
+  s: "A new animal starts when a sperm and an egg meet. The egg divides repeatedly, becomes a hollow ball and then three layers, and attaches to the womb. A bird does the same inside an egg with a large yolk.",
+  n: [
+    ["Spermatogenesis", "Spermatogonia in the seminiferous tubules divide by mitosis, grow into primary spermatocytes, divide by meiosis I to give secondary spermatocytes and meiosis II to give spermatids. Spermatids change into sperm (spermiogenesis), with a head containing the nucleus and acrosome, a middle piece with mitochondria and a tail. One primary spermatocyte makes four sperm."],
+    ["Oogenesis", "Oogonia divide by mitosis before birth. Primary oocytes begin meiosis I but halt in prophase I. At ovulation the oocyte completes meiosis I and forms a secondary oocyte and a first polar body, and then stops in metaphase II. Meiosis II is completed only if fertilisation occurs. One oogonium yields one functional ovum and polar bodies. The dog's oocyte is ovulated as a primary oocyte."],
+    ["Fertilisation", "Sperm undergo capacitation in the female tract and the acrosome reaction, releasing enzymes that let them penetrate the zona pellucida. After the first sperm enters, the zona reaction blocks entry of others (block to polyspermy). The male and female pronuclei fuse to restore the diploid number, forming the zygote."],
+    ["Types of eggs", "Eggs are classified by the amount and the distribution of yolk. Mammalian eggs have little yolk (microlecithal, or alecithal) evenly distributed (isolecithal). Bird eggs have much yolk (macrolecithal) concentrated at one pole (telolecithal), with the nucleus in a small germinal disc. Insect eggs have central yolk (centrolecithal)."],
+    ["Cleavage, morula and blastocyst", "Cleavage is a series of mitotic divisions with no growth. In mammals it is holoblastic (complete) and the cells (blastomeres) form a solid ball, the morula, which becomes a blastocyst with a trophoblast, an inner cell mass and a cavity. In birds cleavage is meroblastic and discoidal because of the large yolk, forming a blastoderm (a disc of cells) on the yolk."],
+    ["Gastrulation", "Gastrulation converts the blastocyst or blastoderm into a three-layered embryo (ectoderm, mesoderm and endoderm). In birds and mammals cells move through the primitive streak. The notochord forms along the axis and induces the neural tube."],
+    ["Implantation", "In domestic animals the blastocyst remains free in the uterus for a time and attaches by a superficial (central) implantation, with the blastocyst staying in the uterine lumen. In some species such as primates and rodents it embeds in the wall (interstitial implantation). The ruminants have a long, filamentous blastocyst (conceptus) that elongates before attaching."],
+    ["Twinning", "Dizygotic twins arise from two ova fertilised by two sperm and are not identical. Monozygotic twins arise from one zygote splitting into two embryos and are genetically identical. In cattle, vascular connections between the placentas of twins of different sex can produce a freemartin."],
+    ["Fetal membranes of mammals", "The amnion forms from folds of the trophoblast and somatic mesoderm. The chorion is the outermost membrane. The allantois grows out from the hindgut and fuses with the chorion to form the chorioallantois. The yolk sac is small in domestic mammals. The umbilical cord connects fetus and placenta and contains umbilical vessels and the urachus."],
+    ["Fetal membranes of birds, and the egg", "The avian embryo develops outside the mother, so the egg provides yolk, albumen and a shell. The yolk sac absorbs yolk. The amnion and serosa (chorion) enclose the embryo. The allantois works as an organ of respiration and as a reservoir for urinary wastes (uric acid). The shell membranes and shell allow gas exchange. The chick pips and hatches at about 21 days for the fowl."]
+  ],
+  tb: { h: ["Feature", "Mammals", "Birds"], r: [["Yolk", "Little (microlecithal)", "Large (macrolecithal, telolecithal)"], ["Cleavage", "Holoblastic", "Meroblastic, discoidal"], ["Fetal membranes", "Amnion, chorion, allantois, yolk sac", "The same four membranes"], ["Development", "In the uterus", "In the egg"], ["Nitrogen waste", "Urea (via placenta)", "Uric acid in the allantois"]] },
+  df: ["Gametogenesis: the formation of gametes (sperm and ova) by meiosis.", "Cleavage: the series of rapid cell divisions of the zygote without growth.", "Gastrulation: the process that produces the three germ layers."],
+  tm: [["Blastomere", "A cell formed by cleavage"], ["Zona pellucida", "Glycoprotein layer around the oocyte"], ["Primitive streak", "Axis along which cells enter during gastrulation in birds and mammals"], ["Polar body", "Small cell produced during oocyte meiosis"], ["Urachus", "Stalk linking the fetal bladder and allantois"]],
+  st: ["Gametes form by meiosis.", "Sperm and egg fuse.", "The zygote cleaves into a morula.", "A blastocyst forms.", "The three germ layers form.", "Fetal membranes form and the embryo implants."],
+  ex: ["A persistent urachus in a newborn foal or calf causes urine to drip from the navel.", "Twin calves of different sex can give a freemartin.", "Infertile eggs of the hen show no developing disc on candling."],
+  k: ["Spermatogenesis and oogenesis.", "Types of eggs.", "Cleavage types.", "Implantation.", "Avian egg and membranes."],
+  m: ["Meiosis in the female is not completed until fertilisation."],
+  sa: [["What is a telolecithal egg?", "An egg with a large amount of yolk concentrated at one pole, as in birds."], ["What is the function of the allantois in birds?", "Respiration and collection of urinary wastes."]],
+  la: [["Describe oogenesis and spermatogenesis and compare them.", "Stages, number of gametes, meiotic arrest, time course, diagrams."]],
+  q: [["Meiosis II of the oocyte is completed at", ["Fertilisation", "Ovulation", "Birth", "Puberty"], 0, "Only if fertilisation occurs."],
+    ["The bird egg is", ["Telolecithal", "Isolecithal", "Alecithal", "Centrolecithal"], 0, "Telolecithal."],
+    ["Cleavage in birds is", ["Meroblastic", "Holoblastic", "Absent", "Radial only"], 0, "Meroblastic."],
+    ["One primary spermatocyte gives", ["Four sperm", "One sperm", "Two sperm", "Eight sperm"], 0, "Four sperm."]],
+  f: [["Capacitation", "Maturation of sperm in the female tract"], ["Polyspermy block", "Zona reaction after the first sperm enters"], ["Blastoderm", "Disc of cells on the yolk in the bird embryo"], ["Dizygotic", "From two ova"]],
+  d: ["Study candling of eggs.", "Learn the stages of chick development.", "Read about assisted reproductive technologies."]
+});
+
+topic("anat", "Development of the Organ Systems", {
+  o: ["Describe the development of the digestive tract, liver and pancreas", "Describe the development of the respiratory, urinary, genital and circulatory systems", "Describe the development of the nervous system, skeleton and muscles", "Link developmental events to congenital anomalies"],
+  i: "The syllabus asks for the development of organs of the digestive system with its accessory structures, and of the respiratory, urinary, circulatory, lymphatic, nervous, musculoskeletal, male and female reproductive systems, endocrine glands and sense organs. Many congenital defects make sense once the normal development is known.",
+  s: "The three germ layers form tubes and folds that grow into organs. A defect at one step, such as a failure of fusion, leaves a typical abnormality at birth.",
+  n: [
+    ["Digestive system", "The endoderm forms the primitive gut, divided into foregut, midgut and hindgut. The foregut gives the pharynx, oesophagus, stomach and the first part of the duodenum, together with the liver and pancreas, which bud from the duodenum. The midgut forms the rest of the small intestine and part of the colon and herniates into the umbilical cord temporarily. The hindgut forms the rectum and joins the cloaca. In ruminants all four stomach compartments develop from the foregut; in the fetus the abomasum is relatively large and the rumen grows after birth with the intake of solid feed. The tongue, teeth and salivary glands develop from the pharyngeal region and oral cavity."],
+    ["Respiratory system", "A groove in the floor of the foregut forms the laryngotracheal diverticulum, which grows into the trachea and lung buds. The lung buds branch to form the bronchial tree. The alveoli mature late, so premature animals may have lungs without enough surfactant."],
+    ["Urinary system", "Three kidney forms appear in sequence: the pronephros (non-functional in mammals), the mesonephros (functional for a time) and the metanephros (the permanent kidney). The ureteric bud grows from the mesonephric duct and forms the ureter, renal pelvis and collecting ducts. The cloaca is divided into the urogenital sinus (bladder and urethra) and the rectum. The urachus connects the bladder to the allantois."],
+    ["Genital system", "The indifferent gonad forms on the urogenital ridge. Two pairs of ducts are present: the mesonephric (Wolffian) ducts and paramesonephric (Müllerian) ducts. In the male, the sex-determining gene on the Y chromosome (SRY) leads to testis development, the Wolffian ducts form the epididymis and ductus deferens and the Müllerian ducts regress. In the female, the Müllerian ducts form the oviducts, uterus, cervix and part of the vagina. The testes descend from the abdomen into the scrotum through the inguinal canal near birth. Failure of descent is cryptorchidism."],
+    ["Circulatory and lymphatic systems", "The heart forms from a tube that loops and is divided into four chambers by septa. The foramen ovale and ductus arteriosus close after birth. Defects of the septa or persistence of the ductus arteriosus are congenital heart defects. Blood vessels form from mesoderm, and lymphatic vessels bud from veins."],
+    ["Nervous system and sense organs", "The neural plate folds into the neural tube, which forms the brain and spinal cord. The neural crest forms the peripheral nerves, ganglia, adrenal medulla and melanocytes. The eye develops from the optic vesicle of the forebrain and from surface ectoderm that forms the lens. The ear develops from the otic vesicle."],
+    ["Musculoskeletal system", "Somites form the axial skeleton and most skeletal muscle. Bones form by intramembranous ossification (flat skull bones) or by endochondral ossification (long bones), with a cartilage model replaced by bone and growth plates at the ends."],
+    ["Endocrine glands", "The anterior pituitary develops from Rathke's pouch, an upgrowth from the roof of the mouth, and the posterior pituitary from a downgrowth of the brain. The thyroid arises from the floor of the pharynx. The adrenal cortex comes from mesoderm and the medulla from the neural crest. The pancreatic islets bud from the foregut endoderm."],
+    ["Congenital anomalies", "Examples are cleft palate (failure of palatal fusion), atresia ani (failure of the anal opening), persistent urachus, umbilical hernia, cryptorchidism, patent ductus arteriosus, hydrocephalus and limb defects. They can come from genetic causes, infections in pregnancy, toxic plants or drugs, and nutritional deficiency."]
+  ],
+  tb: { h: ["System", "Embryonic source", "Example anomaly"], r: [["Digestive", "Endoderm (foregut, midgut, hindgut)", "Atresia ani"], ["Respiratory", "Laryngotracheal diverticulum", "Tracheo-oesophageal fistula"], ["Urinary", "Metanephros and ureteric bud", "Persistent urachus"], ["Genital", "Mesonephric and paramesonephric ducts", "Cryptorchidism, freemartin"], ["Heart", "Heart tube and septa", "Patent ductus arteriosus"], ["Nervous", "Neural tube and crest", "Hydrocephalus"]] },
+  df: ["Organogenesis: the formation of organs from the germ layers.", "Intramembranous ossification: bone formation directly in connective tissue, as in flat skull bones.", "Endochondral ossification: bone formation by replacement of a cartilage model."],
+  tm: [["Foregut", "Part of the primitive gut that forms the stomach, liver and pancreas"], ["Metanephros", "Permanent kidney of mammals and birds"], ["Neural crest", "Group of cells that forms peripheral nerves and other structures"], ["Wolffian duct", "Mesonephric duct that forms the male genital ducts"], ["Müllerian duct", "Paramesonephric duct forming the female genital tract"]],
+  st: ["The germ layers form.", "The neural tube and somites appear.", "Gut, heart and kidneys begin to form.", "Organs fold, fuse and septate.", "Fetal organs mature and the animal is born.", "Foetal shunts close and the organs take over their adult roles."],
+  ex: ["A calf born with no anal opening has atresia ani.", "A foal with urine dripping at the navel has a persistent urachus.", "A pup with a cleft palate has a failure of fusion of the palate."],
+  k: ["Germ layer derivatives.", "Gut regions.", "Kidney stages.", "Genital ducts.", "Congenital anomalies."],
+  m: ["The permanent kidney is not the first one to form. It is the third."],
+  sa: [["Name the three kidney stages in embryonic development.", "Pronephros, mesonephros and metanephros."], ["What does the Müllerian duct form in the female?", "Oviduct, uterus, cervix and part of the vagina."]],
+  la: [["Describe the development of the urogenital system in domestic animals.", "Kidney stages, bladder and urethra, gonad, genital ducts, descent of the testis, anomalies."]],
+  q: [["The permanent kidney is the", ["Metanephros", "Pronephros", "Mesonephros", "Cloaca"], 0, "Metanephros."],
+    ["The anterior pituitary develops from", ["Rathke's pouch", "The neural tube", "The thyroid", "The neural crest"], 0, "Rathke's pouch."],
+    ["The adrenal medulla comes from the", ["Neural crest", "Mesoderm", "Endoderm", "Surface ectoderm"], 0, "Neural crest."],
+    ["Cleft palate is a failure of", ["Fusion of the palatal shelves", "Heart looping", "Kidney descent", "Lens formation"], 0, "Fusion of the palate."]],
+  f: [["Rathke's pouch", "Source of the anterior pituitary"], ["Persistent urachus", "Urine leaking from the navel"], ["Wolffian duct", "Forms male genital ducts"], ["Neural crest", "Source of peripheral nerves and adrenal medulla"]],
+  d: ["Study the fetal pig or chick embryo slides.", "Learn the causes of congenital anomalies in calves.", "Read about teratology."]
+});
+planned("anat", ["Neuroanatomy: tracts, nuclei and the autonomic ganglia", "Detailed anatomy of the guttural pouch and the larynx", "Comparative anatomy of joints and bursae", "Topographic anatomy of the pelvic region and rectal palpation landmarks", "Anatomy of the fish and exotic pets", "Applied anatomy of the horse's limb and lameness", "Mammary gland of the sow, mare and bitch", "Radiographic and ultrasound anatomy in detail", "Practical manual: dissection of a buffalo calf region by region"]);
+
+/* ---- regroup Anatomy into the SVVU syllabus units ---- */
+function regroup(sid, groups) {
+  UNITS[sid] = groups.map(g => [g[0], g[1].map(n => sid + n)]);
+  ORDER[sid] = [].concat.apply([], UNITS[sid].map(u => u[1]));
+}
+regroup("anat", [
+  ["Unit 1A – Introduction, terms, osteology, arthrology and myology", [1, 2, 3, 4, 5, 26]],
+  ["Unit 1B – Angiology, neurology and aesthesiology", [27, 7, 15, 19, 13]],
+  ["Unit 1C – Splanchnology, surface anatomy and imaging", [32, 6, 21, 22, 14, 8, 23, 24, 25, 20, 31]],
+  ["Unit 2 – Fore limb", [33, 10, 16]],
+  ["Unit 3 – Head and neck", [34, 9]],
+  ["Unit 4 – Thorax", [35]],
+  ["Unit 5 – Abdomen", [36, 11]],
+  ["Unit 6 – Hind limb and pelvis", [37]],
+  ["Unit 7 – Cytology, histology and microscopy", [38, 18, 39, 30]],
+  ["Unit 8 – Embryology", [17, 40, 41]],
+  ["Supplement – Birds and small animals (species notes)", [12, 28, 29]]
+]);
+/* ================= ANATOMY completion: new topics, upgrades, diagrams, verify notes ================= */
+function more(id, arr) { if (T[id]) T[id].n = T[id].n.concat(arr); }
+
+unit("anat", "Syllabus additions");
+topic("anat", "Ultrasonography and Radiography: Principles and Applications", {
+  o: ["Explain how an ultrasound image is formed", "Use the terms anechoic, hypoechoic and hyperechoic", "State the main uses of ultrasound in large and small animals", "Compare ultrasound with radiography"],
+  i: "The syllabus asks for the principles and application of radiography and ultrasound for bones and soft tissues. Ultrasound is now routine in practice for pregnancy diagnosis and for looking at soft organs that radiographs show poorly.",
+  s: "An ultrasound machine sends very high-pitched sound into the body and listens for the echoes. Fluid sends back no echo and looks black. Bone sends back a bright echo and hides what lies behind it. A radiograph, in contrast, uses X-rays and shows bone best.",
+  n: [
+    ["How ultrasound works", "A probe (transducer) contains crystals that produce sound waves above the range of hearing when electrically stimulated. The waves travel through tissue and are partly reflected at boundaries between tissues of different density. The same crystals receive the echoes, and the machine converts the time and strength of each echo into a picture. Coupling gel removes air between probe and skin, since air blocks the sound. Hair is usually clipped."],
+    ["Terms for the image", "Anechoic structures such as fluid give no echo and appear black (urine in the bladder, fluid in a cyst, fetal fluid). Hypoechoic tissue gives few echoes and looks dark grey. Hyperechoic tissue gives strong echoes and looks bright (bone surface, gas, fibrous tissue). Acoustic shadowing is the dark area behind bone or gas, which reflect nearly all the sound."],
+    ["Frequency and depth", "Higher-frequency probes give finer detail but do not penetrate deeply and are used for small animals and superficial structures such as tendons. Lower-frequency probes penetrate deeper and are used for large animals and deep organs. Probe shape (linear, sector, convex) suits different areas."],
+    ["Uses", "Pregnancy diagnosis in cattle, buffalo, mares, sheep and dogs, ovarian follicles and corpora lutea, abdominal organs (liver, kidney, bladder, uterus), the heart (echocardiography), tendons and joints in horses, the eye, and guidance for taking samples. Doppler ultrasound measures blood flow."],
+    ["Radiography compared", "Radiography uses X-rays and shows bones, the lungs and gas patterns well, giving a single flat picture. Ultrasound shows the inside structure of soft organs and works in real time, without ionising radiation, but cannot see through bone or gas-filled lung. The two methods complement each other, and in many cases both are used."],
+    ["Advanced imaging (brief)", "Computed tomography (CT) builds cross-sectional images from many X-ray views, magnetic resonance imaging (MRI) uses magnetic fields and radio waves and is excellent for brain and soft tissue, and nuclear imaging uses small amounts of radioactive material. These are available in a few referral centres and are introduced only briefly."],
+    ["Safety", "Ultrasound is safe for the animal and the operator. For radiography, protection from radiation is essential: lead aprons and gloves, collimation, minimal exposures, and keeping people out of the beam."]
+  ],
+  tb: { h: ["Feature", "Radiography", "Ultrasound"], r: [["Energy used", "X-rays (ionising)", "High-frequency sound (non-ionising)"], ["Shows best", "Bone, lungs, gas", "Soft tissue, fluid, heart in motion"], ["Limitation", "Poor soft tissue detail", "Blocked by bone and gas"], ["Typical use", "Fractures, chest films", "Pregnancy, abdomen, heart, tendons"]] },
+  df: ["Ultrasonography: imaging that uses reflected high-frequency sound waves.", "Echogenicity: how strongly a tissue reflects ultrasound.", "Acoustic shadow: the dark region behind a structure that blocks the sound beam."],
+  tm: [["Transducer", "Probe that sends and receives sound"], ["Anechoic", "No echoes, black"], ["Hyperechoic", "Strong echoes, bright"], ["Coupling gel", "Gel that removes air between probe and skin"], ["Doppler", "Technique that measures movement such as blood flow"]],
+  st: ["Prepare the animal and clip the hair if needed.", "Apply coupling gel.", "Place the probe and choose the depth and frequency.", "Scan the organ in more than one plane.", "Identify the structure by its shape and echogenicity.", "Record the findings."],
+  ex: ["Early pregnancy diagnosis in cattle and buffalo uses transrectal ultrasound.", "A full bladder appears as a black, round area.", "A tendon injury in a horse shows as a darker (hypoechoic) area in the tendon."],
+  k: ["Principle of ultrasound.", "Echogenicity terms.", "Uses and limits.", "Comparison with radiography."],
+  m: ["Gel is not for comfort alone. It removes air that would block the sound."],
+  sa: [["What does anechoic mean?", "Producing no echoes, so the structure looks black, as with fluid."], ["Why is gel used in ultrasonography?", "It removes the air between the probe and the skin so that sound can pass."]],
+  la: [["Describe the principles and uses of ultrasonography in veterinary practice.", "Principle, probe types, image terms, uses in species, advantages and limitations, comparison with radiography."]],
+  q: [["Fluid on ultrasound appears", ["Black (anechoic)", "White (hyperechoic)", "Grey only", "Not visible"], 0, "Fluid gives no echoes."],
+    ["Which probe frequency gives the finest detail but least depth?", ["High", "Low", "Zero", "Same for all"], 0, "Higher frequency."],
+    ["An acoustic shadow occurs behind", ["Bone or gas", "Fluid", "Muscle", "Fat"], 0, "They reflect nearly all the sound."],
+    ["Ultrasound uses", ["Sound waves", "X-rays", "Magnets only", "Radioactive tracers"], 0, "High-frequency sound."]],
+  f: [["Anechoic", "No echoes, black"], ["Hyperechoic", "Bright"], ["Transducer", "The ultrasound probe"], ["Acoustic shadow", "Dark area behind bone or gas"]],
+  d: ["Practise identifying organs on ultrasound pictures.", "Learn pregnancy diagnosis in the cow by ultrasound.", "Study echocardiography."],
+  vf: ["Probe frequencies and depths differ by machine. Use your teacher's practical notes for the exact values.", "Uses are listed in outline. The exact ultrasound features of each organ must be learned from images in your atlas."]
+});
+
+topic("anat", "The Vertebral Column: Regions, Typical and Special Vertebrae", {
+  o: ["Describe a typical vertebra and its parts", "Describe the cervical, thoracic, lumbar, sacral and caudal regions", "Describe the atlas, axis and sacrum", "State the vertebral formulae and the joints of the column"],
+  i: "The vertebral column protects the spinal cord, supports the body and takes part in movement. Clinicians use vertebrae as landmarks for locating organs, nerves and injection sites.",
+  s: "A vertebra is a bony ring with a body in front, an arch above and projections for muscles and joints. The ring lines up to make a canal for the spinal cord. The shape changes along the back according to the job of each region.",
+  n: [
+    ["The typical vertebra", "A vertebra has a body (centrum), a vertebral arch (two pedicles and two laminae) enclosing the vertebral foramen, a spinous process, two transverse processes and cranial and caudal articular processes. Between adjacent vertebrae the intervertebral foramen lets the spinal nerve leave. The intervertebral disc, made of an outer fibrous ring and a soft nucleus pulposus, lies between the bodies. Disc herniation in dogs compresses the cord."],
+    ["Cervical vertebrae", "There are seven. The atlas (C1) has broad wings and no body, and the head nods on it at the atlanto-occipital joint. The axis (C2) has a long spine and a tooth-like dens around which the atlas rotates. The cervical vertebrae C3 to C6 have large transverse processes. C7 has a transitional shape."],
+    ["Thoracic vertebrae", "They have long spinous processes, forming the withers, and articular facets for the ribs. The number matches the pairs of ribs."],
+    ["Lumbar vertebrae", "They have long transverse processes projecting sideways and no rib facets. The transverse processes form the roof of the flank. The number varies with the species."],
+    ["Sacrum and caudal vertebrae", "The sacral vertebrae fuse into a single bone (the sacrum), whose wings join the ilium at the sacroiliac joint. The caudal (coccygeal) vertebrae form the tail, and their number varies greatly. The first intercoccygeal space is a landmark for caudal epidural anaesthesia in cattle, which only a vet should perform."],
+    ["Ligaments and joints", "The supraspinous ligament runs along the tips of the spinous processes and continues forward as the nuchal ligament in ungulates. The dorsal and ventral longitudinal ligaments run along the vertebral bodies. Intervertebral joints permit limited movement individually and much movement together."],
+    ["Species differences", "The formula in the dog is C7 T13 L7 S3 and in the ox C7 T13 L6 S5, with differences in the horse and pig as in the table. Birds fuse many vertebrae into the notarium (thoracic) and synsacrum."],
+    ["Clinical relevance", "Fractures and luxations of the column can damage the spinal cord. Intervertebral disc disease is common in chondrodystrophic dogs such as the dachshund. Spinal anaesthesia and CSF collection use specific vertebral spaces."]
+  ],
+  tb: { h: ["Species", "C", "T", "L", "S", "Cd (approx.)"], r: [["Dog", "7", "13", "7", "3", "20 to 23"], ["Cat", "7", "13", "7", "3", "18 to 25"], ["Ox", "7", "13", "6", "5", "18 to 20"], ["Horse", "7", "18", "6", "5", "15 to 21"], ["Pig", "7", "14 to 15", "6 to 7", "4", "20 to 23"]] },
+  df: ["Vertebral foramen: the opening enclosed by the vertebral arch, which forms the vertebral canal with the others.", "Intervertebral disc: the fibrocartilage pad between two vertebral bodies.", "Dens: the tooth-like projection of the axis around which the atlas turns."],
+  tm: [["Centrum", "Body of a vertebra"], ["Pedicle", "Part of the arch joining it to the body"], ["Lamina", "Plate of the arch behind the pedicle"], ["Nucleus pulposus", "Soft centre of the intervertebral disc"], ["Wither", "Highest part of the back, formed by the thoracic spines"]],
+  st: ["Identify the region from the shape of the vertebra.", "Find the body, arch and processes.", "Check for rib facets (thoracic).", "Note the length of the transverse processes (lumbar).", "Compare with the vertebra next to it."],
+  ex: ["A dachshund that suddenly cannot walk may have a herniated disc pressing on the cord.", "A cow with a broken back after a fall may show hind limb paralysis.", "The wing of the atlas is a landmark in the neck for locating the carotid and the jugular vein."],
+  k: ["Parts of a typical vertebra.", "Atlas and axis.", "Vertebral formulae.", "Ligaments of the column."],
+  m: ["The sacrum is one bone in the adult, but it started as several vertebrae."],
+  sa: [["Name the parts of a typical vertebra.", "Body, arch, spinous process, transverse processes and articular processes, enclosing the vertebral foramen."], ["What is the dens?", "The tooth-like process of the axis, around which the atlas rotates."]],
+  la: [["Describe the cervical vertebrae of the ox with special reference to the atlas and axis.", "Number, typical cervical, atlas features, axis features, joints, movements, clinical relevance."]],
+  q: [["The atlas is the", ["First cervical vertebra", "Second cervical vertebra", "First thoracic vertebra", "Sacral vertebra"], 0, "C1."],
+    ["The nucleus pulposus lies in the", ["Intervertebral disc", "Spinal cord", "Atlas", "Rib"], 0, "Centre of the disc."],
+    ["Lumbar vertebrae have", ["Long transverse processes", "Rib facets", "A dens", "No spinous process"], 0, "Long transverse processes."],
+    ["The ox has how many lumbar vertebrae?", ["6", "7", "5", "8"], 0, "Six (verify in your book)."]],
+  f: [["Dens", "Tooth of the axis"], ["Notarium", "Fused thoracic vertebrae of birds"], ["Intervertebral foramen", "Exit for the spinal nerve"], ["Wither", "Thoracic spines at the base of the neck"]],
+  d: ["Practise identifying vertebrae from each region.", "Study disc disease in dogs.", "Learn the joints of the head and neck."],
+  vf: ["The number of vertebrae in each region can vary by one in individual animals and in breeds, especially in the pig and the sheep. Use your textbook table as the exam answer.", "Cd (tail) counts are approximate ranges."]
+});
+
+topic("anat", "Practical Guide: Dissection, Demonstration and Viva Questions by Unit", {
+  o: ["Know what each practical unit of the Anatomy syllabus expects you to demonstrate", "Use a checklist for each unit", "Practise sample viva questions", "Prepare spotters"],
+  i: "The Anatomy syllabus carries 3 credit hours of practical. It is examined in two practical papers covering units 1 to 4 and 5 to 8. This page is a study checklist built from the syllabus text, so you can prepare your practical record and viva.",
+  s: "In each practical unit you identify bones, find structures on a specimen, trace nerves and vessels and look at slides. Work through the lists below, then answer the sample questions aloud.",
+  n: [
+    ["How the practical is organised (syllabus)", "The syllabus says dissection is done on preserved cadavers and specimens, with an embalmed buffalo calf for every 24 students where available, supported by models, plastinated specimens and computer simulations. Practical paper I covers units 1 to 4 and paper II units 5 to 8. Check your college's current instructions."],
+    ["Unit 1 practical checklist", "General terms and planes, parts of the skeleton, surface and joint regions, boundaries of the thoracic, abdominal and pelvic cavities, types of joints, muscles, tendons, ligaments, bursae and tendon sheaths, in-situ demonstration of heart, meninges, brain and spinal cord and organs of the main systems, palpable bony areas, palpable lymph nodes and arteries, surface veins for venepuncture, and the sites for bone marrow and CSF collection. Look at radiographs and ultrasound pictures."],
+    ["Unit 2 practical checklist (fore limb)", "Bones of the ox fore limb and comparison, dissection of the fore limb, joints, ligaments, muscles, vessels, nerves, nerve block sites, suprascapular and radial nerve paralysis, equine hoof compared with the ox, radiographs of normal bones."],
+    ["Unit 3 practical checklist (head and neck)", "Cranial and facial bones and cervical vertebrae, dissection of muscles of face, mastication, tongue, pharynx, soft palate, hyoid, larynx, eye and ear, superficial neck muscles, brain and its parts, tunics of the eye, teeth, tongue, thyroid, parathyroid and salivary glands, cranial nerves, trachea and oesophagus, nerve block sites of the head, the facial artery pulse, Stenson's duct, Viborg's triangle and the jugular vein."],
+    ["Unit 4 practical checklist (thorax)", "Thoracic vertebrae, ribs and sternum, dissection of muscles, vessels, nerves and lymph nodes of the thorax, organs of the thorax, pleural reflections, sites for auscultation and percussion, recurrent laryngeal nerve paralysis, choke, radiographs and ultrasound of the thorax."],
+    ["Unit 5 practical checklist (abdomen)", "Bones, dissection of muscles, vessels and nerves of the abdomen, peritoneum, omentum, mesentery, organs of digestive, urinary and reproductive systems, mammary glands of the cow, mare, bitch and sow, topography of the viscera, flank and paralumbar fossa and the surgical sites listed in the syllabus."],
+    ["Unit 6 practical checklist (hind limb and pelvis)", "Bones of the hind limb and pelvis, joints and ligaments, dissection of muscles, vessels, lymph nodes and nerves, pelvic peritoneal reflections, pelvic organs, external genital organs, the femoral artery pulse and recurrent tarsal vein in the dog, radiographs and ultrasound of the pelvis, and the nerve block and surgical sites listed in the syllabus."],
+    ["Unit 7 practical checklist (histology)", "Microscopy and micrometry, comparison of light and electron microscopes, histological techniques, paraffin sectioning and H and E staining, slides of epithelium, connective tissue, muscle, nervous tissue and blood, and slides of the digestive, circulatory, urinary, respiratory, nervous, lymphatic, endocrine and genital systems and sense organs."],
+    ["Unit 8 practical checklist (embryology)", "Placenta, umbilical cord and fetal membranes of different domestic animals, congenital anomalies as available, and slides of developing organs."],
+    ["Sample viva questions", "- What are the boundaries of the thoracic cavity?\n- Name the contents of the carotid sheath.\n- Where does the reticulum lie in the ox?\n- Name the nerves of the brachial plexus.\n- How many carpal bones does the ox have?\n- Which structure is the point of the hock?\n- What is the layer arrangement of the abdominal wall?\n- What does H and E stain?\n- Name the fetal membranes.\n- Where does fertilisation occur in the mammal?"],
+    ["Spotters (tips)", "For a spotter, look at the shape, surface features and side of the bone or organ. Name it, state two identifying features and one clinical or comparative point. Practise with a timer of one minute per spotter."]
+  ],
+  tb: { h: ["Practical paper", "Units", "Maximum marks"], r: [["Paper I", "1, 2, 3 and 4", "60"], ["Paper II", "5, 6, 7 and 8", "60"]] },
+  df: ["Dissection: the careful cutting and separation of tissues to study structure.", "Spotter: a short identification exercise in a practical examination.", "Viva voce: an oral examination."],
+  tm: [["In situ", "In its natural position"], ["Cadaver", "Dead body used for dissection"], ["Plastination", "Preserving specimens with plastic"], ["Demonstration", "Showing a structure by a teacher"]],
+  st: ["Read the unit's practical list before the class.", "Prepare your drawing and notes for each unit.", "Dissect or demonstrate under supervision.", "Identify the structures yourself on the specimen.", "Revise with viva questions.", "Write up the practical record."],
+  ex: ["A student who studies the checklist before class finds structures faster.", "A spotter on the equine hoof may ask you to name the frog and the white line.", "A viva may ask for the nerve block sites by their anatomical landmarks."],
+  k: ["Practical marks distribution.", "Unit-wise checklists.", "Viva preparation."],
+  m: ["The checklist is built from the syllabus text. Your teacher's practical manual may add or reorder items."],
+  sa: [["How are practical marks distributed?", "Two papers of 60 marks each, one for units 1 to 4 and one for units 5 to 8, per the syllabus text."], ["What is a spotter?", "A quick identification test of a bone, organ or slide."]],
+  la: [["Describe how you would study the practical unit on the thorax.", "Bones, muscles, vessels and nerves, organs, pleural reflections, auscultation areas, radiographs."]],
+  q: [["The syllabus uses which cadaver for dissection where available?", ["Buffalo calf", "Horse", "Dog", "Pig"], 0, "An embalmed buffalo calf for every 24 students, where available."],
+    ["Practical paper II covers units", ["5 to 8", "1 to 4", "1 to 8", "6 only"], 0, "Units 5, 6, 7 and 8."],
+    ["In situ means", ["In its natural position", "In a jar", "Under the microscope", "After burial"], 0, "In its natural position."],
+    ["A viva is", ["An oral examination", "A written paper", "A drawing", "A lab report"], 0, "Viva voce."]],
+  f: [["In situ", "In its natural position"], ["Spotter", "Quick identification station"], ["Viva", "Oral exam"], ["Plastination", "Plastic preservation of specimens"]],
+  d: ["Make your own spotter cards.", "Draw each unit's key diagram from memory.", "Ask seniors for the practical record format."],
+  vf: ["This checklist is a summary of the syllabus wording. Your department's practical manual and internal exam pattern are the final guide.", "Marks and paper structure are taken from the regulations PDF you supplied and may change in later revisions."]
+});
+
+/* ---- upgrade the older Anatomy topics ---- */
+extra("anat1", {
+  o: ["Define anatomy and list its branches", "Explain why anatomy matters in veterinary practice", "Distinguish gross, microscopic, comparative, applied and developmental anatomy", "Describe the levels of organisation of the body"],
+  df: ["Anatomy: the study of the structure of the body and the relationship of its parts.", "Gross anatomy: study of structures visible to the naked eye.", "Comparative anatomy: comparison of structure among different species."],
+  tm: [["Systemic anatomy", "Study by organ systems"], ["Regional (topographic) anatomy", "Study by body regions"], ["Applied (clinical) anatomy", "Anatomy used in diagnosis and treatment"], ["Histology", "Microscopic anatomy of tissues"], ["Embryology", "Study of development before birth"]],
+  ex: ["Knowing where the rumen lies lets a vet listen to rumen sounds in the correct flank.", "Knowing the nerve supply of the horn lets a vet numb it before dehorning.", "Comparing species explains why a horse cannot vomit but a dog can."],
+  vf: ["Different books list slightly different branches of anatomy. Use your textbook's list for the exact exam answer."]
+});
+extra("anat2", {
+  o: ["Use the directional terms correctly on a quadruped", "Name the main planes and sections", "Use limb terms such as proximal, distal, palmar and plantar", "Describe the regions of the body"],
+  df: ["Median plane: the plane that divides the body into equal right and left halves.", "Sagittal plane: any plane parallel to the median plane.", "Transverse plane: a plane at right angles to the long axis of the body or a part."],
+  tm: [["Cranial", "Towards the head"], ["Caudal", "Towards the tail"], ["Rostral", "Towards the nose, used on the head"], ["Dorsal", "Towards the back"], ["Ventral", "Towards the belly"], ["Medial / lateral", "Nearer to or farther from the median plane"], ["Proximal / distal", "Nearer to or farther from the trunk in a limb"], ["Palmar / plantar", "The back of the forefoot and the back of the hind foot"]],
+  ex: ["A radiograph report says 'dorsoventral view' to tell you where the beam entered.", "A vet describes a wound 'on the lateral aspect of the left hock' so that everyone finds the same spot."],
+  vf: ["Terms for the limbs (dorsal vs cranial on the forelimb) differ slightly between textbooks. Use the terms your teachers use."]
+});
+extra("anat3", {
+  o: ["Describe the structure and properties of bone", "Classify the skeleton and bones with examples", "Use the terms of osteology", "Describe how bone develops and grows"],
+  df: ["Osteology: the study of bones.", "Periosteum: the connective tissue membrane covering the outer surface of bone.", "Epiphyseal plate (physis): the cartilage plate at which a long bone grows in length."],
+  tm: [["Diaphysis", "Shaft of a long bone"], ["Epiphysis", "End of a long bone"], ["Metaphysis", "Region between shaft and end"], ["Medullary cavity", "Central cavity of the shaft containing marrow"], ["Foramen", "Hole in a bone"], ["Process", "Projection from a bone"]],
+  st: ["A cartilage model forms from mesenchyme.", "A primary centre of ossification appears in the shaft.", "Secondary centres appear in the ends.", "A growth plate remains between them while the animal grows.", "The plate closes at maturity and the bone stops growing in length."],
+  ex: ["A fracture through a growth plate in a young dog can stop the bone from growing normally.", "Calcium and phosphorus deficiency in calves causes rickets, with soft, bent bones.", "A fractured pneumatic bone in a bird can be connected to the airway."],
+  vf: ["Timing of closure of growth plates differs with species and bone. Use your textbook's table, not a rule of thumb."]
+});
+more("anat3", [
+  ["Classification of the skeleton", "The axial skeleton is the skull, vertebral column, ribs and sternum. The appendicular skeleton is the bones of the limbs and their girdles. The visceral (splanchnic) skeleton consists of bones that develop in soft organs, for example the os cordis in the heart of the ox, the os penis in the dog, and in some species the os rostri in the pig's snout."],
+  ["Terms used in osteology", "Elevations are called process, tuberosity, tubercle, crest, spine, trochanter and condyle. Depressions include fossa, groove and notch. A foramen is a hole, a canal a long passage, and a sinus an air-filled space in a bone. A facet is a smooth articular surface. Knowing these terms makes descriptions of bones easier to read."],
+  ["Properties of bone", "Bone is hard and strong yet slightly elastic. It is made of organic matter (collagen) giving toughness and inorganic salts, mainly calcium phosphate, giving hardness. Young bone has more collagen and is flexible, old bone is more brittle. Bone is living tissue with a blood supply and remodels throughout life. Structure is compact on the outside and spongy (trabecular) inside."]
+]);
+extra("anat4", {
+  o: ["Classify joints with examples", "Describe the parts of a synovial joint", "Name the movements permitted by joints", "Describe bursae, tendon sheaths and ligaments"],
+  df: ["Arthrology: the study of joints.", "Diarthrosis: a freely movable synovial joint.", "Ligament: a band of dense connective tissue joining bone to bone."],
+  tm: [["Articular cartilage", "Smooth cartilage covering the bone ends in a joint"], ["Joint capsule", "Fibrous sleeve around a synovial joint"], ["Synovial fluid", "Lubricating fluid of the joint"], ["Meniscus", "Fibrocartilage pad in the stifle"], ["Bursa", "Synovial sac that reduces friction"], ["Tendon sheath", "Synovial tube around a tendon"]],
+  ex: ["Joint ill in a calf is infection of the joints after navel infection.", "A swollen carpus in a cow (carpal hygroma) is a swollen bursa from a hard floor.", "Cruciate ligament rupture is a common knee (stifle) injury in dogs."],
+  vf: ["Joint type names (hinge, ball and socket and so on) differ slightly between textbooks. Use the terms in your syllabus book."]
+});
+more("anat4", [
+  ["Types of synovial joint and movements", "Hinge (ginglymus) joints, such as the elbow, allow flexion and extension. Ball-and-socket (spheroidal) joints, such as the shoulder and hip, allow movement in many directions. Pivot joints, such as the atlantoaxial joint, allow rotation. Condylar joints, such as the stifle, are mainly hinge with some rotation. Gliding (plane) joints, such as those between carpal bones, allow slight sliding. Movements are flexion (decreasing the angle), extension (increasing it), abduction (away from the median plane), adduction (towards it), rotation and circumduction."]
+]);
+extra("anat5", {
+  o: ["Classify muscles by structure and shape", "Describe tendons, aponeuroses, bursae and tendon sheaths", "Explain origin, insertion and muscle action", "Understand how muscle names are formed"],
+  df: ["Myology: the study of muscles.", "Tendon: a cord of dense connective tissue joining muscle to bone.", "Aponeurosis: a flat sheet-like tendon."],
+  tm: [["Origin", "Fixed attachment of a muscle"], ["Insertion", "Attachment on the part that moves"], ["Agonist", "Muscle that produces a movement"], ["Antagonist", "Muscle that opposes it"], ["Synergist", "Muscle that assists the agonist"], ["Belly", "Fleshy part of a muscle"]],
+  ex: ["A calf with white muscle disease has weak skeletal and cardiac muscle from selenium and vitamin E deficiency.", "A ruptured gastrocnemius tendon causes a dropped hock.", "Bowed tendon in a racehorse is an injury of the flexor tendons."],
+  vf: ["The detailed muscle lists by region are learned during dissection. Lists in the textbook for the ox are the final reference."]
+});
+more("anat5", [
+  ["How muscle names are formed (etymology)", "Muscles are named by shape (trapezius, rhomboideus), by position (supraspinatus above the spine of the scapula, infraspinatus below it), by action (flexor, extensor, abductor), by attachments (sternocephalicus, from sternum to head), by direction of fibres (oblique, transverse, rectus) or by the number of heads (biceps, triceps). The meaning of the name usually tells you where and what the muscle does."]
+]);
+extra("anat6", {
+  o: ["Describe the compartments of the ruminant stomach and their features", "Trace feed through the digestive tract of the ox", "Describe the liver, pancreas and intestines in outline", "Compare with the simple stomach"],
+  df: ["Ruminant: an animal with a four-chambered stomach that regurgitates and re-chews its feed.", "Rumination: the process of regurgitating and re-chewing feed.", "Reticular groove: the groove that carries milk directly to the abomasum in young calves."],
+  tm: [["Rumen papillae", "Finger-like projections that absorb volatile fatty acids"], ["Honeycomb", "The reticulum's lining pattern"], ["Omasal laminae", "Leaf-like folds of the omasum"], ["Abomasum", "True glandular stomach of the ruminant"], ["Cud", "Bolus of regurgitated feed"]],
+  st: ["Feed is chewed briefly and swallowed.", "It enters the rumen and reticulum for fermentation.", "It is regurgitated as cud, re-chewed and swallowed again.", "Fine particles pass to the omasum for water absorption.", "They reach the abomasum for acid and enzyme digestion.", "They move to the small intestine for absorption."],
+  ex: ["Hardware disease: a nail falls into the reticulum and can pierce the diaphragm and heart sac.", "Bloat is gas trapped in the rumen and reticulum.", "A milk-fed calf's milk passes to the abomasum through the reticular groove."],
+  vf: ["Capacities of the stomach compartments differ between breeds and with age. Use the figures in your textbook if the exam asks for them.", "The rib levels of the reticulum are approximate."]
+});
+extra("anat7", {
+  o: ["Describe the heart, its chambers and valves", "Describe the main vessels and the circulation", "Describe the parts of the respiratory tract", "Compare the species"],
+  df: ["Systemic circulation: blood flow from the left ventricle through the body and back to the right atrium.", "Pulmonary circulation: blood flow from the right ventricle to the lungs and back to the left atrium.", "Pericardium: the sac around the heart."],
+  tm: [["Atrioventricular valve", "Valve between atrium and ventricle"], ["Semilunar valve", "Valve at the exit of the ventricle"], ["Coronary artery", "Artery supplying the heart muscle"], ["Bronchus", "Large airway branching from the trachea"], ["Alveolus", "Air sac where gas exchange occurs"]],
+  ex: ["Traumatic reticulopericarditis in cattle follows penetration of the heart sac by a foreign body.", "A horse with a roaring noise has laryngeal nerve damage.", "Heart murmurs in dogs often come from valve disease."],
+  vf: ["Rib spaces of the heart and lung borders are approximate and vary with species and posture. Use the figures in your textbook."]
+});
+extra("anat8", {
+  o: ["Describe the kidneys, ureters, bladder and urethra in outline", "Describe the male and female genital organs in outline", "Name the main divisions of the nervous system", "Understand how the systems link to each other"],
+  df: ["Urogenital system: the combined urinary and genital organs, which develop together.", "Central nervous system: the brain and spinal cord.", "Peripheral nervous system: the nerves outside the brain and spinal cord."],
+  tm: [["Nephron", "Functional unit of the kidney"], ["Ureter", "Tube from kidney to bladder"], ["Gonad", "Testis or ovary"], ["Ganglion", "Collection of nerve cell bodies outside the CNS"], ["Neuron", "Nerve cell"]],
+  ex: ["Urinary stones block the urethra in male goats and cats.", "A calf with a spinal injury shows paralysis behind the injury.", "A bull's testes are felt in the scrotum during a breeding soundness exam."],
+  vf: ["This is an overview topic. Detailed organ systems are covered in the later topics of Unit 1C."]
+});
+extra("anat12", { vf: ["Egg formation times are approximate and vary with breed and age of the hen.", "Which bird bones are pneumatic varies by species. Use your poultry anatomy text."] });
+
+/* ---- verify notes on newer topics ---- */
+extra("anat9", { vf: ["Eruption times and the exact age scale from teeth vary with breed, feeding and the book you follow. Use your textbook's table.", "The dental formulae are standard, but check the ox formula as written in your text (the lower canine is counted with the incisors in many books)."] });
+extra("anat10", { vf: ["The number of horse carpal bones is given as 7 or 8 in different books because the first carpal is often absent.", "Percentages of weight carried by the fore and hind limbs are approximate."] });
+extra("anat11", { vf: ["Quarter yields and blood-to-milk ratios are approximate figures commonly quoted. Check the figure in your book."] });
+extra("anat13", { vf: ["Types of tapetum in species and the pupil shape are given as commonly taught. Confirm in a veterinary ophthalmology or anatomy text."] });
+extra("anat14", { vf: ["Position and number of parathyroid glands vary between species. Use your textbook."] });
+extra("anat15", { vf: ["The list of palpable lymph nodes differs between species and books. The inverted lymph node of the pig is standard, but check the details."] });
+extra("anat16", { vf: ["Hoof growth rate is an approximate figure and varies a lot. Check your text."] });
+extra("anat17", { vf: ["The classification of the ruminant placenta (synepitheliochorial or syndesmochorial) differs between books. Use the term your textbook uses.", "The degree of antibody transfer across the dog and cat placenta is described as 'little' in many books. Check yours."] });
+extra("anat18", { vf: ["Section thickness and staining times in the processing steps are typical values. Use the figures in your practical manual."] });
+extra("anat19", { vf: ["The level at which the spinal cord ends differs between species and between books. Check your text.", "Names of CSF collection sites are as commonly taught. Confirm with your teacher."] });
+extra("anat21", { vf: ["Capacity of the equine stomach and colon is a common exam figure that differs between books. Not given here on purpose."] });
+extra("anat22", { vf: ["Lobe names and numbers vary. Confirm the lobe pattern for each species in your text."] });
+extra("anat24", { vf: ["Details of the cervix of each species and of the suburethral diverticulum should be checked in your reproductive anatomy text."] });
+extra("anat25", { vf: ["Kidney shape descriptions (heart-shaped right kidney in the horse) are as commonly taught. Confirm with a specimen."] });
+extra("anat29", { vf: ["Vertebral formulae are approximate. Verify before using them as an exam answer."] });
+extra("anat32", { vf: ["Rib-level positions of organs are approximate."] });
+extra("anat33", { vf: ["The root levels of the brachial plexus (C6 to T2) are quoted for the dog. Check the levels for the ox in your text.", "Your syllabus pairs radial nerve paralysis with 'capped elbow'. Capped elbow is usually a swelling at the point of the elbow, while radial nerve paralysis gives a dropped elbow. Please confirm the terms with your teacher.", "Carpal and tarsal bone counts for the ox (6 and 5) are as commonly taught. Confirm with a specimen."] });
+extra("anat34", { vf: ["Paranasal sinus lists and names differ in books.", "The exact opening of the parotid duct, and the boundaries of Viborg's triangle, should be checked in your anatomy text.", "Nerve block names are given by landmarks only. Do not use them as a procedure guide."] });
+extra("anat35", { vf: ["Rib counts in the pig (14 or 15) and the horse (about 18) vary between individuals and books.", "Rib-space limits of the heart and lung are approximate."] });
+extra("anat36", { vf: ["Rib levels for the reticulum and other organs are approximate.", "Paravertebral block nerve levels (T13, L1 and L2) are as commonly taught for cattle. Confirm with your text."] });
+extra("anat37", { vf: ["The tarsal bone counts are as commonly taught (ox 5, horse 6, dog and pig 7). Confirm with a specimen.", "Epidural and nerve block sites are named only as landmarks."] });
+extra("anat38", { vf: ["Red cell size ranking and the sites for bone marrow collection are as commonly taught. Check the text."] });
+extra("anat39", { vf: ["Histology of each organ varies between species. Use your slides and textbook as the final reference."] });
+extra("anat40", { vf: ["Terms for implantation types differ between books. The statement that the dog ovulates a primary oocyte is standard but confirm it.", "Incubation days are for the fowl."] });
+extra("anat41", { vf: ["Details of the development of the ruminant stomach compartments differ slightly between texts."] });
+
+more("anat20", [
+  ["Palpable bony prominences", "These are bony points that can be felt through the skin and are used as landmarks: the wing of the atlas, the withers (thoracic spines), the point of the shoulder (greater tubercle of the humerus), the point of the elbow (olecranon), the tuber coxae (point of the hip), the tuber ischii (pin bone), the tuber sacrale, the greater trochanter of the femur, the patella, and the point of the hock (calcaneus). The zygomatic arch and the angle of the mandible are felt on the head."],
+  ["Sites for bone marrow and CSF collection (concept only)", "Bone marrow is examined in cases of unexplained anaemia or some cancers. Common sites are the sternum or ribs in large animals and the iliac crest or proximal humerus or femur in small animals. Cerebrospinal fluid is collected from the space between the skull and atlas (cerebellomedullary cistern) or the lumbosacral space. Both are done under local or general anaesthesia by a vet. You should know the site by its landmarks, not attempt the procedure."]
+]);
+
+/* ---- diagrams for every relevant topic ---- */
+[["anat2", ["planes"]], ["anat3", ["bonecls", "bone"]], ["anat4", ["jointcls", "synovial"]], ["anat5", ["musclecls"]],
+ ["anat6", ["rumen", "gutwall"]], ["anat7", ["circ", "resp"]], ["anat8", ["urine"]], ["anat9", ["tooth"]], ["anat12", ["oviduct"]], ["anat13", ["eye", "lightpath"]],
+ ["anat14", ["endoc"]], ["anat15", ["lymph"]], ["anat16", ["hoofparts"]], ["anat17", ["germ", "placenta"]], ["anat18", ["tissues", "process"]],
+ ["anat19", ["reflex", "meninges", "csf", "cord"]], ["anat21", ["digh"]], ["anat22", ["resp"]], ["anat23", ["male"]], ["anat24", ["female"]], ["anat25", ["urine"]],
+ ["anat26", ["abwall"]], ["anat27", ["circ", "fetal"]], ["anat30", ["skin"]], ["anat31", ["xray"]], ["anat32", ["oxsides"]],
+ ["anat33", ["forechain", "plexus"]], ["anat35", ["thorax"]], ["anat36", ["oxsides", "abwall"]], ["anat37", ["hindchain"]],
+ ["anat38", ["bloodtree", "junctions"]], ["anat39", ["gutwall", "process"]], ["anat40", ["gamet", "membranes"]], ["anat41", ["germ", "kidneydev", "genitaldev"]],
+ ["anat42", ["xray"]]].forEach(p => extra(p[0], { dia: p[1] }));
+
+regroup("anat", [
+  ["Unit 1A – Introduction, terms, osteology, arthrology and myology", [1, 2, 3, 4, 5, 43, 26]],
+  ["Unit 1B – Angiology, neurology and aesthesiology", [27, 7, 15, 19, 13]],
+  ["Unit 1C – Splanchnology, surface anatomy and imaging", [32, 6, 21, 22, 14, 8, 23, 24, 25, 20, 31, 42]],
+  ["Unit 2 – Fore limb", [33, 10, 16]],
+  ["Unit 3 – Head and neck", [34, 9]],
+  ["Unit 4 – Thorax", [35]],
+  ["Unit 5 – Abdomen", [36, 11]],
+  ["Unit 6 – Hind limb and pelvis", [37]],
+  ["Unit 7 – Cytology, histology and microscopy", [38, 18, 39, 30]],
+  ["Unit 8 – Embryology", [17, 40, 41]],
+  ["Practical guide and species notes", [44, 12, 28, 29]]
+]);
 /* ================= DIAGRAMS (schematics, not accurate drawings) ================= */
 const DIA = {};
 const _bx = (x, y, w, h, t, c) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="8" fill="' + (c || "#e3f1e8") + '" stroke="#1f4d3a" stroke-width="1.5"/><text x="' + (x + w / 2) + '" y="' + (y + h / 2 + 4) + '" text-anchor="middle" font-size="12" fill="#17352a">' + t + "</text>";
 const _ar = (x1, y1, x2, y2) => '<line x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '" stroke="#1f4d3a" stroke-width="1.6" marker-end="url(#ah)"/>';
-const _svg = (w, h, body, cap) => '<figure class="dia"><svg viewBox="0 0 ' + w + " " + h + '" role="img" aria-label="' + cap + '"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1f4d3a"/></marker></defs>' + body + "</svg><figcaption>" + cap + " (schematic, not an accurate anatomical drawing)</figcaption></figure>";
+const _svg = (w, h, body, cap) => '<figure class="dia"><svg style="max-width:' + w + 'px" viewBox="0 0 ' + w + " " + h + '" role="img" aria-label="' + cap + '"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1f4d3a"/></marker></defs>' + body + "</svg><figcaption>" + cap + " (schematic, not an accurate anatomical drawing)</figcaption></figure>";
 const _tx = (x, y, t, a) => '<text x="' + x + '" y="' + y + '" font-size="12" fill="#17352a" text-anchor="' + (a || "middle") + '">' + t + "</text>";
 
 DIA.planes = _svg(420, 230,
@@ -3194,8 +3765,234 @@ DIA.eye = _svg(440, 190,
   '<ellipse cx="200" cy="95" rx="120" ry="70" fill="#fff" stroke="#1f4d3a" stroke-width="2"/><path d="M80 95 Q70 95 70 95" stroke="#1f4d3a"/><ellipse cx="110" cy="95" rx="22" ry="50" fill="#e8f4fb" stroke="#2a6f97" stroke-width="1.5"/><line x1="125" y1="70" x2="150" y2="95" stroke="#7a5ea8" stroke-width="2"/><line x1="125" y1="120" x2="150" y2="95" stroke="#7a5ea8" stroke-width="2"/><path d="M318 55 Q335 95 318 135" fill="none" stroke="#b4572b" stroke-width="3"/><line x1="320" y1="95" x2="400" y2="95" stroke="#1f4d3a" stroke-width="5"/>' +
   _tx(60, 40, "Cornea") + _tx(110, 165, "Lens") + _tx(150, 40, "Iris / pupil") + _tx(240, 100, "Vitreous") + _tx(330, 40, "Retina") + _tx(405, 120, "Optic nerve"),
   "Parts of the eye");
-/* attach diagrams to topics */
-[["anat2", "planes"], ["phys2", "homeo"], ["pharm3", "adme"], ["micro2", "gram"], ["anat6", "rumen"], ["para2", "lifecycle"], ["path4", "inflam"], ["anat3", "bone"], ["anat9", "tooth"], ["phys8", "synapse"], ["anat12", "oviduct"], ["anat13", "eye"]].forEach(p => extra(p[0], { dia: p[1] }));
+/* ================= DIAGRAM LIBRARY 2: flowcharts and schematics ================= */
+const _wrap = t => String(t).split("|").flatMap(s => { const out = []; let cur = ""; s.split(" ").forEach(w => { if ((cur + " " + w).trim().length > 21 && cur) { out.push(cur); cur = w; } else cur = (cur + " " + w).trim(); }); out.push(cur); return out; });
+const _bh = (t, min) => Math.max(min || 44, _wrap(t).length * 14 + 18);
+const _b = (x, y, w, h, t, c) => {
+  const L = _wrap(t), lh = 14, y0 = y + h / 2 - (L.length - 1) * lh / 2 + 4;
+  return '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="8" fill="' + (c || "#e3f1e8") + '" stroke="#1f4d3a" stroke-width="1.4"/>' +
+    L.map((s, i) => '<text x="' + (x + w / 2) + '" y="' + (y0 + i * lh) + '" text-anchor="middle" font-size="12" fill="#17352a">' + s + "</text>").join("");
+};
+const _path = d => '<path d="' + d + '" fill="none" stroke="#1f4d3a" stroke-width="1.5" marker-end="url(#ah)"/>';
+const _lab = (x, y, t, a) => '<text x="' + x + '" y="' + y + '" font-size="12" fill="#17352a" text-anchor="' + (a || "start") + '">' + t + "</text>";
+const _ldr = (x1, y1, x2, y2) => '<line x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '" stroke="#555" stroke-width="1"/><circle cx="' + x1 + '" cy="' + y1 + '" r="2.5" fill="#555"/>';
+/* chain of boxes in snake rows of at most 3, with arrows; closed=true adds a return arrow along the left margin */
+const _flow = (labels, per, cap, cols, closed) => {
+  per = Math.min(per, 3); if (labels.length <= 4 && per < labels.length && labels.length <= 3) per = labels.length;
+  const w = 140, gx = 30, gy = 36, n = labels.length, rows = Math.ceil(n / per), m = closed ? 22 : 0;
+  const rh = []; for (let r = 0; r < rows; r++) rh.push(Math.max.apply(null, labels.slice(r * per, r * per + per).map(t => _bh(t))));
+  const ry = []; let yy = 10; rh.forEach(v => { ry.push(yy); yy += v + gy; });
+  const W = per * w + (per - 1) * gx + 20 + m, H = yy - gy + 10 + (closed ? 26 : 0);
+  const pos = i => { const r = Math.floor(i / per), c = i % per; return { x: 10 + m + c * (w + gx), y: ry[r], h: rh[r], r: r }; };
+  let s = "";
+  labels.forEach((t, i) => { const p = pos(i); s += _b(p.x, p.y, w, p.h, t, cols && cols[i]); });
+  for (let i = 0; i < n - 1; i++) {
+    const a = pos(i), b = pos(i + 1);
+    if (a.r === b.r) s += _path("M" + (a.x + w) + " " + (a.y + a.h / 2) + " H" + b.x);
+    else s += _path("M" + (a.x + w / 2) + " " + (a.y + a.h) + " V" + (a.y + a.h + gy / 2) + " H" + (b.x + w / 2) + " V" + b.y);
+  }
+  if (closed) { const a = pos(n - 1), b = pos(0); s += _path("M" + (a.x + w / 2) + " " + (a.y + a.h) + " V" + (H - 8) + " H6 V" + (b.y + b.h / 2) + " H" + b.x); }
+  return _svg(W, H, s, cap);
+};
+/* tree: one root over children (at most 3 per row); kids = "Title|detail" */
+const _tree = (root, kids, cap, cols) => {
+  const w = 150, gx = 16, per = Math.min(kids.length, 3), rows = Math.ceil(kids.length / per);
+  const W = per * w + (per - 1) * gx + 20, rw = Math.min(W - 20, Math.max(170, root.length * 7 + 24));
+  const rh = []; for (let r = 0; r < rows; r++) rh.push(Math.max.apply(null, kids.slice(r * per, r * per + per).map(t => _bh(t, 48))));
+  let y = 56; const ry = rh.map(v => { const t = y; y += v + 30; return t; });
+  let s = _b(W / 2 - rw / 2, 8, rw, 34, root, "#fff1d6");
+  kids.forEach((t, i) => {
+    const r = Math.floor(i / per), c = i % per, inRow = Math.min(per, kids.length - r * per);
+    const x = (W - (inRow * w + (inRow - 1) * gx)) / 2 + c * (w + gx);
+    s += (r === 0 ? _path("M" + (W / 2) + " 42 V" + (ry[0] - 14) + " H" + (x + w / 2) + " V" + ry[0]) : _path("M" + (W / 2) + " 42 V" + (ry[0] - 14) + " H5 V" + (ry[r] - 14) + " H" + (x + w / 2) + " V" + ry[r])) + _b(x, ry[r], w, rh[r], t, cols && cols[i]);
+  });
+  return _svg(W, y - 30 + 10, s, cap);
+};
+const RED = "#fbd5d5", BLUE = "#d5e6f7", CREAM = "#fff1d6", MINT = "#e3f1e8", LILAC = "#efe5fa";
+
+DIA.bonecls = _tree("Classification of bones (by shape)", ["Long|humerus, femur", "Short|carpal, tarsal", "Flat|scapula, ribs, skull", "Irregular|vertebra", "Sesamoid|patella", "Pneumatic|skull bones, bird bones"], "Bones classified by shape");
+DIA.jointcls = _tree("Joints (arthrology)", ["Fibrous|synarthrosis|skull sutures", "Cartilaginous|amphiarthrosis|pubic symphysis,|intervertebral disc", "Synovial|diarthrosis|shoulder, stifle, hock"], "Classification of joints", [MINT, CREAM, LILAC]);
+DIA.synovial = _svg(420, 210,
+  '<rect x="120" y="14" width="180" height="48" rx="10" fill="#f4ead4" stroke="#1f4d3a" stroke-width="1.5"/><rect x="120" y="148" width="180" height="48" rx="10" fill="#f4ead4" stroke="#1f4d3a" stroke-width="1.5"/>' +
+  '<rect x="120" y="62" width="180" height="8" fill="#9ec9d9"/><rect x="120" y="140" width="180" height="8" fill="#9ec9d9"/><rect x="120" y="70" width="180" height="70" fill="#e8f4fb" stroke="none"/>' +
+  '<path d="M110 40 V170 M310 40 V170" stroke="#b4572b" stroke-width="5" fill="none"/>' +
+  _tx(210, 108, "Joint cavity with synovial fluid") + _tx(70, 36, "Bone end", "end") + _tx(330, 105, "Joint capsule", "start") + _tx(330, 68, "Articular cartilage", "start") + _tx(70, 172, "Bone end", "end") + _tx(330, 145, "Articular cartilage", "start") + _tx(330, 122, "Synovial membrane", "start"),
+  "A synovial (diarthrodial) joint");
+DIA.musclecls = _tree("Muscle tissue", ["Skeletal|striated,|voluntary", "Cardiac|striated,|involuntary", "Smooth|not striated,|involuntary"], "Types of muscle", [MINT, RED, BLUE]);
+DIA.circ = _flow(["Right atrium", "Right ventricle", "Pulmonary artery", "Lungs|(gas exchange)", "Pulmonary veins", "Left atrium", "Left ventricle", "Aorta and body", "Cranial and caudal|vena cava"], 3, "Path of blood: systemic and pulmonary circulation", [BLUE, BLUE, BLUE, MINT, RED, RED, RED, RED, BLUE], true);
+DIA.fetal = _flow(["Placenta", "Umbilical vein", "Ductus venosus|(bypasses liver)", "Caudal vena cava", "Right atrium", "Foramen ovale|(to left atrium)", "Left ventricle", "Aorta", "Umbilical arteries|back to placenta"], 3, "Fetal circulation: the three shunts (ductus venosus, foramen ovale, ductus arteriosus)", [MINT, RED, RED, BLUE, BLUE, CREAM, RED, RED, BLUE]);
+DIA.reflex = _flow(["Receptor|(skin, muscle)", "Sensory neuron|(dorsal root)", "Spinal cord|(integration)", "Motor neuron|(ventral root)", "Effector|(muscle)"], 5, "A simple reflex arc", [MINT, LILAC, CREAM, LILAC, MINT]);
+DIA.meninges = _svg(440, 210,
+  '<ellipse cx="220" cy="105" rx="195" ry="92" fill="#f4ead4" stroke="#1f4d3a" stroke-width="2"/><ellipse cx="220" cy="105" rx="170" ry="76" fill="#cfd8dc" stroke="#1f4d3a"/><ellipse cx="220" cy="105" rx="150" ry="62" fill="#e8f4fb" stroke="#1f4d3a" stroke-dasharray="4 3"/><ellipse cx="220" cy="105" rx="128" ry="48" fill="#f6c7c7" stroke="#b44"/><ellipse cx="220" cy="105" rx="90" ry="26" fill="#fff" stroke="#999"/>' +
+  _tx(220, 108, "Brain / cord") + _tx(220, 20, "Skull / vertebral canal", "middle") + _tx(60, 105, "Dura", "middle") + _tx(30, 175, "Subarachnoid space (CSF)", "start") + _tx(400, 175, "Pia on surface", "end") + _tx(90, 70, "Arachnoid", "middle"),
+  "Meninges, from outside inward: dura mater, arachnoid mater, subarachnoid space with CSF, pia mater");
+DIA.csf = _flow(["Choroid plexus|(makes CSF)", "Lateral ventricles", "Third ventricle", "Mesencephalic|aqueduct", "Fourth ventricle", "Subarachnoid space|(brain and cord)", "Venous sinuses|(absorbed)"], 4, "Flow of cerebrospinal fluid", [CREAM, BLUE, BLUE, BLUE, BLUE, MINT, RED]);
+DIA.cord = _svg(380, 220,
+  '<ellipse cx="190" cy="110" rx="100" ry="82" fill="#f3f3ee" stroke="#1f4d3a" stroke-width="2"/><path d="M190 110 m-12-52 q12-30 24 0 q22 16 26 40 q-6 26-32 30 q-20-4-34-30 q-8-24 16-40z" fill="#c9bfe3" stroke="#7a5ea8" stroke-width="1.5"/>' +
+  '<path d="M190 28 V80" stroke="#7a5ea8" stroke-width="2"/><circle cx="190" cy="110" r="6" fill="#fff" stroke="#7a5ea8"/><path d="M150 60 L90 28" stroke="#2a6f97" stroke-width="3"/><path d="M232 60 L290 28" stroke="#2a6f97" stroke-width="3"/><path d="M144 150 L90 192" stroke="#b4572b" stroke-width="3"/><path d="M236 150 L290 192" stroke="#b4572b" stroke-width="3"/><circle cx="104" cy="38" r="10" fill="#fff1d6" stroke="#2a6f97"/>' +
+  _tx(190, 18, "Dorsal") + _tx(190, 214, "Ventral") + _tx(104, 24, "Dorsal root ganglion", "start") + _tx(70, 160, "Ventral root", "end") + _tx(190, 134, "Grey matter (H)") + _tx(300, 112, "White matter", "start"),
+  "Cross-section of the spinal cord and formation of a spinal nerve");
+DIA.digh = _flow(["Mouth|(teeth, tongue)", "Oesophagus", "Stomach|(small, no vomiting)", "Small intestine|(duodenum, jejunum, ileum)", "Caecum|(fermentation)", "Large colon|(pelvic flexure)", "Small colon|(faecal balls)", "Rectum and anus"], 4, "Path of feed in the horse (hindgut fermenter)");
+DIA.resp = _flow(["Nostrils", "Nasal cavity|(turbinates)", "Pharynx", "Larynx", "Trachea|(C-shaped rings)", "Bronchi", "Bronchioles", "Alveoli|(gas exchange)"], 4, "Path of air to the alveoli", [MINT, MINT, MINT, CREAM, MINT, MINT, MINT, RED]);
+DIA.urine = _flow(["Renal corpuscle|(filters blood)", "Proximal tubule", "Loop of Henle", "Distal tubule", "Collecting duct", "Renal pelvis", "Ureter", "Bladder", "Urethra"], 5, "Nephron and urine flow", [RED, MINT, MINT, MINT, MINT, CREAM, CREAM, CREAM, CREAM]);
+DIA.male = _flow(["Seminiferous|tubules (sperm made)", "Epididymis|(stored, matured)", "Ductus deferens|(inguinal canal)", "Pelvic urethra|+ accessory glands", "Penis|(delivery)"], 5, "Path of sperm in the male tract", [CREAM, MINT, MINT, LILAC, MINT]);
+DIA.female = _flow(["Ovary|(ovulation)", "Infundibulum", "Ampulla|(fertilisation)", "Isthmus", "Uterine horn", "Uterine body", "Cervix", "Vagina", "Vestibule, vulva"], 5, "Path of the ovum and the birth canal in the female", [CREAM, MINT, RED, MINT, MINT, MINT, LILAC, MINT, MINT]);
+DIA.abwall = _flow(["Skin", "Superficial fascia", "External oblique", "Internal oblique", "Transversus|abdominis", "Peritoneum"], 3, "Layers met going into the abdomen through the flank (from outside to inside)", [MINT, MINT, CREAM, CREAM, CREAM, LILAC]);
+DIA.germ = _tree("Zygote → three germ layers", ["Ectoderm|skin, hair, nervous|system, sense organs", "Mesoderm|muscle, bone, blood,|heart, kidney, gonads", "Endoderm|gut lining, lungs,|liver, pancreas"], "Germ layers and their main derivatives", [BLUE, RED, MINT]);
+DIA.gamet = _flow(["Spermatogonium", "Primary|spermatocyte", "2 secondary|spermatocytes", "4 spermatids", "4 sperm|(after spermiogenesis)"], 3, "Spermatogenesis (male)", [MINT, MINT, MINT, MINT, CREAM]) + _flow(["Oogonium", "Primary oocyte|(stops in prophase I)", "Secondary oocyte|+ first polar body|(stops in metaphase II)", "Ovum, after sperm|entry, + polar bodies"], 2, "Oogenesis (female)", [MINT, MINT, MINT, CREAM]);
+DIA.placenta = _tree("Placenta (by shape)", ["Diffuse|horse, pig", "Cotyledonary|cattle, sheep, goat", "Zonary|dog, cat", "Discoid|primates, rodents"], "Types of placenta by shape", [MINT, CREAM, BLUE, LILAC]);
+DIA.membranes = _svg(420, 210,
+  '<ellipse cx="210" cy="105" rx="195" ry="92" fill="#fbeedd" stroke="#1f4d3a" stroke-width="2"/><ellipse cx="190" cy="105" rx="150" ry="70" fill="#e8f4fb" stroke="#2a6f97" stroke-width="1.5"/><ellipse cx="170" cy="105" rx="95" ry="48" fill="#fff" stroke="#7a5ea8" stroke-width="1.5"/><ellipse cx="160" cy="105" rx="44" ry="26" fill="#f6c7c7" stroke="#b44"/>' +
+  _tx(160, 109, "Fetus") + _tx(160, 70, "Amnion + fluid") + _tx(200, 44, "Allantois (urine)") + _tx(240, 22, "Chorion (outer)") + _tx(340, 150, "Yolk sac", "start") + _tx(340, 106, "Uterine wall / placenta", "start"),
+  "Fetal membranes of a mammal");
+DIA.gutwall = _svg(420, 190,
+  '<rect x="30" y="20" width="360" height="30" fill="#f6e3e3" stroke="#1f4d3a"/><rect x="30" y="50" width="360" height="30" fill="#e8f4fb" stroke="#1f4d3a"/><rect x="30" y="80" width="360" height="30" fill="#e3f1e8" stroke="#1f4d3a"/><rect x="30" y="110" width="360" height="30" fill="#fff1d6" stroke="#1f4d3a"/><rect x="30" y="140" width="360" height="22" fill="#efe5fa" stroke="#1f4d3a"/>' +
+  _tx(210, 40, "Mucosa (epithelium + lamina propria)") + _tx(210, 70, "Submucosa (vessels, glands, nerves)") + _tx(210, 100, "Muscularis externa: inner circular layer") + _tx(210, 130, "Muscularis externa: outer longitudinal layer") + _tx(210, 156, "Serosa or adventitia") + _tx(210, 182, "Wall of a tubular digestive organ, lumen at the top"),
+  "Layers of the digestive tube");
+DIA.process = _flow(["Fixation|(formalin)", "Dehydration|(graded alcohol)", "Clearing|(xylene)", "Embedding|(paraffin wax)", "Sectioning|(microtome)", "Staining|(H and E)", "Mounting|(coverslip)"], 4, "Steps of tissue processing for histology");
+DIA.skin = _svg(400, 200,
+  '<rect x="40" y="20" width="320" height="26" fill="#f6e3e3" stroke="#1f4d3a"/><rect x="40" y="46" width="320" height="64" fill="#fdf1e3" stroke="#1f4d3a"/><rect x="40" y="110" width="320" height="64" fill="#fffaf0" stroke="#1f4d3a"/><path d="M200 8 V90 q0 12 8 12 h-16 q8 0 8-12" fill="none" stroke="#6b4e2e" stroke-width="3"/><ellipse cx="260" cy="80" rx="14" ry="10" fill="#e8d28a" stroke="#1f4d3a"/><circle cx="130" cy="86" r="9" fill="#cfe3f5" stroke="#1f4d3a"/>' +
+  _tx(20, 38, "Epidermis", "start") + _tx(20, 82, "Dermis", "start") + _tx(20, 142, "Hypodermis", "start") + _tx(282, 83, "Sebaceous gland", "start") + _tx(130, 106, "Sweat gland") + _tx(205, 128, "Hair follicle", "start"),
+  "Layers of the skin");
+DIA.junctions = _svg(440, 190,
+  '<rect x="20" y="20" width="400" height="60" fill="#e3f1e8" stroke="#1f4d3a"/><rect x="20" y="104" width="400" height="60" fill="#e3f1e8" stroke="#1f4d3a"/><line x1="20" y1="84" x2="420" y2="84" stroke="#1f4d3a"/>' +
+  '<rect x="60" y="78" width="40" height="12" fill="#b4572b"/><rect x="150" y="78" width="30" height="12" fill="#2a6f97"/><rect x="230" y="76" width="30" height="16" fill="#7a5ea8"/><rect x="310" y="80" width="30" height="8" fill="#8a8a2a"/>' +
+  _tx(80, 66, "Tight") + _tx(165, 66, "Adherens") + _tx(245, 66, "Desmosome") + _tx(325, 66, "Gap") + _tx(220, 182, "Two neighbouring epithelial cells and the junctions between them"),
+  "Cell junctions");
+DIA.thorax = _svg(420, 220,
+  '<ellipse cx="210" cy="108" rx="190" ry="96" fill="#fff" stroke="#1f4d3a" stroke-width="2"/><ellipse cx="120" cy="108" rx="80" ry="78" fill="#e3f1e8" stroke="#1f4d3a"/><ellipse cx="300" cy="108" rx="80" ry="78" fill="#e3f1e8" stroke="#1f4d3a"/><ellipse cx="210" cy="125" rx="30" ry="36" fill="#f6c7c7" stroke="#b44"/><rect x="198" y="40" width="24" height="26" rx="8" fill="#fff1d6" stroke="#1f4d3a"/><rect x="198" y="70" width="24" height="16" rx="6" fill="#d5e6f7" stroke="#1f4d3a"/>' +
+  _tx(120, 112, "Right lung") + _tx(300, 112, "Left lung") + _tx(210, 128, "Heart") + _tx(210, 32, "Trachea / oesophagus") + _tx(210, 210, "Mediastinum lies between the two pleural sacs"),
+  "Cross-section of the thorax (schematic)");
+DIA.kidneydev = _flow(["Pronephros|(not functional)", "Mesonephros|(temporary)", "Metanephros|(permanent kidney)"], 3, "Three kidney stages in embryonic development", [LILAC, CREAM, MINT]);
+DIA.genitaldev = _tree("Indifferent gonad (both duct systems present)", ["Male: SRY → testis|Wolffian duct stays:|epididymis, ductus deferens|Müllerian duct regresses", "Female: no SRY → ovary|Müllerian duct stays:|oviduct, uterus, cervix|Wolffian duct regresses"], "Development of the genital system", [BLUE, RED]);
+DIA.lightpath = _flow(["Cornea", "Aqueous humour", "Pupil (iris)", "Lens", "Vitreous body", "Retina|(rods, cones)", "Optic nerve", "Brain|(visual cortex)"], 4, "Path of light and visual signal", [MINT, MINT, MINT, MINT, MINT, CREAM, LILAC, LILAC]);
+DIA.endoc = _flow(["Hypothalamus|(releasing hormones)", "Anterior pituitary|(trophic hormones)", "Target gland|(thyroid, adrenal, gonad)", "Hormone in blood", "Negative feedback|to hypothalamus"], 5, "Hypothalamus-pituitary-gland axis with feedback", [LILAC, CREAM, MINT, RED, LILAC]);
+DIA.lymph = _flow(["Tissue fluid", "Lymph capillaries", "Lymph vessels|(valves)", "Lymph nodes|(filter)", "Thoracic duct|(from cisterna chyli)", "Large vein|(cranial vena cava)"], 3, "Flow of lymph back to the blood", [MINT, MINT, MINT, CREAM, MINT, BLUE]);
+DIA.bloodtree = _tree("Blood cells", ["Red cells|(erythrocytes)", "Neutrophil|eosinophil|basophil", "Lymphocyte|monocyte", "Platelets|(thrombocytes)"], "Types of blood cells (red cells; granulocytes; agranulocytes; platelets)", [RED, MINT, BLUE, CREAM]);
+DIA.tissues = _tree("Basic tissues", ["Epithelial|covers, lines, secretes", "Connective|supports, binds|(bone, blood)", "Muscular|contracts", "Nervous|conducts signals"], "The four basic tissues", [MINT, CREAM, RED, LILAC]);
+DIA.forechain = _flow(["Scapula", "Humerus", "Radius + ulna", "Carpus|(ox: 6 bones)", "Metacarpus|(cannon bone)", "Phalanges|+ sesamoids"], 3, "Bones of the fore limb from trunk to foot (ox)");
+DIA.hindchain = _flow(["Pelvis|(ilium, ischium, pubis)", "Femur", "Patella|+ tibia, fibula", "Tarsus|(ox: 5 bones)", "Metatarsus|(cannon bone)", "Phalanges|+ sesamoids"], 3, "Bones of the pelvis and hind limb from trunk to foot (ox)");
+DIA.plexus = _flow(["Ventral branches|C6, C7, C8, T1, T2", "Brachial plexus", "Suprascapular,|axillary", "Musculocutaneous", "Radial", "Median and ulnar"], 3, "Brachial plexus and its main nerves (check root levels for your species in your textbook)", [LILAC, CREAM, MINT, MINT, MINT, MINT]);
+DIA.oxsides = _svg(440, 210,
+  '<rect x="10" y="10" width="200" height="170" rx="12" fill="#f4faf6" stroke="#1f4d3a" stroke-width="1.5"/><rect x="230" y="10" width="200" height="170" rx="12" fill="#faf6ee" stroke="#1f4d3a" stroke-width="1.5"/>' +
+  _tx(110, 30, "LEFT side (ox)") + _tx(330, 30, "RIGHT side (ox)") +
+  _tx(110, 60, "Rumen (most of the side)") + _tx(110, 82, "Spleen (on the rumen)") + _tx(110, 104, "Reticulum (cranial, at diaphragm)") + _tx(110, 126, "Left kidney (displaced to the right)") + _tx(110, 148, "Heart (3rd to 5th ribs)") +
+  _tx(330, 60, "Liver (under the ribs)") + _tx(330, 82, "Omasum, abomasum") + _tx(330, 104, "Intestines, caecum (flank)") + _tx(330, 126, "Right kidney") + _tx(330, 148, "Right lung, diaphragm") +
+  _tx(220, 200, "Approximate positions; verify against your textbook"),
+  "Topography of the ox viscera (schematic)");
+DIA.xray = _flow(["X-ray beam", "Passes through the body", "Absorbed more by|dense tissue", "Detector or film", "Image: bone white,|air black,|soft tissue grey"], 5, "How a radiograph is formed", [CREAM, MINT, MINT, MINT, LILAC]);
+DIA.hoofparts = _svg(400, 210,
+  '<path d="M90 30 H310 L350 170 H50 Z" fill="#f4ead4" stroke="#1f4d3a" stroke-width="2"/><path d="M110 40 H290 L322 150 H78 Z" fill="#e7cfa1" stroke="#1f4d3a"/><path d="M190 100 L225 150 H155 Z" fill="#d9a46a" stroke="#1f4d3a"/><rect x="170" y="62" width="60" height="30" rx="8" fill="#fff" stroke="#7a5ea8"/>' +
+  _tx(200, 22, "Coronary band (horn growth)") + _tx(200, 82, "Coffin bone") + _tx(200, 140, "Frog") + _tx(36, 110, "Wall", "end") + _tx(366, 130, "Sole", "start") + _tx(200, 198, "Sole view and section combined (schematic)"),
+  "Parts of the equine hoof");
+
+/* ===== DIAGRAM LIBRARY 3: callout-style drawings and flow versions of the older diagrams (these override earlier definitions) ===== */
+const _pt = (cx, cy, rx, ry, deg) => { const t = deg * Math.PI / 180; return [Math.round(cx + rx * Math.cos(t)), Math.round(cy + ry * Math.sin(t))]; };
+const _txl = (x, y, t, a) => String(t).split("|").map((s, i) => '<text x="' + x + '" y="' + (y + i * 13) + '" font-size="12" fill="#17352a" text-anchor="' + a + '">' + s + "</text>").join("");
+const _call = (side, ly, text, tx, ty) => {
+  const n = String(text).split("|").length, y0 = ly - (n - 1) * 6.5 + 4;
+  return side === "L" ? _ldr(tx, ty, 136, ly) + _txl(130, y0, text, "end") : _ldr(tx, ty, 384, ly) + _txl(390, y0, text, "start");
+};
+const _ell = (cx, cy, rx, ry, f, s, extra) => '<ellipse cx="' + cx + '" cy="' + cy + '" rx="' + rx + '" ry="' + ry + '" fill="' + f + '" stroke="' + (s || "#1f4d3a") + '" stroke-width="1.5"' + (extra || "") + "/>";
+
+DIA.planes = _svg(520, 240,
+  _ell(260, 120, 110, 45, "#e3f1e8") +
+  '<line x1="260" y1="62" x2="260" y2="178" stroke="#b4572b" stroke-width="2" stroke-dasharray="5 4"/>' +
+  '<line x1="140" y1="120" x2="380" y2="120" stroke="#2a6f97" stroke-width="2" stroke-dasharray="5 4"/>' +
+  '<line x1="200" y1="70" x2="200" y2="172" stroke="#7a5ea8" stroke-width="2" stroke-dasharray="5 4"/>' +
+  _lab(158, 112, "cranial") + _lab(362, 112, "caudal", "end") + _lab(272, 100, "dorsal") + _lab(272, 142, "ventral") +
+  _call("L", 36, "Median (sagittal)|plane", 260, 66) + _call("R", 120, "Dorsal plane|(dorsal / ventral)", 380, 120) + _call("L", 205, "Transverse plane", 200, 168),
+  "Body planes and directions in a quadruped");
+DIA.homeo = _flow(["Set point|(normal range)", "Sensor detects|a change", "Control centre|compares", "Effector acts", "Response pushes the|variable back"], 3, "Negative feedback loop", [CREAM, MINT, BLUE, RED, MINT], true);
+DIA.adme = _flow(["Absorption|gut, muscle, skin", "Distribution|blood to tissues", "Metabolism|mostly liver", "Excretion|kidney, bile, milk"], 2, "Pharmacokinetics: ADME", [MINT, BLUE, CREAM, RED]);
+DIA.gram = _tree("Bacterial cell wall and Gram staining", ["Gram positive|thick peptidoglycan|keeps crystal violet:|looks purple", "Gram negative|thin peptidoglycan plus|outer membrane:|looks pink (counterstain)"], "Gram-positive and Gram-negative cell walls", [LILAC, RED]);
+DIA.rumen = _flow(["Oesophagus", "Rumen + reticulum|(fermentation, cud)", "Omasum|(water absorbed)", "Abomasum|(true stomach)", "Small intestine"], 3, "Path of feed through the ruminant stomach (cud goes back to the mouth for chewing)", [MINT, MINT, MINT, CREAM, MINT]);
+DIA.lifecycle = _flow(["Adult worms|in the host", "Eggs passed|in faeces", "Larvae develop|on pasture", "Infective larva|eaten", "Larva migrates|and matures"], 3, "Generalised direct nematode life cycle", [RED, CREAM, MINT, CREAM, MINT], true);
+DIA.inflam = _flow(["Injury", "Vasodilation|(redness, heat)", "Fluid leaks out|(swelling, pain)", "Neutrophils arrive", "Healing, or chronic|inflammation"], 3, "Sequence of acute inflammation", [RED, CREAM, CREAM, MINT, BLUE]);
+DIA.synapse = _flow(["Action potential|reaches nerve ending", "Calcium enters,|vesicles release|transmitter", "Transmitter crosses|the cleft", "Binds receptors on|next cell", "Response; transmitter|removed or recycled"], 3, "Chemical synapse", [LILAC, CREAM, MINT, MINT, BLUE]);
+DIA.oviduct = _flow(["Ovary|(ovum released)", "Infundibulum|(fertilisation)", "Magnum|(albumen)", "Isthmus|(shell membranes)", "Shell gland|(shell)", "Vagina, cloaca|(egg laid)"], 3, "Egg formation in the hen", [CREAM, MINT, MINT, MINT, CREAM, BLUE]);
+
+DIA.bone = _svg(520, 250,
+  _ell(260, 45, 40, 26, "#f4ead4") + _ell(260, 215, 40, 26, "#f4ead4") +
+  '<rect x="232" y="70" width="56" height="120" fill="#f4ead4" stroke="#1f4d3a" stroke-width="1.5"/><rect x="246" y="80" width="28" height="100" fill="#fff6dd" stroke="#1f4d3a" stroke-dasharray="4 3"/>' +
+  '<line x1="232" y1="72" x2="288" y2="72" stroke="#b4572b" stroke-width="2"/><line x1="232" y1="188" x2="288" y2="188" stroke="#b4572b" stroke-width="2"/><path d="M226 38 Q260 8 294 38" fill="none" stroke="#2a6f97" stroke-width="4"/>' +
+  _call("L", 40, "Epiphysis|(end of bone)", 222, 45) + _call("L", 130, "Diaphysis|(shaft)", 232, 130) + _call("L", 215, "Epiphysis", 222, 215) +
+  _call("R", 30, "Articular cartilage", 292, 28) + _call("R", 90, "Growth plate (physis)|in a young animal", 286, 72) + _call("R", 140, "Marrow cavity", 262, 130) + _call("R", 185, "Compact bone|(wall of the shaft)", 284, 160),
+  "Parts of a long bone");
+DIA.tooth = _svg(520, 250,
+  '<path d="M225 50 Q225 24 260 24 Q295 24 295 50 V110 H225 Z" fill="#fffaf0" stroke="#6a8fa0" stroke-width="3.5"/><path d="M234 52 Q234 36 260 36 Q286 36 286 52 V110 H234 Z" fill="#f4ead4" stroke="#1f4d3a" stroke-width="1"/>' +
+  '<path d="M225 110 H295 L282 220 H238 Z" fill="#f4ead4" stroke="#b4572b" stroke-width="2.5"/><path d="M246 60 Q260 50 274 60 V110 L268 210 H252 L246 110 Z" fill="#f6c7c7" stroke="#b44"/>' +
+  '<line x1="150" y1="110" x2="225" y2="110" stroke="#c88" stroke-width="2" stroke-dasharray="4 3"/><line x1="295" y1="110" x2="370" y2="110" stroke="#c88" stroke-width="2" stroke-dasharray="4 3"/>' +
+  _call("L", 40, "Enamel|(hardest, outer crown)", 227, 45) + _call("L", 95, "Dentine", 238, 90) + _call("L", 190, "Cement|(covers the root)", 241, 190) +
+  _call("R", 40, "Crown|(above the gum)", 290, 60) + _call("R", 110, "Gum line|(gingiva)", 340, 110) + _call("R", 150, "Pulp cavity|(vessels, nerves)", 262, 150) + _call("R", 205, "Root", 286, 190),
+  "Parts of a tooth (shapes differ between species)");
+DIA.synovial = _svg(520, 250,
+  '<rect x="200" y="10" width="120" height="62" rx="10" fill="#f4ead4" stroke="#1f4d3a" stroke-width="1.5"/><rect x="200" y="178" width="120" height="62" rx="10" fill="#f4ead4" stroke="#1f4d3a" stroke-width="1.5"/>' +
+  '<rect x="200" y="72" width="120" height="10" fill="#9ec9d9"/><rect x="200" y="168" width="120" height="10" fill="#9ec9d9"/><rect x="200" y="82" width="120" height="86" fill="#e8f4fb"/>' +
+  '<path d="M190 55 V195 M330 55 V195" stroke="#b4572b" stroke-width="5" fill="none"/><path d="M198 82 V168 M322 82 V168" stroke="#2a6f97" stroke-width="3" fill="none"/>' +
+  _call("L", 40, "Bone end", 200, 40) + _call("L", 100, "Fibrous capsule|(outer layer)", 190, 110) + _call("L", 150, "Synovial membrane|(makes the fluid)", 198, 140) + _call("L", 215, "Bone end", 200, 215) +
+  _call("R", 77, "Articular cartilage", 318, 77) + _call("R", 125, "Joint cavity with|synovial fluid", 270, 125) + _call("R", 173, "Articular cartilage", 318, 173),
+  "A synovial (diarthrodial) joint, in section");
+(function () {
+  const C = [215, 125], P = (rx, ry, d) => _pt(C[0], C[1], rx, ry, d);
+  const a = P(142, 93, -60), b = P(127, 78, -35), c = P(112, 64, 0), d = P(120, 72, 30), e = P(104, 56, 55);
+  DIA.meninges = _svg(560, 250,
+    _ell(215, 125, 150, 100, "#f4ead4") + _ell(215, 125, 135, 86, "#cfd8dc") + _ell(215, 125, 120, 72, "#cfe8f5", "#1f4d3a", ' stroke-dasharray="5 3"') + _ell(215, 125, 104, 56, "#f6c7c7", "#b44") +
+    _lab(215, 129, "Brain or cord", "middle") +
+    _call("R", 28, "Skull or vertebra", a[0], a[1]) + _call("R", 70, "Dura mater|(tough)", b[0], b[1]) + _call("R", 125, "Subarachnoid space|(holds CSF)", c[0], c[1]) + _call("R", 172, "Arachnoid mater|(web-like)", d[0], d[1]) + _call("R", 215, "Pia mater|(on the surface)", e[0], e[1]),
+    "Meninges from outside inward: dura mater, arachnoid mater, subarachnoid space with CSF, pia mater");
+})();
+DIA.cord = _svg(520, 250,
+  _ell(260, 125, 80, 80, "#f3f3ee") +
+  '<g stroke="#c9bfe3" stroke-linecap="round" fill="none"><path d="M260 125 L232 75 M260 125 L288 75" stroke-width="12"/><path d="M260 125 L225 170 M260 125 L295 170" stroke-width="22"/></g>' + _ell(260, 125, 24, 16, "#c9bfe3", "#c9bfe3") +
+  '<circle cx="260" cy="125" r="5" fill="#fff" stroke="#7a5ea8"/>' +
+  '<path d="M232 75 L150 35 M288 75 L370 35" stroke="#2a6f97" stroke-width="3" fill="none"/><path d="M225 170 L150 205 M295 170 L370 205" stroke="#b4572b" stroke-width="3" fill="none"/>' +
+  _ell(182, 51, 10, 8, "#fff1d6", "#2a6f97") + _ell(338, 51, 10, 8, "#fff1d6", "#2a6f97") +
+  _lab(260, 18, "Dorsal", "middle") + _lab(260, 244, "Ventral", "middle") +
+  _call("L", 36, "Dorsal root ganglion|(cell bodies)", 176, 48) + _call("L", 92, "Dorsal root|(sensory in)", 210, 63) + _call("L", 125, "Central canal", 255, 125) + _call("L", 210, "Ventral root|(motor out)", 192, 187) +
+  _call("R", 100, "White matter|(tracts, outside)", 330, 100) + _call("R", 150, "Grey matter|(cell bodies, H-shape)", 280, 135),
+  "Cross-section of the spinal cord with a spinal nerve forming");
+(function () {
+  const P = (rx, ry, d) => _pt(200, 120, rx, ry, d);
+  const a = P(160, 96, -55), b = P(124, 70, -25), c = P(70, 36, 10), d = P(160, 96, 40);
+  DIA.membranes = _svg(560, 240,
+    _ell(200, 120, 170, 100, "#fbeedd") + _ell(200, 120, 148, 78, "#e3f1e8") + _ell(200, 120, 100, 52, "#e8f4fb", "#2a6f97") + _ell(200, 120, 50, 26, "#f6c7c7", "#b44") +
+    _lab(200, 124, "Fetus", "middle") +
+    _call("R", 30, "Chorion|(outermost, meets uterus)", a[0], a[1]) + _call("R", 75, "Allantois|(urine, fluid)", b[0], b[1]) + _call("R", 130, "Amnion + amniotic fluid|(cushion)", c[0], c[1]) + _call("R", 190, "Placenta = chorion|+ uterine wall", d[0], d[1]),
+    "Fetal membranes of a mammal (simplified; the yolk sac is not drawn)");
+})();
+DIA.skin = _svg(520, 240,
+  '<rect x="160" y="30" width="240" height="24" fill="#f6e3e3" stroke="#1f4d3a"/><rect x="160" y="54" width="240" height="70" fill="#fdf1e3" stroke="#1f4d3a"/><rect x="160" y="124" width="240" height="70" fill="#fffaf0" stroke="#1f4d3a"/>' +
+  '<path d="M290 12 V100 q0 12 10 12 h-20 q10 0 10-12" fill="none" stroke="#6b4e2e" stroke-width="3"/>' + _ell(322, 80, 14, 9, "#e8d28a") + _ell(225, 100, 11, 11, "#cfe3f5") +
+  _call("L", 42, "Epidermis", 170, 42) + _call("L", 85, "Dermis", 170, 85) + _call("L", 110, "Sweat gland", 216, 103) + _call("L", 160, "Hypodermis|(fat, loose tissue)", 170, 160) +
+  _call("R", 24, "Hair shaft", 291, 22) + _call("R", 70, "Sebaceous gland|(oil)", 335, 78) + _call("R", 120, "Hair follicle", 293, 104),
+  "Layers of the skin");
+DIA.junctions = _svg(540, 250,
+  '<rect x="130" y="24" width="122" height="196" rx="10" fill="#e3f1e8" stroke="#1f4d3a"/><rect x="270" y="24" width="122" height="196" rx="10" fill="#e3f1e8" stroke="#1f4d3a"/>' +
+  '<rect x="248" y="40" width="26" height="12" fill="#b4572b"/><rect x="248" y="82" width="26" height="12" fill="#2a6f97"/><rect x="248" y="124" width="26" height="12" fill="#7a5ea8"/><rect x="248" y="166" width="26" height="12" fill="#8a8a2a"/>' +
+  _lab(191, 130, "Cell 1", "middle") + _lab(331, 100, "Cell 2", "middle") + _lab(260, 14, "Lumen side (apical)", "middle") + _lab(260, 242, "Basal side", "middle") +
+  '<line x1="274" y1="46" x2="404" y2="46" stroke="#555"/><line x1="274" y1="88" x2="404" y2="88" stroke="#555"/><line x1="274" y1="130" x2="404" y2="130" stroke="#555"/><line x1="274" y1="172" x2="404" y2="172" stroke="#555"/>' +
+  _txl(410, 43, "Tight junction|(seals the gap)", "start") + _txl(410, 85, "Adherens junction|(anchors actin)", "start") + _txl(410, 127, "Desmosome|(strong spot weld)", "start") + _txl(410, 169, "Gap junction|(small molecules pass)", "start"),
+  "Cell junctions between two neighbouring epithelial cells");
+DIA.thorax = _svg(520, 240,
+  _ell(230, 120, 150, 100, "#fff") + _ell(165, 120, 62, 70, "#e3f1e8") + _ell(295, 120, 62, 70, "#e3f1e8") + _ell(230, 145, 28, 36, "#f6c7c7", "#b44") +
+  '<rect x="218" y="38" width="24" height="26" rx="8" fill="#fff1d6" stroke="#1f4d3a"/><rect x="218" y="68" width="24" height="14" rx="6" fill="#d5e6f7" stroke="#1f4d3a"/>' +
+  _lab(165, 124, "Lung", "middle") + _lab(295, 124, "Lung", "middle") + _lab(230, 149, "Heart", "middle") +
+  _call("L", 40, "Rib wall|(thoracic cage)", 110, 68) + _call("L", 200, "Mediastinum:|space between the|pleural sacs", 215, 165) + _call("R", 40, "Trachea", 242, 50) + _call("R", 90, "Oesophagus", 242, 75),
+  "Cross-section of the thorax (the lungs sit in separate pleural sacs)");
+DIA.hoofparts = _svg(520, 250,
+  '<path d="M200 50 H320 L390 190 H150 Z" fill="#e7cfa1" stroke="#1f4d3a" stroke-width="2"/><path d="M225 70 H300 L345 160 H195 Z" fill="#fff" stroke="#7a5ea8" stroke-width="1.5"/><path d="M290 190 L350 190 L335 168 Z" fill="#d9a46a" stroke="#1f4d3a"/>' +
+  '<path d="M196 52 Q260 36 324 52" fill="none" stroke="#b4572b" stroke-width="5"/>' +
+  _call("L", 40, "Coronary band|(horn grows from here)", 230, 46) + _call("L", 120, "Hoof wall|(horn)", 188, 120) + _call("L", 185, "Sole", 200, 188) +
+  _call("R", 100, "Coffin bone|(distal phalanx)", 300, 100) + _call("R", 170, "Frog|(wedge in the sole,|horse)", 330, 180),
+  "Parts of the hoof (side section)");
+DIA.eye = _svg(560, 250,
+  _ell(270, 115, 110, 85, "#fff") + '<path d="M165 75 Q132 115 165 155" fill="#dbeaf5" stroke="#2a6f97" stroke-width="3"/>' +
+  '<path d="M260 32 A110 85 0 1 1 260 198" fill="none" stroke="#7a5ea8" stroke-width="4"/>' + _ell(205, 115, 14, 30, "#e8f4fb", "#2a6f97") +
+  '<path d="M186 78 V100 M186 130 V152" stroke="#8a5a2a" stroke-width="6"/><path d="M378 125 H435" stroke="#c9b26a" stroke-width="12"/>' +
+  _call("L", 45, "Cornea|(clear front window)", 146, 105) + _call("L", 90, "Iris (pupil = the gap)", 186, 86) + _call("L", 150, "Aqueous humour|(front chamber)", 172, 118) + _call("L", 205, "Lens", 198, 140) +
+  _call("R", 40, "Retina|(rods and cones)", 348, 55) + _call("R", 92, "Vitreous body|(jelly)", 300, 115) + _call("R", 160, "Optic nerve", 420, 125) + _call("R", 205, "Sclera|(white outer coat)", 325, 189),
+  "Parts of the eye (horizontal section)");
 /* ================= GLOSSARY =================
    Format: "Term|subjectId|meaning"  (add as many as you like) */
 const GLOSS_RAW = [
@@ -3584,6 +4381,30 @@ const GLOSS_RAW = [
 "Stratum corneum|anat|Outermost, dead, horny layer of the epidermis.",
 "Radiopaque|anat|Material that absorbs X-rays and looks white on a radiograph.",
 "Radiolucent|anat|Material that lets X-rays pass and looks dark on a radiograph.",
+"Splanchnology|anat|Study of the viscera, the organs inside the body cavities.",
+"Viscera|anat|Internal organs of the thoracic, abdominal and pelvic cavities.",
+"Stay apparatus|anat|Tendons and ligaments that support a limb so the horse can stand with little muscle effort.",
+"Brachial plexus|anat|Network of nerves from the last cervical and first thoracic nerves that supplies the fore limb.",
+"Jugular furrow|anat|Groove on the side of the neck, between brachiocephalicus and sternocephalicus, holding the jugular vein.",
+"Carotid sheath|anat|Sheath around the common carotid artery, vagosympathetic trunk and recurrent laryngeal nerve.",
+"Thoracocentesis|anat|Puncture of the chest wall to remove fluid or air from the pleural cavity.",
+"Omentum|anat|Fold of peritoneum attached to the stomach.",
+"Mesentery|anat|Peritoneal fold that suspends the intestines.",
+"Inguinal canal|anat|Oblique passage through the lower abdominal wall carrying the spermatic cord.",
+"Prepubic tendon|anat|Common tendon of the abdominal muscles attached to the pubis.",
+"Reciprocal apparatus|anat|Mechanism linking the stifle and hock of the horse so they move together.",
+"Desmosome|anat|Spot-like junction that holds neighbouring cells together.",
+"Gap junction|anat|Channel connecting the cytoplasm of two cells.",
+"Urothelium|anat|Transitional epithelium lining the urinary passages.",
+"Kupffer cell|anat|Macrophage lining the liver sinusoids.",
+"Gametogenesis|anat|Formation of sperm and ova by meiosis.",
+"Capacitation|anat|Final maturation of sperm in the female tract before fertilisation.",
+"Telolecithal|anat|Egg with a large amount of yolk concentrated at one pole, as in birds.",
+"Morula|anat|Solid ball of cells formed by cleavage of the zygote.",
+"Blastocyst|anat|Hollow stage of the early embryo with a trophoblast and an inner cell mass.",
+"Neural crest|anat|Group of embryonic cells that form peripheral nerves, adrenal medulla and melanocytes.",
+"Rathke's pouch|anat|Upgrowth from the roof of the mouth that forms the anterior pituitary.",
+"Metanephros|anat|Permanent kidney of mammals and birds.",
 "Cost of production|farm|Total cost divided by output, for example per litre of milk."
 ];
 const GLOSS = GLOSS_RAW.map(l => { const p = l.split("|"); return [p[0], p[1], p.slice(2).join("|")]; }).sort((a, b) => a[0].localeCompare(b[0]));
@@ -3660,6 +4481,8 @@ function renderHome() {
 
 /* ---------- subjects ---------- */
 let yearTab = "all";
+const YEAR_DEFAULT = { anat: "y1", phys: "y1", lpm: "y1", bioc: "y2", micro: "y2", path: "y2", gen: "y2", nutr: "y2", pharm: "y3", pubh: "y3", para: "y3", lpt: "y3", ext: "y3", clin: "y3", farm: "y3", surg: "y4", med: "y4", gyn: "y4" };
+const yearOf = id => (S.pins[id] !== undefined ? S.pins[id] : YEAR_DEFAULT[id]);
 const YEARS = [["all", "All subjects"], ["y1", "Year 1"], ["y2", "Year 2"], ["y3", "Year 3"], ["y4", "Year 4"], ["int", "Internship"]];
 function renderSubjects() {
   $("#yearTabs").innerHTML = YEARS.map(y => '<button data-y="' + y[0] + '" class="' + (y[0] === yearTab ? "on" : "") + '">' + y[1] + "</button>").join("");
@@ -3668,11 +4491,11 @@ function renderSubjects() {
 function drawSubjects() {
   const q = $("#subSearch").value.trim().toLowerCase();
   let list = SUBJECTS.filter(s => (s.name + " " + s.blurb).toLowerCase().includes(q));
-  if (yearTab !== "all") list = list.filter(s => S.pins[s.id] === yearTab);
-  if (!list.length) { $("#subGrid").innerHTML = '<p class="empty">' + (yearTab !== "all" ? "No subjects pinned to this year yet. Go to 'All subjects' and use 'Pin to year' on a card. Placement differs between syllabus versions, so you decide." : "No subject matches your search.") + "</p>"; return; }
+  if (yearTab !== "all") list = list.filter(s => yearOf(s.id) === yearTab);
+  if (!list.length) { $("#subGrid").innerHTML = '<p class="empty">' + (yearTab !== "all" ? "No subjects in this year yet." : "No subject matches your search.") + "</p>"; return; }
   $("#subGrid").innerHTML = list.map(s => {
     const n = ORDER[s.id].length, left = PLANNED[s.id].length;
-    return '<article class="card subj-card"><div class="icon">' + s.icon + "</div><h3>" + esc(s.name) + '</h3><p class="meta">' + esc(s.blurb) + '</p><span class="tag">' + n + " topics written</span>" + (left ? '<span class="tag off">' + left + " more planned</span>" : "") + '<div class="row"><a class="btn small" href="#subject/' + s.id + '">Open</a></div><label class="meta">Pin to year<select data-pin="' + s.id + '"><option value="">General library</option>' + YEARS.slice(1).map(y => '<option value="' + y[0] + '"' + (S.pins[s.id] === y[0] ? " selected" : "") + ">" + y[1] + "</option>").join("") + "</select></label></article>";
+    return '<article class="card subj-card"><div class="icon">' + s.icon + "</div><h3>" + esc(s.name) + '</h3><p class="meta">' + esc(s.blurb) + '</p><span class="tag">' + n + " topics written</span>" + (left ? '<span class="tag off">' + left + " more planned</span>" : "") + '<div class="row"><a class="btn small" href="#subject/' + s.id + '">Open</a></div><label class="meta">Pin to year<select data-pin="' + s.id + '"><option value="">No year</option>' + YEARS.slice(1).map(y => '<option value="' + y[0] + '"' + (yearOf(s.id) === y[0] ? " selected" : "") + ">" + y[1] + "</option>").join("") + "</select></label></article>";
   }).join("");
 }
 function drawTopicSearch() {
@@ -3717,7 +4540,7 @@ function renderReader(id) {
   h += '<div class="body">';
   h += sec("Introduction", "<p>" + esc(t.i) + "</p>");
   if (t.o) h += sec("Learning objectives", "<p class='meta'>After this topic you should be able to:</p>" + ul(t.o));
-  if (t.dia && DIA[t.dia]) h += sec("Diagram", DIA[t.dia]);
+  { const ks = [].concat(t.dia || []).filter(k => DIA[k]); if (ks.length) h += sec(ks.length > 1 ? "Diagrams and flowcharts" : "Diagram", ks.map(k => DIA[k]).join("")); }
   if (t.df) h += sec("Scientific definitions", ul(t.df));
   if (t.tm) h += sec("Important terminology", tbl({ h: ["Term", "Meaning"], r: t.tm }));
   if (S.mode === "simple") {
@@ -3737,6 +4560,7 @@ function renderReader(id) {
   h += sec("MCQs (practice)", t.q.map((m, i) => '<div class="mcq" data-i="' + i + '"><p><b>' + (i + 1) + ".</b> " + esc(m[0]) + "</p>" + shuffle(m[1].map((o, k) => [o, k])).map(ok => '<button class="opt" data-k="' + ok[1] + '">' + esc(ok[0]) + "</button>").join("") + '<p class="exp" hidden><b>Answer:</b> ' + esc(m[1][m[2]]) + ". " + esc(m[3]) + "</p></div>").join(""), false);
   h += sec("Flashcards (tap to flip)", t.f.map(f => '<button class="fc"><span class="f">' + esc(f[0]) + '</span><span class="b" hidden>' + esc(f[1]) + "</span></button>").join(""), false);
   h += sec("Quick revision summary", ul(t.k.slice(0, 4).concat(t.f.map(f => f[0] + ": " + f[1]))), false);
+  if (t.vf && t.vf.length) h += '<details class="sec verify" open><summary>⚠ Check these points in your textbook</summary><div class="secbody"><p class="meta">I am not fully certain of these, or they vary between books, breeds and colleges. Treat them as my best understanding and an assumption to check, not a final answer.</p>' + ul(t.vf) + "</div></details>";
   if (t.d && t.d.length) h += sec("Keep exploring (this topic has more than this page)", "<p class='meta'>No topic is ever finished. Here is where to go next:</p>" + ul(t.d));
   const rel = related(t);
   if (rel.length) h += sec("Related topics", "<ul>" + rel.map(r => "<li>" + tLink(r) + ' <span class="meta">(' + esc(SUBJ[T[r].s].name) + ")</span></li>").join("") + "</ul>");
@@ -4049,7 +4873,7 @@ function init() {
   $("#subSearch").addEventListener("input", drawSubjects);
   $("#topicSearch").addEventListener("input", drawTopicSearch);
   $("#yearTabs").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; yearTab = b.dataset.y; renderSubjects(); });
-  $("#subGrid").addEventListener("change", e => { const s = e.target.closest("select[data-pin]"); if (!s) return; if (s.value) S.pins[s.dataset.pin] = s.value; else delete S.pins[s.dataset.pin]; save(); });
+  $("#subGrid").addEventListener("change", e => { const s = e.target.closest("select[data-pin]"); if (!s) return; S.pins[s.dataset.pin] = s.value; save(); });
 
   const rd = $("#reader"); rd.addEventListener("click", readerClick); rd.addEventListener("input", readerInput);
 

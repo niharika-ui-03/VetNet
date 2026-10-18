@@ -152,3 +152,9 @@ body.focus main{padding-top:30px}
 
 .dia{margin:0;text-align:center}.dia svg{width:100%;max-width:520px;height:auto}.dia figcaption{font-size:.85em;color:#5b6b62;margin-top:.4em}
 .fill input{padding:.4em .6em;margin-right:.4em;border:1px solid #b9cfc1;border-radius:6px}
+
+.sec.verify{border-left:4px solid #d9a441;background:#fff8e6}
+.sec.verify summary{color:#7a5410}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .sec.verify{background:#3a3018}:root:not([data-theme="light"]) .sec.verify summary{color:#f0d28a}}
+:root[data-theme="dark"] .sec.verify{background:#3a3018}:root[data-theme="dark"] .sec.verify summary{color:#f0d28a}
+.dia + .dia{margin-top:1rem}
