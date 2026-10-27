@@ -1,0 +1,28 @@
+{
+  "name": "vetnet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niharika-ui-03/VetNet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/niharika-ui-03/VetNet/issues"
+  },
+  "homepage": "https://github.com/niharika-ui-03/VetNet#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
